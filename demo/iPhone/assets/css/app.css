@@ -452,6 +452,7 @@ a {
 }
 
 .top-banner {
+
   height: 72px;
   padding: 12px 20px;
 }
@@ -544,26 +545,26 @@ a {
   }
 
   .top-banner {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
     height: 122px;
-    width: 90%;
+    width:100%;
     margin: 0 auto;
   }
-
-  .top-banner a {
-    width: 80%;
-    margin: 0 auto;
+  .top-banner .newBtn{
+    width:48%;
   }
-
   .top-banner .newBtn img {
     /* width: 220px; */
-    width: 120px;
+    width: 80%;
     vertical-align: top;
+    display:block;
     margin: 0 auto;
+    text-align: center;
   }
 
-  .top-banner .newBtn>img {
-    float: left;
-  }
+
 
   .full-bg {
     margin-top: 0;
