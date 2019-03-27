@@ -93,14 +93,12 @@ var plan_content = {
     'upgrade.json': {
         "type": "table3",
         "content": [
-            ["iPhone XR", "64G", "26,900", "25,900", "128G", "28,900", "27,900", "256G", "32,500", "31,500"],
-            ["iPhone XS", "64G", "35,900", "34,400", "256G", "41,500", "40,000", "512G", "48,900", "47,400"],
-            ["iPhone XS Max", "64G", "39,900", "37,900", "256G", "45,500", "43,500", "512G", "52,900", "50,900"],
-            ["iPhone X", "64G", "31,900", "-", "256G", "37,500", "-"],
+            ["iPhone XR", "64G", "26,900", "<strike>25,900</strike>", "128G", "28,900", "<strike>27,900</strike>", "256G", "32,500", "<strike>31,500</strike>"],
+            ["iPhone XS", "64G", "35,900", "<strike>34,400</strike>", "256G", "41,500", "<strike>40,000</strike>", "512G", "48,900", "<strike>47,400</strike>"],
+            ["iPhone XS Max", "64G", "39,900", "<strike>37,900</strike>", "256G", "45,500", "<strike>43,500</strike>", "512G", "52,900", "<strike>50,900</strike>"],
+            ["iPhone X","256G", "37,500", "-"],
             ["iPhone 8", "64G", "21,500", "-", "256G", "27,100", "-"],
             ["iPhone 8 Plus", "64G", "25,500", "-", "256G", "31,100", "-"],
-            ["iPhone 7", "256G", "23,100", "-"],
-            ["iPhone 6s Plus", "32G", "15,900", "-"]
         ]
     },
     '2gto4g.json': {
@@ -411,7 +409,7 @@ function table3(json) {
             tmp += '<td>' + data[i] + '</td><td>' + data[i + 1] + '</td><td>' + data[i + 2] + '</td></tr>';
         }
     });
-    return '<table class="table3"><tr><th class="color-3-1">機型</th><th class="color-3-1">容量</th><th class="color-3-1">購機優惠(元)</th><th class="color-3-1">中華電信客戶獨享價(元)<br>(108/04/01~108/04/30)</th></tr>' + tmp + '</table>';
+    return '<table class="table3"><tr><th class="color-3-1">機型</th><th class="color-3-1">容量</th><th class="color-3-1">購機優惠(元)</th><th class="color-3-1"><strike>中華電信客戶獨享價(元)<br>(108/04/01~108/04/30)</strike></th></tr>' + tmp + '</table>';
 }
 
 function table4(json) {
