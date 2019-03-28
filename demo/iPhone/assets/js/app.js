@@ -80,25 +80,22 @@ var plan_content = {
             ["h1row", "iPhone XS Max", "64G", "-", "35,900", "34,900"],
             ["h1row", "iPhone XS Max", "256G", "-", "41,500", "40,500"],
             ["h1row", "iPhone XS Max", "512G", "-", "48,900", "47,900"],
-            ["h1row", "iPhone X", "64G", "27,900", "25,900", "24,900"],
             ["h1row", "iPhone X", "256G", "33,500", "31,500", "30,500"],
             ["h1row", "iPhone 8", "64G", "17,500", "15,500", "14,500"],
             ["h1row", "iPhone 8", "256G", "23,100", "21,100", "20,100"],
             ["h1row", "iPhone 8 Plus", "64G", "21,500", "19,500", "18,500"],
-            ["h1row", "iPhone 8 Plus", "256G", "27,100", "25,100", "24,100"],
-            ["h1row", "iPhone 7", "256G", "19,100", "17,100", "16,100"],
-            ["h1row", "iPhone 6s Plus", "32G", "7,900", "7,900", "5,900"]
+            ["h1row", "iPhone 8 Plus", "256G", "27,100", "25,100", "24,100"]
         ]
     },
     'upgrade.json': {
         "type": "table3",
         "content": [
-            ["iPhone XR", "64G", "26,900", "<strike>25,900</strike>", "128G", "28,900", "<strike>27,900</strike>", "256G", "32,500", "<strike>31,500</strike>"],
-            ["iPhone XS", "64G", "35,900", "<strike>34,400</strike>", "256G", "41,500", "<strike>40,000</strike>", "512G", "48,900", "<strike>47,400</strike>"],
-            ["iPhone XS Max", "64G", "39,900", "<strike>37,900</strike>", "256G", "45,500", "<strike>43,500</strike>", "512G", "52,900", "<strike>50,900</strike>"],
-            ["iPhone X","256G", "37,500", "-"],
-            ["iPhone 8", "64G", "21,500", "-", "256G", "27,100", "-"],
-            ["iPhone 8 Plus", "64G", "25,500", "-", "256G", "31,100", "-"],
+            ["iPhone XR", "64G", "26,900",  "128G", "28,900", "256G", "32,500"],
+            ["iPhone XS", "64G", "35,900",  "256G", "41,500",  "512G", "48,900"],
+            ["iPhone XS Max", "64G", "39,900",  "256G", "45,500", "512G", "52,900"],
+            ["iPhone X","256G", "37,500"],
+            ["iPhone 8", "64G", "21,500",  "256G", "27,100"],
+            ["iPhone 8 Plus", "64G", "25,500", "256G", "31,100"]
         ]
     },
     '2gto4g.json': {
@@ -403,13 +400,13 @@ function table2(json) {
 function table3(json) {
     var tmp = '';
     $.each(json.content, function (i, data) {
-        tmp += '<tr><td class="color-3-2" rowspan="' + (data.length - 1) / 3 + '">' + data[0] + '</td>';
-        for (var i = 1; i < data.length; i += 3) {
+        tmp += '<tr><td class="color-3-2" rowspan="' + (data.length - 1) / 2 + '">' + data[0] + '</td>';
+        for (var i = 1; i < data.length; i += 2) {
             if (i != 1) tmp += '<tr>';
-            tmp += '<td>' + data[i] + '</td><td>' + data[i + 1] + '</td><td>' + data[i + 2] + '</td></tr>';
+            tmp += '<td>' + data[i] + '</td><td>' + data[i + 1] + '</td></tr>';
         }
     });
-    return '<table class="table3"><tr><th class="color-3-1">機型</th><th class="color-3-1">容量</th><th class="color-3-1">購機優惠(元)</th><th class="color-3-1"><strike>中華電信客戶獨享價(元)<br>(108/04/01~108/04/30)</strike></th></tr>' + tmp + '</table>';
+    return '<table class="table3"><tr><th class="color-3-1">機型</th><th class="color-3-1">容量</th><th class="color-3-1">購機優惠(元)</th></tr>' + tmp + '</table>';
 }
 
 function table4(json) {
