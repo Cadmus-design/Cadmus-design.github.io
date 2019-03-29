@@ -67,8 +67,9 @@ ol,ul{
  	 	padding:30px 15px 0 0;
  	 }
  	 #wrapper header ul li{
+ 	 background: linear-gradient(#19BEE8,#289BFF);
  	color:#fff;
- 	font-size: 1em;
+ 	font-size: 0.8em;
  	padding:0.5em .8em;
  	border-radius: 0.5em;
  	box-shadow: 2px 2px 2px #999;
