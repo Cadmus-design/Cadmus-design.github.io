@@ -44,7 +44,7 @@ ol,ul{
  	background: linear-gradient(#19BEE8,#289BFF);
  	color:#fff;
  	font-size: 1em;
- 	padding:0.5em .8em;
+ 	padding:0.75em 1.25em;
  	border-radius: 0.4em;
  	box-shadow: 2px 2px 2px #999;
  	align-self: baseline;
@@ -67,11 +67,10 @@ ol,ul{
  	 	padding:30px 15px 0 0;
  	 }
  	 #wrapper header ul li{
- 	background: #343AEB;
  	color:#fff;
- 	font-size: 1.25em;
- 	padding:0.5em 1em;
- 	border-radius: 0.4em;
+ 	font-size: 1em;
+ 	padding:0.5em .8em;
+ 	border-radius: 0.5em;
  	box-shadow: 2px 2px 2px #999;
  	align-self: center;
  }
