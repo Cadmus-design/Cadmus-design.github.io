@@ -86,7 +86,7 @@ ol,ul{
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
-@media (min-width:769px ) and (max-width: 1786px) {
+@media (min-width:641px ) and (max-width: 1786px) {
 	#wrapper main .container{
 	width:calc(100% - 120px);
 	margin:10em auto 3em;
