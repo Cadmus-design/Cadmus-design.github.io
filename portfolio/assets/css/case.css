@@ -174,7 +174,7 @@ main{
 
 #wrapper main .container ul{
 	display:block;
-	width:95%;
+	width:90%;
 	margin:0 auto;
 }
 #wrapper main .container ul li{
@@ -182,7 +182,7 @@ main{
 	background: #fff;
 	color:#333;
 	font-size: 1em;
-	line-height: 1em;
+	line-height: 1.5em;
 }
 
 #wrapper main .container ul li h4{
