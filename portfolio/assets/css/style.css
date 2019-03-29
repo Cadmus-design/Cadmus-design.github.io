@@ -55,7 +55,7 @@ ol,ul{
  	border-radius: 0.4em;
  	box-shadow: 2px 2px 2px #999;
  }
- @media (min-width:320px ) and (max-width: 768px) {
+ @media (min-width:320px ) and (max-width: 640px) {
  	#wrapper header img{
  	width:80px;
  	padding: 10em 1em 1em;
@@ -104,7 +104,7 @@ ol,ul{
 
 	}
 }
-@media (min-width:320px ) and (max-width: 768px) {
+@media (min-width:320px ) and (max-width: 640px) {
 	#wrapper main .container{
 	width:100%;
 	margin:3em auto;
@@ -160,7 +160,7 @@ footer .social, footer .contact{
 	display: flex;
 	align-items: center;
 }
-@media (min-width:320px ) and (max-width: 768px) {
+@media (min-width:320px ) and (max-width: 640px) {
 	footer{
 		width: 95vw;
 		margin:0 auto;

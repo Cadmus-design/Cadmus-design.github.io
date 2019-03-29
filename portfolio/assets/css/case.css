@@ -52,7 +52,7 @@ ol,ul{
   #wrapper header ul li:nth-of-type(2){
   	background: linear-gradient(#787F7F,#B4BFBF);
   }
- @media (min-width:320px ) and (max-width: 768px) {
+ @media (min-width:320px ) and (max-width: 640px) {
  	#wrapper header img{
  	width:80px;
  	padding: 1em 1em 1em;
@@ -164,7 +164,7 @@ main{
 	font-weight: 1000;
 	font-style: normal;
 }
- @media (min-width:320px ) and (max-width: 768px) {
+ @media (min-width:320px ) and (max-width: 640px) {
 	#wrapper main .container{
 	width:100%;
 }
@@ -240,7 +240,7 @@ footer .social, footer .contact{
 	display: flex;
 	align-items: center;
 }
-@media (min-width:320px ) and (max-width: 768px) {
+@media (min-width:320px ) and (max-width: 640px) {
 	footer{
 		width: 95vw;
 		margin:0 auto;
