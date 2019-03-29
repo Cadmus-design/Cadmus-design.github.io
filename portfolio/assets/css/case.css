@@ -43,8 +43,8 @@ ol,ul{
  	/*background: #343AEB;*/
  	background: linear-gradient(#19BEE8,#289BFF);
  	color:#fff;
- 	font-size: 1.25em;
- 	padding:0.75em 1.25em;
+ 	font-size: 1em;
+ 	padding:0.5em .8em;
  	border-radius: 0.4em;
  	box-shadow: 2px 2px 2px #999;
  	align-self: baseline;
@@ -56,6 +56,9 @@ ol,ul{
  	#wrapper header img{
  	width:80px;
  	padding: 1em 1em 1em;
+ 	}
+ 	#wrapper header h1{
+ 		font-size: 2em;
  	}
  	 #wrapper header ul{
  	 	width:66%;
