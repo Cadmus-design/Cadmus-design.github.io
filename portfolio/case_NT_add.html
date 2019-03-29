@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+	<meta charset="UTF-8">
+	<title>新北市門牌-CSS手刻</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="assets/images/Cadmus.ico" />
+	<link rel="stylesheet" type="text/css" href="assets/css/case.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/css_card.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/lightbox.css">
+	<script src="assets/js/jQuery.js"></script>
+	<script src="assets/js/all.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+	<header>
+		<a class="logo" href="index.html"><img src="assets/images/logo.png" alt="Cadmus"></a>
+		<ul>
+			<!--<li><a class="btn btn-default" href="assets/doc/CV_Zh_Tw.pdf" data-featherlight="iframe" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-width="800em" data-featherlight-iframe-height="60em">簡歷</a></li>-->
+		<li><a href="assets/doc/CV_Zh_Tw.pdf">簡歷</a></li>
+			<li>作品展示中</li>
+		</ul>
+	</header>
+	<main>
+		<div class="box">
+			<img src="assets/images/case/css/NT/banner_CSS_NT.jpg" />
+		</div>
+		<div class="container">
+			<ul>
+				<li><h3>新北市門牌</h3><p>2019/3</p></li>
+				<li>
+					<p>瀏覽技術文章看到此<a href="https://www.youtube.com/watch?v=SBEop-dXkrY&fbclid=IwAR08hduwInAM5Ij2yL9eVizSopMAHTl2-qFPFhwVIjNo9P0qd5NS-qwUe0k">連結</a>除了新北市LOGO與下方特徵使用圖片外，用CSS畫一張門牌嘗試各種裝置對應的寫法。</p>
+				</li>
+				<li>
+					<h3>歷程</h3>
+				</li>
+				<li>
+					<ol>
+						<li><h4>UI KIT</h4></li>
+								<li>製作範例<img src="assets/images/case/css/NT/NT_add_template.png" alt="新北市門牌"></li>
+								<li><p>字型</p><p>中文字體以微軟正黑體為主，大小則比對門牌比例規範</li>
+									<li><p>顏色</p><p>取現有背景、文字顏色</p></li>
+								<li><p>圖片</p><p>圖片利用Photoshop去背，當成元素使用。</p></li>
+								<li>考量門牌網頁中權重，雖然門牌號碼字號最大，但住址為由前至後帶入，故於KIT上會以行政區>路名>巷弄>號的方式排序。</li>
+								<li>調整字體僅能使用100%定義初始值，各字號再以標籤定義vw設定其他尺寸的大小。</li>
+								<li>門牌號碼斜體字若用italic太突兀，改採transform調整10度的樣式。</li>
+					</ol>
+				</li>
+				<li>成果</li>
+				<li>
+					<div id="card">
+						<div class="area">
+							<img src="assets/images/case/css/NT/NT_add_flower.png">
+							<h1>淡水區</h1>
+						</div>
+						<div class="place">
+							<h2>新北大道一段</h2>
+							<div class="number">
+								<h3>199巷10弄</h3>
+								<h4>187</h4><h5>之</h5><h6>3</h6>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--container end -->
+	</main>
+	</div>
+	<!-- wrapper end -->
+	<footer>
+	<div class="social">
+		<p>個人社群</p>
+		<a href="https://www.behance.net/CADMUS22"><img src="assets/images/footer/behance.svg" alt="behance"></a>
+		<a href="https://dribbble.com/Cadmus22"><img src="assets/images/footer/dribbble.svg" alt="dribble"></a>
+		<a href="https://www.facebook.com/Cadmus.Sung"><img src="assets/images/footer/facebook.svg" alt="facebook"></a>
+		<a href="https://www.instagram.com/cadmus_sung"><img src="assets/images/footer/instagram.svg" alt="instagram"></a>
+		<a href="https://medium.com/@cadmus22"><img src="assets/images/footer/Medium.svg" alt="Medium"></a>
+	</div>
+	<div class="contact">
+		<p>與我聯絡</p>
+		<a href="mailto:cadmus.sung@gmail.com"><img src="assets/images/footer/mail.png" alt=""></a>
+	</div>
+</footer>
+</body>
+</html>

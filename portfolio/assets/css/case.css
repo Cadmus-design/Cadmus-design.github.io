@@ -95,6 +95,17 @@ main{
 }
 #wrapper main .container img{
 	max-width: 100%;
+	box-shadow: 2px 2px 6px #ddd;
+}
+ #wrapper main .container span{
+	padding:0.1em 0.6em;
+	background:linear-gradient(#FF8E22,#FF4316);
+	color:#fff;
+	font-weight: normal;
+	border-radius:1em;
+	font-size: 0.8em;
+	box-shadow: 1px 1px 3px 2px #ddd;
+	margin:0 0.2em 0 0;
 }
 #wrapper main .container ul{
 	width: 100%;
@@ -149,6 +160,9 @@ main{
 #wrapper main .container ul > li > ol > li{
 	
 	line-height: 2em;
+}
+#wrapper main .container ul > li > ol > li a{
+color:red;
 }
 #wrapper main .container ul > li > ol > li > ol{
 	list-style:lower-roman;

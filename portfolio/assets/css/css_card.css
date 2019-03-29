@@ -1,0 +1,103 @@
+#card{
+	background: #018FA5;
+	width:80%;
+	border-radius: 2.5em;
+	display: flex;
+	justify-content: space-between;
+	color:#fff;
+	font-size: 100%;
+	white-space: nowrap;
+}
+#card .area{
+	width:18.5%;
+	padding:1.5em 0.5em 1.5em 1.5em;
+	background:url(../images/case/css/NT/NT_add_boat.png) left bottom no-repeat;
+}
+#card .area img{
+
+}
+#card .area h1{
+	font-size: 2vw;
+
+}
+#card .place{
+	width:80%;
+	padding:1.5em;
+}
+#wrapper main .container #card .place h2{
+	color:#fff;
+	text-align: right;
+	line-height: 100%;
+	font-size: 4.5vw;
+	padding:0 0.2em 0 0;
+	margin:0;
+}
+#card .place .number{
+	background: #fff;
+	border-radius: 2em;
+	padding:1.5em;
+	margin:0.5em;
+	color:#842878;
+}
+#card .place .number h3{
+	text-align: right;
+	font-size: 3.8vw;
+	padding:0.2em 0em 1em 0;
+	margin:0;
+	line-height: 10%;
+}
+#card .place .number h4{
+color:#842878;	
+font-size: 12vw;
+text-shadow: 0px 0px 1px #842878;
+transform:skew(-10deg);
+
+}
+#card .place .number h5{
+font-size: 2.5vw;
+}
+#card .place .number h6{
+font-size: 3.5vw;
+}
+#card .place .number h4, #card .place .number h5, #card .place .number h6{
+	display: inline-block;
+	line-height: 100%;
+	padding:0;
+	margin:0;
+}
+@media (min-width: 320px) and (max-width: 640px){
+	#card{
+	background: #018FA5;
+	width:80%;
+	margin:0 auto;
+	border-radius: 2.5em;
+	display: flex;
+	justify-content: space-between;
+	color:#fff;
+	font-size: 40%;
+}
+
+#card .area{
+	width:18.5%;
+	padding:1.5em 0.5em 1.5em 1.5em;
+	background:url(../images/case/css/NT/NT_add_boat.png) left bottom no-repeat;
+	background-size:80%;
+}
+#card .area h1{
+	font-size: 3vw;
+
+}
+#card .area img{
+	width:80%;
+}
+#card .place .number{
+
+}
+#card .place .number h4{
+color:#842878;	
+font-size: 1001%;
+text-shadow: 0px 0px 1px #842878;
+transform:skew(-10deg);
+text-indent: 0.25em;
+}
+}
