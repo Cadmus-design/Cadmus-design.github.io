@@ -134,7 +134,7 @@ main{
 	font-size: 1em;
 	line-height: 1.5em;
 }
- 
+
 #wrapper main .container ul li h4{
 	line-height: 1.2em;
 	
@@ -145,11 +145,12 @@ main{
 	text-align: right;
 	padding:2%;
 	font-size: 1.5em;
-	line-height: 0.5em;
+	line-height: 1.5em;
 }
 #wrapper main .container ul > li:nth-of-type(2n){
 	width:60%;	
 	padding:3%;
+	line-height: 3.5em;
 	margin:0 0 4em 0; 
 }
 #wrapper main .container ul > li > ol{
@@ -197,8 +198,18 @@ color:red;
 	color:#333;
 	font-size: 1em;
 	line-height: 1.5em;
+	margin:1em 0;
 }
-
+ #wrapper main .container span{
+	padding:0.1em 0.6em;
+	background:linear-gradient(#FF8E22,#FF4316);
+	color:#fff;
+	font-weight: normal;
+	border-radius:1em;
+	font-size: 1.2em;
+	box-shadow: 1px 1px 3px 2px #ddd;
+	margin:0 0.2em 1.5em 0;
+}
 #wrapper main .container ul li h4{
 	line-height: 0.2em;
 	padding:0;
@@ -219,6 +230,7 @@ color:red;
 #wrapper main .container ul > li:nth-of-type(2n-1) h3{
 	margin:0;
 	font-size: 1.5em;
+	line-height: 1.2em;
 	color:#279EFD;
 	text-shadow: 2px 2px 2px #ddd;
 }
