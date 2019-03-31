@@ -21,6 +21,13 @@ ol,ul{
 	 background-size:contain;
 	 overflow-x:hidden;
  }
+ #wrapper img{
+ 	transition: .2s all ease-out;
+ }
+ #wrapper img:hover{
+	 filter: alpha(opacity=70);
+  	opacity: 0.7;
+ }
  #wrapper header h1{
   	font-size: 2.5em;
   }
@@ -55,6 +62,18 @@ ol,ul{
  	border-radius: 0.4em;
  	box-shadow: 2px 2px 2px #999;
  }
+ #wrapper header ul li, #wrapper main .container ul li span{
+ 	transition:.4s all ease-out;
+ }
+  #wrapper header ul li:hover{
+  	color:#ffff00;
+	background: linear-gradient(#289BFF,#19BEE8);
+	box-shadow: 0px 0px 5px #19BEE8;
+  }
+  #wrapper main .container ul li span:hover{
+  	color:#666;
+  	box-shadow: 0px 0px 5px 4px #ddd;
+  }
  @media (min-width:320px ) and (max-width: 640px) {
  	#wrapper header img{
  	width:80px;

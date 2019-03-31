@@ -8,6 +8,10 @@
 	font-size: 100%;
 	white-space: nowrap;
 }
+#wrapper main .container #card .area img{
+	max-width: 100%;
+	box-shadow: 0px 0px 0px #ddd;
+}
 #card .area{
 	width:18.5%;
 	padding:1.5em 0.5em 1.5em 1.5em;

@@ -1,18 +1,19 @@
 
 
 
-
+/*
 $( window ).resize(function() {
   $( "body" ).prepend( "<div>" + $( window ).width() + "</div>" );
 
 });
-
+*/
+/*
  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
 
 	  gtag('config', 'UA-6789868-5');
-
+*/
 /*gtag manager*/
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
