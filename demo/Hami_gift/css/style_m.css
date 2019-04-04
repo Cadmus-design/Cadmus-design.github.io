@@ -6287,41 +6287,41 @@ body {
           position: absolute;
           max-width: 100%;
           width: 50%;
-          top: 68.5%;
+          top: 69%;
           left: 21%; }
         .wrapper .content .tabcontent .section .section01_btn02 {
           position: absolute;
           max-width: 100%;
-          width: 50%;
-          top: 92.5%;
+          width: 40%;
+          top: 89.5%;
           left: 21%; }
         .wrapper .content .tabcontent .section .section02_btn01 {
           position: absolute;
           max-width: 100%;
-          width: 25%;
-          top: 17%;
-          left: 69%; }
+          width: 16%;
+          top: 43%;
+          left: 33%; }
 
         .wrapper .content .tabcontent .section .section02_btn02 {
           position: absolute;
           max-width: 100%;
-          width: 25%;
-          top: 36%;
-          left: 69%;  }
+          width: 16%;
+          top: 43%;
+          left: 77%;  }
 
         .wrapper .content .tabcontent .section .section02_btn03 {
           position: absolute;
           max-width: 100%;
-          width: 25%;
-          top: 55%;
-          left: 69%;  }
+          width: 16%;
+          top: 86%;
+          left: 33%;  }
 
         .wrapper .content .tabcontent .section .section02_btn04 {
           position: absolute;
           max-width: 100%;
-          width: 25%;
-          top: 75%;
-          left: 69%;  }
+          width: 16%;
+          top: 86%;
+          left: 77%;  }
 
         .wrapper .content .tabcontent .section .section02_btn05 {
           position: absolute;
@@ -6333,30 +6333,30 @@ body {
         .wrapper .content .tabcontent .section .section03_btn01 {
           position: absolute;
           max-width: 100%;
-          width: 25%;
-          top: 17%;
-          left: 69%;  }
+          width: 16%;
+          top: 43%;
+          left: 33%;  }
 
         .wrapper .content .tabcontent .section .section03_btn02 {
           position: absolute;
           max-width: 100%;
-          width: 25%;
-          top: 36%;
-          left: 69%; }
+          width: 16%;
+          top: 43%;
+          left: 77%; }
 
         .wrapper .content .tabcontent .section .section03_btn03 {
           position: absolute;
           max-width: 100%;
-          width: 25%;
-          top: 54%;
-          left: 69%;  }
+          width: 16%;
+          top: 88%;
+          left: 33%;  }
 
         .wrapper .content .tabcontent .section .section03_btn04 {
           position: absolute;
           max-width: 100%;
-          width: 25%;
-          top: 72%;
-          left: 69%;  }
+          width: 16%;
+          top: 88%;
+          left: 77%;  }
 
         .wrapper .content .tabcontent .section .section03_btn05 {
           position: absolute;
@@ -6436,9 +6436,21 @@ body {
         .wrapper .content .tabcontent .section .tab02_section_btn {
           position: absolute;
           max-width: 100%;
-          width: 29%;
-          top: 10.5%;
-          left: 62%; }
+          width: 37%;
+          top: 20.5%;
+          left: 13%; }
+          .wrapper .content .tabcontent .section .tab02_section_btn_2 {
+          position: absolute;
+          max-width: 100%;
+          width: 37%;
+          top: 20.5%;
+          left: 51%; }
+          .wrapper .content .tabcontent .section .tab03_section_btn {
+          position: absolute;
+          max-width: 100%;
+          width: 28%;
+          top: 6.5%;
+          left: 65%; }
     .wrapper .content .hami_point {
       position: relative;
       padding: 0 50px 50px; }
@@ -6459,7 +6471,7 @@ body {
             top: 80%; } }
         @media (max-width: 425px) {
           .wrapper .content .hami_point .hami_point_btn {
-            top: 84%; } }
+            top: 86%; } }
         @media (min-width: 1200px) {
           .wrapper .content .hami_point .hami_point_btn {
             top: 82%; } }
