@@ -17,7 +17,7 @@ ol,ul{
 
  #wrapper{
 	 width:100%;
-	 background:#fff url(../images/bg.png) no-repeat top right;
+	 background:#aaa url(../images/bg.png) no-repeat top right;
 	 background-size:contain;
 	 overflow-x:hidden;
  }
@@ -30,11 +30,12 @@ ol,ul{
  }
  #wrapper header h1{
   	font-size: 2.5em;
+  	color:#fff;
   }
  #wrapper header p{
  	font-size: 1.2em;
  	line-height: 1.8em;
- 	color:#666;
+ 	color:#fff;
  }
  #wrapper header p span:before, #wrapper header p span:after{
  	white-space: pre;
@@ -48,7 +49,7 @@ ol,ul{
  	padding:0 0 30px 60px;
  }
  #wrapper header ul{
- 	width:18em;
+ 	width:14em;
  	display:flex;
  	flex-wrap: nowrap;
  	justify-content: space-between;
@@ -58,8 +59,8 @@ ol,ul{
  	background: linear-gradient(#19BEE8,#289BFF);
  	color:#fff;
  	font-size: 1.25em;
- 	padding:0.75em 1.25em;
- 	border-radius: 0.4em;
+ 	padding:0.35em 0.75em;
+ 	border-radius: 2em;
  	box-shadow: 2px 2px 2px #999;
  }
  #wrapper header ul li, #wrapper main .container ul li span{
@@ -105,6 +106,18 @@ ol,ul{
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
+#wrapper main .container ul{
+		width:100%;
+		display: flex;
+		justify-content: space-around;
+	}	
+#wrapper main .container ul li{
+	margin:0em 0 4em;
+	background: #fff;
+	padding:1em;
+	box-shadow: 1px 8px 6px #666;
+	width:25%;
+}
 @media (min-width:641px ) and (max-width: 1786px) {
 	#wrapper main .container{
 	width:calc(100% - 120px);
@@ -116,7 +129,7 @@ ol,ul{
 		justify-content: space-around;
 	}
 	#wrapper main .container ul li{
-		width:45%;
+		width:29%;
 	}
 	#wrapper main .container ul li img{
 		width:100%;
@@ -143,12 +156,11 @@ ol,ul{
 
 	}
 }
-#wrapper main .container ul li{
-	margin:0em 0 4em;
-	background: #fff;
-	padding:1em;
-	box-shadow: 1px 8px 6px #ddd;
-}
+
+#wrapper main .container ul li img{
+		width:100%;
+
+	}
 #wrapper main .container ul li span{
 	padding:0.2em 0.6em;
 	background:linear-gradient(#FF8E22,#FF4316);
