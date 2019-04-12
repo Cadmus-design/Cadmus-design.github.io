@@ -1800,7 +1800,7 @@ a {
 .main-rateplan .plan-table #slide {
   vertical-align: top;
   border: none;
-  position: relative;
+  /*position: relative;*/
 }
 
 .main-rateplan .plan-table #slide li table td,
