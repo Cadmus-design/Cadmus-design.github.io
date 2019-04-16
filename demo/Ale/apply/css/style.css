@@ -117,8 +117,8 @@ Patterns - reusable parts of our design
   .cd-is-hidden {
     visibility: hidden;
   }
-  .col-md-12 {width: 100%;float: left;margin-top: 1.25em;}
-  .col-md-6 {width: 50%;float: left}
+  .col-md-12 {width: 100%;margin-top: 1.25em;}
+  .col-md-6 {width: 50%;}
 }
   .col-md-4 {float: left;width: 33%}
 
@@ -289,7 +289,7 @@ select[type="text"]:focus, select[type="file"]:focus, select[type="password"]:fo
       text-align: left;
     }
 ul {
-    /*list-style: none;*/padding: 0 35px 0 35px;
+    /*list-style: none;*/padding: 0 35px 1em 35px;
     list-style: disc;
     display: block;
     width: 85%;
