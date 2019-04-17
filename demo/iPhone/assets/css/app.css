@@ -1277,13 +1277,14 @@ a {
 }
 
 .main-rateplan {
-  padding-top: 190px;
+  padding-top: 160px;
 }
 
 @media screen and (max-width: 639px) {
   .main-rateplan {
     padding-left: 5px;
     padding-right: 5px;
+    padding-top: 190px;
   }
 }
 
