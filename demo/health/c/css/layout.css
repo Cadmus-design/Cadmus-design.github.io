@@ -587,6 +587,21 @@ table .arrow1{
     height: 15px;
     background: url(../img/arrow7.png) no-repeat;
 }
+.event{
+    color:#666;
+    font-weight:bold;
+}
+.event_btn a{
+    background:#fd8d25;
+    color:#fff;
+    padding:.2em .5em;
+    border-radius: .3em;
+    display:table;
+    margin:1em auto;
+    font-size: 1.5em;
+    text-decoration: none;
+    letter-spacing: 0.3em
+}
 .table .notice{
     font-size: 22px;
     color: #666666;
@@ -777,6 +792,20 @@ table .arrow1{
 /* ============================
 -------------RWD------------
 ============================ */
+@media screen and (max-width:767px){
+    .desktop-only{
+        display:none;
+    }
+    .mobile-only img{
+        width:100%;
+    }
+}
+@media screen and (min-width:768px){
+    .mobile-only{
+        display:none;
+    }
+    
+}
 @media screen and (max-width:975px) {
 	
 	
