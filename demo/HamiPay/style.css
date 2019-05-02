@@ -46,7 +46,7 @@ ul {
 
 #wrapper .title_btn {
   width: 100%;
-  height: 240px;
+  height: 210px;
   background: #ffd200; }
 
 #wrapper .title_btn .btn {
@@ -54,7 +54,7 @@ ul {
   margin: 0 auto;
   display: block;
   background: #ffd200;
-  padding-bottom: 3em; }
+  }
 
 .auto {
   width: 1200px;
@@ -68,12 +68,17 @@ ul {
   position: absolute;
   top: 80px;
   left: 182px; }
+#wrapper .btn{
 
+}
 #wrapper .btn li {
   display: inline-block;
-  padding: 0;
+  padding: 1.3em 0.78em 0.65em;
   margin: 0; }
-
+#wrapper .btn:nth-of-type(2){
+width:900px;
+margin:0 auto;
+}
 #wrapper .box .content {
   width: 1200px;
   margin: 0 auto; }

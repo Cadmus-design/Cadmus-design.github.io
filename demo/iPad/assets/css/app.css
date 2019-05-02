@@ -1883,7 +1883,7 @@ span.st {
 }
 
 .e_index-right h3 {
-  font-size: 35px;
+  font-size: 30px;
   color: #1a3349;
   font-weight: bold;
   padding: 0px 0 20px;
@@ -1891,7 +1891,7 @@ span.st {
 
 @media screen and (max-width: 639px) {
   .e_index-right h3 {
-    font-size: 7vw;
+    font-size: 6.5vw;
     color: #1a3349;
     font-weight: bold;
     padding: 15px 0 30px;
