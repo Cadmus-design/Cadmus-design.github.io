@@ -204,6 +204,22 @@ main{
 	margin:0;
 }
 /*faq end*/
+.content .contArea h2{
+ font-size: 2em;
+    font-weight: bolder;
+    color: #195d99;
+    letter-spacing: 5px;
+    text-align:center;
+    padding:0;
+    margin:0;
+    line-height: 40px;
+}
+@media screen and (max-width: 750px){
+.content .contArea h2{
+    font-size: 2em;
+    text-align: left;
+}
+}
 .content .contArea .title{
     font-size: 30px;
     font-weight: bolder;
@@ -243,8 +259,58 @@ main{
 .content .contArea .wrap .liststyle{
     list-style-image: url(../img/arrow2.png);
 }
+.content .contArea .wrap .liststyle h3{
+    background:#339d38;
+    border-radius: 1em;
+    color:#fff;
+    font-size: 1em;
+    padding:0.2em 0.8em 0;
+    line-height: 1.5em;
+    display: table-cell;
+    vertical-align: middle;
+}
+.content .contArea .wrap .liststyle ol{
+     list-style-image: none;
+     padding:0 0 0 1.2em;
+}
+.content .contArea .wrap .liststyle li ul li img{
+    padding:0 0.2em 0.3em;
+    vertical-align: bottom;
+}
+.content .contArea .wrap .liststyle li ul li:nth-of-type(2){
+    padding:0 0 0 2em;
+}
+.content .contArea .wrap .liststyle ul{
+    list-style: none;
+    padding:0 0 0 0em;
+}
+.content .contArea .wrap h4{
+    color:#195d99;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+}
 .content .contArea .wrap .liststyle2{
     list-style-image: url(../img/arrow3.png);
+}
+.content .contArea .wrap .noticeTXT{
+    font-size: 1.2em;
+    color:#727171;
+    padding:0 0 0 4.5em;
+}
+.content .contArea .wrap .member{
+    display:flex;
+    width:38%;
+    margin:0 auto;
+    justify-content: space-around;
+}
+@media screen and (max-width: 750px){
+    .content .contArea .wrap h2, .content .contArea .wrap  h4{
+        font-size: 2.2em;
+    }
+    .content .contArea .wrap .member{
+        width:68%;
+    }
 }
 .content .contArea .flowchart{
     width: 996px;
@@ -264,6 +330,9 @@ main{
 }
 .content .contArea .wrap .txt2{
     padding-top: 25px;
+}
+.content .contArea .wrap .txt3{
+    padding: 0 80px;
 }
 /* service end */
 
