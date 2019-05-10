@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Hami</title>
+	<meta content="zh-tw" http-equiv="Content-Language">
+	<!--meta-->
+	<meta name="title" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<!--facebook:og -->
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="assets/images/fb.jpg">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<!--facebook:og-->
+	<link rel="shortcut icon" href="assets/images/hami-wallet.ico" />
+	<!--css-->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136540881-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-136540881-1');
+	</script>
+	
+
+</head>
+<body>
+<div id="wrapper">
+	<header>
+		<div class="menu">
+			<div class="logo">
+				<a href="https://www.cht.com.tw/home/consumer" target="_blank"> <img src="assets/images/CHT_logo.png"> </a>
+			</div>
+			<div class="logo">
+				<a href="https://hamipoint.cht.com.tw" target="_blank"> <img src="assets/images/hami_logo.png"> </a>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="kv">
+			<img src="assets/images/kv.png"	usemap="#image-map">
+			<map name="image-map">
+			    <area target="_blank" alt="" title="" href="https://play.google.com/store/apps/details?id=tw.com.cht.easyhami&amp;hl=zh_TW " coords="100,3383,602,3562" shape="rect">
+			    <area target="_blank" alt="" title="" href="https://itunes.apple.com/tw/app/hami-pay/id1240651472?mt=8 " coords="624,3383,1221,3560" shape="rect">
+			    <area target="_blank" alt="" title="" href="https://hamipoint.cht.com.tw" coords="453,3607,1178,3693" shape="rect">
+			</map>
+		</div>
+		<!-- KV end -->
+	</main>
+	<div class="footer"> <img src="assets/images/footer.png"></div>
+</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	;(function(a){a.fn.rwdImageMaps=function(){var c=this;var b=function(){c.each(function(){if(typeof(a(this).attr("usemap"))=="undefined"){return}var e=this,d=a(e);a("<img />").load(function(){var g="width",m="height",n=d.attr(g),j=d.attr(m);if(!n||!j){var o=new Image();o.src=d.attr("src");if(!n){n=o.width}if(!j){j=o.height}}var f=d.width()/100,k=d.height()/100,i=d.attr("usemap").replace("#",""),l="coords";a('map[name="'+i+'"]').find("area").each(function(){var r=a(this);if(!r.data(l)){r.data(l,r.attr(l))}var q=r.data(l).split(","),p=new Array(q.length);for(var h=0;h<p.length;++h){if(h%2===0){p[h]=parseInt(((q[h]/n)*100)*f)}else{p[h]=parseInt(((q[h]/j)*100)*k)}}r.attr(l,p.toString())})}).attr("src",d.attr("src"))})};a(window).resize(b).trigger("resize");return this}})(jQuery);
+	</script>
+	<script>
+	$('img[usemap]').rwdImageMaps();
+	</script>
+</body>
+</html>
