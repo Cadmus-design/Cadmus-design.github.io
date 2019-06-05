@@ -630,8 +630,8 @@ a {
 
 	#wrap #container_page .feature ul li .answer{
 		display: none;
-		margin:-3em 0 0 3px;
-		width:536px;
+		margin:-3em 0 0 1.73em;
+		width:84.5%;
 	}
 	#wrap #container_page .feature ul li .q1, #wrap #container_page .feature ul li .q2, #wrap #container_page .feature ul li .q3, #wrap #container_page .feature ul li .q4{
 		cursor:pointer;
