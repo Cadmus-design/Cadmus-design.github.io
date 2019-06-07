@@ -395,6 +395,7 @@ a {
 	}
 	#wrap #container_page .adv{
 		padding:1rem 0;
+
 	}
 	#wrap #container_page .adv ul li img{
 		width:35%;
@@ -410,6 +411,7 @@ a {
 	}
 	#wrap #container_page .adv > section > ul > li {
 		border-bottom:1px solid #01596f;
+		background: #f9f9f9;
 	}
 	#wrap #container_page .adv > section > ul > li:last-of-type{
 		border:none;
