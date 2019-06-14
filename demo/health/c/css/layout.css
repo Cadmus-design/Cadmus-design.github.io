@@ -656,9 +656,76 @@ table .arrow1{
     height: 15px;
     background: url(../img/arrow7.png) no-repeat;
 }
+
 .event{
     color:#666;
     font-weight:bold;
+}
+.event p{
+    color:#195d99;
+    font-size: 1.5em;
+    vertical-align: middle;
+    text-indent: 1.2em
+}
+.event img{
+    margin:0 0 -5px 0;
+}
+.event_table{
+    border-collapse:collapse;
+    border:1px solid #b5b6b6;
+}
+.event_table tr td, .event_table tr th{
+    padding:0.5em;
+    text-align:center;
+    border:1px solid #b5b6b6;
+    background: #ecf7fa;
+}
+.event_table tr th{
+    background: #136291;
+    font-size: 1.5em;
+    color:#fff;
+}
+
+.event_table tr td:first-of-type{
+    background: #cbe6f2;
+    color:#595656;
+    font-style: normal;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.event_table tr:nth-of-type(2) td{
+    background: #cbe6f2;
+    color:#136291;
+    font-size: 1.2em;
+    font-weight: bold;
+    width:15%;
+}
+.event_table tr td:first-of-type em, .event_table tr td p{
+    color: #f1891b;
+    font-style: normal;
+}
+.event_table tr td{
+    font-size: 1.5em;
+}
+
+.table .notice{
+    font-size: 22px;
+    color: #666666;
+    text-align: right;
+    padding-top: 5px;
+}
+.table .note{
+    font-size: 22px;
+    color: #666666;
+    padding-top: 5px;
+}
+.tel{
+    color:#006699;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    width:50%;
+    margin:0 auto;
 }
 .event_btn a{
     background:#fd8d25;
@@ -667,15 +734,17 @@ table .arrow1{
     border-radius: .3em;
     display:table;
     margin:1em auto;
-    font-size: 1.5em;
+    /*font-size: 1.5em;*/
     text-decoration: none;
-    letter-spacing: 0.3em
+    letter-spacing: 0.3em;
+     display: inline-block;
 }
-.table .notice{
-    font-size: 22px;
-    color: #666666;
-    text-align: right;
-    padding-top: 5px;
+.tel2{
+  display: inline-block;
+  vertical-align: middle;
+}
+.tel2 img{
+    margin:0 0 -10px 10px;
 }
 /* package end */ 
 
@@ -1226,10 +1295,84 @@ table .arrow1{
         font-size: 18px;
         -webkit-text-stroke: 0;
     }
+
+
+.event{
+    color:#666;
+    font-weight:bold;
+}
+.event p{
+    color:#195d99;
+    font-size: 1.5em;
+    vertical-align: middle;
+    text-indent: 0;
+}
+.event img{
+    margin:0 0 -5px 0;
+}
+.event_table{
+    border-collapse:collapse;
+    border:1px solid #b5b6b6;
+}
+.event_table tr td, .event_table tr th{
+    padding:0.5em;
+    text-align:center;
+    border:1px solid #b5b6b6;
+    background: #ecf7fa;
+}
+.event_table tr th{
+    background: #136291;
+    font-size: 1.5em;
+    color:#fff;
+}
+
+.event_table tr td:first-of-type{
+    background: #cbe6f2;
+    color:#136291;
+    font-size: 1.2em;
+    font-weight: bold;
+    width:17%;
+}
+.event_table tr:nth-of-type(2) td{
+    background: #cbe6f2;
+    color:#595656;
+    font-style: normal;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.event_table tr td:nth-of-type(2) em, .event_table tr td p{
+    color: #f1891b;
+    font-style: normal;
+}
+.event_table tr td{
+    font-size: 1.5em;
+}
+
     .table .notice{
         font-size: 18px;
         text-align: center;
     }
+    .table .note{
+    font-size: 18px;
+    color: #666666;
+    padding-top: 5px;
+}
+.tel{
+    color:#006699;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    width:100%;
+    margin:0 auto;
+}
+
+.tel2{
+  display: inline-block;
+  vertical-align: middle;
+}
+.tel2 img{
+    margin:0 0 -10px 10px;
+}
     table .td3h{
         padding: 60px 0 45px;
     }
