@@ -668,7 +668,7 @@ table .arrow1{
     text-indent: 1.2em
 }
 .event img{
-    margin:0 0 -5px 0;
+    margin:0 0 -15px 0;
 }
 .event_table{
     border-collapse:collapse;
@@ -1308,7 +1308,7 @@ table .arrow1{
     text-indent: 0;
 }
 .event img{
-    margin:0 0 -5px 0;
+    margin:0 0 -15px 0;
 }
 .event_table{
     border-collapse:collapse;
