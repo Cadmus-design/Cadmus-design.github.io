@@ -13,6 +13,9 @@
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
 <script type="text/javascript">
+	!function(e){"use strict";function t(e,n){if(!(this instanceof t)){var r=new t(e,n);return r.open(),r}this.id=t.id++,this.setup(e,n),this.chainCallbacks(t._callbackChain)}function n(e,t){var n={};for(var r in e)r in t&&(n[r]=e[r],delete e[r]);return n}function r(e,t){var n={},r=new RegExp("^"+t+"([A-Z])(.*)");for(var i in e){var o=i.match(r);if(o){var a=(o[1]+o[2].replace(/([A-Z])/g,"-$1")).toLowerCase();n[a]=e[i]}}return n}if("undefined"==typeof e)return void("console"in window&&window.console.info("Too much lightness, Featherlight needs jQuery."));var i=[],o=function(t){return i=e.grep(i,function(e){return e!==t&&e.$instance.closest("body").length>0})},a={allowfullscreen:1,frameborder:1,height:1,longdesc:1,marginheight:1,marginwidth:1,name:1,referrerpolicy:1,scrolling:1,sandbox:1,src:1,srcdoc:1,width:1},s={keyup:"onKeyUp",resize:"onResize"},c=function(n){e.each(t.opened().reverse(),function(){return n.isDefaultPrevented()||!1!==this[s[n.type]](n)?void 0:(n.preventDefault(),n.stopPropagation(),!1)})},u=function(n){if(n!==t._globalHandlerInstalled){t._globalHandlerInstalled=n;var r=e.map(s,function(e,n){return n+"."+t.prototype.namespace}).join(" ");e(window)[n?"on":"off"](r,c)}};t.prototype={constructor:t,namespace:"featherlight",targetAttr:"data-featherlight",variant:null,resetCss:!1,background:null,openTrigger:"click",closeTrigger:"click",filter:null,root:"body",openSpeed:250,closeSpeed:250,closeOnClick:"background",closeOnEsc:!0,closeIcon:"&#10005;",loading:"",persist:!1,otherClose:null,beforeOpen:e.noop,beforeContent:e.noop,beforeClose:e.noop,afterOpen:e.noop,afterContent:e.noop,afterClose:e.noop,onKeyUp:e.noop,onResize:e.noop,type:null,contentFilters:["jquery","image","html","ajax","iframe","text"],setup:function(t,n){"object"!=typeof t||t instanceof e!=0||n||(n=t,t=void 0);var r=e.extend(this,n,{target:t}),i=r.resetCss?r.namespace+"-reset":r.namespace,o=e(r.background||['<div class="'+i+"-loading "+i+'">','<div class="'+i+'-content">','<button class="'+i+"-close-icon "+r.namespace+'-close" aria-label="Close">',r.closeIcon,"</button>",'<div class="'+r.namespace+'-inner">'+r.loading+"</div>","</div>","</div>"].join("")),a="."+r.namespace+"-close"+(r.otherClose?","+r.otherClose:"");return r.$instance=o.clone().addClass(r.variant),r.$instance.on(r.closeTrigger+"."+r.namespace,function(t){var n=e(t.target);("background"===r.closeOnClick&&n.is("."+r.namespace)||"anywhere"===r.closeOnClick||n.closest(a).length)&&(r.close(t),t.preventDefault())}),this},getContent:function(){if(this.persist!==!1&&this.$content)return this.$content;var t=this,n=this.constructor.contentFilters,r=function(e){return t.$currentTarget&&t.$currentTarget.attr(e)},i=r(t.targetAttr),o=t.target||i||"",a=n[t.type];if(!a&&o in n&&(a=n[o],o=t.target&&i),o=o||r("href")||"",!a)for(var s in n)t[s]&&(a=n[s],o=t[s]);if(!a){var c=o;if(o=null,e.each(t.contentFilters,function(){return a=n[this],a.test&&(o=a.test(c)),!o&&a.regex&&c.match&&c.match(a.regex)&&(o=c),!o}),!o)return"console"in window&&window.console.error("Featherlight: no content filter found "+(c?' for "'+c+'"':" (no target specified)")),!1}return a.process.call(t,o)},setContent:function(t){var n=this;return t.is("iframe")&&n.$instance.addClass(n.namespace+"-iframe"),n.$instance.removeClass(n.namespace+"-loading"),n.$instance.find("."+n.namespace+"-inner").not(t).slice(1).remove().end().replaceWith(e.contains(n.$instance[0],t[0])?"":t),n.$content=t.addClass(n.namespace+"-inner"),n},open:function(t){var n=this;if(n.$instance.hide().appendTo(n.root),!(t&&t.isDefaultPrevented()||n.beforeOpen(t)===!1)){t&&t.preventDefault();var r=n.getContent();if(r)return i.push(n),u(!0),n.$instance.fadeIn(n.openSpeed),n.beforeContent(t),e.when(r).always(function(e){n.setContent(e),n.afterContent(t)}).then(n.$instance.promise()).done(function(){n.afterOpen(t)})}return n.$instance.detach(),e.Deferred().reject().promise()},close:function(t){var n=this,r=e.Deferred();return n.beforeClose(t)===!1?r.reject():(0===o(n).length&&u(!1),n.$instance.fadeOut(n.closeSpeed,function(){n.$instance.detach(),n.afterClose(t),r.resolve()})),r.promise()},resize:function(e,t){if(e&&t){this.$content.css("width","").css("height","");var n=Math.max(e/(parseInt(this.$content.parent().css("width"),10)-1),t/(parseInt(this.$content.parent().css("height"),10)-1));n>1&&(n=t/Math.floor(t/n),this.$content.css("width",""+e/n+"px").css("height",""+t/n+"px"))}},chainCallbacks:function(t){for(var n in t)this[n]=e.proxy(t[n],this,e.proxy(this[n],this))}},e.extend(t,{id:0,autoBind:"[data-featherlight]",defaults:t.prototype,contentFilters:{jquery:{regex:/^[#.]\w/,test:function(t){return t instanceof e&&t},process:function(t){return this.persist!==!1?e(t):e(t).clone(!0)}},image:{regex:/\.(png|jpg|jpeg|gif|tiff|bmp|svg)(\?\S*)?$/i,process:function(t){var n=this,r=e.Deferred(),i=new Image,o=e('<img src="'+t+'" alt="" class="'+n.namespace+'-image" />');return i.onload=function(){o.naturalWidth=i.width,o.naturalHeight=i.height,r.resolve(o)},i.onerror=function(){r.reject(o)},i.src=t,r.promise()}},html:{regex:/^\s*<[\w!][^<]*>/,process:function(t){return e(t)}},ajax:{regex:/./,process:function(t){var n=e.Deferred(),r=e("<div></div>").load(t,function(e,t){"error"!==t&&n.resolve(r.contents()),n.fail()});return n.promise()}},iframe:{process:function(t){var i=new e.Deferred,o=e("<iframe/>"),s=r(this,"iframe"),c=n(s,a);return o.hide().attr("src",t).attr(c).css(s).on("load",function(){i.resolve(o.show())}).appendTo(this.$instance.find("."+this.namespace+"-content")),i.promise()}},text:{process:function(t){return e("<div>",{text:t})}}},functionAttributes:["beforeOpen","afterOpen","beforeContent","afterContent","beforeClose","afterClose"],readElementConfig:function(t,n){var r=this,i=new RegExp("^data-"+n+"-(.*)"),o={};return t&&t.attributes&&e.each(t.attributes,function(){var t=this.name.match(i);if(t){var n=this.value,a=e.camelCase(t[1]);if(e.inArray(a,r.functionAttributes)>=0)n=new Function(n);else try{n=JSON.parse(n)}catch(s){}o[a]=n}}),o},extend:function(t,n){var r=function(){this.constructor=t};return r.prototype=this.prototype,t.prototype=new r,t.__super__=this.prototype,e.extend(t,this,n),t.defaults=t.prototype,t},attach:function(t,n,r){var i=this;"object"!=typeof n||n instanceof e!=0||r||(r=n,n=void 0),r=e.extend({},r);var o,a=r.namespace||i.defaults.namespace,s=e.extend({},i.defaults,i.readElementConfig(t[0],a),r),c=function(a){var c=e.extend({$source:t,$currentTarget:e(this)},i.readElementConfig(t[0],s.namespace),i.readElementConfig(this,s.namespace),r),u=o||e(this).data("featherlight-persisted")||new i(n,c);"shared"===u.persist?o=u:u.persist!==!1&&e(this).data("featherlight-persisted",u),c.$currentTarget.blur(),u.open(a)};return t.on(s.openTrigger+"."+s.namespace,s.filter,c),c},current:function(){var e=this.opened();return e[e.length-1]||null},opened:function(){var t=this;return o(),e.grep(i,function(e){return e instanceof t})},close:function(e){var t=this.current();return t?t.close(e):void 0},_onReady:function(){var t=this;t.autoBind&&(e(t.autoBind).each(function(){t.attach(e(this))}),e(document).on("click",t.autoBind,function(n){if(!n.isDefaultPrevented()){var r=t.attach(e(n.currentTarget));r(n)}}))},_callbackChain:{onKeyUp:function(t,n){return 27===n.keyCode?(this.closeOnEsc&&e.featherlight.close(n),!1):t(n)},beforeOpen:function(t,n){return this._previouslyActive=document.activeElement,this._$previouslyTabbable=e("a, input, select, textarea, iframe, button, iframe, [contentEditable=true]").not("[tabindex]").not(this.$instance.find("button")),this._$previouslyWithTabIndex=e("[tabindex]").not('[tabindex="-1"]'),this._previousWithTabIndices=this._$previouslyWithTabIndex.map(function(t,n){return e(n).attr("tabindex")}),this._$previouslyWithTabIndex.add(this._$previouslyTabbable).attr("tabindex",-1),document.activeElement.blur(),t(n)},afterClose:function(t,n){var r=t(n),i=this;return this._$previouslyTabbable.removeAttr("tabindex"),this._$previouslyWithTabIndex.each(function(t,n){e(n).attr("tabindex",i._previousWithTabIndices[t])}),this._previouslyActive.focus(),r},onResize:function(e,t){return this.resize(this.$content.naturalWidth,this.$content.naturalHeight),e(t)},afterContent:function(e,t){var n=e(t);return this.$instance.find("[autofocus]:not([disabled])").focus(),this.onResize(t),n}}}),e.featherlight=t,e.fn.featherlight=function(e,n){return t.attach(this,e,n),this},e(document).ready(function(){t._onReady()})}(jQuery);
+	</script>
+<script type="text/javascript">
 /* goto top*/
     $(function(){$("a").each(function(){var n=$(this),t=n.attr("href");if(t&&"#"==t[0]){var e=t.substring(1);$(this).click(function(){var n=$("[name='"+e+"']"),t=$("#"+e),i=null;if(n.length>0?i=n:t.length>0&&(i=t),i){var r=i.offset();window.parent.scrollTo(r.left,r.top)}return!1})}})});
 	/**/
@@ -86,20 +89,17 @@
 			-->
 		</ul>	
 		<div style="margin:20px 0 0 0;"></div>
-			<div class="videoWrap" >
-				<iframe width="100%" height="100%"  src="https://www.youtube.com/embed/1xgPTQ8leG8?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="videoWrap" id="Menu-special_offers">
+				<iframe width="100%" height="100%"  src="https://www.youtube.com/embed/SGevy13hdM8?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
-		<img id="Menu-special_offers" src="images/section_m_03a.jpg" usemap="#image-map001">
-		<map name="image-map001">
-		    <area onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Sale-CTBC'  });"  href="https://www.ctbcbank.com/twrbo/zh_tw/onlinecounter_index/cc_service/cc_service_register/cc_service_register_activity.html;jsessionid=lCu_pzJvweGx6wZ4EQl2jpdSiycVUw8deSPHhPHuIHRasszCnMg3!-282823821?id=TW_RB_MK_creditcard_055001&zf0StZ=c6CxcAqXhPgXhPgXhPLxxJELcFWQBJ8h3xX7coqBaVlX" coords="262,614,376,649" shape="rect">
-		    <area onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Sale-Pi'  });" href="https://www.piapp.com.tw/faq/pipoint-partners" coords="200,1063,442,1097" shape="rect">
-			<area onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'special_offers_2'  });" href="https://event.hamipoint.cht.com.tw/store/?utm_source=hpay&utm_medium=actweb&utm_campaign=chtstore" coords="256,1605,387,1640" shape="rect">
-		</map>
-		<img id="bonus" src="images/section_m_03a-1.jpg" >
-		<img id="bonus" src="images/section_m_03a-2.jpg" >
-		<img id="Menu-intro" src="images/section_m_01.jpg" usemap="#image-map002">
+		<img  src="images/section_01-title-m.jpg">
+		<img id="card" src="images/section_01-01-m.jpg" >
+		<img id="icash" src="images/section_01-02-m.jpg" >
+		<img id="smart" src="images/section_01-03-m.jpg" >
+		<img id="hamipay" src="images/section_01-04-m.jpg" >
+		<img id="Menu-intro" src="images/section_02-m.jpg" usemap="#image-map002">
 		<map name="image-map002">
-		    <area onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Pi Store'  });" href="https://www.piapp.com.tw/faq/pipoint-partners" coords="300,976,505,1007" shape="rect">
+		    <area onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Pi Store'  });" href="https://web.piapp.com.tw/faq/" coords="300,976,505,1007" shape="rect">
 		</map>
 		<!-- <div class="videoWrap">
 				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vimlvN1QE0w?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -128,25 +128,31 @@
 		<div class="content qa open04">
 			<h2>活動注意事項:</h2>
 				<ol>
-                    <li>活動時間：2019/4/1~2019/6/30。</li>
-<li>使用Hami Pay進行支付，需先下載APP完成註冊，不限中華客戶。</li>
-<li>第一重回饋活動適用對象：
-    <ul>
-<li>Android用戶：<ul><li>感應支付(手機具備NFC功能)：綁定中國信託之VISA、Mastercard卡適用。</li>
-<li>掃碼支付：綁定中國信託/聯邦/國泰世華/台新之VISA及Mastercard、玉山之Mastercard卡適用。</li>
-</ul>
-<li>iOS用戶：綁定 Pi 拍錢包適用之銀行信用卡，適用掃碼支付。</li>
-<li>*部分卡別不適用Hami Pay，將依各銀行、Pi 拍錢包公告為主。各通路適用銀行，依各商家、Pi拍錢包規範為主。</li>
-    </ul>
-    </li>
-<li>第二重回饋：購買指定商品用Hami Point折抵，不限折抵多少點數皆可獲得該商品售價的4%Hami Point回饋，指定商品內容詳洽各地中華電信門市或上Hami Point官網查詢。</li> 
-<li>最高10% Hami Point回饋，係於中華電信門市用點數折抵購買指定商品計算(例如：客戶在門市購買1100元指定商品並折抵100點，需另付商品1000元，若客戶使用Hami Pay綁定中國信託信用卡感應付款，1000元可獲得6% Hami Point回饋，及使用點數折抵購買指定商品獲得4% Hami Point回饋，合計10% Hami Point回饋)。</li>
-<li>智慧繳費繳交信用卡費活動，每月依照成功繳費之先後順序前1000名給予贈點，符合贈點之4月繳費客戶，將於6月底前匯入所使用Hami Pay門號之中華電信會員帳戶，各月份贈點時間依此類推，點數使用期限依入點後6個月內有效，每門號每月限贈點一次，繳二筆以上依第一筆繳費時間為主。繳交各銀行費用之手續費，依各銀行有所不同，依繳費當下提供之手續費資訊為主。</li>
-<li>使用智慧繳費成功繳納任一項費用者，每月皆可參加10000點Hami Point抽獎活動，每一筆繳費皆可計算一次抽獎機會，未中獎者可持續參加下個月抽獎，得獎者將分別於2019年6/7/8月底前公告，相關抽獎資格及贈點，皆以使用Hami Pay繳費之門號為主。</li>
-<li>Hami Point 1點等於1元，將依刷卡金額計算(小數點後四捨五入)。信用卡感應支付以同證號歸戶，活動期間最高回饋點數為300點 (正附卡合併計算，須至中國信託銀行官網登錄，方可享有回饋)。掃碼支付以行動電話號碼歸戶，以同門號所綁定信用卡所進行之掃碼支付總金額計算，最高回饋點數300點。點數將於活動結束後次次月底前(2019.8.31前)匯入正卡持卡人之中華電信會員帳戶，使用期限至2020.2.29止，逾期點數失效。相關點數可打開Hami Pay APP，至「我的點數」進行查詢，並進行兌換商品。</li>
-<li>所有持卡人於回饋時須具有有效之Hami Pay服務，並仍綁定各銀行適用卡片，以符合本次活動贈點資格。</li>
-<li>相關交易認定，依各銀行、Pi拍錢包認定及規範為主。</li>
-<li>更多活動詳情以各銀行及中華電信官網公告為準，各銀行及中華電信保留終止、取消、變更活動之權利。</li>
+                    <li>使用Hami Pay進行消費，需先下載App完成註冊。其中Hami Pay悠遊卡及Hami Pay icash2.0功能，須先持有具NFC功能之Android智慧型手機，以及中華電信4G月租型門號之NFC SIM卡，並完成記名申請後方可使用。</li>
+<li>Hami Pay悠遊卡及智慧繳費活動所有獎項，統一於活動結束後抽出。Hami Pay悠遊卡活動「新舊用戶皆可抽獎」如遇商品缺貨，則改送同價值之商品。</li>
+<li>Hami Pay悠遊卡活動之消費，排除搭乘公車、捷運、火車…等交通工具、代收、單筆消費0元、現金及自動加值之交易。</li>
+<li>Hami Pay悠遊卡活動新舊用戶皆可抽於活動期間，每一門號限有一次中獎資格，每月抽獎機會重新計算。</li>
+<li>Hami Pay悠遊卡活動新用戶加碼抽，僅限首次使用當月可享抽獎機會一次。</li>
+<li>HamiPoint將於各別活動結束後次次月底前（悠遊卡活動為2019/11/30前，智慧繳費繳燃料費活動為2019/9/30前）匯入中獎門號之中華電信會員帳戶。HamiPoint點數使用期限至2020/12/31，逾期失效。</li>
+<li>HamiPoint1點=1元，可折抵電信費或兌換多樣商品電子票券。欲查詢點數及兌換商品，請至Hami Pay App「我的點數」進行查詢及兌換商品。</li>
+<li>Hami Pay 悠遊卡活動中獎之用戶，於領取獲贈之贈品或HamiPoint點數時，所持之悠遊卡須為有效卡，且悠遊卡功能需為正常，若已遭停用、凍結、延遲繳款或違反銀行信用卡會員約定條款、悠遊卡定型化契約等情事，將喪失中獎資格。</li>
+<li>HamiPayicash2.0活動期間首刷禮每個手機門號限兌換一次，且該手機門號於2019/7/1前未有消費紀錄過。</li>
+<li>HamiPayicash2.0活動2019年7月完成首刷之新客戶，可於2019/8/14起至全台7-ELEVEN門市兌領「茶裏王青心烏龍茶」一瓶；2019年8月完成首刷之新客戶，可於2019/9/11起至全台7-ELEVEN門市兌領「茶裏王青心烏龍茶」一瓶；2019年9月完成首刷之新客戶，可於2019/10/9起至全台7-ELEVEN門市兌領「茶裏王青心烏龍茶」一瓶；活動之首刷禮最後提領時間為2019/11/15止。</li>
+<li>HamiPayicash2.0活動7-ELEVEN兌領首刷禮流程：<ol>
+<li>攜帶手機icash2.0至7-ELEVEN門市。</li>
+<li>拿取「茶裏王青心烏龍茶」至櫃檯。</li>
+<li>將手機NFC感應位置靠近icash卡機上。</li>
+<li>告知店員該商品為「icash免費兌領」專案。</li>
+<li>完成商品兌領。 </li>
+</li>
+</ol>
+<li>HamiPayicash2.0活動舊客戶消費送，係指以手機icash2.0至各<a href="https://www.icash.com.tw/Home/Point?type=Point2" target="_blank">使用據點</a>消費、搭乘大眾交通工具，但不包含代收、單筆消費0元之交易 、現金及自動加值。</li>
+<li>HamiPayicash2.0活動每筆消費贈100點OPENPOINT，300點OPENPOINT等值7-ELEVEN現金抵用券1元，每手機門號每月贈送上限3萬點OPENPOINT，每月總點數上限1050萬點，總點數贈送完畢將於愛金卡公司官網公告。</li>
+<li>當月符合HamiPayicash2.0活動贈點資格之客戶，將於次月底前收到獲贈之OPENPOINT點數，獲贈OPENPOINT點數時，所持之icash2.0須為有效卡，且icash2.0功能需為正常，若已遭停用、凍結、延遲繳款或違反銀行信用卡會員約定條款、icash2.0定型化契約等情事，將喪失本活動回饋資格。</li>
+<li>OPENPOINT由統一超商提供，紅利點數相關問題，請洽OPENPOINT客服中心0800-711-177。</li>
+<li>相關抽獎資格及贈點皆以使用Hami Pay之行動電話門號為主，每一門號限有一次中獎資格。</li>
+<li>依中華民國稅法規定，年度累積中獎金額若超過新台幣1,000元，得獎人須依規定填寫並繳交相關中獎收據，得獎者若無法配合，則視為自動棄權，不具得獎格。獎項價值超過新台幣20,000元者，得獎者依法需自付10%稅額（海外人士或不具中華民國身分者，機會中獎所得稅為20%）。主辦單位將開立各類所得稅扣繳憑單給得獎者，若得獎者不願意給付得獎商品之稅額，則視為自動棄權，不具得獎資格。 </li>
+<li>相關交易消費認定，依悠遊卡公司、愛金卡公司、各銀行認定及規範為主。詳細活動辦法依悠遊卡公司、愛金卡公司、各銀行及中華電信官網公告為準。悠遊卡公司、愛金卡公司、各銀行及中華電信保留終止、取消、變更活動之權利。</li>
 
 
 
