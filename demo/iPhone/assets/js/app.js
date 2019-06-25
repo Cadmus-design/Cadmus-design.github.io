@@ -410,7 +410,7 @@ function table2(json) {
     //console.log(sizes,tmp);
 
     var left = '<tr><td class="vertical-row color-2-2" rowspan="' + rows_count + '">購<br />機<br />優<br />惠<br />︵<br>元<br>︶</td>' + sizes_tmp + '</tr>';
-    return '<table class="slide-table table2" cellpadding="0" cellspacing="0" rules="all"><tr><th colspan="3" class="color-2-1 left-first-td">月繳金額</th><td id="slide" rowspan="' + (rows_count + 1) + '"><div class="bg"></div><ul class="slides">' + tmp + '</ul></td></tr>' + left + '</table>';
+    return '<table class="slide-table table2" cellpadding="0" cellspacing="0" rules="all"><tr><th colspan="3" class="color-2-1 left-first-td">月繳金額</th><td id="slide" rowspan="' + (rows_count + 1) + '"><!--<div class="bg"></div>--><ul class="slides">' + tmp + '</ul></td></tr>' + left + '</table>';
 }
 
 function table3(json) {
@@ -667,7 +667,7 @@ function table8(json) {
     //console.log(sizes,tmp);
 
     var left = '<tr><td class="vertical-row color-6" rowspan="' + rows_count + '">購<br />機<br />優<br />惠<br />︵<br>元<br>︶</td>' + sizes_tmp + '</tr>';
-    return '<table class="slide-table table2" cellpadding="0" cellspacing="0" rules="all"><tr><th colspan="3" class="color-2 left-first-td">月繳金額</th><td id="slide" rowspan="' + (rows_count + 1) + '"><div class="bg"></div><ul class="slides">' + tmp + '</ul></td></tr>' + left + '</table>';
+    return '<table class="slide-table table2" cellpadding="0" cellspacing="0" rules="all"><tr><th colspan="3" class="color-2 left-first-td">月繳金額</th><td id="slide" rowspan="' + (rows_count + 1) + '"><!--<div class="bg"></div>--><ul class="slides">' + tmp + '</ul></td></tr>' + left + '</table>';
 }
 
 
