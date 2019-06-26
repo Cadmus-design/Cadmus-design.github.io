@@ -151,8 +151,8 @@ small {
 
 caption {
   padding: 0.8rem;
-  color: #d8650d;
-  border: 2px solid #d8650d;
+  color: #6CD4C8;
+  border: 2px solid #6CD4C8;
   font-weight: bold;
   width: 12.5rem;
   margin: 0 0 1rem 0;
@@ -423,9 +423,11 @@ caption {
     font-weight: bold;
     line-height: 1.5rem;
     width: 50%; }
-  .container_page .plan table tr th:last-of-type {
+  /*.container_page .plan table tr th:last-of-type {
     background: #6cd4c8;
     color: #fff; }
+    20190626 
+    */
   .container_page .plan table tr td {
     line-height: 1.5rem;
     font-weight: bold; }
@@ -1326,9 +1328,11 @@ caption {
     font-weight: bold;
     line-height: 1.5rem;
     width: 50%; }
-  .container_page .plan table tr th:last-of-type {
+  /*.container_page .plan table tr th:last-of-type {
     background: #6cd4c8;
     color: #fff; }
+  20190626 
+    */
   .container_page .plan table tr td {
     line-height: 1.5rem;
     font-weight: bold; }
