@@ -1,0 +1,30 @@
+@chartset "UTF-8";
+@media screen and (min-width: 641px){
+#wrap{
+	width:1280px;
+	margin:0 auto;
+	padding:0;
+}
+#wrap .container_page{
+	margin:0;
+	padding:0;
+}
+#wrap .note{
+	font-size: 1.2em;
+	line-height: 1.8em;
+}
+}
+@media screen and (max-width: 640px){
+	#wrap{
+	width:100%;
+}
+#wrap .container_page{
+	margin:0;
+	padding:0;
+}
+#wrap .note{
+	padding:0.5em;
+	font-size: 1.2em;
+	line-height: 1.8em;
+}
+}
