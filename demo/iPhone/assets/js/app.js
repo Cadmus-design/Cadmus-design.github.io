@@ -193,10 +193,10 @@ var plan_content = {
             ["h1row", "iPhone 8", "256GB", "22,500"],
             ["h1row", "iPhone 8 Plus", "64GB", "20,900"],
             ["h1row", "iPhone 8 Plus", "256GB", "26,500"],
-            ["h1row", "iPhone 7", "32GB", "9,900"],
-            ["h1row", "iPhone 7", "128GB", "13,900"],
-            ["h1row", "iPhone 7 Plus", "32GB", "12,400"],
-            ["h1row", "iPhone 7 Plus", "128GB", "16,400"]
+            ["h1row", "iPhone 7*", "32GB", "9,900"],
+            ["h1row", "iPhone 7*", "128GB", "13,900"],
+            ["h1row", "iPhone 7 Plus*", "32GB", "12,400"],
+            ["h1row", "iPhone 7 Plus*", "128GB", "16,400"]
         ]
     },
     'offers2.json': {
