@@ -251,8 +251,8 @@ body {
 		display:block;
 		}
 	#menu .ctrlarea div{  
-		top: 50%;
-		left: 50%;
+		top: 15%;
+		left: 15%;
 		transform: translate(-50%,-50%);  
 		display:block;
 	} 
@@ -295,7 +295,7 @@ body {
 	}
 	
 	#menu .itemArea .rwdMT200{ 
-		margin-top:120px;
+		margin-top:80px;
 	}
 	
 	#menu .itemArea .item{ 
