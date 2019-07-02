@@ -78,7 +78,7 @@ div#social-float img{width:25%;margin:0 auto;display: block;}
 }
 
 div.social-float-parent { width: 100%; height:100px; position: relative; }
-div#social-float { width: 100%; padding:2em;display:block;margin:0 auto;position: fixed; left: 0%; bottom: 0px; background: rgba(255,255,255,0.75); }
+div#social-float { width: 100%; padding:1em;display:block;margin:0 auto;position: fixed; left: 0%; bottom: 0px; background: rgba(255,255,255,0.75); }
 }
 
 /*lightbox*/
