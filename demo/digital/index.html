@@ -45,7 +45,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- recpacha demo only - delete me-->
     <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" defer async></script>
-
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+    <script type="text/javascript">
+    !function(e){"use strict";function t(e,n){if(!(this instanceof t)){var r=new t(e,n);return r.open(),r}this.id=t.id++,this.setup(e,n),this.chainCallbacks(t._callbackChain)}function n(e,t){var n={};for(var r in e)r in t&&(n[r]=e[r],delete e[r]);return n}function r(e,t){var n={},r=new RegExp("^"+t+"([A-Z])(.*)");for(var i in e){var o=i.match(r);if(o){var a=(o[1]+o[2].replace(/([A-Z])/g,"-$1")).toLowerCase();n[a]=e[i]}}return n}if("undefined"==typeof e)return void("console"in window&&window.console.info("Too much lightness, Featherlight needs jQuery."));var i=[],o=function(t){return i=e.grep(i,function(e){return e!==t&&e.$instance.closest("body").length>0})},a={allowfullscreen:1,frameborder:1,height:1,longdesc:1,marginheight:1,marginwidth:1,name:1,referrerpolicy:1,scrolling:1,sandbox:1,src:1,srcdoc:1,width:1},s={keyup:"onKeyUp",resize:"onResize"},c=function(n){e.each(t.opened().reverse(),function(){return n.isDefaultPrevented()||!1!==this[s[n.type]](n)?void 0:(n.preventDefault(),n.stopPropagation(),!1)})},u=function(n){if(n!==t._globalHandlerInstalled){t._globalHandlerInstalled=n;var r=e.map(s,function(e,n){return n+"."+t.prototype.namespace}).join(" ");e(window)[n?"on":"off"](r,c)}};t.prototype={constructor:t,namespace:"featherlight",targetAttr:"data-featherlight",variant:null,resetCss:!1,background:null,openTrigger:"click",closeTrigger:"click",filter:null,root:"body",openSpeed:250,closeSpeed:250,closeOnClick:"background",closeOnEsc:!0,closeIcon:"&#10005;",loading:"",persist:!1,otherClose:null,beforeOpen:e.noop,beforeContent:e.noop,beforeClose:e.noop,afterOpen:e.noop,afterContent:e.noop,afterClose:e.noop,onKeyUp:e.noop,onResize:e.noop,type:null,contentFilters:["jquery","image","html","ajax","iframe","text"],setup:function(t,n){"object"!=typeof t||t instanceof e!=0||n||(n=t,t=void 0);var r=e.extend(this,n,{target:t}),i=r.resetCss?r.namespace+"-reset":r.namespace,o=e(r.background||['<div class="'+i+"-loading "+i+'">','<div class="'+i+'-content">','<button class="'+i+"-close-icon "+r.namespace+'-close" aria-label="Close">',r.closeIcon,"</button>",'<div class="'+r.namespace+'-inner">'+r.loading+"</div>","</div>","</div>"].join("")),a="."+r.namespace+"-close"+(r.otherClose?","+r.otherClose:"");return r.$instance=o.clone().addClass(r.variant),r.$instance.on(r.closeTrigger+"."+r.namespace,function(t){var n=e(t.target);("background"===r.closeOnClick&&n.is("."+r.namespace)||"anywhere"===r.closeOnClick||n.closest(a).length)&&(r.close(t),t.preventDefault())}),this},getContent:function(){if(this.persist!==!1&&this.$content)return this.$content;var t=this,n=this.constructor.contentFilters,r=function(e){return t.$currentTarget&&t.$currentTarget.attr(e)},i=r(t.targetAttr),o=t.target||i||"",a=n[t.type];if(!a&&o in n&&(a=n[o],o=t.target&&i),o=o||r("href")||"",!a)for(var s in n)t[s]&&(a=n[s],o=t[s]);if(!a){var c=o;if(o=null,e.each(t.contentFilters,function(){return a=n[this],a.test&&(o=a.test(c)),!o&&a.regex&&c.match&&c.match(a.regex)&&(o=c),!o}),!o)return"console"in window&&window.console.error("Featherlight: no content filter found "+(c?' for "'+c+'"':" (no target specified)")),!1}return a.process.call(t,o)},setContent:function(t){var n=this;return t.is("iframe")&&n.$instance.addClass(n.namespace+"-iframe"),n.$instance.removeClass(n.namespace+"-loading"),n.$instance.find("."+n.namespace+"-inner").not(t).slice(1).remove().end().replaceWith(e.contains(n.$instance[0],t[0])?"":t),n.$content=t.addClass(n.namespace+"-inner"),n},open:function(t){var n=this;if(n.$instance.hide().appendTo(n.root),!(t&&t.isDefaultPrevented()||n.beforeOpen(t)===!1)){t&&t.preventDefault();var r=n.getContent();if(r)return i.push(n),u(!0),n.$instance.fadeIn(n.openSpeed),n.beforeContent(t),e.when(r).always(function(e){n.setContent(e),n.afterContent(t)}).then(n.$instance.promise()).done(function(){n.afterOpen(t)})}return n.$instance.detach(),e.Deferred().reject().promise()},close:function(t){var n=this,r=e.Deferred();return n.beforeClose(t)===!1?r.reject():(0===o(n).length&&u(!1),n.$instance.fadeOut(n.closeSpeed,function(){n.$instance.detach(),n.afterClose(t),r.resolve()})),r.promise()},resize:function(e,t){if(e&&t){this.$content.css("width","").css("height","");var n=Math.max(e/(parseInt(this.$content.parent().css("width"),10)-1),t/(parseInt(this.$content.parent().css("height"),10)-1));n>1&&(n=t/Math.floor(t/n),this.$content.css("width",""+e/n+"px").css("height",""+t/n+"px"))}},chainCallbacks:function(t){for(var n in t)this[n]=e.proxy(t[n],this,e.proxy(this[n],this))}},e.extend(t,{id:0,autoBind:"[data-featherlight]",defaults:t.prototype,contentFilters:{jquery:{regex:/^[#.]\w/,test:function(t){return t instanceof e&&t},process:function(t){return this.persist!==!1?e(t):e(t).clone(!0)}},image:{regex:/\.(png|jpg|jpeg|gif|tiff|bmp|svg)(\?\S*)?$/i,process:function(t){var n=this,r=e.Deferred(),i=new Image,o=e('<img src="'+t+'" alt="" class="'+n.namespace+'-image" />');return i.onload=function(){o.naturalWidth=i.width,o.naturalHeight=i.height,r.resolve(o)},i.onerror=function(){r.reject(o)},i.src=t,r.promise()}},html:{regex:/^\s*<[\w!][^<]*>/,process:function(t){return e(t)}},ajax:{regex:/./,process:function(t){var n=e.Deferred(),r=e("<div></div>").load(t,function(e,t){"error"!==t&&n.resolve(r.contents()),n.fail()});return n.promise()}},iframe:{process:function(t){var i=new e.Deferred,o=e("<iframe/>"),s=r(this,"iframe"),c=n(s,a);return o.hide().attr("src",t).attr(c).css(s).on("load",function(){i.resolve(o.show())}).appendTo(this.$instance.find("."+this.namespace+"-content")),i.promise()}},text:{process:function(t){return e("<div>",{text:t})}}},functionAttributes:["beforeOpen","afterOpen","beforeContent","afterContent","beforeClose","afterClose"],readElementConfig:function(t,n){var r=this,i=new RegExp("^data-"+n+"-(.*)"),o={};return t&&t.attributes&&e.each(t.attributes,function(){var t=this.name.match(i);if(t){var n=this.value,a=e.camelCase(t[1]);if(e.inArray(a,r.functionAttributes)>=0)n=new Function(n);else try{n=JSON.parse(n)}catch(s){}o[a]=n}}),o},extend:function(t,n){var r=function(){this.constructor=t};return r.prototype=this.prototype,t.prototype=new r,t.__super__=this.prototype,e.extend(t,this,n),t.defaults=t.prototype,t},attach:function(t,n,r){var i=this;"object"!=typeof n||n instanceof e!=0||r||(r=n,n=void 0),r=e.extend({},r);var o,a=r.namespace||i.defaults.namespace,s=e.extend({},i.defaults,i.readElementConfig(t[0],a),r),c=function(a){var c=e.extend({$source:t,$currentTarget:e(this)},i.readElementConfig(t[0],s.namespace),i.readElementConfig(this,s.namespace),r),u=o||e(this).data("featherlight-persisted")||new i(n,c);"shared"===u.persist?o=u:u.persist!==!1&&e(this).data("featherlight-persisted",u),c.$currentTarget.blur(),u.open(a)};return t.on(s.openTrigger+"."+s.namespace,s.filter,c),c},current:function(){var e=this.opened();return e[e.length-1]||null},opened:function(){var t=this;return o(),e.grep(i,function(e){return e instanceof t})},close:function(e){var t=this.current();return t?t.close(e):void 0},_onReady:function(){var t=this;t.autoBind&&(e(t.autoBind).each(function(){t.attach(e(this))}),e(document).on("click",t.autoBind,function(n){if(!n.isDefaultPrevented()){var r=t.attach(e(n.currentTarget));r(n)}}))},_callbackChain:{onKeyUp:function(t,n){return 27===n.keyCode?(this.closeOnEsc&&e.featherlight.close(n),!1):t(n)},beforeOpen:function(t,n){return this._previouslyActive=document.activeElement,this._$previouslyTabbable=e("a, input, select, textarea, iframe, button, iframe, [contentEditable=true]").not("[tabindex]").not(this.$instance.find("button")),this._$previouslyWithTabIndex=e("[tabindex]").not('[tabindex="-1"]'),this._previousWithTabIndices=this._$previouslyWithTabIndex.map(function(t,n){return e(n).attr("tabindex")}),this._$previouslyWithTabIndex.add(this._$previouslyTabbable).attr("tabindex",-1),document.activeElement.blur(),t(n)},afterClose:function(t,n){var r=t(n),i=this;return this._$previouslyTabbable.removeAttr("tabindex"),this._$previouslyWithTabIndex.each(function(t,n){e(n).attr("tabindex",i._previousWithTabIndices[t])}),this._previouslyActive.focus(),r},onResize:function(e,t){return this.resize(this.$content.naturalWidth,this.$content.naturalHeight),e(t)},afterContent:function(e,t){var n=e(t);return this.$instance.find("[autofocus]:not([disabled])").focus(),this.onResize(t),n}}}),e.featherlight=t,e.fn.featherlight=function(e,n){return t.attach(this,e,n),this},e(document).ready(function(){t._onReady()})}(jQuery);
+    </script>
+    <script>
+    ;(function(a){a.fn.rwdImageMaps=function(){var c=this;var b=function(){c.each(function(){if(typeof(a(this).attr("usemap"))=="undefined"){return}var e=this,d=a(e);a("<img />").load(function(){var g="width",m="height",n=d.attr(g),j=d.attr(m);if(!n||!j){var o=new Image();o.src=d.attr("src");if(!n){n=o.width}if(!j){j=o.height}}var f=d.width()/100,k=d.height()/100,i=d.attr("usemap").replace("#",""),l="coords";a('map[name="'+i+'"]').find("area").each(function(){var r=a(this);if(!r.data(l)){r.data(l,r.attr(l))}var q=r.data(l).split(","),p=new Array(q.length);for(var h=0;h<p.length;++h){if(h%2===0){p[h]=parseInt(((q[h]/n)*100)*f)}else{p[h]=parseInt(((q[h]/j)*100)*k)}}r.attr(l,p.toString())})}).attr("src",d.attr("src"))})};a(window).resize(b).trigger("resize");return this}})(jQuery);
+    </script>
+    <script>
+    $(document).ready(function(e) {
+    $('img[usemap]').rwdImageMaps();
+    });
+    /**/
+    function checkOffset() {
+    if($('#social-float').offset().top + $('#social-float').height() 
+                                           >= $('#footer').offset().top - 10)
+        $('#social-float').css('position', 'absolute');
+    if($(document).scrollTop() + window.innerHeight < $('#footer').offset().top)
+        $('#social-float').css('position', 'fixed'); // restore when you scroll up
+    /*$('#social-float').text($(document).scrollTop() + window.innerHeight);*/
+    }
+    $(document).scroll(function() {
+        checkOffset();
+    });
+    </script>
     <!-- favicon-->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     
@@ -87,7 +110,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     <!-- includes/header-blank.pug-->
-    <section class="is-regular" id="header">
+    <section class="is-regular" id="header" id="top">
         <header class="nav-global-header">
             <h1 style="display:none"></h1>
             <nav class="nav-global">
@@ -110,30 +133,90 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- <section class="header-spacer">for space in mobile</section>
     <div class="h1">blank header</div>-->
     <div id="wrap">
-        <section class="container_page">
-            <img src="assets/images/KV.jpg" />
-            <a href="https://www.cht.com.tw/home/cht/about-cht/business-group/store-locator" target="_blank"><img src="assets/images/btn.jpg" /></a>
+        <div id="sticker">
+            <a href="#intro"><img src="assets/images/pattern.png" /></a>
+        </div>
+        <section class="header_page">
+            <div class="KV d">
+                <img src="assets/images/KV.png" />
+            </div>
+            <div class="KV m">
+                <img src="assets/images/KV_m.jpg" />
+            </div>
         </section>
-        <section class="note">
-            <p>注意事項：</p>
-            <ol>
-                <li>本方案活動期間自108年7月1日起至108年9月30日止，可於中華電信營業窗口(含特約服務中心)申請辦理。</li>
-                <li>本方案適用對象需同時辦理【寬頻+MOD+行動】、【寬頻+MOD】或【寬頻+行動】服務。個別服務的申辦資格如下：
-                    <ul>
-                        <li>(1)寬頻：新租/升速/續約HiNet光世代指定方案之客戶。</li><li>(2)MOD：新租/續約MOD指定方案之客戶。</li><li>(3)行動：新租/攜碼(NP)/續約行動指定方案之客戶。</li>
-                    </ul>
-                </li>
-                <li>本方案受理跨服務別(寬頻、MOD及行動)之申請資料需為相同證號或相同帳單地址或相同戶籍地址，方能成立。</li>
-                <li>本方案會依不同的服務組合及方案內容贈送不同數量的HamiPoint點數，相關內容詳見本活動網頁。</li>
-                <li>本方案一寬頻設備限搭配一個行動門號，且不得與其他優惠方案併用。</li>
-                <li>若因可歸責於客戶之事由而註銷寬頻，或於合約期間退租寬頻者，本案所加贈之HamiPoint優惠則即時停止，並依實際已享點數優惠金額(按未滿租期之日數比例計收)繳還定額專案補貼款，由該行動4G門號列帳繳還。日後原號或新號復租本優惠不恢復/遞延。</li>
-                <li>本方案所贈送之HamiPoint點數將依不同服務別，於不同的指定期間贈送：(1)HiNet光世代及MOD指定方案：點數於寬頻及MOD竣工後3周工作日內，一次匯入服務租用人證號下。(2)行動4G指定方案：點數於申辦完成後10日內匯入行動門號租用人證號下。</li>
-                <li>Hami Point點數價值為1點1元，可折抵中華電信帳單、下載Hami Pay兌換商品券、至HamiPoint購物網站、中華電信門市消費折抵…等，更多累兌點辦法詳見HamiPoint入口網(https://hamipoint.cht.com.tw/)，本活動贈送之點數使用期限至2021/12/31到期。</li>
-		    <li>有關HamiPoint點數使用、設定、查詢及網站會員等相關問題，請上HamiPoint官網查詢或洽0800-080-412客服專線。</li>
-		    <li>本公司保有解釋、變更、終止本方案內容之權利。各速率優惠方案詳情及簽約條件說明，以官網公布為主，或逕洽客服專線0800-080-412。</li>
-            </ol>
+        <section class="container_page" id="intro">
+            <div class="d">
+                <img src="assets/images/digital_02.jpg" />
+                <img src="assets/images/digital_03.jpg"  usemap="#image-a">
+                <map name="image-a">
+                    <area data-featherlight="#fl1" href="/" coords="101,13,342,99" shape="rect">
+                    <area data-featherlight="#fl2" href="/" coords="361,11,601,100" shape="rect">
+                    <area target="_blank" href="https://www.cht.com.tw/home/campaign/big4g/index.html" coords="621,11,858,99" shape="rect">
+                </map>
+                <img src="assets/images/digital_04.jpg" />
+                <img src="assets/images/digital_05.jpg" usemap="#image-b">
+                <map name="image-b">
+                    <area target="_blank" href="https://www.cht.com.tw/home/consumer/broadband/hinet/hinet-light" coords="57,500,276,546" shape="rect">
+                    <area target="_blank" href="http://mod.cht.com.tw/" coords="369,503,588,547" shape="rect">
+                    <area target="_blank" href="http://emcrm.hinet.net/events/28b56b3d-829c-e811-a24d-00155dc8c07d/" coords="677,500,902,546" shape="rect">
+                </map>
+                <img src="assets/images/digital_06.jpg" usemap="#image-c">
+                <map name="image-c">
+                    <area target="_blank" href="https://hamipoint.cht.com.tw/trans_outpoint.php?cp=discountbill" coords="151,339,343,379" shape="rect">
+                    <area target="_blank" href="https://hamipoint.cht.com.tw/trans_outpoint.php?cp=modsee" coords="541,341,708,380" shape="rect">
+                    <area target="_blank" href="https://hamipoint.cht.com.tw/trans_outpoint.php?cp=surfquota" coords="724,340,889,379" shape="rect">
+                    <area target="_blank" href="https://event.hamipoint.cht.com.tw/store/" coords="151,572,341,612" shape="rect">
+                    <area target="_blank" href="https://mall.cheerspoint.com.tw/" coords="619,575,814,611" shape="rect">
+                    <area target="_blank" href="https://event.hamipoint.cht.com.tw/download_hamipay" coords="151,804,345,846" shape="rect">
+                    <area target="_blank" href="https://games.hamipoint.cht.com.tw/HamiPointGame/index.do" coords="619,806,809,845" shape="rect">
+                </map>
+                <img src="assets/images/digital_07.jpg"  usemap="#image-map-d">
+                <map name="image-map-d">
+                    <area target="" alt="" title="" href="#top" coords="436,14,542,45" shape="rect">
+                </map>
+            </div>
+            <div class="m">
+                <img src="assets/images/digital_m_02.png" />
+                <img src="assets/images/digital_m_03.jpg" usemap="#image-map-a_m">
+                <map name="image-map-a_m">
+                    <area data-featherlight="#fl1" href="/" coords="76,16,563,104" shape="rect">
+                    <area data-featherlight="#fl2" href="/" coords="74,128,563,213" shape="rect">
+                    <area target="_blank" href="https://www.cht.com.tw/home/campaign/big4g/index.html" coords="75,240,565,325" shape="rect">
+                </map>
+                <img src="assets/images/digital_m_04.jpg" usemap="#image-map-b_m">
+                <map name="image-map-b_m">
+                    <area target="_blank" href="https://www.cht.com.tw/home/consumer/broadband/hinet/hinet-light" coords="318,680,577,735" shape="rect">
+                    <area target="_blank" href="http://mod.cht.com.tw/" coords="319,1224,573,1275" shape="rect">
+                    <area target="_blank" href="http://emcrm.hinet.net/events/28b56b3d-829c-e811-a24d-00155dc8c07d/" coords="317,1561,575,1614" shape="rect">
+                </map>
+                <img src="assets/images/digital_m_05.jpg"  usemap="#image-map-c_m">
+                <map name="image-map-c_m">
+                    <area target="_blank" href="https://hamipoint.cht.com.tw/trans_outpoint.php?cp=discountbill" coords="288,383,552,441" shape="rect">
+                    <area target="_blank" href="https://event.hamipoint.cht.com.tw/store/" coords="287,720,548,773" shape="rect">
+                    <area target="_blank" href="https://mall.cheerspoint.com.tw/" coords="288,1066,545,1115" shape="rect">
+                    <area target="_blank" href="https://hamipoint.cht.com.tw/trans_outpoint.php?cp=modsee" coords="85,1377,313,1429" shape="rect">
+                    <area target="_blank" href="https://hamipoint.cht.com.tw/trans_outpoint.php?cp=surfquota" coords="344,1372,571,1424" shape="rect">
+                    <area target="_blank" href="https://event.hamipoint.cht.com.tw/download_hamipay&nbsp;" coords="291,1711,544,1765" shape="rect">
+                    <area target="_blank" href="https://games.hamipoint.cht.com.tw/HamiPointGame/index.do" coords="286,2021,545,2072" shape="rect">
+                </map>
+                <img src="assets/images/digital_m_06.jpg" usemap="#image-map-d_m">
+                <map name="image-map-d_m">
+                    <area target="" alt="" title="" href="#top" coords="267,29,377,64" shape="rect">
+                </map>
+            </div>
         </section>
+        <div class="social-float-parent">
+            <div id="social-float">
+                <a target="_blank" href="https://www.cht.com.tw/home/cht/about-cht/business-group/store-locator"><img src="assets/images/btn.png" /></a>
+            </div>
+        </div>
 	</div>
+    <div class="lightbox" id="fl1">
+        <img src="assets/images/pop_01.png" />
+    </div>
+    <div class="lightbox" id="fl2">
+        <img src="assets/images/pop_02.png" />
+    </div>
     <section class="footer" id="footer">
         <div class="container">
             <div class="nekos" style="display: block; text-align: center;">
