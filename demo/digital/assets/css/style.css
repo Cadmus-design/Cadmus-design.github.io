@@ -20,9 +20,10 @@
 }
 #wrap #sticker{
 	position:fixed;
+  z-index:500;
 	width:225px;
 	height:205px;
-	top:20%;
+	bottom:1%;
 	right:20%;
 }
 #wrap .header_page{
@@ -55,9 +56,10 @@ div#social-float img{width:25%;margin:0 auto;display: block;}
 }
 #wrap #sticker{
 	position:fixed;
+  z-index:500;
 	width:105px;
 	height:96px;
-	top:15%;
+	bottom:15%;
 	right:5%;
 }
 #wrap .header_page{
