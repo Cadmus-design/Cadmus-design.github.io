@@ -26,7 +26,30 @@ $(function () {
     });
 });
 */
+
+
 $(function(){
-	$('#type').css('color','#ff0000');
-	
+	//$('#typo').css('color','#ff0000');
+	//$('#typo .inner').css('transform','rotate(10deg)');
+	$('.page-main > div:nth-child(1) .inner').css('opacity',0.1);
+	$('h1').css('text-decoration','underline');
 });
+$(function(){
+	$('p').css('color','#fff');
+	$('p').css('font-size','2em');
+	$('p').css('background','#ff9900');
+});
+$(function(){
+	$('h2').css({
+		'font-size':'5em',
+		'transform':30deg,
+		'text-align':'center'
+		
+	})
+});
+$(function(){
+	$('h3').css({
+		fontSize:'10em',
+		transform:-25deg,
+	})
+};
