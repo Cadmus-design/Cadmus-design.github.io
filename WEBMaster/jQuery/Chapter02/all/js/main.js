@@ -27,6 +27,7 @@ $(function () {
 });
 */
 
+//ch2
 
 $(function(){
 	//$('#typo').css('color','#ff0000');
@@ -42,7 +43,7 @@ $(function(){
 $(function(){
 	$('h2').css({
 		'font-size':'5em',
-		'transform':30deg,
+		'transform':'rotate(30deg)',
 		'text-align':'center'
 		
 	})
@@ -50,6 +51,40 @@ $(function(){
 $(function(){
 	$('h3').css({
 		fontSize:'10em',
-		transform:-25deg,
+		transform:'rotate(-25deg)'
 	})
-};
+});
+
+//ch3
+$(function(){
+	$('#typo')
+			.on('mouseover',function(){
+				$('#typo').css({
+					color:'#000',
+					background:'#ffff00'
+		});
+			})
+			.on('mouseout',function(){
+				$('#typo').css({
+					color:'',
+					background:''
+				});
+			});
+})
+/*
+$(function(){
+	$('#typo')
+			.on('mouseover',function(){
+				$('#typo').css({
+					color: '$ebc000',
+					background: '#ae5b9b'
+				});
+			})
+			.on('mouseout',function(){
+				$('#typo').css({
+					color: '',
+					background: '',
+				});
+			});
+})
+*/
