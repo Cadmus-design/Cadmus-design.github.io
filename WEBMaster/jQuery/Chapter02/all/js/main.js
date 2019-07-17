@@ -27,7 +27,7 @@ $(function () {
 });
 */
 
-//ch2
+//ch2-2
 
 $(function(){
 	//$('#typo').css('color','#ff0000');
@@ -55,7 +55,7 @@ $(function(){
 	})
 });
 
-//ch3
+//ch2-3
 $(function(){
 	$('#typo')
 			.on('mouseover',function(){
@@ -88,3 +88,14 @@ $(function(){
 			});
 })
 */
+//CH2-4
+$(function(){
+	$('#typo .inner').on('click', function(){
+		$('#typo .inner').animate({
+			opacity:0,
+			fontSize:'0px'
+		},
+		1500
+		);
+	});
+});
