@@ -84,10 +84,10 @@ var plan_content = {
             ["h1row", "iPhone 8", "256GB", "23,100", "21,100", "20,100"],
             ["h1row", "iPhone 8 Plus", "64GB", "21,500", "19,500", "18,500"],
             ["h1row", "iPhone 8 Plus", "256GB", "27,100", "25,100", "24,100"],
-            ["h1row", "iPhone 7*", "32GB", "10,900", "8,900", "7,900"],
-            ["h1row", "iPhone 7*", "128GB", "14,900", "12,900", "11,900"],
-            ["h1row", "iPhone 7 Plus*", "32GB", "13,400", "11,400", "10,400"],
-            ["h1row", "iPhone 7 Plus*", "128GB", "17,400", "15,400", "14,400"]
+            ["h1row", "iPhone 7", "32GB", "10,900", "8,900", "7,900"],
+            ["h1row", "iPhone 7", "128GB", "14,900", "12,900", "11,900"],
+            ["h1row", "iPhone 7 Plus", "32GB", "13,400", "11,400", "10,400"],
+            ["h1row", "iPhone 7 Plus", "128GB", "17,400", "15,400", "14,400"]
         ]
     },
     'upgrade.json': {
@@ -98,8 +98,8 @@ var plan_content = {
             ["iPhone XS Max", "64GB", "39,900",  "256GB", "45,500", "512GB", "52,900"],
             ["iPhone 8", "64GB", "21,500",  "256GB", "27,100"],
             ["iPhone 8 Plus", "64GB", "25,500", "256GB", "31,100"],
-            ["iPhone 7*", "32GB", "15,900",  "128GB", "19,900"],
-            ["iPhone 7 Plus*", "32GB", "20,500",  "128GB", "24,500"]
+            ["iPhone 7", "32GB", "15,900",  "128GB", "19,900"],
+            ["iPhone 7 Plus", "32GB", "20,500",  "128GB", "24,500"]
         ]
     },
     '2gto4g.json': {
@@ -193,10 +193,10 @@ var plan_content = {
             ["h1row", "iPhone 8", "256GB", "22,500"],
             ["h1row", "iPhone 8 Plus", "64GB", "20,900"],
             ["h1row", "iPhone 8 Plus", "256GB", "26,500"],
-            ["h1row", "iPhone 7*", "32GB", "9,900"],
-            ["h1row", "iPhone 7*", "128GB", "13,900"],
-            ["h1row", "iPhone 7 Plus*", "32GB", "12,400"],
-            ["h1row", "iPhone 7 Plus*", "128GB", "16,400"]
+            ["h1row", "iPhone 7", "32GB", "9,900"],
+            ["h1row", "iPhone 7", "128GB", "13,900"],
+            ["h1row", "iPhone 7 Plus", "32GB", "12,400"],
+            ["h1row", "iPhone 7 Plus", "128GB", "16,400"]
         ]
     },
     'offers2.json': {
