@@ -542,10 +542,10 @@ main{
 
 /* package start */
 #package .content{
-    margin-top: 110px;
+    /*margin-top: 110px;*/
 }
 #package .content .contArea{
-    padding: 75px 0 20px;
+    padding: 0 0 20px;
     width: 90%;
 }
 table{
@@ -667,6 +667,12 @@ table .arrow1{
     vertical-align: middle;
     text-indent: 1.2em
 }
+.event .event_box{
+    color:#666;
+     font-size: 1em;
+    vertical-align: middle;
+    text-indent: 0;
+}
 .event img{
     margin:0 0 -15px 0;
 }
@@ -711,7 +717,6 @@ table .arrow1{
 .table .notice{
     font-size: 22px;
     color: #666666;
-    text-align: right;
     padding-top: 5px;
 }
 .table .note{
@@ -738,6 +743,17 @@ table .arrow1{
     text-decoration: none;
     letter-spacing: 0.3em;
      display: inline-block;
+}
+.event_btn2 a{
+    background:#fd8d25;
+    color:#fff;
+    padding:.2em .5em;
+    border-radius: .3em;
+    display:table;
+    margin:1em auto;
+    font-size: 1.5em;
+    text-decoration: none;
+    letter-spacing: 0.3em;
 }
 .tel2{
   display: inline-block;
