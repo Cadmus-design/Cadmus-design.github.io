@@ -87,6 +87,25 @@
         }
     </style> -->
     <style>
+    	.e_pc {
+			display: block !important;
+		}
+
+		@media (max-width: 768px) {
+			.e_pc {
+				display: none !important;
+			}
+		}
+
+		.e_mobile {
+			display: none !important;
+		}
+
+		@media (max-width: 768px) {
+			.e_mobile {
+				display: block !important;
+			}
+		}
 
         .reveal-modal-bg {
             position: fixed;
@@ -778,7 +797,7 @@
             </div>
         </div>
     </section>
-    <div id="myModal" class="reveal-modal"> <img src="img/kv.jpg" /><a class="close-reveal-modal">X</a> </div>
+    <div id="myModal" class="reveal-modal"> <img src="img/event_iPhone.png"  class="e_pc" /><img class="e_mobile" src="images/event_iPhone_m.png" /><a class="close-reveal-modal">X</a> </div>
     <!-- script-->
     <div class="ScriptWrap">
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>        
@@ -820,13 +839,13 @@
                     d.unbind("click.modalEvent"), i("." + e.dismissmodalclass).unbind("click.modalEvent"), c || (a(),
                         "fadeAndPop" == e.animation && (o.css({
                             top: i(document).scrollTop() - s,
-                            opacity: 0,
+                            opacity: 0.5,
                             visibility: "visible"
                         }), d.fadeIn(e.animationspeed / 2), o.delay(e.animationspeed / 2).animate({
                             top: i(document).scrollTop() + t + "px",
                             opacity: 1
                         }, e.animationspeed, n())), "fade" == e.animation && (o.css({
-                            opacity: 0,
+                            opacity: 0.5,
                             visibility: "visible",
                             top: i(document).scrollTop() + t
                         }), d.fadeIn(e.animationspeed / 2), o.delay(e.animationspeed / 2).animate({
