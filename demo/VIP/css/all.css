@@ -764,6 +764,9 @@ a:hover {
     .menu_item--sub .menu_item_title::after {
       right: 9%;/*15%*/
       top: 50%; }
+      .menu_item:first-of-type .menu_item--sub .menu_item_title::after{
+        right: 5%;
+      }
     .menu_item--sub:hover .subMenu {
       display: block; }
     .menu_item .menu_item_title {
