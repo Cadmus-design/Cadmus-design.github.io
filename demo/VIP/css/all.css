@@ -309,7 +309,7 @@ a:hover {
   .wrap {
     min-width: 640px; }
   .custom_container {
-    padding: 0 25px; } }
+    padding: 0 5px; } }
 
 .social-group {
   display: -webkit-box;
@@ -695,12 +695,16 @@ a:hover {
 .menu_item {
   float: left;
   position: relative;
-  width: 33.3%;
+  width: 25%;
   padding: 33px 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #ffffff;
   text-align: center; }
+  .menu_item:last-of-type p{
+    color:#896f43;
+    font-weight: bold;
+  }
   .menu_item--sub .menu_item_title {
     position: relative;
     cursor: pointer; }
