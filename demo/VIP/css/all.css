@@ -713,7 +713,7 @@ a:hover {
     cursor: pointer; }
     .menu_item--sub .menu_item_title::after {
       position: absolute;
-      right: 35%;
+      right: 30%;/*35%*/
       top: 40%;
       content: '';
       width: 0;
