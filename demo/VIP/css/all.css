@@ -701,6 +701,9 @@ a:hover {
   box-sizing: border-box;
   background-color: #ffffff;
   text-align: center; }
+  .menu_item:first-of-type{
+    width:22%;
+  }
   .menu_item:last-of-type p{
     color:#896f43;
     font-weight: bold;
