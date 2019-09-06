@@ -762,10 +762,10 @@ a:hover {
   .menu_item {
     padding: 0; }
     .menu_item--sub .menu_item_title::after {
-      right: 9%;/*15%*/
+      right: 5%;/*15%*/
       top: 50%; }
       .menu_item:first-of-type .menu_item--sub .menu_item_title::after{
-        right: 5%;
+        right: 2%;
       }
     .menu_item--sub:hover .subMenu {
       display: block; }
