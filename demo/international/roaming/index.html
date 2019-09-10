@@ -5499,11 +5499,13 @@
 </style>
 <script type="text/javascript">
     $(function () {
+    	
         $('[slide-target]').click(function () {
             var target = $(this).attr('slide-target');
             var $target = $(target);
             $target.stop().slideToggle(600)
         })
+
         // $("a").click(function () {
         //     function hashchange(e) {
         //         var isScrollDown = $('.nav-global-header').hasClass('scrolling-down');
@@ -5612,7 +5614,6 @@
                 } else {
                     e.preventDefault();
                 }
-
                 function hashchange(e) {
                     var isScrollDown = $('.nav-global-header').hasClass('scrolling-down');
                     var scrollTop = $(window).scrollTop();
