@@ -562,6 +562,10 @@ table .header1{
     background: url(../img/table1.png) no-repeat;
     background-size: 100%;
 }
+table:nth-of-type(3) .header1{
+    background: url(../img/table3.png) no-repeat;
+    background-size: 100%;
+}
 table .header1 span,table .header2 span{
     position: absolute;
     font-size: 36px;
