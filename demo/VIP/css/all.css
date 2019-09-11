@@ -309,7 +309,7 @@ a:hover {
   .wrap {
     min-width: 640px; }
   .custom_container {
-    padding: 0 5px; } }
+    padding: 0 25px; } }
 
 .social-group {
   display: -webkit-box;
@@ -695,25 +695,18 @@ a:hover {
 .menu_item {
   float: left;
   position: relative;
-  width: 25%;
+  width: 33.3%;
   padding: 33px 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #ffffff;
   text-align: center; }
-  .menu_item:first-of-type{
-    width:20%;
-  }
-  .menu_item:last-of-type p{
-    color:#896f43;
-    font-weight: bold;
-  }
   .menu_item--sub .menu_item_title {
     position: relative;
     cursor: pointer; }
     .menu_item--sub .menu_item_title::after {
       position: absolute;
-      right: 30%;/*35%*/
+      right: 35%;
       top: 40%;
       content: '';
       width: 0;
@@ -762,11 +755,8 @@ a:hover {
   .menu_item {
     padding: 0; }
     .menu_item--sub .menu_item_title::after {
-      right: 5%;/*15%*/
+      right: 15%;
       top: 50%; }
-      .menu_item:first-of-type .menu_item--sub .menu_item_title::after{
-        right: 2%;
-      }
     .menu_item--sub:hover .subMenu {
       display: block; }
     .menu_item .menu_item_title {
