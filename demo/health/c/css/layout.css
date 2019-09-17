@@ -611,6 +611,12 @@ table .td3w{
 table .td3h .txt1{
     display: inline-block;
 }
+    table .td3 .item1{
+        display:inline-block;
+        vertical-align: middle;
+    }
+
+
 table .td4{
     background: #fff0dd;
 }
