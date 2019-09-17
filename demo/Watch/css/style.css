@@ -882,6 +882,58 @@ caption {
 		background:#e5abaa;
 		color:#d0403d;
 	} */
+  .container_page .plan table {
+    width: 95%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    border: 2px solid #000;
+    font-size: 0.85rem; }
+  .container_page .plan {
+    position: relative; }
+    #wrapper .container_page .plan_student_table{
+       width: 95%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    border: 2px solid #000;
+    font-size: 0.85rem;
+    }
+    .container_page .plan_student_table caption{
+      color:#E87740;
+        padding: 0.8rem;
+    border: 2px solid #E87740;
+    font-weight: bold;
+    width: 12.5rem;
+    margin: 0 0 1rem 0;
+    font-size: 110%; 
+    }
+    #wrapper .container_page .plan_student_table tr:nth-of-type(2) td:nth-of-type(2), #wrapper .container_page .plan_student_table tr:nth-of-type(2n) td:first-of-type{
+      background-color: #fff;
+      color:#000;
+    }
+    #wrapper .container_page .plan_student_table tr:nth-of-type(2n) td{
+    background:#F4E7D7;
+    }
+     #wrapper .container_page .plan_student_table tr:nth-of-type(2n-1) td{
+    background:#FFF;
+    }
+    #wrapper .container_page .plan_student_table tr th{
+      background: #D05C37;
+      color:#fff;
+      width:22%;
+    }
+    #wrapper .container_page .plan_student_table tr:nth-of-type(2) td:first-of-type{
+      background: #E97741;
+      color:#fff;
+      vertical-align: middle;
+    }
+    #wrapper .container_page .plan_student_table tr td{
+    color: #4d4d4d;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold; 
+
+  }
+    /*plan_student_table end*/
   .container_page .reminder,
   .container_page .note {
     width: 90%;
