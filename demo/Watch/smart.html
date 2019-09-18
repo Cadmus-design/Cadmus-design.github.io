@@ -48,13 +48,13 @@ ga('send', 'pageview');
             </div>
             <ul id="menu-list" class="m">
                 <li class="list"><a href="watch-home.html">最新活動</a></li>
-                <li class="list has-sub-list1" onClick="$('.sub-list1').toggle();">購機方案</a></li>
+                <li class="list has-sub-list1" onClick="$('.sub-list1').toggle();javascript:ga('send', 'event', 'AW', 'action', 'prodouctsinfo');">購機方案</a></li>
 				<li class="list sub-list1" style="display: none"><a href="collect.html">新精選購機方案</a></li> 				
                 <li class="list sub-list1" style="display: none"><a href="plan_4g.html" onclick="javascript:ga('send', 'event', 'AW', 'action', 'carddiscount');" >大4G購機方案</a></li>
-				<li class="list sub-list1" style="display: none"><a href="plan_student.html">青春無敵學生方案</a></li>
-                <li class="list sub-list1" style="display: none"><a href="purchase.html">單購機方案</a></li>
+				<li class="list sub-list1" style="display: none"><a href="plan_student.html" onclick="javascript:ga('send', 'event', 'AW', 'action', ' studentspage');">青春無敵學生方案</a></li>
+                <li class="list sub-list1" style="display: none"><a href="purchase.html" onclick="javascript:ga('send', 'event', 'AW', 'action', 'singlesale');">單購機方案</a></li>
 				
-                <li  class="list"><a href="multi.html">One Number 服務</a></li>
+                <li  class="list"><a href="multi.html" onclick="javascript:ga('send', 'event', 'AW', 'action', 'onenoservice');">One Number 服務</a></li>
                 <li class="list"><a href="spec.html">產品規格</a></li>
 				<li class="list has-sub-list" onClick="$('.sub-list2').toggle();">銷售門市</li>
 				<li class="list sub-list2" style="display: none"><a href="https://www.cht.com.tw/zh-tw/home/cht/about-cht/business-group/store-locator"  target="_blank">實體門市</a></li>
@@ -65,19 +65,19 @@ ga('send', 'pageview');
             </ul>
             <div class="nav-w pc">
                 <ul class="nav">
-                   <li><a href="watch-home.html">最新活動</a>
+                   <li><a href="watch-home.html" onClick="javascript:ga('send', 'event', 'AW', 'action', 'awnewevent');">最新活動</a>
 					</li>
-					<li><a href="#">購機方案</a>
+					<li><a href="#" onClick="javascript:ga('send', 'event', 'AW', 'action', 'prodouctsinfo');">購機方案</a>
 						<ul class="sub-nav">
                             <li><a href="collect.html">新精選購機方案</a></li>                             
                             <li><a href="plan_4g.html" onclick="javascript:ga('send', 'event', 'AW', 'action', 'carddiscount');" >大4G購機方案</a></li>
-							<li><a href="plan_student.html">青春無敵學生方案</a></li>
-                            <li><a href="purchase.html">單購機方案</a></li>
+							<li><a href="plan_student.html" onclick="javascript:ga('send', 'event', 'AW', 'action', ' studentspage');">青春無敵學生方案</a></li>
+                            <li><a href="purchase.html" onclick="javascript:ga('send', 'event', 'AW', 'action', 'singlesale');">單購機方案</a></li>
 							
                         </ul>
 					</li>
-                    <li><a href="multi.html">One Number 服務</a></li>
-                    <li><a href="spec.html">產品規格</a></li>
+                    <li><a href="multi.html" onclick="javascript:ga('send', 'event', 'AW', 'action', 'onenoservice');">One Number 服務</a></li>
+                    <li><a href="spec.html" onClick="javascript:ga('send', 'event', 'AW', 'action', 'productinfo');">產品規格</a></li>
                     <li><a href="#l">銷售門市</a>
 						<ul class="sub-nav">
                             <li><a href="https://www.cht.com.tw/zh-tw/home/cht/about-cht/business-group/store-locator"  target="_blank">實體門市</a></li>
