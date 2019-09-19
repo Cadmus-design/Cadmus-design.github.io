@@ -842,7 +842,7 @@ a {
   width: 100%;
   position: relative;
 }
-
+/*20190919 marked
 .addBox .box>a {
   position: absolute;
   width: 22%;
@@ -850,7 +850,7 @@ a {
   top: 70%;
   right: 14%;
 }
-
+*/
 .addBox .box2 img {
   width: 100vw;
   padding-top: 145px;
@@ -1254,7 +1254,7 @@ a {
     line-height: 40px;
     font-size: 30px;
   }
-
+/*20190919 marked
   .addBox .box>a {
     position: absolute;
     width: 31%;
@@ -1262,7 +1262,7 @@ a {
     top: 39%;
     right: 34%;
   }
-
+*/
   .addBox .box p {
     border: none;
     line-height: 70px;
