@@ -61,7 +61,7 @@ gtag('config', 'UA-112390676-5');
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'UA-112390676-5');
-    gtag('config', 'UA-137034255-1');
+    gtag('config', 'UA-137034355-2');
   gtag('event', 'Landing', {
   // Event parameters
   'event_category': 'Landing',
@@ -114,7 +114,7 @@ gtag('config', 'UA-112390676-5');
 		<div class="title_btn">
 		
 		<ul class="btn">
-			<li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu-HamiPay' });" href="#Menu-special_offers"><img src="images/01.png" /></a></li><!--
+			<li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu-HamiPay' });" href="#" data-featherlight="#fl0"><img src="images/01.png" /></a></li><!--
 			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu-Sale'  });" href="#Menu-intro"><img src="images/02.png" /></a></li><!--
 			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu-Function' });" href="#Menu-steps"><img src="images/03.png" /></a></li><!--
 			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu-life'  });" href="#life"><img src="images/04.png" /></a></li><!--
@@ -126,18 +126,23 @@ gtag('config', 'UA-112390676-5');
 		</div>
 		<div class="content over e_sb" id="Menu-special_offers">
 			<div style="margin:20px 0 0 0;"></div>
-			
-            <div class="videoWrap" >
-				<iframe width="100%" height="100%"  src="https://www.youtube.com/embed/nmiyjydsCzQ?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-            
 			<img src="images/title_02.jpg" />
-			<img id="card" src="images/section_01-1.jpg" >
+			<img id="CTBC" src="images/section_01-1.jpg" usemap="#image-aa">
+			<map name="image-aa">
+			    <area target="_blank" href="https://reurl.cc/NaZ4mk" coords="1181,538,1073,496" shape="rect">
+			    <area target="_blank" href="https://www.ctbcbank.com/CTCBPortalWeb/toPage?id=TW_RB_MK_creditcard_055001" coords="678,563,964,652" shape="rect">
+			    <area href="#" data-featherlight="#fl4" coords="980,565,1259,648" shape="rect">
+			    <area href="#" data-featherlight="#fl5" coords="773,877,1169,957" shape="rect">
+			    <area target="_blank" alt="" title="" href="https://www.ctbcbank.com/content/dam/minisite/long/creditcard/CHT/index.html" coords="857,1256,1086,1337" shape="rect">
+			</map>
 			<img id="icash" src="images/section_01-2.jpg" usemap="#image-a">
 			<map name="image-a">
-			        <area target="_blank" href="/" data-featherlight="#fl3" coords="722,835,1239,916" shape="rect">
+			        <area target="_blank" href="/" data-featherlight="#fl6" coords="830,585,1097,664" shape="rect">
 			</map>
-			<img id="smart" src="images/section_01-3.jpg" >
+			<img id="smart" src="images/section_01-3.jpg" usemap="#image-bb">
+			<map name="image-bb">
+			        <area target="_blank" href="/" data-featherlight="#fl7" coords="827,604,1098,697" shape="rect">
+			</map>
 			<img id="hamipay" src="images/section_01-4.jpg" >
 		</div>
 		<div class="title">
@@ -146,11 +151,14 @@ gtag('config', 'UA-112390676-5');
 			</div>
 		</div>
 		<div class="content">
-			<img src="images/section_02-1.jpg" usemap="#image-map00">
 
+			 <div class="videoWrap" >
+				<iframe width="100%" height="100%"  src="https://www.youtube.com/embed/nmiyjydsCzQ?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<img src="images/section_02-1.jpg" usemap="#image-map00">
 		<map name="image-map00">
-		    <area onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Pi Store'  });" href="https://web.piapp.com.tw/enterprise_partners/" coords="693,1183,832,1221" shape="rect">
-            <area onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Pi Store'  });" href="https://web.piapp.com.tw/enterprise_partners/" coords="832,285,1076,322" shape="rect">
+		    <area onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Pi Store'  });" href="https://web.piapp.com.tw/enterprise_partners/" coords="827,287,1080,326" shape="rect">
+            <area onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Pi Store'  });" href="https://web.piapp.com.tw/enterprise_partners/" coords="695,982,832,1019" shape="rect">
 		</map>
 		</div>
 		<div class="title">
@@ -232,9 +240,14 @@ gtag('config', 'UA-112390676-5');
 		</div>
     </div>
 	<div class="note">
-		<img src="images/note.gif" />
+		<img src="images/note.gif" >
 	</div>
-
+	<div class="lightbox" id="fl0">
+		<img src="images/bonus_01.gif" style="display: block;"><!--
+		--><img onclick="location.href='#CTBC';parent.window.$.featherlight.current().close();" src="images/bonus_02.gif"  style="cursor:pointer;display: block;"><!--
+		--><img onclick="location.href='#icash';parent.window.$.featherlight.current().close();" src="images/bonus_03.gif"  style="cursor:pointer;display: block;"><!--
+		--><img onclick="location.href='#smart';parent.window.$.featherlight.current().close();" src="images/bonus_04.gif"  style="cursor:pointer;display: block;">
+	</div>
 	<div class="lightbox" id="fl1">
 		<img src="images/pop-android.jpg" />
 	</div>
@@ -251,6 +264,22 @@ gtag('config', 'UA-112390676-5');
 			<li>完成商品兌領。</li>
 			</ol>
 	</div>
+	<div class="lightbox" id="fl4">
+		<img src="images/fl4.gif" />
+	</div>
+	<div class="lightbox" id="fl5">
+		<img src="images/fl5.jpg" />
+	</div>
+	<div class="lightbox" id="fl6">
+		<img src="images/fl6_01.gif" style="display: block;"/>
+		<a href="https://reurl.cc/8lnrvy"><img src="images/fl6_02.gif" style="cursor:pointer;display: block;"/></a>
+		<img src="images/fl6_03.gif" style="display: block;"/>
+		<a href="https://www.icash.com.tw/Home/NewsDetail/9724"><img src="images/fl6_04.gif" style="cursor:pointer;display: block;"/></a>
+		<img src="images/fl6_05.gif" style="display: block;"/>
+	</div>
+	<div class="lightbox" id="fl7">
+		<img src="images/fl7.gif" />
+	</div>	
 	<!-- reminder end -->
 </div><!-- wrapper end -->
 <div id="footer">

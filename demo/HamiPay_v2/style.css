@@ -177,7 +177,7 @@ a.back-to-top {
 
  .videoWrap {
 		  width: 50%;
-		  margin:0 auto;
+		  margin:1.5em auto 0;
 		  position: relative;
 		}
 		 .videoWrap:before {
