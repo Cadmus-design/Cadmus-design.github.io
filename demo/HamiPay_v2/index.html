@@ -71,13 +71,13 @@ gtag('config', 'UA-112390676-5');
   gtag('event', 'Landing', {
   // Event parameters
   'event_category': 'Landing',
-  'event_label': 'Menu-HamiPay',
-  'event_label': 'Menu-Sale',
-  'event_label': 'Menu-Function',
-  'event_label': 'Menu-life',
-  'event_label': 'Menu-Step',
-  'event_label': 'Menu-Service',
-  'event_label': 'Menu-CHTcard',
+  'event_label': 'Menu_gift',
+  'event_label': 'Menu_infomation',
+  'event_label': 'Menu_function',
+  'event_label': 'Menu_pay',
+  'event_label': 'Menu_step',
+  'event_label': 'Menu_official',
+  'event_label': 'Menu_CTBC',
   'event_label': '回到上方',
   // ...
 });
@@ -120,13 +120,13 @@ gtag('config', 'UA-112390676-5');
 		<div class="title_btn">
 		
 		<ul class="btn">
-			<li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu-HamiPay' });" href="#" data-featherlight="#fl0"><img src="images/01.png" /></a></li><!--
-			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu-Sale'  });" href="#Menu-intro"><img src="images/02.png" /></a></li><!--
-			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu-Function' });" href="#Menu-steps"><img src="images/03.png" /></a></li><!--
-			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu-life'  });" href="#life"><img src="images/04.png" /></a></li><!--
-			--></ul><ul class="btn"><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu-Step'  });" target="_blank" href="#APP"><img src="images/05.png" /></a></li><!--
-			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu-Service'  });" target="_blank" href="http://hamipay.emome.net"><img src="images/06.png" /></a></li><!--
-			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu-CHTcard'  });" target="_blank" href="https://www.ctbcbank.com/html/long/creditcard/CHT/index.html#section-1"><img src="images/07.png" /></a></li><!--
+			<li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu_gift' });" href="#" data-featherlight="#fl0"><img src="images/01.png" /></a></li><!--
+			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu_infomation'  });" href="#Menu-intro"><img src="images/02.png" /></a></li><!--
+			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu_function' });" href="#Menu-steps"><img src="images/03.png" /></a></li><!--
+			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu_pay'  });" href="#life"><img src="images/04.png" /></a></li><!--
+			--></ul><ul class="btn"><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu_step'  });" target="_blank" href="#APP"><img src="images/05.png" /></a></li><!--
+			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu_official'  });" target="_blank" href="http://hamipay.emome.net"><img src="images/06.png" /></a></li><!--
+			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Menu_CTBC'  });" target="_blank" href="https://www.ctbcbank.com/html/long/creditcard/CHT/index.html#section-1"><img src="images/07.png" /></a></li><!--
 			-->
 		</ul>
 		</div>
@@ -135,19 +135,19 @@ gtag('config', 'UA-112390676-5');
 			<img src="images/title_02.jpg" />
 			<img id="CTBC" src="images/section_01-1.jpg" usemap="#image-aa">
 			<map name="image-aa">
-			    <area target="_blank" href="https://reurl.cc/NaZ4mk" coords="1181,538,1073,496" shape="rect">
-			    <area target="_blank" href="https://www.ctbcbank.com/CTCBPortalWeb/toPage?id=TW_RB_MK_creditcard_055001" coords="678,563,964,652" shape="rect">
-			    <area href="#" data-featherlight="#fl4" coords="980,565,1259,648" shape="rect">
-			    <area href="#" data-featherlight="#fl5" coords="773,877,1169,957" shape="rect">
-			    <area target="_blank" alt="" title="" href="https://www.ctbcbank.com/content/dam/minisite/long/creditcard/CHT/index.html" coords="857,1256,1086,1337" shape="rect">
+			    <area target="_blank" onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': '30point'  });" href="https://reurl.cc/NaZ4mk" coords="1181,538,1073,496" shape="rect">
+			    <area target="_blank" onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'CTBC_login'  });" href="https://www.ctbcbank.com/CTCBPortalWeb/toPage?id=TW_RB_MK_creditcard_055001" coords="678,563,964,652" shape="rect">
+			    <area href="#" onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'CTBC_notes'  });" data-featherlight="#fl4" coords="980,565,1259,648" shape="rect">
+			    <area href="#" onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'CTBC_step'  });" data-featherlight="#fl5" coords="773,877,1169,957" shape="rect">
+			    <area target="_blank" onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'CTBC_official'  });" href="https://www.ctbcbank.com/content/dam/minisite/long/creditcard/CHT/index.html" coords="857,1256,1086,1337" shape="rect">
 			</map>
 			<img id="icash" src="images/section_01-2.jpg" usemap="#image-a">
 			<map name="image-a">
-			        <area target="_blank" href="/" data-featherlight="#fl6" coords="830,585,1097,664" shape="rect">
+			        <area target="_blank" href="/" onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Icash_notes'  });" data-featherlight="#fl6" coords="830,585,1097,664" shape="rect">
 			</map>
 			<img id="smart" src="images/section_01-3.jpg" usemap="#image-bb">
 			<map name="image-bb">
-			        <area target="_blank" href="/" data-featherlight="#fl7" coords="827,604,1098,697" shape="rect">
+			        <area target="_blank" href="/" onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Smart_notes'  });" data-featherlight="#fl7" coords="827,604,1098,697" shape="rect">
 			</map>
 			<img id="hamipay" src="images/section_01-4.jpg" >
 		</div>
@@ -163,8 +163,8 @@ gtag('config', 'UA-112390676-5');
 			</div>
 			<img src="images/section_02-1.jpg" usemap="#image-map00">
 		<map name="image-map00">
-		    <area onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Pi Store'  });" href="https://web.piapp.com.tw/enterprise_partners/" coords="827,287,1080,326" shape="rect">
-            <area onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Pi Store'  });" href="https://web.piapp.com.tw/enterprise_partners/" coords="695,982,832,1019" shape="rect">
+		    <area onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Information_cooperation1'  });" href="https://web.piapp.com.tw/enterprise_partners/" coords="827,287,1080,326" shape="rect">
+            <area onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Information_cooperation2'  });" href="https://web.piapp.com.tw/enterprise_partners/" coords="695,982,832,1019" shape="rect">
 		</map>
 		</div>
 		<div class="title">
