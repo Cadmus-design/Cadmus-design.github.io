@@ -446,7 +446,7 @@ caption {
   .container_page .plan table tr td strike {
     font-size: 85%;
     padding: 0 0.5rem 0 0; }
-  .container_page .plan table tr:nth-of-type(2n) td {
+  .container_page .plan table tr:nth-of-type(2n) td, .container_page .plan table tr:last-of-type td:first-of-type{
     background: #d1e7e2; }
   /*
 .container_page .plan table tr td:last-of-type{
@@ -551,9 +551,11 @@ caption {
     }
     #wrapper .container_page .plan_student_table tr:nth-of-type(2n) td{
     background:#F4E7D7;
+    vertical-align: middle;
     }
      #wrapper .container_page .plan_student_table tr:nth-of-type(2n-1) td{
     background:#FFF;
+    vertical-align: middle;
     }
     #wrapper .container_page .plan_student_table tr th{
       background: #D05C37;
@@ -1441,9 +1443,11 @@ caption {
     }
     #wrapper .container_page .plan_student_table tr:nth-of-type(2n) td{
     background:#F4E7D7;
+    vertical-align: middle;
     }
      #wrapper .container_page .plan_student_table tr:nth-of-type(2n-1) td{
     background:#FFF;
+    vertical-align: middle;
     }
     #wrapper .container_page .plan_student_table tr th{
       background: #D05C37;
@@ -1509,7 +1513,7 @@ caption {
   .container_page .plan table tr td strike {
     font-size: 85%;
     padding: 0 0.5rem 0 0; }
-  .container_page .plan table tr:nth-of-type(2n) td {
+  .container_page .plan table tr:nth-of-type(2n) td,.container_page .plan table tr:last-of-type td:first-of-type {
     background: #d1e7e2; }
   /*
 	.container_page .plan table tr td:last-of-type{
