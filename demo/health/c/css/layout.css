@@ -562,10 +562,12 @@ table .header1{
     background: url(../img/table1.png) no-repeat;
     background-size: 100%;
 }
-table:nth-of-type(3) .header1{
+
+table .header1_purple{
     background: url(../img/table3.png) no-repeat;
     background-size: 100%;
 }
+
 table .header1 span,table .header2 span{
     position: absolute;
     font-size: 36px;
@@ -696,7 +698,7 @@ table .arrow1{
     border:1px solid #b5b6b6;
     background: #ecf7fa;
 }
-.event_table tr th{
+.event_table tr th, .desktop-only .event_table tr:nth-of-type(2) td:first-of-type, .desktop-only .event_table tr:nth-of-type(5) td:first-of-type{
     background: #136291;
     font-size: 1.5em;
     color:#fff;
@@ -709,7 +711,10 @@ table .arrow1{
     font-size: 1.2em;
     font-weight: bold;
 }
-.event_table tr:nth-of-type(2) td{
+.event_table tr td{
+    color:#595656;
+}
+.event_table tr:nth-of-type(2) td, .desktop-only .event_table tr:nth-of-type(5) td{
     background: #cbe6f2;
     color:#136291;
     font-size: 1.2em;
@@ -728,6 +733,7 @@ table .arrow1{
     font-size: 22px;
     color: #666666;
     padding-top: 5px;
+    text-align:right;
 }
 .table .note{
     font-size: 22px;
@@ -1376,7 +1382,7 @@ table .arrow1{
 
     .table .notice{
         font-size: 18px;
-        text-align: center;
+        text-align:right;
     }
     .table .note{
     font-size: 18px;
