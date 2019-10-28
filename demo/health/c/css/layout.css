@@ -1368,7 +1368,7 @@ table .arrow1{
     color:#136291;
     font-size: 1.2em;
     font-weight: bold;
-    width:20%;
+    width:30%;
 }
 .event_table tr:nth-of-type(2) td{
     background: #cbe6f2;
@@ -1376,6 +1376,9 @@ table .arrow1{
     font-style: normal;
     font-size: 1.2em;
     font-weight: bold;
+}
+.event_table:nth-of-type(2) tr:nth-of-type(2) td{
+    width:34%;
 }
 .event_table tr td:nth-of-type(2) em, .event_table tr td p{
     color: #f1891b;
