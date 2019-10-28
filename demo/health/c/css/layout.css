@@ -1,4 +1,5 @@
 body{ 
+    font-family: "Microsoft JhengHei";
 }
 .pcShow{
     display: block;
@@ -612,6 +613,7 @@ table .td3w{
 }
 table .td3h .txt1{
     display: inline-block;
+    margin:0 0 0 28px;
 }
     table .td3 .item1{
         display:inline-block;
@@ -625,14 +627,16 @@ table .td4{
 table .td4 div{
     font-size: 50px;
     color: #f38d0e;
-    -webkit-text-stroke: 2px #fff;
+    /*-webkit-text-stroke: 2px #fff; */
+    text-shadow: 2px 2px #fff;
     text-align: center; 
-    font-weight: bolder;
+    font-weight: 1000;
     padding: 20px;
 }
 table .td4 div span{
     font-size: 30px;
-    -webkit-text-stroke: 1px #fff;
+    /*-webkit-text-stroke: 1px #fff;*/
+    text-shadow: 1px 1px #fff;
 }
 table .td2 .sub-title{
     color: #fff;
@@ -646,6 +650,7 @@ table div{
     font-weight: bold;
     margin-top: 5px;
 }
+
 table .td3 span{
     color: #f38d0e;
 }
@@ -719,7 +724,7 @@ table .arrow1{
     color:#136291;
     font-size: 1.2em;
     font-weight: bold;
-    width:15%;
+    
 }
 .event_table tr td:first-of-type em, .event_table tr td p{
     color: #f1891b;
@@ -1363,7 +1368,7 @@ table .arrow1{
     color:#136291;
     font-size: 1.2em;
     font-weight: bold;
-    width:17%;
+    width:20%;
 }
 .event_table tr:nth-of-type(2) td{
     background: #cbe6f2;
