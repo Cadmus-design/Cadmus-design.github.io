@@ -69,12 +69,20 @@ ul {
   top: 80px;
   left: 182px; }
 #wrapper .btn{
-
+width:80%;
+margin:0 auto;
+background: #ffd200;
 }
 #wrapper .btn li {
   display: inline-block;
-  padding: 1.3em 0.78em 0.65em;
-  margin: 0; }
+  padding: 1.3em 0.2em 0.65em;
+  margin: 0; 
+  width:31%;
+  }
+  #wrapper .btn li img{
+    width:80%;
+    margin:0 0 0 21%;
+  }
 #wrapper .btn:nth-of-type(2){
 width:900px;
 margin:0 auto;
@@ -82,7 +90,18 @@ margin:0 auto;
 #wrapper .box .content {
   width: 1200px;
   margin: 0 auto; }
-
+#wrapper .box1 {
+  background: #e6f8ec;
+}
+#wrapper .box2 {
+  background: #fbf0f4;
+}
+#wrapper .box3 {
+  background: #e5f8ff;
+}
+#wrapper .box4 {
+  background: #fdf8f2;
+}
 #wrapper .box .content img {
   width: 100%; }
 
@@ -93,16 +112,33 @@ margin:0 auto;
   width: 700px;
   margin: 0 auto; }
 
-#wrapper .box .title {
+#wrapper .box .title1 {
   width: 100%;
-  background: url(images/title_bg.jpg) repeat-x; }
+  background: url(images/title1_bg.jpg) repeat-x; }
 
-#wrapper .box .title .high {
+#wrapper .box .title2 {
+  width: 100%;
+  background: url(images/title2_bg.jpg) repeat-x; }
+  #wrapper .box .title3 {
+  width: 100%;
+  background: url(images/title3_bg.jpg) repeat-x; }
+  #wrapper .box .title4 {
+  width: 100%;
+  background: url(images/title4_bg.jpg) repeat-x; }
+#wrapper .box .title1 .high, #wrapper .box .title2 .high, #wrapper .box .title3 .high, #wrapper .box .title4 .high, #wrapper .box .title5 .high {
   width: 1200px;
   margin: 0 auto; }
 
 #wrapper .note .download img, #wrapper .note .download table {
   width: 100%; }
+  #wrapper .content ol {
+    margin:0;
+  }
+#wrapper .content ol li{
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+}
+
 
 #wrapper .note {
   width: 100%; }
