@@ -178,7 +178,7 @@ a.back-to-top {
     left: 36%;
     height: 38px;
     z-index: 999; }
-#wrapper .content ol li>ol{
+#wrapper .content ol li ol{
   padding:0 0 0 2em;
   margin:0;
 }
