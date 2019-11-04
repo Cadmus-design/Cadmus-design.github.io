@@ -515,7 +515,13 @@ a {
 	margin-left: 485px;
 	font-weight: bold;*/
 }
-
+.main-index h4 {
+  margin: 20px;
+    font-weight: bold;
+    color:#203248;
+    font-size: 42px;
+    white-space: nowrap;
+}
 @media screen and (max-width: 639px) {
   .main-index h2 {
     margin: 10px auto;
@@ -527,6 +533,12 @@ a {
     /*margin: 10px auto;
 		width: 180px;
 		font-size: 18px;*/
+  }
+    .main-index h4 {
+    margin: 30px auto;
+        color:#203248;
+    font-size: 38px;
+    white-space: nowrap;
   }
 }
 
