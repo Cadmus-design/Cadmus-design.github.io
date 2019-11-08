@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>iPad 購機方案 - 中華電信大4G</title>
     <link media="all" type="text/css" rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,23 +23,40 @@
 <body>
     <header class="header">
     </header>
-    <div class="main main-index container">
-        <img class="e_index_left" src="assets/images/index_ipad2019.jpg">
-        <div class="e_index-right">
-            <img class="desktop-only" src="assets/images/big_4g.gif">
-            <img class="e_index_left_m" style="width:50%" src="assets/images/big_4g.gif">
-            <h4>iPad歡樂升級</h4>
-            <h4>樂趣不可思議</h4>
-            <p> <a href="http://ipad.emome.net/plan_super.html" onclick="javascript:ga('send', 'event', 'index17pad', 'action', 'ipadknowmore');"><img
-                        alt="了解更多" title="了解更多" src="assets/images/bt01.gif" /></a>
-                <a href="https://www.cht.com.tw/home/consumer/mobservice/device/tablet#!brand%3Avalues%3DAPPLE%26_orderby%3A%26_page%3A1"
-                    target="_blank" onclick="javascript:ga('send', 'event', 'btn2', 'action', 'ipadbuynow');">
-                    <img alt="立即搶購" title="立即搶購" src="assets/images/bt02.gif" /></a></p>
-        </div>
-        <img class="e_index_left_m" src="assets/images/index_ipad2019_m.jpg">
-
-
-    </div>
+    <div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+    			<div class="main main-index container">
+    	
+				
+		        	<img class="e_index_left" src="assets/images/index_ipad2019.jpg">
+				        <div class="e_index-right">
+				            <img class="desktop-only" src="assets/images/big_4g.gif">
+				            <img class="e_index_left_m" style="width:50%" src="assets/images/big_4g.gif">
+				            <h4>iPad歡樂升級</h4>
+				            <h4>樂趣不可思議</h4>
+				            <p> <a href="http://ipad.emome.net/plan_super.html" onclick="javascript:ga('send', 'event', 'index17pad', 'action', 'ipadknowmore');"><img
+				                        alt="了解更多" title="了解更多" src="assets/images/bt01.gif" /></a>
+				                <a href="https://www.cht.com.tw/home/consumer/mobservice/device/tablet#!brand%3Avalues%3DAPPLE%26_orderby%3A%26_page%3A1"
+				                    target="_blank" onclick="javascript:ga('send', 'event', 'btn2', 'action', 'ipadbuynow');">
+				                    <img alt="立即搶購" title="立即搶購" src="assets/images/bt02.gif" /></a></p>
+				        </div>
+		        	<img class="e_index_left_m" src="assets/images/index_ipad2019_m.jpg">
+    		
+    			</div>
+    		</div>
+    		<div class="swiper-slide">
+    			<div class="main main-index container">
+    				<img class="desktop-only" src="assets/images/index_tv.jpg">
+    				<img class="e_index_left_m"  src="assets/images/index_tv_m.jpg">
+    			</div>
+    		</div>
+		</div>
+		<!-- swiper wrapper end -->
+		<div class="swiper-pagination "></div>
+		<div class="swiper-button-next "></div>
+		<div class="swiper-button-prev "></div>
+	</div>
     <footer class="footer">
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -47,6 +65,20 @@
     <script>
         $(function () {});
     </script>
+    <script>
+		$(function () {});
+	</script>
+	<script src="assets/js/swiper.min.js "></script>
+
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+			spaceBetween: 30
+		});
+	</script>
 </body>
 
 </html>

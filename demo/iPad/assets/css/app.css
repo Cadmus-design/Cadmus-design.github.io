@@ -228,7 +228,7 @@ a {
 .container {
   margin-right: auto;
   margin-left: auto;
-  width: 100%;
+  /*width: 100%;*/
 }
 
 @media screen and (min-width: 1024px) {
