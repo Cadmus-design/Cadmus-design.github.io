@@ -38,6 +38,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script type="text/javascript" src="https://web-eshop.cdn.hinet.net/eshop/js/all.js" defer></script>
     <!-- custom -->
+    <script type="text/javascript" src="assets/js/all.js"></script>
     <script type="text/javascript" src="https://web-eshop.cdn.hinet.net/eshop/js/custom/custom.js"></script>
 	 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
@@ -110,18 +111,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!--<div class="h1">blank header</div>-->
     <div id="wrapper_content">
         <div class="KV service">
-            <ul class="menu">
-                <li><a href="index.html">Home 首頁</a></li>｜
-                <li><a href="intro.html">About us 公司簡介</a></li>｜
-                <li><a href="challenge.html">Challenges 遭遇問題</a></li>｜
-                <li class="active"><a href="/">Services 服務項目</a></li>｜
-                <li><a href="contact.html">Contact us 聯絡我們</a></li>
-            </ul>
+            <nav class="menu">
+                <ul class="active">
+                    <li><a href="index.html">Home 首頁</a></li>｜
+                    <li><a href="intro.html">About us 公司簡介</a></li>｜
+                    <li><a href="challenge.html">Challenges 遭遇問題</a></li>｜
+                    <li class="current-item"><a href="services.html">Services 服務項目</a></li>｜
+                    <li><a href="contact.html">Contact us 聯絡我們</a></li>
+                </ul>
+                <a class="toggle-nav" href="#">&#9776;</a>
+                <form class="search-form">
+                    <input type="text">
+                    <button>Search</button>
+                </form>
+            </nav>
         <!-- menu end -->
         <ul class="language">
             <li><a href="/">JP</a></li>
             <li><a href="/">EN</a></li>
-            <li class="active"><a href="/">中文</a></li>
+            <li class="current"><a href="/">中文</a></li>
         </ul>
         <!-- language end -->
             <div class="slogan">
@@ -164,7 +172,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h5>在日台商解決方案</h5>
                 <ul class="services_content">
                     <li>
-                        <h1>籌備<br>規劃</h1>
+                        <h1>籌備<span>規劃</span></h1>
                         <ol>
                             <li>申請日本當地市話及Internet上網服務</li>
                             <li>企業SSL VPN/境外上網服務</li>
@@ -172,7 +180,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </ol>
                     </li>
                     <li>
-                        <h1>基礎<br>ICT<br>建設</h1>
+                        <h1>基礎<span>ICT</span><span>建設</span></h1>
                         <ol>
                             <li>PBX及通信語音設備</li>
                             <li>企業網路整體解決方案</li>
@@ -181,7 +189,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </ol>
                     </li>
                     <li>
-                        <h1>進階<br>應用</h1>
+                        <h1>進階<span>應用</span></h1>
                         <ol>
                             <li>國際及日本國內MPLS/VPN服務</li>
                             <li>TWGate Internet服務</li>

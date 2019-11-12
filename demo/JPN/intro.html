@@ -38,6 +38,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script type="text/javascript" src="https://web-eshop.cdn.hinet.net/eshop/js/all.js" defer></script>
     <!-- custom -->
+    <script type="text/javascript" src="assets/js/all.js"></script>
     <script type="text/javascript" src="https://web-eshop.cdn.hinet.net/eshop/js/custom/custom.js"></script>
 	 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
@@ -110,18 +111,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!--<div class="h1">blank header</div>-->
     <div id="wrapper_content">
         <div class="KV intro">
-            <ul class="menu">
-                <li><a href="index.html">Home 首頁</a></li>｜
-                <li class="active"><a href="/">About us 公司簡介</a></li>｜
-                <li><a href="challenge.html">Challenges 遭遇問題</a></li>｜
-                <li><a href="services.html">Services 服務項目</a></li>｜
-                <li><a href="contact.html">Contact us 聯絡我們</a></li>
-            </ul>
+            <nav class="menu">
+                <ul class="active">
+                    <li><a href="index.html">Home 首頁</a></li>｜
+                    <li class="current-item"><a href="intro.html">About us 公司簡介</a></li>｜
+                    <li><a href="challenge.html">Challenges 遭遇問題</a></li>｜
+                    <li><a href="services.html">Services 服務項目</a></li>｜
+                    <li><a href="contact.html">Contact us 聯絡我們</a></li>
+                </ul>
+                <a class="toggle-nav" href="#">&#9776;</a>
+                <form class="search-form">
+                    <input type="text">
+                    <button>Search</button>
+                </form>
+            </nav>
         <!-- menu end -->
         <ul class="language">
             <li><a href="/">JP</a></li>
             <li><a href="/">EN</a></li>
-            <li class="active"><a href="/">中文</a></li>
+            <li class="current"><a href="/">中文</a></li>
         </ul>
         <!-- language end -->
             <div class="slogan">
@@ -166,7 +174,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="intro_brand">
                 <h4>我們曾服務過的客戶有：</h4>
                 <!--<img src="assets/images/brand.png">-->
-                臺灣銀行、臺灣企銀、第一銀行、彰化銀行、中國信託銀行、台新銀行、玉山銀行、東京之星銀行、中華航空、長榮海運、長榮航空、宏碁、緯創資通、日月光投資控股、飛宏科技、和碩聯合科技、華碩、英業達、中華民國對外貿易發展協會、創意電子、南亞科技、華邦電子、友達光電、益群創意、長興材料、日本電信電話、KDDI、軟銀集團、NTTPC、台灣碩網、日立製作所、日本克拉線上、日本網路先機、Equinix、富士通、NEWCOM、Tokai株式會社、JAPAEMO株式會社、遊戲橘子、三井知識產業株式會社、U-NEXT、Arteria Networks、スターネット株式會社、信實通信、兼松通訊株式會社
+                <p>
+                臺灣銀行、臺灣企銀、第一銀行、彰化銀行、中國信託銀行、台新銀行、玉山銀行、東京之星銀行、中華航空、長榮海運、長榮航空、宏碁、緯創資通、日月光投資控股、飛宏科技、和碩聯合科技、華碩、英業達、中華民國對外貿易發展協會、創意電子、南亞科技、華邦電子、友達光電、益群創意、長興材料、日本電信電話、KDDI、軟銀集團、NTTPC、台灣碩網、日立製作所、日本克拉線上、日本網路先機、Equinix、富士通、NEWCOM、Tokai株式會社、JAPAEMO株式會社、遊戲橘子、三井知識產業株式會社、U-NEXT、Arteria Networks、スターネット株式會社、信實通信、兼松通訊株式會社</p>
             </div>
         </div>
         <!-- end -->

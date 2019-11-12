@@ -38,6 +38,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script type="text/javascript" src="https://web-eshop.cdn.hinet.net/eshop/js/all.js" defer></script>
     <!-- custom -->
+    <script type="text/javascript" src="assets/js/all.js"></script>
     <script type="text/javascript" src="https://web-eshop.cdn.hinet.net/eshop/js/custom/custom.js"></script>
 	 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
@@ -110,18 +111,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!--<div class="h1">blank header</div>-->
     <div id="wrapper_content">
         <div class="KV contactus">
-            <ul class="menu">
-                <li><a href="index.html">Home 首頁</a></li>｜
-                <li><a href="intro.html">About us 公司簡介</a></li>｜
-                <li><a href="challenge.html">Challenges 遭遇問題</a></li>｜
-                <li><a href="services.html">Services 服務項目</a></li>｜
-                <li class="active"><a href="/">Contact us 聯絡我們</a></li>
-            </ul>
+            <nav class="menu">
+                <ul class="active">
+                    <li><a href="index.html">Home 首頁</a></li>｜
+                    <li><a href="intro.html">About us 公司簡介</a></li>｜
+                    <li><a href="challenge.html">Challenges 遭遇問題</a></li>｜
+                    <li><a href="services.html">Services 服務項目</a></li>｜
+                    <li class="current-item"><a href="contact.html">Contact us 聯絡我們</a></li>
+                </ul>
+                <a class="toggle-nav" href="#">&#9776;</a>
+                <form class="search-form">
+                    <input type="text">
+                    <button>Search</button>
+                </form>
+            </nav>
+        <!-- menu end -->
         <!-- menu end -->
         <ul class="language">
             <li><a href="/">JP</a></li>
             <li><a href="/">EN</a></li>
-            <li class="active"><a href="/">中文</a></li>
+            <li class="current"><a href="/">中文</a></li>
         </ul>
         <!-- language end -->
             <div class="slogan">
