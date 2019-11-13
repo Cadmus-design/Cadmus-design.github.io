@@ -203,16 +203,16 @@ a, a:visited, a:hover, a:link{text-decoration: none;}
 	display: block;
 }
 
-#wrapper_content .KV .active li a, #wrapper_content .KV .active li a:visited{
+#wrapper_content .KV .active li a{
 	color:#fff;
 	font-weight:400;
 	text-decoration: none;
 	display:block;
 }
-#wrapper_content .KV .active li a:hover, #wrapper_content .KV .active .current a{
+#wrapper_content .KV .active li a:hover, #wrapper_content .KV .active .current-item a{
 	color:#00ffff;
 }
-#wrapper_content .KV .active li:hover, #wrapper_content .KV .active .current{
+#wrapper_content .KV .active li:hover, #wrapper_content .KV .active .current-item{
 	border-bottom:4px solid #00ffff;
 }
 #wrapper_content .KV .language{
