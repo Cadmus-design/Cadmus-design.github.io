@@ -139,21 +139,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <!-- KV end -->
         <div class="button_wrapper">  
-            <ul class="normal_content challenge_button">
-                <li>
+            <ul class="button_content">
+                <li><a href="#data">
                         <img class="normal" src="assets/images/service_01_icon.png" />
+                        <img class="other" src="assets/images/service_01_icon_hover.png" />
                         <h3>國際及日本國內<br>數據專用線服務</h3>
-                    
+                        <i class="fas fa-chevron-circle-right other"></i>
+                    </a>
                 </li><span></span>
-                <li>
+                <li><a href="#sale">
                         <img class="normal" src="assets/images/service_02_icon.png" />
+                        <img class="other" src="assets/images/service_02_icon_hover.png" />
                         <h3>ICT規劃<br>整合銷售服務</h3>
+                        <i class="fas fa-chevron-circle-right other"></i>
+                    </a>
                     
                 </li><span></span>
-                <li>
+                <li><a href="#cloud">
                         <img class="normal" src="assets/images/service_03_icon.png" />
+                        <img class="other" src="assets/images/service_03_icon.png" />
                         <h3>中華全球雲網<br>融合服務GXC</h3>
-                    
+                        <i class="fas fa-chevron-circle-right other"></i>
+                    </a>
                 </li>
             </ul>
             <!-- button_content end -->
@@ -198,7 +205,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <ul class="services_inside">
                     <li>
                         <ul>
-                            <li><h6>國際及日本國內數據服務</h6></li>
+                            <li id="data"><h6>國際及日本國內數據服務</h6></li>
                             <li>
                                 <ul>
                                     <li>國際海纜</li>
@@ -212,7 +219,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </li>
                     <li>
                         <ul>
-                            <li><h6>ICT規劃整合銷售服務</h6></li>
+                            <li id="sale"><h6>ICT規劃整合銷售服務</h6></li>
                             <li>
                                 <ul>
                                     <li>國際企業之國際電話節費服務</li>
@@ -226,7 +233,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </li>
                     <li>
                         <ul>
-                            <li><h6>中華全球雲網融合服務GXC</h6></li>
+                            <li id="cloud"><h6>中華全球雲網融合服務GXC</h6></li>
                             <li>
                                 <ul>
                                     <li>專業託管服務</li>
@@ -278,4 +285,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 </body>
+<script type="text/javascript">
+    // create the back to top button
+    $('body').prepend('<a target="_blank" href="#" class="back-to-top">Back to Top</a>');
+
+    var amountScrolled = 300;
+
+    $(window).scroll(function() {
+        if ( $(window).scrollTop() > amountScrolled ) {
+            $('a.back-to-top').fadeIn('slow');
+        } else {
+            $('a.back-to-top').fadeOut('slow');
+        }
+    });
+
+    $('a.back-to-top, a.simple-back-to-top').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 700);
+        return false;
+    });
+    
+    </script>
 </html>

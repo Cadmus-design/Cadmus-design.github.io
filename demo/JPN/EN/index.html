@@ -221,4 +221,26 @@ Chunghwa Telecom (CHT) is one of the top 5 enterprises and the No.1 telecom serv
         </div>
     </section>
 </body>
+<script type="text/javascript">
+    // create the back to top button
+    $('body').prepend('<a target="_blank" href="#" class="back-to-top">Back to Top</a>');
+
+    var amountScrolled = 300;
+
+    $(window).scroll(function() {
+        if ( $(window).scrollTop() > amountScrolled ) {
+            $('a.back-to-top').fadeIn('slow');
+        } else {
+            $('a.back-to-top').fadeOut('slow');
+        }
+    });
+
+    $('a.back-to-top, a.simple-back-to-top').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 700);
+        return false;
+    });
+    
+    </script>
 </html>

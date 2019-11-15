@@ -150,7 +150,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li>Chunghwa Telecom Japan Co.,Ltd.</li>
                         <li> </li>
                         <li>Email：</li>
-                        <li>info@chtjp.net</li>
+                        <li><a href="mailto:info@chtjp.net">info@chtjp.net</a></li>
                         <li>Phone:</li>
                         <li>03-3436-5988</li>
                         <li>Fax：</li>
@@ -196,4 +196,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 </body>
+<script type="text/javascript">
+    // create the back to top button
+    $('body').prepend('<a target="_blank" href="#" class="back-to-top">Back to Top</a>');
+
+    var amountScrolled = 300;
+
+    $(window).scroll(function() {
+        if ( $(window).scrollTop() > amountScrolled ) {
+            $('a.back-to-top').fadeIn('slow');
+        } else {
+            $('a.back-to-top').fadeOut('slow');
+        }
+    });
+
+    $('a.back-to-top, a.simple-back-to-top').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 700);
+        return false;
+    });
+    
+    </script>
 </html>
