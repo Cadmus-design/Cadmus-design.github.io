@@ -821,7 +821,7 @@ a.back-to-top {
 }
 #wrapper_content .KV .slogan{
 	width:85vw;
-	margin:1rem auto;
+	margin:-1rem auto;
 }
 #wrapper_content .KV .slogan h1{
 	font-size: 1.5rem;
@@ -839,7 +839,7 @@ a.back-to-top {
 }
 #wrapper_content .button_content{
 	display:flex;
-	
+	justify-content: space-around;
 	flex-wrap: wrap;
 	width:97%;
 	margin:-3em auto 0rem;
@@ -851,7 +851,7 @@ a.back-to-top {
 }
 #wrapper_content .button_content li{
 	text-align: center;
-	width:47%;
+	width: 47%;
 	margin:0 1%;
 	padding:0.5rem;
 	transition: .6s ease;
@@ -890,17 +890,21 @@ a.back-to-top {
 	display: block;
 	vertical-align: middle;
 	font-size: 1rem;
-	margin:.25rem;
+	
 }
 
 #wrapper_content .button_content li:first-of-type em, #wrapper_content .button_content li:nth-of-type(4) em{
-	line-height: 3rem;
+	
 }
 #wrapper_content .button_content li p{
-	font-size: .8rem;
-	line-height: .8rem;
+	font-size: 1rem;
+	line-height: 1rem;
 	vertical-align: top;
 	word-break: keep-all;
+	
+}
+#wrapper_content .button_content li:nth-of-type(4) p{
+	line-height: 3rem;
 }
 #wrapper_content .button_content li .other{
 	display:none;
@@ -1302,16 +1306,16 @@ a.back-to-top {
 	font-size: 0.8rem;
 }
 #wrapper_content .content_wrapper .services_wrapper .services_inside >li:first-of-type{
-	background: #fff url(../images/services_inside_01.jpg) no-repeat -200% 0;
+	background: #fff url(../images/services_inside_01_m.jpg) no-repeat -200% 0;
 	background-size: cover;
-	text-shadow: 2px 2px 4px #fff;
+
 }
 #wrapper_content .content_wrapper .services_wrapper .services_inside >li:nth-of-type(2){
-	background: #fff  url(../images/services_inside_02.jpg) no-repeat -200% 0;
+	background: #fff  url(../images/services_inside_02_m.jpg) no-repeat -200% 0;
 	background-size: cover;
 }
 #wrapper_content .content_wrapper .services_wrapper .services_inside >li:nth-of-type(3){
-	background: #fff  url(../images/services_inside_03.jpg) no-repeat -200% 0;
+	background: #fff  url(../images/services_inside_03_m.jpg) no-repeat -200% 0;
 	background-size: cover;
 }
 /*service end*/

@@ -852,11 +852,11 @@ a.back-to-top {
 }
 #wrapper_content .KV .slogan{
 	width:85vw;
-	margin:1rem auto;
+	margin:-1rem auto;
 }
 #wrapper_content .KV .slogan h1{
-	font-size: 1.5rem;
-	line-height: 2.5rem;
+	font-size: 1rem;
+	line-height: 1.2rem;
 	color: #fff;
 	font-weight: 800;
 }
@@ -865,7 +865,7 @@ a.back-to-top {
 	display: block;
 	color: #fff;
 	font-style: normal;
-	font-size: 1rem;
+	font-size: .8rem;
 	word-wrap: break-word;
 }
 #wrapper_content .button_content{
@@ -1335,15 +1335,26 @@ a.back-to-top {
 #wrapper_content .content_wrapper .services_wrapper .services_inside >li:first-of-type{
 	background: #fff url(../images/services_inside_01.jpg) no-repeat -200% 0;
 	background-size: cover;
-	text-shadow: 2px 2px 4px #fff;
+	text-shadow: 1px -1px 0 #fff, 
+               1px -1px 0 #fff,
+              -1px 1px 0 #fff, 
+              1px 1px 0 #fff;
 }
 #wrapper_content .content_wrapper .services_wrapper .services_inside >li:nth-of-type(2){
 	background: #fff  url(../images/services_inside_02.jpg) no-repeat -200% 0;
 	background-size: cover;
+	text-shadow: 1px -1px 0 #fff, 
+               1px -1px 0 #fff,
+              -1px 1px 0 #fff, 
+              1px 1px 0 #fff;
 }
 #wrapper_content .content_wrapper .services_wrapper .services_inside >li:nth-of-type(3){
 	background: #fff  url(../images/services_inside_03.jpg) no-repeat -200% 0;
 	background-size: cover;
+	text-shadow: 1px -1px 0 #fff, 
+               1px -1px 0 #fff,
+              -1px 1px 0 #fff, 
+              1px 1px 0 #fff;
 }
 /*service end*/
 /*contact*/
