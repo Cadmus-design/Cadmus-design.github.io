@@ -1266,6 +1266,12 @@ a {
 		width:50%;
 		margin:0 auto;
 	}
+@media screen and (max-width:768px){
+    #wrap #container_page .type table:nth-of-type(3) tr td ul{
+
+		width:100%;
+	}
+}
 	#wrap #container_page .type table:nth-of-type(3) tr td ul li{
 		text-align:left;
 	}
