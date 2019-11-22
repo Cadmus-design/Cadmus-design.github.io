@@ -1275,6 +1275,16 @@ a {
 	#wrap #container_page .type table:nth-of-type(3) tr td ul li{
 		text-align:left;
 	}
+	@media screen and (max-width: 768px){
+	#wrap #container_page .type table:nth-of-type(3) tr td span:before, #wrap #container_page .type table:nth-of-type(3) tr th span:before{
+		content:"\A";
+		white-space: pre;
+	}
+	#wrap #container_page .type table:nth-of-type(3) tr th{
+		vertical-align: middle;
+	} 
+}
+
 	#wrap #container_page .type table .line{
 		border:4px solid #12a5b0;
 		
