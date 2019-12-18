@@ -758,7 +758,10 @@ a {
 
 @media screen and (max-width: 639px) {
   .main-index a {
-    padding: 15px 30px;
+    /*padding: 15px 30px;*/
+  }
+  .main-index .addBox .box{
+   padding: 15px 30px; 
   }
 
   .addBox .box2 img {
