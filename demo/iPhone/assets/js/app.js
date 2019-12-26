@@ -95,13 +95,13 @@ var plan_content = {
     'upgrade.json': {
         "type": "table3",
         "content": [
-            ["iPhone XR", "64GB", "21,500",  "128GB", "23,500", "256GB", "25,100"],
-            ["iPhone XS", "64GB", "32,900",  "256GB", "38,500",  "512GB", "41,900"],
-            ["iPhone XS Max", "64GB", "35,900",  "256GB", "41,500", "512GB", "44,900"],
-            ["iPhone 7", "32GB", "12,900","128GB", "14,900"],
-            ["iPhone 7 Plus", "32GB", "15,500","128GB", "17,500"],
-            ["iPhone 8", "64GB", "15,900","128GB", "17,900",  "256GB", "21,500"],
-            ["iPhone 8 Plus", "64GB", "19,900","128GB", "21,900", "256GB", "25,500"],
+            ["iPhone XR", "64GB", "21,500", "-",  "128GB", "23,500", "-", "256GB", "25,100", "-"],
+            ["iPhone XS", "64GB", "32,900", "30,900",  "256GB", "38,500", "36,500", "512GB", "41,900", "39,900"],
+            ["iPhone XS Max", "64GB", "35,900", "33,900",  "256GB", "41,500", "39,500", "512GB", "44,900", "42,900"],
+            ["iPhone 7", "32GB", "12,900", "-", "128GB", "14,900", "-"],
+            ["iPhone 7 Plus", "32GB", "15,500", "-", "128GB", "17,500", "-"],
+            ["iPhone 8", "64GB", "15,900", "-", "128GB", "17,900", "-", "256GB", "21,500", "-"],
+            ["iPhone 8 Plus", "64GB", "19,900", "-", "128GB", "21,900", "-", "256GB", "25,500", "-"],
         ]
     },
     '2gto4g.json': {
@@ -420,13 +420,13 @@ function table2(json) {
 function table3(json) {
     var tmp = '';
     $.each(json.content, function (i, data) {
-        tmp += '<tr><td class="color-3-2" rowspan="' + (data.length - 1) / 2 + '">' + data[0] + '</td>';
-        for (var i = 1; i < data.length; i += 2) {
+        tmp += '<tr><td class="color-3-2" rowspan="' + (data.length - 1) / 3 + '">' + data[0] + '</td>';
+        for (var i = 1; i < data.length; i += 3) {
             if (i != 1) tmp += '<tr>';
-            tmp += '<td>' + data[i] + '</td><td>' + data[i + 1] + '</td></tr>';
+            tmp += '<td>' + data[i] + '</td><td>' + data[i + 1] + '</td><td>' + data[i + 2] + '</td></tr>';
         }
     });
-    return '<table class="table3"><tr><th class="color-3-1">機型</th><th class="color-3-1">容量</th><th class="color-3-1">購機優惠(元)</th></tr>' + tmp + '</table>';
+    return '<table class="table3"><tr><th class="color-3-1">機型</th><th class="color-3-1">容量</th><th class="color-3-1">購機優惠(元)</th><th class="color-3-1">中華電信客戶<br>獨享購機優惠(元)</th></tr>' + tmp + '</table>';
 }
 
 function table4(json) {
