@@ -914,10 +914,10 @@ table.line10 {
       width: 5%;
       pointer-events: all; }
       .go_top .go_box a img {
-        width: 5%; }
+        width: 8%; }
         @media (max-width: 768px) {
           .go_top .go_box a img {
-            width: 10%; } }
+            width: 15%; } }
 
 .top1 {
   position: relative;
