@@ -943,6 +943,13 @@ a.back-to-top {
 	word-break: keep-all;
 	
 }
+#wrapper_content .button_content li p i:before{
+	white-space: pre;
+	content:"\A";
+}
+#wrapper_content .button_content li p i{
+	font-style:normal;
+}
 #wrapper_content .button_content li:nth-of-type(4) p{
 	line-height: 3rem;
 }
@@ -1137,7 +1144,7 @@ a.back-to-top {
 	text-align:center;
 }
 #wrapper_content .intro_title li em span{
-	font-size: .8rem;
+	font-size: .7rem;
 	font-weight: 400;
 	color: #44494d;	
 	text-align:center;

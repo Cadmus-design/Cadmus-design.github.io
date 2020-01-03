@@ -965,6 +965,7 @@ a.back-to-top {
 	vertical-align: top;
 	word-break: keep-all;
 }
+
 #wrapper_content .button_content li .other{
 	display:none;
 	text-align: center;
@@ -1116,22 +1117,22 @@ a.back-to-top {
 	border-radius: 0.8rem;
 	background-clip:padding-box;
 	box-shadow: 2px 2px 4px #777;
-	max-height: 11.5rem;
+	height: 18rem;
 	flex-wrap:wrap;
 	padding:1rem 0 0 0;
 }
 #wrapper_content .intro_title li{
 	width:30%;
-	height:10vh;
+	height:14vh;
 	text-align: center;
 	padding:.5rem;
 	transition: 0.6s ease;
-	white-space:nowrap;
+	white-space:break-all;
 	vertical-align: middle;
 }
 #wrapper_content .intro_title li + span{
 	width:1px;
-	height:2rem;
+	height:4rem;
 	margin-top:1rem;
 	vertical-align: middle;
 	border-right:1px solid #666;

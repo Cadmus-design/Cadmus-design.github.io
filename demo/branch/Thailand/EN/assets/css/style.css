@@ -877,8 +877,8 @@ a.back-to-top {
 	margin:-1rem auto;
 }
 #wrapper_content .KV .slogan h1{
-	font-size: 1.5rem;
-	line-height: 2.5rem;
+	font-size: 1rem;
+	line-height: 2rem;
 	color: #fff;
 	font-weight: 800;
 }
@@ -888,7 +888,8 @@ a.back-to-top {
 	color: #fff;
 	font-style: normal;
 	font-size: 0.8rem;
-	word-wrap: break-word;
+	line-height: 1rem;
+
 }
 #wrapper_content .button_content{
 	display:flex;
@@ -1059,7 +1060,6 @@ a.back-to-top {
 }
 #wrapper_content .challenge_button li h3{
 	font-size: 0.8rem;
-	white-space: nowrap;
 }
 #wrapper_content .challenge_button span{
 	width:1px;
@@ -1113,17 +1113,16 @@ a.back-to-top {
 	border-radius: 0.8rem;
 	background-clip:padding-box;
 	box-shadow: 2px 2px 4px #777;
-	max-height: 11.5rem;
+	height: 18rem;
 	flex-wrap:wrap;
 	padding:1rem 0 0 0;
 }
 #wrapper_content .intro_title li{
 	width:30%;
-	height:10vh;
+	height:14vh;
 	text-align: center;
 	padding:.5rem;
 	transition: 0.6s ease;
-	white-space:nowrap;
 	vertical-align: middle;
 }
 #wrapper_content .intro_title li + span{
@@ -1147,8 +1146,8 @@ a.back-to-top {
 	font-weight: 600;
 	display: block;
 	vertical-align: middle;
-	line-height: 0.75rem;
-	font-size: 1rem;
+	line-height: 1rem;
+	font-size: 1.5rem;
 	color:#b148d3;
 	text-align:center;
 }

@@ -324,6 +324,9 @@ a.back-to-top {
 	line-height: .8rem;
 	vertical-align: top;
 }
+#wrapper_content .button_content li p i{
+	font-style:normal;
+}
 #wrapper_content .button_content li .other{
 	display:none;
 	text-align: center;
@@ -934,6 +937,13 @@ a.back-to-top {
 	vertical-align: top;
 	word-break: keep-all;
 	
+}
+#wrapper_content .button_content li p i:before{
+	white-space: pre;
+	content:"\A";
+}
+#wrapper_content .button_content li p i{
+	font-style:normal;
 }
 #wrapper_content .button_content li:nth-of-type(4) p{
 	line-height: 3rem;
