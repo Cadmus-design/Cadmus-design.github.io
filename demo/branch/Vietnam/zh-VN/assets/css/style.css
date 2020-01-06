@@ -1412,12 +1412,6 @@ a.back-to-top {
 #wrapper_content .contact_wrapper .info ul li:nth-of-type(2n){
 	width:60%;
 }
-#wrapper_content .contact_wrapper .info ul li:nth-of-type(1){
-	width:80%;
-}
-#wrapper_content .contact_wrapper .info ul li:nth-of-type(2){
-	width:5%;
-}
 #wrapper_content .contact_wrapper .info h2{
 	text-indent: 1rem;
 	border-left:10px solid #ff7b58;
