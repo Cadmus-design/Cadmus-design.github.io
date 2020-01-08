@@ -256,6 +256,9 @@ a.back-to-top {
 	color: #fff;
 	font-weight: 800;
 }
+#wrapper_content .KV .slogan h1 i{
+	font-style: normal;
+}
 #wrapper_content .KV .slogan em{
 	width:25em;
 	display: block;
