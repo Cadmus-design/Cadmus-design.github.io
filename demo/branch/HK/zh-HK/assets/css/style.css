@@ -294,6 +294,7 @@ a.back-to-top {
 }
 #wrapper_content .button_content li a i{
 	line-height: 1rem;
+	font-style: normal;
 }
 #wrapper_content .button_content li:hover a, #wrapper_content .button_content li:hover a p, #wrapper_content .button_content .current{
 	color:#fff;
