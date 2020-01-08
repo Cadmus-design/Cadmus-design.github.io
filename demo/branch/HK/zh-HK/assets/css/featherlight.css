@@ -159,6 +159,7 @@ html.with-featherlight {
 	padding:.5rem;
 	display: inline-block;
 	vertical-align: top;
+	width:45%;
 }
 
 /* handling phones and small screens */
