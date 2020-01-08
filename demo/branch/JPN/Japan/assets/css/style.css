@@ -310,12 +310,15 @@ a.back-to-top {
 	font-size: 1rem;
 }
 /*chanllenge button*/
+#wrapper_content .button_content li {
+	width:30%;
+}
 #wrapper_content .button_content li h3{
 	font-style:normal;
 	font-weight: 800;
 	display: block;
 	vertical-align: middle;
-	font-size: 1.5rem;
+	font-size: 1rem;
 	margin:.25rem;
 }
 
@@ -373,6 +376,7 @@ a.back-to-top {
 	transition: .6s ease;
 	white-space:nowrap;
 	color:#337ab7;
+	width: 30%;
 }
 #wrapper_content .normal_content span{
 	width:1px;
