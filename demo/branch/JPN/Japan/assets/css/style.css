@@ -483,12 +483,12 @@ a.back-to-top {
 	font-weight: 600;
 	display: block;
 	vertical-align: middle;
-	line-height: 1.8rem;
-	font-size: 2rem;
+	line-height: 1.5rem;
+	font-size: 1.5rem;
 	color:#00a7ff;
 }
 #wrapper_content .intro_title li em span{
-	font-size: 1.2rem;
+	font-size: 1rem;
 	font-weight: 400;
 	color: #44494d;	
 }
@@ -846,7 +846,7 @@ a.back-to-top {
 	border-bottom:4px solid #00ffff;
 }
 #wrapper_content .KV .language{
-	width:40%;
+	width:44%;
 	text-align:right;
 	position:absolute;
 	right:0vw;
@@ -1118,13 +1118,13 @@ a.back-to-top {
 	padding:1rem 0 0 0;
 }
 #wrapper_content .intro_title li{
-	width:30%;
+	width:31%;
 	height:10vh;
 	text-align: center;
-	padding:.5rem;
+	padding:.1rem;
 	transition: 0.6s ease;
-	white-space:break-all;
 	vertical-align: middle;
+
 }
 #wrapper_content .intro_title li:nth-of-type(2), #wrapper_content .intro_title li:nth-of-type(4){
 
@@ -1132,8 +1132,7 @@ a.back-to-top {
 #wrapper_content .intro_title li + span{
 	width:1px;
 	height:4rem;
-	margin-top:1rem;
-	vertical-align: middle;
+	vertical-align: bottom;
 	border-right:1px solid #666;
 }
 #wrapper_content .intro_title li a{
@@ -1149,21 +1148,22 @@ a.back-to-top {
 	font-style:normal;
 	font-weight: 600;
 	display: block;
-	vertical-align: middle;
 	line-height: 1rem;
 	font-size: 1rem;
 	color:#00a7ff;
 	text-align:center;
 }
 #wrapper_content .intro_title li em span{
-	font-size: .8rem;
+	font-size: 85%;
 	font-weight: 400;
 	color: #44494d;	
 	text-align:center;
 }
 #wrapper_content .intro_title li em span:before{
+	/*
 	white-space: pre;
 	content: "\A";
+	*/
 }
 
 #wrapper_content .intro_title li .other{
