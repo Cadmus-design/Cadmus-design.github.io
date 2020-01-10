@@ -833,7 +833,7 @@ a.back-to-top {
 	border-bottom:4px solid #00ffff;
 }
 #wrapper_content .KV .language{
-	width:40%;
+	width:45%;
 	text-align:right;
 	position:absolute;
 	right:0vw;
@@ -859,8 +859,8 @@ a.back-to-top {
 	margin:-1rem auto;
 }
 #wrapper_content .KV .slogan h1{
-	font-size: 1.5rem;
-	line-height: 2.5rem;
+	font-size: 1.25rem;
+	line-height: 2rem;
 	color: #fff;
 	font-weight: 800;
 }
