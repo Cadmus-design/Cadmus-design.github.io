@@ -1181,7 +1181,7 @@ a:hover {
         .vip_main .qualifications .dateTable table td ~ td {
           position: relative;
           padding: 19px 20px;
-          width: 19%;
+          width: 15%;
           -webkit-box-sizing: border-box;
           box-sizing: border-box;
           text-align: center; }
