@@ -60,8 +60,8 @@ html.with-featherlight {
 	border-bottom: 25px solid transparent;
 
 	/* dimensions: handling large content */
-	margin-left: 5%;
-	margin-right: 5%;
+	margin-left: 20%;
+	margin-right: 20%;
 	max-height: 95%;
 
 	/* styling */
