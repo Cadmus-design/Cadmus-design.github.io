@@ -321,8 +321,10 @@ a.back-to-top {
 	margin:.25rem;
 	color:#547992;
 }
-
-#wrapper_content .button_content li:first-of-type em, #wrapper_content .button_content li:nth-of-type(4) em{
+#wrapper_content .button_content li:first-of-type em{
+	line-height: 2.5rem;
+}
+#wrapper_content .button_content li:nth-of-type(4) em{
 	line-height: 3rem;
 }
 #wrapper_content .button_content li p{

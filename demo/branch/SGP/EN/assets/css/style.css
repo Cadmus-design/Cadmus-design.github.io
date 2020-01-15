@@ -291,10 +291,12 @@ a.back-to-top {
 #wrapper_content .button_content li{
 	text-align: center;
 	margin:0 1%;
-	padding:1rem;
+	padding:.5rem;
 	transition: .6s ease;
 	white-space:nowrap;
+	width:19%;
 }
+
 #wrapper_content .button_content span{
 	width:1px;
 	height:5rem;
@@ -329,7 +331,7 @@ a.back-to-top {
 	font-weight: 800;
 	display: block;
 	vertical-align: middle;
-	font-size: 1.5rem;
+	font-size: .8rem;
 	margin:.25rem;
 	color:#2ab39f;
 }
