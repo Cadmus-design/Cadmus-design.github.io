@@ -268,7 +268,6 @@ a.back-to-top {
 	display:inline-block;
 	vertical-align: top;
 	margin:0 1rem 0 0;
-	font-size: 85%;
 	text-shadow: 1px 1px #333;
 }
 #wrapper_content .KV .slogan .index:nth-of-type(2){
@@ -496,6 +495,7 @@ a.back-to-top {
 	font-size: 1.2rem;
 	font-weight: 400;
 	color: #44494d;	
+	padding:0 0 0 .4rem;
 }
 
 #wrapper_content .intro_title li .other{
@@ -878,12 +878,12 @@ a.back-to-top {
 	display: inline-block;
 }
 #wrapper_content .KV .language li a{
-	color:#4a6390;	
+	color:#fff;	
 	text-decoration: none;
 	text-shadow: 0px 0px 1px #ddd;
 }
 #wrapper_content .KV .language .current a{
-	color:#fff;
+	color:#ff7b6f;
 }
 #wrapper_content .KV .active li, #wrapper_content .KV .language li{
 	padding:0.25rem;

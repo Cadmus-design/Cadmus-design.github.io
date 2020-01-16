@@ -863,12 +863,12 @@ a.back-to-top {
 	display: inline-block;
 }
 #wrapper_content .KV .language li a{
-	color:#4a6390;	
+	color:#fff;	
 	text-decoration: none;
 	text-shadow: 0px 0px 1px #ddd;
 }
 #wrapper_content .KV .language .current a{
-	color:#fff;
+	color:#ff7b58;
 }
 #wrapper_content .KV .active li, #wrapper_content .KV .language li{
 	padding:0.25rem;
