@@ -4842,8 +4842,8 @@
 
     <div class="container_page">
         <div class="kv">
-            <a href="#discount" onclick="gtag('event', 'Travel_insurance', {'event_category': 'KV', 'event_label': 'KV'});"><img class="img_pc" src="img/KV.jpg" border="0"></a>
-            <a class="ccc" href="#discount" onclick="gtag('event', 'Travel_insurance', {'event_category': 'KV_m', 'event_label': 'KV_m'});"><img class="img_moblie" src="img/KV_m.jpg" border="0"></a>
+            <a href="#discount2" onclick="gtag('event', 'Travel_insurance', {'event_category': 'KV', 'event_label': 'KV'});"><img class="img_pc" src="img/KV.jpg" border="0"></a>
+            <a class="kkk" href="#discount2" onclick="gtag('event', 'Travel_insurance', {'event_category': 'KV_m', 'event_label': 'KV_m'});"><img class="img_moblie" src="img/KV_m.jpg" border="0"></a>
         </div>
 
 
@@ -5611,7 +5611,7 @@
             </div>
         </div>
 
-        <div class="discount">
+        <div class="discount discount2">
 
             <div class="discount_main">
                 <h3>
@@ -5814,8 +5814,20 @@
         //   $(this).toggleClass('menu-opened');
         //   $all_icon.removeClass('submenu-opened');
         // }) 
-        $(window).width()
+        function hashchange(k) {
+                    var isScrollDown = $('.nav-global-header').hasClass('scrolling-down');
+                    var scrollTop = $(window).scrollTop();
+                    var hash = window.location.hash.substring(window.location.hash.indexOf('#') + 1);
+                    var $target = $('.' + hash);
+                    var top = $target.offset().top;
+                    var diff = top > scrollTop ? 60 : 120;
+                    $("html, body").stop().animate({
+                        scrollTop: top - diff
+                    }, 600);
+                }
+                $(window).bind('hashchange', hashchange).trigger('hashchange');
 
+        $(window).width()           
         if ($(window).width() < 1001) {
             $a.click(function (e) {
                 var $ul = $(this).siblings('ul');
@@ -5883,6 +5895,7 @@
 
 
     });
+    
 </script>
 
 <script>
