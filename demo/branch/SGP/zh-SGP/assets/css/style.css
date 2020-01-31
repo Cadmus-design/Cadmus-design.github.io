@@ -632,6 +632,9 @@ a.back-to-top {
 	color:#fff;
 	font-size: 1.2rem;
 }
+#wrapper_content .content_wrapper .services_wrapper .services_content li:nth-of-type(2) h1{
+	margin:3rem 0 0 0;
+}
 #wrapper_content .content_wrapper .services_wrapper .services_content li h1 span:before{
 	white-space: pre;
 	content:"\A";
@@ -1357,14 +1360,14 @@ a.back-to-top {
 	list-style: disc;
 }
 #wrapper_content .content_wrapper .services_wrapper .services_content >li:first-of-type{
-	background: #44546a;
+	background: #007ac5;
 
 }
 #wrapper_content .content_wrapper .services_wrapper .services_content >li:nth-of-type(2){
-	background: #8497b0;
+	background: #28a435;
 }
 #wrapper_content .content_wrapper .services_wrapper .services_content >li:nth-of-type(3){
-	background: #adb9ca;
+	background: #f08c00;
 }
 #wrapper_content .content_wrapper .services_wrapper .services_content li ol li{
 	line-height: 1.5rem;

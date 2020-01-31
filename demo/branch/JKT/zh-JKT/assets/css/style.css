@@ -631,6 +631,9 @@ a.back-to-top {
 	color:#fff;
 	font-size: 1.2rem;
 }
+#wrapper_content .content_wrapper .services_wrapper .services_content li:nth-of-type(2) h1{
+	margin:3rem 0 0 0;
+}
 #wrapper_content .content_wrapper .services_wrapper .services_content li h1 span:before{
 	white-space: pre;
 	content:"\A";
