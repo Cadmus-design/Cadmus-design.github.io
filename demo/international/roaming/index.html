@@ -5814,19 +5814,7 @@
         //   $(this).toggleClass('menu-opened');
         //   $all_icon.removeClass('submenu-opened');
         // }) 
-        function hashchange(k) {
-                    var isScrollDown = $('.nav-global-header').hasClass('scrolling-down');
-                    var scrollTop = $(window).scrollTop();
-                    var hash = window.location.hash.substring(window.location.hash.indexOf('#') + 1);
-                    var $target = $('.' + hash);
-                    var top = $target.offset().top;
-                    var diff = top > scrollTop ? 60 : 120;
-                    $("html, body").stop().animate({
-                        scrollTop: top - diff
-                    }, 600);
-                }
-                $(window).bind('hashchange', hashchange).trigger('hashchange');
-
+        
         $(window).width()           
         if ($(window).width() < 1001) {
             $a.click(function (e) {
@@ -5895,7 +5883,18 @@
 
 
     });
-    
+    function hashchange(k) {
+                    var isScrollDown = $('.nav-global-header').hasClass('scrolling-down');
+                    var scrollTop = $(window).scrollTop();
+                    var hash = window.location.hash.substring(window.location.hash.indexOf('#') + 1);
+                    var $target = $('.' + hash);
+                    var top = $target.offset().top;
+                    var diff = top > scrollTop ? 60 : 120;
+                    $("html, body").stop().animate({
+                        scrollTop: top - diff
+                    }, 600);
+                }
+                $(window).bind('hashchange', hashchange).trigger('hashchange');
 </script>
 
 <script>
