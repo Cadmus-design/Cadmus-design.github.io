@@ -555,6 +555,13 @@ table{
     margin-top: 40px;
     border-spacing: 4px;
 }
+table caption{
+    font-size: 2.5rem;
+    color: #000;
+    text-align: left;
+    padding: 0.8rem;
+}
+
 table .header1{
     position: absolute;
     width: 99.5%;
@@ -605,6 +612,10 @@ table .td3{
 }
 table .td3h{
     padding: 130px 0 45px;
+}
+table .td3 b{
+    font-size: 150%;
+    font-style: bold;
 }
 table .td3w{
     text-align: center;
@@ -673,7 +684,19 @@ table .arrow1{
     height: 15px;
     background: url(../img/arrow7.png) no-repeat;
 }
-
+table .new520{
+    padding:1rem 0;
+    
+    background: #77c7f3;
+    color: :#fff;
+    font-size: 120%;
+}
+table .new520:nth-of-type(2),table .new520:nth-of-type(3){
+    width:43%;   
+}
+.table table .new520 .sub-title, .table table .new520 div{
+    color: :#ffffff;
+}
 .event{
     color:#666;
     font-weight:bold;
@@ -767,6 +790,17 @@ table .arrow1{
 }
 .event_btn2 a{
     background:#fd8d25;
+    color:#fff;
+    padding:.2em .5em;
+    border-radius: .3em;
+    display:table;
+    margin:1em auto;
+    font-size: 1.5em;
+    text-decoration: none;
+    letter-spacing: 0.3em;
+}
+.event_btn3 a{
+    background:#f85d77;
     color:#fff;
     padding:.2em .5em;
     border-radius: .3em;
@@ -1390,7 +1424,7 @@ table .arrow1{
 
     .table .notice{
         font-size: 18px;
-        text-align:right;
+        text-align:center;
     }
     .table .note{
     font-size: 18px;
