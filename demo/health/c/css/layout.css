@@ -583,9 +583,7 @@ table .header1 span,table .header2 span{
     left: 47%;
     line-height: 85px;
 }
-@media screen and (max-width:975px){
 
-}
 table .header2{
     position: absolute;
     width: 99.5%;
@@ -630,7 +628,15 @@ table .td3h .txt1{
         display:inline-block;
         vertical-align: middle;
     }
-
+    table .td3 {
+            vertical-align: top;
+            }
+    @media screen and (max-width:975px){
+        table .td3 .item1 img{
+            max-width:70%;
+            min-width:50%;
+            }
+    }
 
 table .td4{
     background: #fff0dd;
