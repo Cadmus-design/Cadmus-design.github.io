@@ -1012,7 +1012,7 @@ a {
 		padding:1rem 0;
 	}
 	.solution ul{
-		list-style-type: decimal;
+		list-style-type: cjk-ideographic;
 		width: 70%;
 		margin:0 auto;
 	}
@@ -1020,7 +1020,7 @@ a {
 		font-size: 0.8rem;
 		line-height: 1rem;
 		padding:.2rem;
-		text-align: justify;
+		text-align: left;
 	}
 }
 
