@@ -371,7 +371,7 @@ a {
 		padding:1rem 0;
 	}
 	.solution ul{
-		list-style: trad-chinese-informal ;
+		list-style: cjk-ideographic;
 		width: 85%;
 		margin:0 auto;
 	}
