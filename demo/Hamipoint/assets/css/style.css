@@ -1012,7 +1012,7 @@ a {
 		padding:1rem 0;
 	}
 	.solution ul{
-		list-style: trad-chinese-informal ;
+		list-style-type: trad-chinese-informal ;
 		width: 70%;
 		margin:0 auto;
 	}
