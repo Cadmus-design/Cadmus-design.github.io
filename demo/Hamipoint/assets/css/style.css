@@ -1027,6 +1027,7 @@ a {
 		list-style-type: cjk-ideographic;
 		width: 70%;
 		margin:0 auto;
+		padding:0 0 0 2rem;
 	}
 	.solution ul li{
 		font-size: 0.8rem;
