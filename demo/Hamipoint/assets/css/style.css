@@ -242,7 +242,7 @@ a {
 	#wrap #container_page .feature ul li p{
 		font-size:1rem;
 		line-height:1.5rem;
-		padding:0 3rem 0 0;
+		padding:0 3.8rem 0 0;
 		text-align: center;
 	}
 	#wrap #container_page .feature ul li p span{
@@ -437,7 +437,7 @@ a {
 		color: #388c31;
 	}
 	#wrap .intro h2{
-		padding:1rem 0 0.5rem 45vw;
+		padding:2rem 0 0.5rem 45vw;
 		font-size:1.25rem;
 		line-height:1.5rem;
 		color: #388c31;
@@ -544,6 +544,7 @@ a {
 	}
 	#wrap #container_page .feature ol li p{
 		padding:0 3rem 0 0;
+        white-space: nowrap;
 	}
 	#wrap #container_page .feature ol li p a{
 		border-radius: 2rem;
@@ -551,6 +552,7 @@ a {
 		font-weight: bold;
 		background: #eee;
 		padding:.5em 1rem;
+        white-space: nowrap;
 	}
 	/*adv begin*/
 	#wrap #container_page .adv{
