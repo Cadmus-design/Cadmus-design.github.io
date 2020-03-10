@@ -357,9 +357,9 @@ a:hover {
       content: '';
       display: block; }
   .pageTitle .pic {
-    float: left; }
+    float:left; }
   .pageTitle .text_group {
-    float: left; }
+    float:left; }
   .pageTitle .title_group {
     position: relative;
     text-align: center;
@@ -397,7 +397,7 @@ a:hover {
     margin-top: 40px;
     font-size: 30px;
     font-weight: 600; }
-  .spotContent .moreBtn {
+  .spotContent .moreBtn, .birthday .moreBtn  {
     display: inline-block;
     padding: 15px 30px;
     border-radius: 30px;
@@ -408,7 +408,7 @@ a:hover {
     background-color: #7b5d21;
     color: #fff;
     letter-spacing: 2px; }
-    .spotContent .moreBtn:hover {
+    .spotContent .moreBtn:hover, .birthday .moreBtn  {
       background-color: #a1803c;
       -webkit-transition: all 0.2s;
       -o-transition: all 0.2s;
@@ -545,6 +545,9 @@ a:hover {
       background: -webkit-linear-gradient(left, #baa276 46%, #e5d4b8 52%);
       background: -o-linear-gradient(left, #baa276 46%, #e5d4b8 52%);
       background: linear-gradient(90deg, #baa276 46%, #e5d4b8 52%); }
+      .linear_5G{
+        margin:0 0 150px 0;
+      }
   .spotContent {
     background-color: #f8f5f0; }
     .spotContent .title {
@@ -980,6 +983,15 @@ a:hover {
   padding: 50px 0; }
   .pageTitle .text_group {
     margin-left: 75px; }
+    .pageTitle .text_group #new_5G, .title_5G {
+    margin-left: -40px; }
+
+    .news_5G {
+   
+   list-style-image: url(../img/list_icon.png) ;
+   
+    }
+
   .pageTitle .title {
     font-size: 45px;
     margin-bottom: 35px;
@@ -1011,7 +1023,12 @@ a:hover {
       font-size: 35px;
       letter-spacing: 0px; }
     .pageTitle .subTitle {
-      margin-top: 10px; } }
+      margin-top: 10px; } 
+    .custom_container >.btn_group{
+      display: table-cell;
+      margin:0 auto;
+    }
+    }
 
 .logo {
   position: relative;
@@ -1522,7 +1539,14 @@ a:hover {
   padding: 0 30px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
-
+.custom_container >.btn_group{
+      width:15%;
+      display: block;
+      margin:0px auto 0;
+    }
+  .custom_container >.btn_group >.moreBtn{
+    margin:50px 0 0 0;
+  }
 .continueAgree .spotContent .title_group {
   position: relative;
   text-align: center;
@@ -1923,6 +1947,11 @@ a:hover {
     margin-bottom: 0px; }
     .addService .spotContent .custom_container {
       padding: 0 25px; }
+      .custom_container >.btn_group{
+      width:30%;
+      display: block;
+      margin:0px auto 0;
+    }
     .addService .spotContent .service_group {
       width: 400px;
       margin: 0 auto; }
@@ -3447,7 +3476,7 @@ a:hover {
     margin: 10px 0;
     font-size: 20px;
     font-weight: 500; }
-  .birthday .spotContent .content .moreBtn {
+  .birthday .spotContent .content .moreBtn, .birthday .moreBtn {
     margin: 100px auto 0 auto; }
 
 .birthday .Remind .remind_content {
@@ -3469,6 +3498,7 @@ a:hover {
     max-width: 640px;
     width: 100%;
     padding-top: 0px; }
+
   .birthday .pageTitle .pic {
     width: 180px;
     margin: 0; }
@@ -3476,6 +3506,9 @@ a:hover {
     margin: 0px;
     margin-top: 5px 0 20px 0;
     line-height: 1; }
+    .birthday .pageTitle .title_5G{
+      margin-left: -40px;
+    }
   .birthday .pageTitle .subTitle {
     line-height: 1.6;
     margin-top: 20px;
