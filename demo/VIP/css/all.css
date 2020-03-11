@@ -386,6 +386,9 @@ a:hover {
     background: -webkit-linear-gradient(left, #baa276 46%, #e5d4b8 52%);
     background: -o-linear-gradient(left, #baa276 46%, #e5d4b8 52%);
     background: linear-gradient(90deg, #baa276 46%, #e5d4b8 52%); }
+.linear_5G{
+        margin: -100px 0 150px 0;
+      }
 
 .spotContent {
   background-color: #f8f5f0; }
@@ -546,7 +549,7 @@ a:hover {
       background: -o-linear-gradient(left, #baa276 46%, #e5d4b8 52%);
       background: linear-gradient(90deg, #baa276 46%, #e5d4b8 52%); }
       .linear_5G{
-        margin:0 0 150px 0;
+        margin: -100px 0 150px 0;
       }
   .spotContent {
     background-color: #f8f5f0; }
@@ -982,16 +985,29 @@ a:hover {
 .pageTitle {
   padding: 50px 0; }
   .pageTitle .text_group {
-    margin-left: 75px; }
-    .pageTitle .text_group #new_5G, .title_5G {
-    margin-left: -40px; }
+    margin-left: 75px; 
+width:60%;}
+    .pageTitle .text_group #new_5G, .news_5G li {
+        font-size:1.2rem;
+        font-weight:bold;
+        line-height: 2.5rem;
+        argin-left: -40px;
+     }
 
     .news_5G {
    
    list-style-image: url(../img/list_icon.png) ;
    
     }
-
+.news_5G {
+       padding-left:1.5rem;
+    }
+    .pageTitle .text_group .title_5G{
+        margin-left: -40px;
+    }
+.clear{
+clear: both;
+}
   .pageTitle .title {
     font-size: 45px;
     margin-bottom: 35px;
@@ -3498,7 +3514,9 @@ a:hover {
     max-width: 640px;
     width: 100%;
     padding-top: 0px; }
-
+.pageTitle .text_group {
+    margin-left: 75px; 
+width:60%;}
   .birthday .pageTitle .pic {
     width: 180px;
     margin: 0; }
@@ -3506,8 +3524,16 @@ a:hover {
     margin: 0px;
     margin-top: 5px 0 20px 0;
     line-height: 1; }
-    .birthday .pageTitle .title_5G{
+    .pageTitle .text_group #new_5G, .news_5G li {
+        font-size:1.2rem;
+        font-weight:bold;
       margin-left: -40px;
+    }
+    .news_5G {
+        margin-left:2rem;
+    }
+    .pageTitle .text_group .title_5G{
+        margin-left: -40px;
     }
   .birthday .pageTitle .subTitle {
     line-height: 1.6;
