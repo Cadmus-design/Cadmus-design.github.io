@@ -347,6 +347,7 @@ $(function(){
 	});
 });
 */
+/*
 $(function(){
 	$('#typo')
 	.on('mouseover',function(){
@@ -364,3 +365,35 @@ $(function(){
 		);
 	});
 });
+*/
+//變數資料再利用
+/* CH3
+var arg = {
+    'font-size' : '50px',
+    'background-color' : '#ae5e9b',
+    'color' : 'ebc000'
+};
+//傳遞資料
+
+$(function(){
+	$('#typo .inner').on('mouseover',function(){
+		$('#typo .inner').css(arg);
+	});
+});
+
+*/
+//CH3 this
+$(function(){
+    $('header, #typo, footer').on('mouseover', function(){
+        $(this).css(
+            'background-color', '#ae5e9b'
+            );
+     });
+    //下方增加移開後恢復原始狀態
+     $('header, #typo, footer').on('mouseout', function(){  
+        $(this).css(
+            'background-color', ''
+            );
+     });
+}); 
+var num = 10-5*345/97;

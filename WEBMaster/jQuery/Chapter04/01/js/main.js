@@ -1,11 +1,10 @@
 ﻿$(function(){
-   // 
     var duration = 300;
-
-    // buttons1 ----------------------------------------
-    // buttons1  第一列
+    //定義動畫時間變數
+    //button1
+    //第一列 button
     $('#buttons1 button:nth-child(-n+4)')
-        .on('mouseover', function() {
+        .on('mouseover', function(){
             $(this).stop(true).animate({
                 backgroundColor: '#ae5e9b',
                 color: '#fff'
@@ -14,34 +13,36 @@
         .on('mouseout', function(){
             $(this).stop(true).animate({
                 backgroundColor: '#fff',
-                color: '#ebc000'
-            }, duration);
+                color: '#ebc000',
+            },duration);
         });
+        //第1列結束
+        //第2列
+        $('#buttons1 button:nth-child(n+5):nth-child(-n+8)')
+            .on('mouseover', function(){
+                $(this).stop(true).animate({
+                    borderWidth: '12px',
+                    color: '#ae5e9b'
+                }, duration, 'easeOutSine')
+            })
+            .on('mouseout',function(){
+                $(this).stop(true).animate({
+                    borderWidth: '0px',
+                    color: '#ebc000'
+                }, duration,'easeOutSine')
+            });
+        //第2列結束
+        //第3列
+        $('#buttons1 button:nth-child(n+9)')
+            .on('mouseover', function(){
+                $(this).find('> span').stop(true).animate({
+                    width: '100%',
 
-    // buttons1  第二列
-    $('#buttons1 button:nth-child(n+5):nth-child(-n+8)')
-        .on('mouseover', function(){
-            $(this).stop(true).animate({
-                borderWidth: '12px',
-                color: '#ae5e9b'
-            }, duration, 'easeOutSine');
-        })
-        .on('mouseout', function(){
-            $(this).stop(true).animate({
-                borderWidth: '0px',
-                color: '#ebc000'
-            }, duration, 'easeOutSine');
-        });
-
-    // buttons1  第三列
-    $('#buttons1 button:nth-child(n+9)')
-        .on('mouseover', function(){
-            $(this).find('> span')
-                .stop(true).animate({width: '100%'}, duration, 'easeOutQuad');
-        })
-        .on('mouseout', function(){
-            $(this).find('> span')
-                .stop(true).animate({width: '0%'}, duration, 'easeOutQuad');
-        });
-
+                }, duration, 'easeOutQuad');
+            })
+            .on('mouseout', function(){
+                $(this).find('> span').stop(true).animate({
+                    width: '0%',
+                },duration, 'easeOutQuad');
+            });
 });
