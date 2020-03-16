@@ -411,7 +411,7 @@ a:hover {
     background-color: #7b5d21;
     color: #fff;
     letter-spacing: 2px; }
-    .spotContent .moreBtn:hover, .birthday .moreBtn  {
+    .spotContent .moreBtn:hover, .birthday .moreBtn:hover  {
       background-color: #a1803c;
       -webkit-transition: all 0.2s;
       -o-transition: all 0.2s;
@@ -986,16 +986,19 @@ a:hover {
   padding: 50px 0; }
   .pageTitle .text_group {
     margin-left: 75px; 
-      width:55%;}
+      }
+       .title_5G{
+        width:60%;
+       }
     .pageTitle .text_group #new_5G, .news_5G li {
         font-size:1.2rem;
         font-weight:bold;
         line-height: 2.5rem;
-        argin-left: -40px;
+        margin-left: -40px;
      }
 
     .news_5G {
-   
+   margin-left: 5px;
    list-style-image: url(../img/list_icon.png) ;
    
     }
@@ -1259,7 +1262,7 @@ clear: both;
   .vip_main .question .btn_group {
     position: absolute;
     top: 25px;
-    right: calc(50% - 280px); }
+    right: calc(50% - 330px); }
     .vip_main .question .btn_group .close {
       display: none; }
     .vip_main .question .btn_group .open .btn_img {
