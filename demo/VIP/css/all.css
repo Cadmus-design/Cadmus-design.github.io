@@ -357,9 +357,9 @@ a:hover {
       content: '';
       display: block; }
   .pageTitle .pic {
-    float:left; }
+    float: left; }
   .pageTitle .text_group {
-    float:left; }
+    float: left; }
   .pageTitle .title_group {
     position: relative;
     text-align: center;
@@ -386,10 +386,9 @@ a:hover {
     background: -webkit-linear-gradient(left, #baa276 46%, #e5d4b8 52%);
     background: -o-linear-gradient(left, #baa276 46%, #e5d4b8 52%);
     background: linear-gradient(90deg, #baa276 46%, #e5d4b8 52%); }
-.linear_5G{
+  .linear_5G{
         margin: -100px 0 150px 0;
       }
-
 .spotContent {
   background-color: #f8f5f0; }
   .spotContent .title {
@@ -400,7 +399,7 @@ a:hover {
     margin-top: 40px;
     font-size: 30px;
     font-weight: 600; }
-  .spotContent .moreBtn, .birthday .moreBtn  {
+  .spotContent .moreBtn, .birthday .moreBtn  { 
     display: inline-block;
     padding: 15px 30px;
     border-radius: 30px;
@@ -548,9 +547,6 @@ a:hover {
       background: -webkit-linear-gradient(left, #baa276 46%, #e5d4b8 52%);
       background: -o-linear-gradient(left, #baa276 46%, #e5d4b8 52%);
       background: linear-gradient(90deg, #baa276 46%, #e5d4b8 52%); }
-      .linear_5G{
-        margin: -100px 0 150px 0;
-      }
   .spotContent {
     background-color: #f8f5f0; }
     .spotContent .title {
@@ -985,32 +981,22 @@ a:hover {
 .pageTitle {
   padding: 50px 0; }
   .pageTitle .text_group {
-    margin-left: 75px; 
-      }
-       .title_5G{
-        width:60%;
-       }
+    margin-left: 75px; }
     .pageTitle .text_group #new_5G, .news_5G li {
         font-size:1.2rem;
         font-weight:bold;
-        line-height: 2.5rem;
-        margin-left: -40px;
+        line-height: 1.5rem;
+        padding:0.25rem 0;
      }
 
-    .news_5G {
+     .news_5G {
    margin-left: 5px;
    list-style-image: url(../img/list_icon.png) ;
    
     }
-.news_5G {
+    .news_5G {
        padding-left:1.5rem;
     }
-    .pageTitle .text_group .title_5G{
-        margin-left: -40px;
-    }
-.clear{
-clear: both;
-}
   .pageTitle .title {
     font-size: 45px;
     margin-bottom: 35px;
@@ -1042,12 +1028,7 @@ clear: both;
       font-size: 35px;
       letter-spacing: 0px; }
     .pageTitle .subTitle {
-      margin-top: 10px; } 
-    .custom_container >.btn_group{
-      display: table-cell;
-      margin:0 auto;
-    }
-    }
+      margin-top: 10px; } }
 
 .logo {
   position: relative;
@@ -1262,7 +1243,7 @@ clear: both;
   .vip_main .question .btn_group {
     position: absolute;
     top: 25px;
-    right: calc(50% - 330px); }
+    right: calc(50% - 280px); }
     .vip_main .question .btn_group .close {
       display: none; }
     .vip_main .question .btn_group .open .btn_img {
@@ -1558,12 +1539,12 @@ clear: both;
   padding: 0 30px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
-.custom_container >.btn_group{
+.custom_container .btn_5G{
       width:15%;
       display: block;
       margin:0px auto 0;
     }
-  .custom_container >.btn_group >.moreBtn{
+  .custom_container .btn_5G .moreBtn_5G{
     margin:50px 0 0 0;
   }
 .continueAgree .spotContent .title_group {
@@ -1864,15 +1845,14 @@ clear: both;
       margin: 40px auto 0 auto; } }
 
 .addService .pageTitle .custom_container {
-  width: 700px; }
+  width: 900px; }
 
 .addService .pageTitle .pic {
   margin-top: 50px; }
 
 .addService .pageTitle .text_group {
   margin-top: 100px; }
-  .addService .pageTitle .text_group .subTitle {
-    font-size: 22px; }
+
 
 .addService .spotContent {
   margin-bottom: 100px; }
@@ -1966,11 +1946,6 @@ clear: both;
     margin-bottom: 0px; }
     .addService .spotContent .custom_container {
       padding: 0 25px; }
-      .custom_container >.btn_group{
-      width:30%;
-      display: block;
-      margin:0px auto 0;
-    }
     .addService .spotContent .service_group {
       width: 400px;
       margin: 0 auto; }
@@ -3495,7 +3470,7 @@ clear: both;
     margin: 10px 0;
     font-size: 20px;
     font-weight: 500; }
-  .birthday .spotContent .content .moreBtn, .birthday .moreBtn {
+  .birthday .spotContent .content .moreBtn {
     margin: 100px auto 0 auto; }
 
 .birthday .Remind .remind_content {
@@ -3517,30 +3492,13 @@ clear: both;
     max-width: 640px;
     width: 100%;
     padding-top: 0px; }
-.pageTitle .text_group {
-    margin-left: 75px; 
-width:50%;}
   .birthday .pageTitle .pic {
     width: 180px;
-    margin:20px 0 0; }
+    margin: 0; }
   .birthday .pageTitle .title {
     margin: 0px;
     margin-top: 5px 0 20px 0;
     line-height: 1; }
-    .pageTitle .text_group #new_5G, .news_5G li {
-        font-size:1.2rem;
-        font-weight:bold;
-      margin-left: -40px;
-    }
-    .news_5G li {
-        margin-left: -3.8rem;
-    }
-    .news_5G {
-        margin-left:2rem;
-    }
-    .pageTitle .text_group .title_5G{
-        margin-left: -40px;
-    }
   .birthday .pageTitle .subTitle {
     line-height: 1.6;
     margin-top: 20px;
@@ -3548,7 +3506,7 @@ width:50%;}
     .birthday .pageTitle .subTitle br {
       display: none; }
   .birthday .pageTitle .text_group {
-    margin-top:50px;
+    width: 390px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 20px 0 0 20px; }
