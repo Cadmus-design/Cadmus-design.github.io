@@ -1852,7 +1852,12 @@ a:hover {
 
 .addService .pageTitle .text_group {
   margin-top: 100px; }
-
+.addService .pageTitle .title{
+  margin-bottom: 20px;
+}
+.addService .pageTitle .subTitle{
+  margin-top:0;
+}
 
 .addService .spotContent {
   margin-bottom: 100px; }
