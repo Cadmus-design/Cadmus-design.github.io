@@ -387,7 +387,7 @@ a:hover {
     background: -o-linear-gradient(left, #baa276 46%, #e5d4b8 52%);
     background: linear-gradient(90deg, #baa276 46%, #e5d4b8 52%); }
   .linear_5G{
-        margin: -100px 0 150px 0;
+        margin: -50px 0 150px 0;
       }
 .spotContent {
   background-color: #f8f5f0; }
@@ -988,7 +988,11 @@ a:hover {
         line-height: 1.5rem;
         padding:0.25rem 0;
      }
-
+     @media all and (min-width: 1368px){
+     .news_5G li span:before{
+      content: "\A";
+      white-space: pre;
+     }}
      .news_5G {
    margin-left: 5px;
    list-style-image: url(../img/list_icon.png) ;
@@ -1546,6 +1550,13 @@ a:hover {
     }
   .custom_container .btn_5G .moreBtn_5G{
     margin:50px 0 0 0;
+  }
+  @media all and (max-width: 768px){
+    .custom_container .btn_5G{
+      width:30%;
+      display: block;
+      margin:0px auto 0;
+    }
   }
 .continueAgree .spotContent .title_group {
   position: relative;
