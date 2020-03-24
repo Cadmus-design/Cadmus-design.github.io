@@ -628,6 +628,10 @@ table .td3h .txt1{
         display:inline-block;
         vertical-align: middle;
     }
+     table .td3 .item3{
+        width:48%;
+        vertical-align: top;
+     }
     table .td3 {
             vertical-align: top;
             }
@@ -1420,7 +1424,7 @@ table .new520:nth-of-type(2),table .new520:nth-of-type(3){
 .event_table:nth-of-type(2) tr:nth-of-type(2) td{
     width:34%;
 }
-.event_table tr td:nth-of-type(2) em, .event_table tr td p{
+.event_table tr td:nth-of-type(2) em, .event_table tr td:nth-of-type(3) em, .event_table tr td p{
     color: #f1891b;
     font-style: normal;
 }
