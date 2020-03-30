@@ -348,13 +348,14 @@ nav .nav-top {
   height: 20rem;
   margin-top: 0;
   /*background: #efe6d5 url("../../images/mvip2019/process.png") center top no-repeat;*/
-  background: #efe6d5
+  background: #F8F2EB;
   background-size: cover;
 }
 
 .process-bg-top.process-bg-top-white {
   min-height: 2rem;
-  background: #F4EFE5 url("../../images/mvip2019/bg2020.png") center top repeat-y;
+  background: #F8F2EB;
+  /*background: #F4EFE5 url("../../images/mvip2019/bg2020.png") center top repeat-y;*/
   background-size: cover;
 }
 
