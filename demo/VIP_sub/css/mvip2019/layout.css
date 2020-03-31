@@ -265,8 +265,11 @@ nav .nav-top {
   
 }
 .title3{
-  width:15%;
+  width:17%;
   margin:2rem auto 3rem;
+}
+.title3 img{
+    width:115%;
 }
 .title2 {
   width: 100%;
@@ -330,7 +333,7 @@ nav .nav-top {
   margin:1rem auto;
 }
   .title3 img{
-    width:80%;
+    width:100%;
   }
 .title2 {
   width: 100%;
