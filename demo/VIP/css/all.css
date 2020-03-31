@@ -1108,13 +1108,13 @@ a:hover {
     background: url(../img/text_bg.jpg) 0 50% repeat-x;
     }
     .VIP_5G ul{
-      width: 60%;
+      width: 65%;
       margin:0 auto;
       list-style: disc;
     }
     .VIP_5G ul li{
       text-align: left;
-      font-size: 0.9rem;
+      font-size: 1rem;
       line-height: 1.5rem;
     }
 
