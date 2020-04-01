@@ -1003,7 +1003,7 @@ a:hover {
     .VIP_5G, .VIP_5G_title{
       width:75%;
       padding:0.5rem 0;
-      margin:0 auto;
+      margin:.8rem auto;
       background: #e0d2b8;
       color:#77622f;
       line-height: 2.2rem;
@@ -1038,6 +1038,7 @@ a:hover {
       text-align: left;
       font-size: 1.2rem;
       line-height: 1.8rem;
+        white-space:nowrap;
     }
   .pageTitle .title {
     font-size: 45px;
@@ -1081,7 +1082,7 @@ a:hover {
       .VIP_5G, .VIP_5G_title{
       width:85%;
       padding:0.5rem 0;
-      margin:0 auto;
+      margin:.8rem auto;
       background: #e0d2b8;
       color:#77622f;
       line-height: 1.8rem;
