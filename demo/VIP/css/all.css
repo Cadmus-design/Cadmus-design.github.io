@@ -989,7 +989,7 @@ a:hover {
         padding:0.25rem 0;
      }
      @media all and (min-width: 1368px){
-     .news_5G li span:before, .VIP_5G_title span:after{
+     .news_5G li span:before{
       content: "\A";
       white-space: pre;
      }}
@@ -1000,6 +1000,10 @@ a:hover {
     .news_5G {
        padding-left:1.5rem;
     }
+.VIP_5G_title span:after{
+      content: "\A";
+      white-space: pre;
+     }
     .VIP_5G, .VIP_5G_title{
       width:75%;
       padding:0.5rem 0;
@@ -1075,10 +1079,6 @@ a:hover {
       .birthday .spotContent .custom_container .title_group{
         height:1rem;
       }
-      .VIP_5G_title span:after{
-      content: "\A";
-      white-space: pre;
-     }
       .VIP_5G, .VIP_5G_title{
       width:85%;
       padding:0.5rem 0;
