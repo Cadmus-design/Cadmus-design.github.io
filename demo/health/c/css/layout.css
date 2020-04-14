@@ -768,7 +768,7 @@ table .new520:nth-of-type(2),table .new520:nth-of-type(3){
     font-size: 1.5em;
 }
 
-/*mothers_dat*/
+/*mothers_day*/
 .event .mothers_day ul{
     list-style: none;
 }
@@ -1474,7 +1474,36 @@ table .new520:nth-of-type(2),table .new520:nth-of-type(3){
 .event_table tr td{
     font-size: 1.5em;
 }
-
+/*mothers_day*/
+.event .mothers_day ul{
+    list-style: none;
+}
+.event .mothers_day ul:first-of-type{
+    padding-left:2rem;
+}
+.event .mothers_day ul li{
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+.event .mothers_day ul:nth-of-type(2){
+    padding:0;
+}
+.event .mothers_day ul:nth-of-type(2) img{
+    width: 100%;
+}
+.event .mothers_day ul:nth-of-type(3){
+     padding-left:2.5em;
+     list-style-type: numeric;
+}
+.event .mothers_day p{
+    font-size: 1.2rem;
+    text-indent: 0;
+    padding-left:2.5em;
+}
+.event .mothers_day ol{
+    list-style-type: cjk-ideographic;
+    padding-left:3em;
+}
     .table .notice{
         font-size: 18px;
         text-align:center;
