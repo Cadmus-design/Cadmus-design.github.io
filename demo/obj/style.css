@@ -93,6 +93,12 @@ a {
 	}
 	#KV{width:100%;padding:0 0 1.2rem;}
 	#KV img{width:100%;}
+	.sticker{
+		position: fixed;
+		width:13%;
+		bottom:30px;
+		right:15px;
+	}
 	.navbar > .nav {
 		display: table;
 		max-width: 90%;
@@ -132,12 +138,14 @@ a {
 		padding:0.5rem 0 0.2rem;
 	}
 	#wrap #header_page ul{
-	width:90%;	
+	width:95%;	
 	margin:0 auto;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content:space-around;
 	}
 	#wrap #header_page ul li{
-	display:inline-block;
-	width:19%;
+	
 	text-align:center;
 	}
 	#wrap #header_page ul li a{
@@ -149,10 +157,10 @@ a {
 	#wrap #header_page ul li img{
 		vertical-align:middle;
 	}
-	#wrap #header_page .navbar .nav:first-of-type li:last-of-type  a{
+	#wrap #header_page .navbar .nav:first-of-type li:nth-of-type(6)  a{
 		color:#ffff00;
 	}
-	#wrap #header_page .navbar .nav:first-of-type li:last-of-type a:hover{
+	#wrap #header_page .navbar .nav:first-of-type li:nth-of-type(6) a:hover{
 		color:#fff;
 	}
 	/* .anchor {
@@ -228,7 +236,7 @@ a {
 		padding:1rem 0;
 	}
 	
-	#wrap #container_page .intro p{
+	#wrap #container_page .intro p, #wrap #container_page .link p{
 		font-size:1rem;
 		line-height:2rem;
 		padding:0.5rem 0 0 0;
@@ -516,6 +524,7 @@ a {
 	
 	#wrap #container_page{
 		margin:0 auto;
+		display: block;
 	}
 	#wrap #header_page{
 		width:100%;
@@ -524,6 +533,7 @@ a {
 	#wrap #header_page ul{
 	width:78%;	
 	margin:0 auto;
+
 	}
 	#wrap #header_page ul li{
 	display:inline-block;
@@ -593,6 +603,12 @@ a {
 	/*container_page inside*/
 	#KV{width:100%;}
 	#KV img{width:100%;}
+	.sticker{
+		position: fixed;
+		width:15%;
+		bottom:30px;
+		right:15px;
+	}
 	#wrap #container_page  h1{
 		font-size:2rem;
 		letter-spacing:0.2rem;
@@ -604,7 +620,7 @@ a {
 		width:100%;
 		padding:1rem 0;
 	}
-	#wrap #container_page .intro p{
+	#wrap #container_page .intro p, #wrap #container_page .link p{
 		font-size:1rem;
 		line-height:2rem;
 		padding:0.5rem 0 0 0;
@@ -890,14 +906,16 @@ a {
 	#wrap #header_page ul{
 	width:100%;	
 	margin:0 auto;
+	display: flex;
+	flex-wrap: wrap;
 	}
 	#wrap #header_page .first{
-		margin:0 0 0 6%;
+		margin:0%;
 	}
 	#wrap #header_page ul li{
-	display:inline-block;
-	width:33%;
-	margin:0 10% 0 6%;
+	
+	
+
 	font-size:0.85rem;
 	}
 	#wrap #header_page ul li:before{
@@ -907,7 +925,7 @@ a {
 	#wrap #header_page ul:last-of-type{
 		margin:0 auto 0;
 		width:100%;
-		display:block;
+		
 		padding:0 0 0 3%;
 	} 
 	#wrap #header_page ul li a{
@@ -918,17 +936,17 @@ a {
 	}
 	#wrap #header_page ul li img{
 		vertical-align:middle;
-		padding:0 0.2rem 0 0;
+		width:3em;
 	}
 	#wrap #header_page ul:last-of-type li{
-		width:31%;
+		
 		margin:0 0.5%;
-		display:inline-block;
+		
 	}
-	#wrap #header_page ul:last-of-type li:last-of-type a{
+	#wrap #header_page ul:last-of-type li:nth-of-type(6) a{
 		color:#ffff00;
 	}
-	#wrap #header_page ul:last-of-type li:last-of-type a:hover{
+	#wrap #header_page ul:last-of-type li:nth-of-type(6) a:hover{
 		color:#fff;
 	}
 		/* .anchor {
@@ -1014,6 +1032,12 @@ a {
 	/*container_page inside*/
 	#KV{width:100%;}
 	#KV img{width:100%;}
+	.sticker{
+		position: fixed;
+		width:33%;
+		bottom:30px;
+		right:15px;
+	}
 	#wrap #container_page  h1{
 		font-size:1.5rem;
 		
@@ -1025,11 +1049,15 @@ a {
 		width:100%;
 	}
 	#wrap #container_page .intro img{
-		width:80%;
+		width:90%;
 		display:block;
 		margin:1rem auto;
 	}
-	#wrap #container_page .intro p{
+	#wrap #container_page .intro h2{
+		width:85%;
+		margin:0 auto;
+	}
+	#wrap #container_page .intro p, #wrap #container_page .link p{
 		font-size:1rem;
 		line-height:2rem;
 		padding:0.5rem 0 0 0;
@@ -1266,6 +1294,35 @@ a {
 		width:50%;
 		margin:0 auto;
 	}
+	#wrap #container_page .type table:nth-of-type(4) caption{
+		background:#1b3d96;
+	}
+	#wrap #container_page .type table:nth-of-type(4) tr th:first-of-type, #wrap #container_page .type table:nth-of-type(4) tr td:first-of-type{
+		background:#dddcdc;
+		font-weight:bold;
+		width:20%;
+	}
+	#wrap #container_page .type table:nth-of-type(4) tr td {
+		vertical-align:middle;
+	}
+	#wrap #container_page .type table:nth-of-type(4) tr td span{
+		font-weight:bold;
+		color:#1666a3;
+	}
+	#wrap #container_page .type table:nth-of-type(4) tr td ol:first-of-type{
+		padding:0 0 0 1rem;
+		width:30%;
+		margin:0 auto;
+		font-size: 	.8rem;
+		
+	}
+	#wrap #container_page .type table:nth-of-type(4) tr td ol{
+		padding:0 0 0 1rem;
+		width:100%;
+		margin:0 auto;
+		font-size: 	.8rem;
+		text-align: left;
+	}
 @media screen and (max-width:768px){
     #wrap #container_page .type table:nth-of-type(3) tr td ul{
 
@@ -1283,6 +1340,20 @@ a {
 	#wrap #container_page .type table:nth-of-type(3) tr th{
 		vertical-align: middle;
 	} 
+	#wrap #container_page .type table:nth-of-type(4) tr td ol:first-of-type{
+		padding:0 0 0 1rem;
+		width:80%;
+		margin:0 auto;
+		font-size: 	.8rem;
+		
+	}
+	#wrap #container_page .type table:nth-of-type(4) tr td ol{
+		padding:0 0 0 1rem;
+		width:100%;
+		margin:0 auto;
+		font-size: 	.8rem;
+		text-align: left;
+	}
 }
 
 	#wrap #container_page .type table .line{
