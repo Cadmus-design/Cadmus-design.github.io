@@ -484,13 +484,13 @@ a {
   -moz-box-sizing: border-box;
        box-sizing: border-box; }
   .box5ThI:nth-child(1), .box5TdI:nth-child(1) {
-    width: 24%; }
+    width: 22%; }
   .box5ThI:nth-child(2), .box5TdI:nth-child(2) {
-    width: 35%; }
+    width: 33%; }
   .box5ThI:nth-child(3), .box5TdI:nth-child(3) {
-    width: 10%; }
+    width: 12%; }
   .box5ThI:nth-child(4), .box5TdI:nth-child(4) {
-    width: 31%; }
+    width: 33%; }
 
 .title3 {
   color: #134689;
