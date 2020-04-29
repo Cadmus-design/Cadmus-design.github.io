@@ -61,6 +61,8 @@ a {
 	top: 0;
 	left: 0;
 	z-index: 654;
+	width:500px;
+		overflow-x: auto;
 }
 }
 
@@ -70,11 +72,7 @@ a {
 	}
 }
 
-@media screen and (max-width: 1280px) {
-	.navbar {
-		background: #f3f3f3;
-	}
-}
+
 
 @media (max-width: 1280px) and (min-width:769px) {
 	.navbar {
@@ -89,10 +87,7 @@ a {
 	}
 	#KV{width:100%;line-height: 0;}
 	#KV img{width:100%;}
-	#wrap #container_page{
-		max-width:1280px;
-		margin:0 auto;
-	}
+	
 	#wrap #header_page{
 		width:100%;
 		
@@ -247,6 +242,10 @@ a {
 	}
 
 	/*container_page inside*/
+	#wrap #container_page{
+		width:1280px;
+		margin:0 auto;;
+	}
 	#wrap #container_page h1, #wrap #container_page2 h1{
 		font-size:2rem;
 		/*letter-spacing:0.2rem;*/
@@ -309,7 +308,9 @@ a {
 	
 	/*adv begin*/
 	#wrap #container_page .adv{
-		padding:2rem 0;
+		width:1080px;
+		margin:0 auto;
+		padding:2rem;
 	}
 	#wrap #container_page .adv h1{
 		text-indent: 3.5rem;
@@ -334,7 +335,7 @@ a {
 		text-align:center;
 	}
 	#wrap #container_page .adv .swiper-container .swiper-wrapper .swiper-slide .logos img{
-		max-width:80%;
+		width:100%;
 	}
 	#wrap #container_page .adv .swiper-container .swiper-wrapper .swiper-slide .logos p{
 		line-height: 1.5rem;
@@ -591,7 +592,7 @@ a {
 	.solution .thanks{
 		padding:1rem 0;
 	}
-}
+
 }
 
 
@@ -617,7 +618,7 @@ a {
 	#KV img{width:100%;}
 	#wrap nav{
 		width:100%;
-		
+		position: relative;
 	}
 	#wrap nav ul{
 		display: flex;
@@ -643,7 +644,10 @@ a {
 		width:100%;
 		padding:0.5rem 0 0.2rem;
 	}
-	
+	#wrap #container_page{
+		max-width:1	0px;
+		margin:0 auto;
+	}
 	
 	
 	#wrap .intro{
@@ -1077,17 +1081,16 @@ a {
 		background-size: 100%;
 	}
 	#wrap{
-		width:100%;
+		
 	}
 	#wrap nav{
-		width:100%;
 		font-size: 0.8rem;
+		width:100%;
 	}
+
 	#wrap nav ul{
 		display: flex;
-		width:100%;
 		background: #f3f3f3;
-		
 	}
 	#wrap nav ul li{
 		justify-content: space-around;
@@ -1095,6 +1098,7 @@ a {
 		text-align: center;
 		width:24%;
 		font-weight: bold;
+		/*white-space:nowrap;*/
 	}
 	#wrap nav ul li a{
 		color:#000;
