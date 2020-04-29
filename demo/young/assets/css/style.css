@@ -5,8 +5,10 @@ html {box-sizing: border-box;}*, *::after, *::before {box-sizing: inherit;}html,
  body{
 	 background:#fff;
  }
- #wrap .solution .q11, #wrap .solution .answer{display: none;}
- .a1, .q1{cursor: pointer;}
+ 
+ .prompt, .prompt-close{cursor: pointer;}
+ .remind_content, .prompt-close {
+  display: none; }
  @media screen and (max-width: 768px) {
 	.d {
 		display: none !important;

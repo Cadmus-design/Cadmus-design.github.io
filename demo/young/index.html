@@ -2,9 +2,9 @@
 <html lang="zh-Hant">
 <head>
 
-    <title></title>
-    <meta name="description" content="">
-    <meta name="keywords" content=""/>
+    <title>好young感謝祭</title>
+    <meta name="description" content="好young感謝祭">
+    <meta name="keywords" content="好young感謝祭"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta itemprop="priceCurrency" content="TWD">
@@ -13,7 +13,7 @@
 <!-- og example tag-->
     <meta property="og:url" content="">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="">
+    <meta property="og:title" content="好young感謝祭">
     <meta property="og:description" content="">
     <meta property="og:image" content="">
     <meta property="og:type" content="website" />
@@ -445,8 +445,12 @@
 	</div>-->
 	<div class="anchor" scroll-id="faq"></div>
 	<section class="solution">
-			<h1>活動注意事項<br>中華電信【好Young感謝祭】<img class="q1 a1" src="assets/images/plus_btn.png" /><img class="a1 q1 q11" src="assets/images/minus_btn.png" /></h1>
-			<ul class="a1 answer">
+			<!--<h1>活動注意事項<br>中華電信【好Young感謝祭】<img class="q1 a1" src="assets/images/plus_btn.png" /><img class="a1 q1 q11" src="assets/images/minus_btn.png" /></h1>-->
+			<h1>活動注意事項<br>中華電信【好Young感謝祭】</h1>
+			<p class="prompt" id="RemindBtn" >點擊展開+</p>
+            <p class="prompt prompt-close" id="RemindCloseBtn">點擊關閉-</p>
+			<!--<ul class="a1 answer">-->
+			<ul class="remind_content">
 				<li>參加者參與「好Young感謝祭」活動（以下簡稱本活動）同時，即表示同意本活動之活動辦法、注意事項及各項相關規範。</li>
 				<li>活動說明：本活動於2020/5/1~2020/5/31期間辦理「好Young感謝祭」活動，共舉辦三項期間限定活動：
 					<ul>
@@ -604,18 +608,21 @@
 		},1000)
 	});
 	
-	    function toggle_visibility(id) {
-       var e = document.getElementById(id);
-       if(e.style.display == 'block')
-          e.style.display = 'none';
-       else
-          e.style.display = 'block';
-    }
 
     $( ".q1" ).click(function() {
       $( ".a1" ).toggle();
     });
 
+    $('#RemindBtn').click(function () {
+    $('#RemindBtn').hide()
+    $('#RemindCloseBtn').show()
+    $('.remind_content').slideDown(500)
+  })
+  $('#RemindCloseBtn').click(function () {
+    $('#RemindCloseBtn').hide()
+    $('#RemindBtn').show()
+    $('.remind_content').slideUp(500)
+  })
 // create the back to top button
 /*
 $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
