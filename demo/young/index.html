@@ -47,7 +47,7 @@
 	<style type="text/css">
 	@media all{.featherlight{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:2147483647;text-align:center;white-space:nowrap;cursor:pointer;background:none;background:none}.featherlight:last-of-type{background:rgba(0,0,0,.8)}.featherlight:before{content:'';display:inline-block;height:85%;vertical-align:middle}.featherlight .featherlight-content{position:relative;text-align:left;vertical-align:middle;display:inline-block;overflow:auto;padding:25px 25px;margin-left:5%;margin-right:5%;max-height:95%;background:#fff;cursor:auto;white-space:normal}.featherlight .featherlight-content ol{padding:0 2rem 2rem;line-height: 150%;}.featherlight .featherlight-content ol li{margin:.2rem 0;}.featherlight .featherlight-content h2{font-size: 1.5rem;text-align: center;padding:.5rem;}.featherlight .featherlight-inner{display:block}.featherlight .featherlight-close-icon{position:absolute;z-index:9999;top:0;right:0;line-height:25px;width:25px;cursor:pointer;text-align:center;font-family:Arial,sans-serif;background:#fff;background:rgba(255,255,255,.3);color:#000;border:0;padding:0}.featherlight .featherlight-close-icon::-moz-focus-inner{border:0;padding:0}.featherlight .featherlight-image{width:80%}.featherlight-iframe .featherlight-content{border-bottom:0;padding:0;-webkit-overflow-scrolling:touch;overflow-y:scroll}.featherlight iframe{border:0}.featherlight *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}}@media only screen and (max-width:1024px){.featherlight .featherlight-content{margin-left:0;margin-right:0;max-height:98%;padding:10px 10px 0;}}
 	@media all {.lightbox {display: none;width:85%;margin:0 auto;padding:0px;background:none;}.fl-page h1, .fl-page h3, .fl-page h4 {font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;font-weight: 100;letter-spacing: 1px;}.fl-page h1 {font-size: 110px;margin-bottom: 0.5em;}.fl-page h1 i {font-style: normal;color: #ddd;}.fl-page h1 span {font-size: 30px;color: #333;}.fl-page h3 {text-align: right;}.fl-page h3 {font-size: 15px;}.fl-page h4 {font-size: 2em;}.fl-page .jumbotron {margin-top: 2em;}.fl-page .doc {margin: 2em 0;}.fl-page .btn-download {float: right;}.fl-page .btn-default {vertical-align: bottom;}.fl-page .btn-lg span {font-size: 0.7em;}.fl-page .footer {margin-top: 3em;color: #aaa;font-size: 0.9em;}.fl-page .footer a {color: #999;text-decoration: none;margin-right: 0.75em;}.fl-page .github {margin: 2em 0;}.fl-page .github a {vertical-align: top;}.fl-page .marketing a {color: #999;}.fixwidth {background: none;}.fixwidth .featherlight-content {width: 500px;padding: 25px;color: #fff;background: none;}.fixwidth .featherlight-close {color: #fff;background: none;}}@media(max-width: 768px){.fl-page h1 span {display: block;}.fl-page .btn-download {float: none;margin-bottom: 1em;}
-		.fl1 li{word-break: break-all;}}
+		.fl1 li a{word-break: break-all;}}
 	</style>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136540881-1"></script>
@@ -445,8 +445,8 @@
 	</div>-->
 	<div class="anchor" scroll-id="faq"></div>
 	<section class="solution">
-			<h1>活動注意事項<br>中華電信【好Young感謝祭】</h1>
-			<ul>
+			<h1>活動注意事項<br>中華電信【好Young感謝祭】<img class="q1 a1" src="assets/images/plus_btn.png" /><img class="a1 q1 q11" src="assets/images/minus_btn.png" /></h1>
+			<ul class="a1 answer">
 				<li>參加者參與「好Young感謝祭」活動（以下簡稱本活動）同時，即表示同意本活動之活動辦法、注意事項及各項相關規範。</li>
 				<li>活動說明：本活動於2020/5/1~2020/5/31期間辦理「好Young感謝祭」活動，共舉辦三項期間限定活動：
 					<ul>
@@ -500,7 +500,7 @@
 				<li>納稅義務人如為非中華民國境內居住之個人，或在中華民國境內無固定營業場所之營利事業：競技競賽機會中獎獎金或給與按給付全額扣取20%。</li>
 				<li>本活動若有其他未盡事宜，或有任何變更或修改，則依活動網站公告為主，不再另行通知，主辦單位保留取消、終止、修改或暫停本活動之權利，並保有最終釋義權。 </li>
 				<li>得獎者同意所填寫的姓名、聯絡電話，由主辦單位基於辦理本活動及完成領獎程序之特定目的範圍內予以蒐集、處理或利用。 </li>
-				<li>中華電信隱私權聲明，請參閱：<a target="_blank" href="https://www.cht.com.tw/home/consumer/privacy">詳細說明</a></li>
+				<li>中華電信隱私權聲明，請參閱：<a target="_blank" href="https://www.cht.com.tw/home/consumer/privacy">https://www.cht.com.tw/home/consumer/privacy</a></li>
 			</ol>
 		</div>
 	<!-- wrap end -->
@@ -603,6 +603,18 @@
 			onHashChange();
 		},1000)
 	});
+	
+	    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+
+    $( ".q1" ).click(function() {
+      $( ".a1" ).toggle();
+    });
 
 // create the back to top button
 /*
