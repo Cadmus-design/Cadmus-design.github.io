@@ -5,7 +5,11 @@ html {box-sizing: border-box;}*, *::after, *::before {box-sizing: inherit;}html,
  body{
 	 background:#fff;
  }
- 
+ .reveal-box{height:400px}
+	.reveal-box .reveal-action-more,.reveal-box .reveal-action-less{display:block}
+	.reveal-box .reveal-action-more,.reveal-box .reveal-action-less{display:block}
+.reveal-box .reveal-action-less a{line-height:40px}
+
  .prompt, .prompt-close{cursor: pointer;}
  .remind_content, .prompt-close {
   display: none; }
@@ -618,7 +622,7 @@ a {
 	.solution .thanks h2{
 		line-height: 250%;
 	}
-
+	
 }
 @media (min-width:1280px) and (max-width: 1680px){
 	#wrap #container_page2 .red_border .coke_1 img, #wrap #container_page2 .red_border .coke_2 img, #wrap #container_page2 .red_border .coke_3 img, #wrap #container_page2 .red_border .coke_4 img{
