@@ -181,7 +181,6 @@ a {
 	#wrap .intro{
 		max-width:1280px;
 		margin:0 auto;
-		min-height: 500px;
 		/*background: url(../images/intro_bg.png) 0 -2.5rem no-repeat;*/
 		background-size: contain;
 	}
@@ -622,11 +621,11 @@ a {
 	.solution .thanks h2{
 		line-height: 250%;
 	}
-	
+
 }
 @media (min-width:1280px) and (max-width: 1680px){
 	#wrap #container_page2 .red_border .coke_1 img, #wrap #container_page2 .red_border .coke_2 img, #wrap #container_page2 .red_border .coke_3 img, #wrap #container_page2 .red_border .coke_4 img{
-		width:85%;
+		width:10%;
 	}
 	#wrap #container_page2 .red_border .coke_1{
 		position: absolute;
@@ -710,8 +709,6 @@ a {
 	
 	
 	#wrap .intro{
-		
-		min-height: 500px;
 		/*background: url(../images/intro_bg.png) 0 -2.5rem no-repeat;*/
 		background-size: contain;
 	}
@@ -808,7 +805,7 @@ a {
 	
 	/*adv begin*/
 	#wrap #container_page .adv{
-		padding:2rem 0;
+		padding:.5rem 0;
 	}
 	#wrap #container_page .adv h1{
 		text-indent: 3.5rem;
@@ -822,7 +819,7 @@ a {
 	}
 	#wrap #container_page .adv .swiper-container{
 		width:100%;
-		padding:2rem 0;
+		padding:.5rem 0;
 	}
 	#wrap #container_page .adv .swiper-container .swiper-wrapper{
 		padding:0rem 0 3.5rem;
@@ -891,7 +888,9 @@ a {
 		padding:0 60px 3rem;
 		
 	}
-	
+	#wrap #container_page2 .red_border .coke_1 img, #wrap #container_page2 .red_border .coke_2 img, #wrap #container_page2 .red_border .coke_3 img, #wrap #container_page2 .red_border .coke_4 img{
+		width:10%;
+	}
 	#wrap #container_page2 .red_border .coke_1{
 		position: absolute;
 		top:46.5%;
@@ -901,7 +900,7 @@ a {
 	#wrap #container_page2 .red_border .coke_2{
 		position: absolute;
 		top:52%;
-		left:-4.2%;
+		left:-5.2%;
 		z-index: 500;
 	}
 	#wrap #container_page2 .red_border .coke_3{
@@ -913,7 +912,7 @@ a {
 	#wrap #container_page2 .red_border .coke_4{
 		position: absolute;
 		top:62%;
-		left:-1.2%;
+		left:-5.2%;
 		z-index: 500;
 	}
 	#wrap #container_page2 .type{
@@ -1158,7 +1157,6 @@ a {
 	}
 	#wrap .intro{
 		padding:1rem;
-		min-height: 700px;
 		/*background: url(../images/intro_bg.png) center bottom no-repeat;*/
 		background-size: contain;
 	}
