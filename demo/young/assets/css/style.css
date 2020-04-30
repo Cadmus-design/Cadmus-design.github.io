@@ -85,6 +85,7 @@ a {
 	#wrap{
 		width:100%;
 		position: relative;
+        overflow-x:hidden;
 	}
 	#KV{width:100%;line-height: 0;}
 	#KV img{width:100%;}
@@ -101,6 +102,7 @@ a {
 	#wrap nav ul{
 		display: flex;
 		width:100%;
+        padding:0 15%;
 		background: #f3f3f3;
 		
 	}
@@ -602,13 +604,13 @@ a {
 	#wrap #container_page2 .red_border .coke_1{
 		position: absolute;
 		top:46.5%;
-		left:90.5%;
+		left:85%;
 		z-index: 500;
 	}
 	#wrap #container_page2 .red_border .coke_2{
 		position: absolute;
 		top:52%;
-		left:1.2%;
+		left:-2.2%;
 		z-index: 500;
 	}
 	#wrap #container_page2 .red_border .coke_3{
@@ -620,7 +622,7 @@ a {
 	#wrap #container_page2 .red_border .coke_4{
 		position: absolute;
 		top:62%;
-		left:1.2%;
+		left:-2.2%;
 		z-index: 500;
 	}
 }
@@ -1296,7 +1298,7 @@ a {
 		text-decoration: none;
 		color:#fff;
 		font-weight: bold;
-		padding:.8rem 1.5rem;
+		padding:1.3rem 1.8rem;
 		border-radius: 3rem;
 		background: #5dbc56;
 	}
@@ -1397,7 +1399,7 @@ a {
 		color: #fff;
 		font-weight: bold;
 		background: #4eb247;
-		padding:.5em 1rem;
+		padding:1rem 1.8rem;
 	}
 	#wrap #container_page2 .type section >p{
 		text-align: center;
