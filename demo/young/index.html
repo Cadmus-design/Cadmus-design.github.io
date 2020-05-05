@@ -524,7 +524,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<li>本公司保有修改活動內容及辦法之權利，如有異動，以活動網頁公告為主。若遇不可抗力之特殊原因無法執行活動時，本公司有權決定取消、終止、修改或暫停。</li>
 			</ul>
 	        <!--<p class="prompt prompt-close" id="RemindCloseBtn">點擊關閉-</p>-->
-	        <div class="reveal-action-more2"><a onclick="return false;">顯示更多...</a></div>
+	        <div class="reveal-action-more"><a onclick="return false;">顯示更多...</a></div>
 			<div class="reveal-action-less"><a href="#revealbox">顯示更少...</a></div>
 			</div>
 			<div class="thanks">
@@ -643,32 +643,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		},1000)
 	});
 	
-
-    $( ".q1" ).click(function() {
-      $( ".a1" ).toggle();
-    });
-
-    $('#RemindBtn').click(function () {
-    $('#RemindBtn').hide()
-    $('#RemindCloseBtn').show()
-    $('.remind_content').slideDown(500)
-  })
-  $('#RemindCloseBtn').click(function () {
-    $('#RemindCloseBtn').hide()
-    $('#RemindBtn').show()
-    $('.remind_content').slideUp(500)
-  })
-
   /*more*/
-   $('.reveal-action-more2').click(function () {
-            $('.reveal-box').css({ 'height': "auto" });
-            $('.reveal-action-more2').css({ 'left': "15000px" });
-            $('.reveal-action-less').show();
+   $('.solution .reveal-action-more').click(function () {
+            $('.solution .reveal-box').css({ 'height': "auto" });
+            $('.solution .reveal-action-more').css({ 'left': "15000px" });
+            $('.solution .reveal-action-less').show();
         });
-        $('.reveal-action-less').click(function () {
-            $('.reveal-box').css({ 'height': "400px" });
-            $('.reveal-action-more2').css({ 'left': "auto" });
-            $('.reveal-action-less').hide();
+        $('.solution .reveal-action-less').click(function () {
+            $('.solution .reveal-box').css({ 'height': "400px" });
+            $('.solution .reveal-action-more').css({ 'left': "auto" });
+            $('.solution .reveal-action-less').hide();
         });
 // create the back to top button
 /*
