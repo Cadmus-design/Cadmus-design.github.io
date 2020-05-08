@@ -809,7 +809,68 @@ table .new520:nth-of-type(2),table .new520:nth-of-type(3){
     color:#195d99;
     font-size: 1.2rem;
 }
+/*mother_day*/
+/*measure*/
+.event .measure ul{
+    list-style: none;
+}
+.event .measure ul:first-of-type{
+    padding-left:4rem;
+}
+.event .measure ul:first-of-type li{
+    display: inline-block;
 
+}
+.event .measure ul:first-of-type li:nth-of-type(2n-1){
+    width:15%;
+    text-align: right;
+    vertical-align: top;
+}
+.event .measure ul:first-of-type li:nth-of-type(2n){
+    width:80%;
+    list-style: none;
+}
+.event .measure ul:first-of-type li:last-of-type{
+    display: block;
+    width:90%;
+    text-align: left;
+    text-indent: 2rem;
+}
+.event .measure ul li{
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+.event .measure ul li img{
+    width:90%;
+}
+.event .measure p{
+    font-size: 1.2rem;
+    text-indent: 0;
+    padding-left:4.5em;
+}
+.event .measure ol{
+    list-style-type: cjk-ideographic;
+    padding-left:5em;
+}
+.event .measure span{
+    color:#ff0000;
+}
+.event .measure ol li{
+    line-height: 1.8rem;
+    padding:0.5rem 0;
+}
+.event .measure{
+    color:#195d99;
+    font-size: 1.2rem;
+}
+/*measure*/
+.table2 {
+    display: flex;
+    justify-content:space-around;
+}
+.table2 .event_btn3{
+
+}
 .table .notice{
     font-size: 22px;
     color: #666666;
@@ -852,6 +913,7 @@ table .new520:nth-of-type(2),table .new520:nth-of-type(3){
     text-decoration: none;
     letter-spacing: 0.3em;
 }
+
 .event_btn3 a{
     background:#f85d77;
     color:#fff;
@@ -1503,6 +1565,65 @@ table .new520:nth-of-type(2),table .new520:nth-of-type(3){
 .event .mothers_day ol{
     list-style-type: cjk-ideographic;
     padding-left:3em;
+}
+/*mother_day*/
+/*measure*/
+.event .measure ul{
+    list-style: none;
+}
+.event .measure ul:first-of-type{
+    padding-left:4rem;
+}
+.event .measure ul:first-of-type li{
+    display: inline-block;
+
+}
+.event .measure ul:first-of-type li:nth-of-type(2n-1){
+    width:28%;
+    text-align: right;
+    vertical-align: top;
+}
+.event .measure ul:first-of-type li:nth-of-type(2n){
+    width:68%;
+    list-style: none;
+}
+.event .measure ul:first-of-type li:last-of-type{
+    display: block;
+    width:100%;
+    text-align: left;
+    text-indent: 0rem;
+}
+.event .measure ul li{
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+.event .measure ul li img{
+    width:100%;
+}
+.event .measure p{
+    font-size: 1.2rem;
+    text-indent: 0;
+    padding-left:4.5em;
+}
+.event .measure ol{
+    list-style-type: cjk-ideographic;
+    padding-left:5em;
+}
+.event .measure span{
+    color:#ff0000;
+}
+.event .measure ol li{
+    line-height: 1.8rem;
+    padding:0.5rem 0;
+}
+.event .measure{
+    color:#195d99;
+    font-size: 1.2rem;
+}
+/*measure*/
+.table2 {
+    display: flex;
+    justify-content:space-around;
 }
     .table .notice{
         font-size: 18px;
