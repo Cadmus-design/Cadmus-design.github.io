@@ -832,10 +832,10 @@ table .new520:nth-of-type(2),table .new520:nth-of-type(3){
     list-style: none;
 }
 .event .measure ul:first-of-type li:last-of-type{
-    /*display: block;*/
+    /*display: block;
     width:90%;
     text-align: left;
-    text-indent: 2rem;
+    text-indent: 2rem;*/
 }
 .event .measure ul li{
     font-size: 1.2rem;
@@ -1592,10 +1592,10 @@ table .new520:nth-of-type(2),table .new520:nth-of-type(3){
     list-style: none;
 }
 .event .measure ul:first-of-type li:last-of-type{
-    display: block;
+    /*display: block;
     width:100%;
     text-align: left;
-    text-indent: 0rem;
+    text-indent: 0rem;*/
 }
 .event .measure ul li{
     font-size: 1.2rem;
