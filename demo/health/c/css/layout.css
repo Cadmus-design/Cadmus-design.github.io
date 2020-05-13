@@ -1606,7 +1606,7 @@ table .new520:nth-of-type(2),table .new520:nth-of-type(3){
     text-indent: 0;
     text-align: left;
     padding-left:0;
-        font-size:1rem;
+        font-size:1.2rem;
 }
 .event .measure ul li{
     font-size: 1.2rem;
