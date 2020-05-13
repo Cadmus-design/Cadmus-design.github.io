@@ -832,7 +832,7 @@ table .new520:nth-of-type(2),table .new520:nth-of-type(3){
     list-style: none;
 }
 .event .measure ul:first-of-type li:last-of-type{
-    display: block;
+    /*display: block;*/
     width:90%;
     text-align: left;
     text-indent: 2rem;
