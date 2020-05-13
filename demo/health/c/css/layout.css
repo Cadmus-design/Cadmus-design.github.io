@@ -837,6 +837,11 @@ table .new520:nth-of-type(2),table .new520:nth-of-type(3){
     text-align: left;
     text-indent: 2rem;*/
 }
+.event .measure ul p{
+    text-indent: 0;
+    text-align: left;
+    padding-left:2.2rem;
+}
 .event .measure ul li{
     font-size: 1.2rem;
     line-height: 1.8rem;
@@ -1596,6 +1601,11 @@ table .new520:nth-of-type(2),table .new520:nth-of-type(3){
     width:100%;
     text-align: left;
     text-indent: 0rem;*/
+}
+    .event .measure ul p{
+    text-indent: 0;
+    text-align: left;
+    padding-left:0;
 }
 .event .measure ul li{
     font-size: 1.2rem;
