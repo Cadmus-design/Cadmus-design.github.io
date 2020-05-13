@@ -842,7 +842,7 @@ table .new520:nth-of-type(2),table .new520:nth-of-type(3){
     line-height: 1.8rem;
 }
 .event .measure ul li b{
-    white-space: nowrap;
+    /*white-space: nowrap;*/
 }
 .event .measure ul li img{
     width:90%;
