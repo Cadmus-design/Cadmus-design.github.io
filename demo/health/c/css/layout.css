@@ -832,17 +832,22 @@ table .new520:nth-of-type(2),table .new520:nth-of-type(3){
     list-style: none;
 }
 .event .measure ul:first-of-type li:last-of-type{
-    display: block;
+    /*display: block;
     width:90%;
     text-align: left;
-    text-indent: 2rem;
+    text-indent: 2rem;*/
+}
+.event .measure ul p{
+    text-indent: 0;
+    text-align: left;
+    padding-left:2.2rem;
 }
 .event .measure ul li{
     font-size: 1.2rem;
     line-height: 1.8rem;
 }
 .event .measure ul li b{
-    white-space: nowrap;
+    /*white-space: nowrap;*/
 }
 .event .measure ul li img{
     width:90%;
@@ -1592,10 +1597,16 @@ table .new520:nth-of-type(2),table .new520:nth-of-type(3){
     list-style: none;
 }
 .event .measure ul:first-of-type li:last-of-type{
-    display: block;
+    /*display: block;
     width:100%;
     text-align: left;
-    text-indent: 0rem;
+    text-indent: 0rem;*/
+}
+    .event .measure ul p{
+    text-indent: 0;
+    text-align: left;
+    padding-left:0;
+        font-size:1.05rem;
 }
 .event .measure ul li{
     font-size: 1.2rem;
