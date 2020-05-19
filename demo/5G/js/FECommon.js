@@ -21,6 +21,76 @@ function onYouTubePlayerAPIReady() {
         // }
     });
 };
+
+var player3;
+function onYouTubePlayerAPIReady() {
+    player3 = new YT.Player('popup3Vo', {
+        width: '335',
+        height: '190',
+        videoId: 'W9Pi_BvOiZ4',
+        playerVars: {
+            autohide: 0
+            ,playsinline: 1 //ios 是否全屏0是 1內嵌
+            ,rel: 0 //是否應顯示相關視頻播放時的初始視頻的結束。
+            ,controls: 1
+            ,wmode: "opaque"
+            ,showinfo: 0
+            // ,startSeconds:0.5
+            // ,hd:1
+            // ,vq:'hd1080'
+        }
+        // ,events: {
+        //     'onReady': onPlayerReady
+        // }
+    });
+};
+
+var player4;
+function onYouTubePlayerAPIReady() {
+    player4 = new YT.Player('popup4Vo', {
+        width: '335',
+        height: '190',
+        videoId: 'hHhe8WY_yaY',
+        playerVars: {
+            autohide: 0
+            ,playsinline: 1 //ios 是否全屏0是 1內嵌
+            ,rel: 0 //是否應顯示相關視頻播放時的初始視頻的結束。
+            ,controls: 1
+            ,wmode: "opaque"
+            ,showinfo: 0
+            // ,startSeconds:0.5
+            // ,hd:1
+            // ,vq:'hd1080'
+        }
+        // ,events: {
+        //     'onReady': onPlayerReady
+        // }
+    });
+};
+
+var player5;
+function onYouTubePlayerAPIReady() {
+    player4 = new YT.Player('popup5Vo', {
+        width: '335',
+        height: '190',
+        videoId: 'UJnMggD8ixg',
+        playerVars: {
+            autohide: 0
+            ,playsinline: 1 //ios 是否全屏0是 1內嵌
+            ,rel: 0 //是否應顯示相關視頻播放時的初始視頻的結束。
+            ,controls: 1
+            ,wmode: "opaque"
+            ,showinfo: 0
+            // ,startSeconds:0.5
+            // ,hd:1
+            // ,vq:'hd1080'
+        }
+        // ,events: {
+        //     'onReady': onPlayerReady
+        // }
+    });
+};
+
 var FECommon = FECommon || {};
 var np_GTAC="";
 (function(FECommon) {
@@ -228,30 +298,53 @@ $(document).ready(function() {
         FECommon.GAEvent('click','認識5G_中華優勢','認識5G_形象影片','');
     });
 
-    $("#popup1 .xBtn").click(function(e) {
+    
+      $(".part5Video3").click(function(e) {
+        $("#popup3").addClass("on").css('z-index',200);
+        $("#popup3 .popup3Vo").html(' <iframe id="popup3Vo" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="335" height="190" src="https://www.youtube.com/embed/W9Pi_BvOiZ4?autohide=0&amp;playsinline=1&amp;rel=0&amp;controls=1&amp;wmode=opaque&amp;showinfo=0&amp;enablejsapi=1&amp;widgetid=1"></iframe>');
+        //tracking----
+        FECommon.GAEvent('click','認識5G_中華優勢','認識5G_形象影片','');
+    });
+      $(".part5Video4").click(function(e) {
+        $("#popup4").addClass("on").css('z-index',200);
+        $("#popup4 .popup4Vo").html(' <iframe id="popup4Vo" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="335" height="190" src="https://www.youtube.com/embed/hHhe8WY_yaY?autohide=0&amp;playsinline=1&amp;rel=0&amp;controls=1&amp;wmode=opaque&amp;showinfo=0&amp;enablejsapi=1&amp;widgetid=1"></iframe>');
+        //tracking----
+        FECommon.GAEvent('click','認識5G_中華優勢','認識5G_形象影片','');
+    });
+      $(".part5Video5").click(function(e) {
+        $("#popup5").addClass("on").css('z-index',200);
+        $("#popup5 .popup5Vo").html(' <iframe id="popup5Vo" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="335" height="190" src="https://www.youtube.com/embed/UJnMggD8ixg?autohide=0&amp;playsinline=1&amp;rel=0&amp;controls=1&amp;wmode=opaque&amp;showinfo=0&amp;enablejsapi=1&amp;widgetid=1"></iframe>');
+        //tracking----
+        FECommon.GAEvent('click','認識5G_中華優勢','認識5G_形象影片','');
+    });
+
+      $("#popup1 .xBtn").click(function(e) {
         $("#popup1 .popup1Vo").html('');
         $("#popup1").removeClass("on");
         setTimeout(function(){
             $("#popup1").css('z-index',-1)
         },300);
     });
-      $(".part5Video1").click(function(e) {
-        $("#popup1").addClass("on").css('z-index',200);
-        $("#popup1 .popup1Vo").html(' <iframe id="popup1Vo" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="335" height="190" src="https://www.youtube.com/embed/HmDBQEooILQ?autohide=0&amp;playsinline=1&amp;rel=0&amp;controls=1&amp;wmode=opaque&amp;showinfo=0&amp;enablejsapi=1&amp;widgetid=1"></iframe>');
-        //tracking----
-        FECommon.GAEvent('click','認識5G_中華優勢','認識5G_形象影片','');
+      $("#popup3 .xBtn").click(function(e) {
+        $("#popup3 .popup3Vo").html('');
+        $("#popup3").removeClass("on");
+        setTimeout(function(){
+            $("#popup3").css('z-index',-1)
+        },300);
     });
-      $(".part5Video2").click(function(e) {
-        $("#popup1").addClass("on").css('z-index',200);
-        $("#popup1 .popup1Vo").html(' <iframe id="popup1Vo" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="335" height="190" src="https://www.youtube.com/embed/8cNp3_8d_zk?autohide=0&amp;playsinline=1&amp;rel=0&amp;controls=1&amp;wmode=opaque&amp;showinfo=0&amp;enablejsapi=1&amp;widgetid=1"></iframe>');
-        //tracking----
-        FECommon.GAEvent('click','認識5G_中華優勢','認識5G_形象影片','');
+      $("#popup4 .xBtn").click(function(e) {
+        $("#popup4 .popup4Vo").html('');
+        $("#popup4").removeClass("on");
+        setTimeout(function(){
+            $("#popup4").css('z-index',-1)
+        },300);
     });
-      $(".part5Video3").click(function(e) {
-        $("#popup1").addClass("on").css('z-index',200);
-        $("#popup1 .popup1Vo").html(' <iframe id="popup1Vo" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="335" height="190" src="https://www.youtube.com/embed/vsBf_0gDxSM?autohide=0&amp;playsinline=1&amp;rel=0&amp;controls=1&amp;wmode=opaque&amp;showinfo=0&amp;enablejsapi=1&amp;widgetid=1"></iframe>');
-        //tracking----
-        FECommon.GAEvent('click','認識5G_中華優勢','認識5G_形象影片','');
+      $("#popup5 .xBtn").click(function(e) {
+        $("#popup5 .popup5Vo").html('');
+        $("#popup5").removeClass("on");
+        setTimeout(function(){
+            $("#popup5").css('z-index',-1)
+        },300);
     });
 
 
