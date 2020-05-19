@@ -235,6 +235,26 @@ $(document).ready(function() {
             $("#popup1").css('z-index',-1)
         },300);
     });
+      $(".part5Video1").click(function(e) {
+        $("#popup1").addClass("on").css('z-index',200);
+        $("#popup1 .popup1Vo").html(' <iframe id="popup1Vo" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="335" height="190" src="https://www.youtube.com/embed/HmDBQEooILQ?autohide=0&amp;playsinline=1&amp;rel=0&amp;controls=1&amp;wmode=opaque&amp;showinfo=0&amp;enablejsapi=1&amp;widgetid=1"></iframe>');
+        //tracking----
+        FECommon.GAEvent('click','認識5G_中華優勢','認識5G_形象影片','');
+    });
+      $(".part5Video2").click(function(e) {
+        $("#popup1").addClass("on").css('z-index',200);
+        $("#popup1 .popup1Vo").html(' <iframe id="popup1Vo" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="335" height="190" src="https://www.youtube.com/embed/8cNp3_8d_zk?autohide=0&amp;playsinline=1&amp;rel=0&amp;controls=1&amp;wmode=opaque&amp;showinfo=0&amp;enablejsapi=1&amp;widgetid=1"></iframe>');
+        //tracking----
+        FECommon.GAEvent('click','認識5G_中華優勢','認識5G_形象影片','');
+    });
+      $(".part5Video3").click(function(e) {
+        $("#popup1").addClass("on").css('z-index',200);
+        $("#popup1 .popup1Vo").html(' <iframe id="popup1Vo" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="335" height="190" src="https://www.youtube.com/embed/vsBf_0gDxSM?autohide=0&amp;playsinline=1&amp;rel=0&amp;controls=1&amp;wmode=opaque&amp;showinfo=0&amp;enablejsapi=1&amp;widgetid=1"></iframe>');
+        //tracking----
+        FECommon.GAEvent('click','認識5G_中華優勢','認識5G_形象影片','');
+    });
+
+
     $(".part5PicI,.part5Dot a").click(function(e) {
         fnPart5Move($(this).attr("data-key"));
     });
