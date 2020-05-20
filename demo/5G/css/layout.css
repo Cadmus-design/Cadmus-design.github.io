@@ -1181,7 +1181,8 @@ a,a:hover{
   display: block;
   position: absolute;
   top: -35px;
-  left: 50%; }
+  /*left: 50%;*/
+  left: -40%; }
 
 .timelineI2 {
   top: auto;

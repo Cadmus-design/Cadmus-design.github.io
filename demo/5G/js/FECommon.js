@@ -446,7 +446,7 @@ $(document).ready(function() {
         
             $(".part7").attr("data-p","0");
             $(".part7").attr("data-x",parseInt($(".timelineWrap").css("width"))/2);
-            fnPart7Move(parseInt($(".timelineWrap").css("width"))*5/8);
+            fnPart7Move(parseInt($(".timelineWrap").css("width"))*5/9);
             setTimeout(function(){   $(".part7").attr("data-p","1");},500);
         }
     });
@@ -456,7 +456,7 @@ $(document).ready(function() {
         
             $(".part7").attr("data-p","0");
             $(".part7").attr("data-x",parseInt($(".timelineWrap").css("width"))/2);
-            fnPart7Move(parseInt($(".timelineWrap").css("width"))*3/8);
+            fnPart7Move(parseInt($(".timelineWrap").css("width"))*4/9);
             setTimeout(function(){   $(".part7").attr("data-p","1");},500);
         }
     });
