@@ -49,7 +49,39 @@ a {
   font-size: 0;
   content: ".";
 }
+/* line */
+  .separator>* {
+    display: inline-block;
+    vertical-align: middle;
+  }
 
+  .separator {
+    text-align: center;
+    border: 0;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
+
+  .separator:before, .separator:after {
+    content: "";
+    height: 2px;
+    width: 45%;
+    background-color: #4A2000;
+    margin: -5px 15px 0 15px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .separator:before {
+    margin-left: -100%;
+  }
+
+  .separator:after {
+    margin-right: -100%;
+  }
 /* hides from IE-mac \ */
 * html .clearfix {
   height: 1%;
