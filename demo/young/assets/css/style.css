@@ -5,10 +5,10 @@ html {box-sizing: border-box;}*, *::after, *::before {box-sizing: inherit;}html,
  body{
 	 background:#fff;
  }
- .reveal-box{height:400px}
+ 	.reveal-box{height:400px}
 	.reveal-box .reveal-action-more,.reveal-box .reveal-action-less{display:block}
 	.reveal-box .reveal-action-more,.reveal-box .reveal-action-less{display:block}
-.reveal-box .reveal-action-less a{line-height:40px}
+	.reveal-box .reveal-action-less a{line-height:40px}
 
  .prompt, .prompt-close{cursor: pointer;}
  .remind_content, .prompt-close {
