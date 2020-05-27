@@ -34,7 +34,15 @@
   font-size: 1.25rem !important;
   min-width: 180px;
 }
-
+.content-table{
+    position: relative;
+}
+.content-table .btn{
+    position: absolute;
+    bottom:15%;
+    right:38%;
+    z-index: 150;
+}
 .accordion .card .card-header .btn-link {
   position: relative;
   display: block;
@@ -65,6 +73,16 @@
   .accordion .card .card-header .btn-link .plus {
     left: 65%;
   }
+    .content-table{
+    position: relative;
+}
+.content-table .btn{
+    position: relative;
+    display: block;
+    top:0;
+    left:0;
+    margin:0 auto;
+}
 }
 
 .accordion .card .card-header .btn-link.collapsed .less {
