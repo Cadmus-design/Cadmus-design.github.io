@@ -125,13 +125,15 @@ div#social-float img{width:25%;margin:0 auto;display: block;}
 		width:100%;
 		display: flex;
 		background: #fff;
+        padding:0;
+        margin:0;
 	}
 	#wrap nav ul li{
 		justify-content: space-around;
 		padding:.8rem;
 		text-align: center;
 		font-size: .85rem;
-		
+		width:25%;
 		font-weight: bold;
 		white-space:nowrap;
 	}
