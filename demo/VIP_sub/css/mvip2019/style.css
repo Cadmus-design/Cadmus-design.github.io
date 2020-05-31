@@ -37,7 +37,7 @@
 .content-table{
     position: relative;
 }
-.content-table .btn{
+.content-table .btn_vip{
     position: absolute;
     bottom:15%;
     right:38%;

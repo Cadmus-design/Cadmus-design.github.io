@@ -763,4 +763,8 @@ footer {
 .notice-text li {
   text-align: left;
 }
+.notice-text li a{
+  color:#209CFF;
+  text-decoration: underline;
+}
 /*# sourceMappingURL=layout.css.map */
