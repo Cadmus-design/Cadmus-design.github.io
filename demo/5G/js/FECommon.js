@@ -388,26 +388,32 @@ $(document).ready(function() {
         fnPart6Pop(1);
         //tracking----
         FECommon.GAEvent('click','產業創新升級','產業創新升級_車聯網','');
+        fbq('track', '車聯網/無人自駕車');
     });
+
     $(".part6Btn2").click(function(e) {
         fnPart6Pop(2);
         //tracking----
         FECommon.GAEvent('click','產業創新升級','產業創新升級_企業專網','');
+        fbq('track', '企業專網');
     });
     $(".part6Btn3").click(function(e) {
         fnPart6Pop(3);
         //tracking----
         FECommon.GAEvent('click','產業創新升級','產業創新升級_智慧醫療','');
+        fbq('track', '智慧醫療');
     });
     $(".part6Btn4").click(function(e) {
         fnPart6Pop(4);
         //tracking----
         FECommon.GAEvent('click','產業創新升級','產業創新升級_無人機應用','');
+        fbq('track', '無人機應用');
     });
     $(".part6Btn5").click(function(e) {
         fnPart6Pop(5);
         //tracking----
         FECommon.GAEvent('click','產業創新升級','產業創新升級_智慧三表','');
+        fbq('track', '智慧三表');
     });
     $(".part6Btn6").click(function(e) {
         //fnPart6Pop(6);//等內容放好再取消註解
