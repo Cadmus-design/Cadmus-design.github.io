@@ -51,6 +51,23 @@ a{color:#209cff;}
 	.container img{
 		width: 100%;
 	}
+    #wrap p{text-align: center; margin: 1.5rem 0;}
+    #wrap #month p a{
+        border-radius:1.2rem;
+        text-align: center;
+        background: #e3141c;
+        padding:.4rem .8rem;
+        color:#fff;
+        text-decoration: none;
+    }
+    #wrap #year p a{
+        border-radius:1.2rem;
+        text-align: center;
+        background: #0d6fb8;
+        padding:.4rem .8rem;
+        color:#fff;
+        text-decoration: none;
+    }
 	.notice{
 		width:100%;
 		background: #fff;
@@ -146,6 +163,24 @@ div#social-float img{width:25%;margin:0 auto;display: block;}
 	.container img{
 		width: 100%;
 	}
+    #wrap p{text-align: center; margin: .8rem 0;}
+    #wrap #month p a{
+        border-radius:1.2rem;
+        text-align: center;
+        background: #e3141c;
+        padding:.2rem .8rem;
+        color:#fff;
+        text-decoration: none;
+    }
+    #wrap p{text-align: center;}
+    #wrap #year p a{
+        border-radius:1.2rem;
+        text-align: center;
+        background: #0d6fb8;
+        padding:.2rem .8rem;
+        color:#fff;
+        text-decoration: none;
+    }
 	#social-float ul{
 		display: flex;
 		width:100%;
