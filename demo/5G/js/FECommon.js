@@ -291,11 +291,13 @@ $(document).ready(function() {
         fnPart3Move($(this).attr("data-key"));
     });
 
-    $(".part4Video").click(function(e) {
+    $(".part4ConNode").click(function(e) {
         $("#popup1").addClass("on").css('z-index',200);
-        $("#popup1 .popup1Vo").html(' <iframe id="popup1Vo" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="335" height="190" src="https://www.youtube.com/embed/32-WT82ORyg?autohide=0&amp;playsinline=1&amp;rel=0&amp;controls=1&amp;wmode=opaque&amp;showinfo=0&amp;enablejsapi=1&amp;widgetid=1"></iframe>');
+        $("#popup1 .popup1Vo").html(' <iframe id="popup1Vo" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="335" height="190" src="https://www.youtube.com/embed/'+$(this).attr("data-vo")+'?autohide=0&amp;playsinline=1&amp;rel=0&amp;controls=1&amp;wmode=opaque&amp;showinfo=0&amp;enablejsapi=1&amp;widgetid=1"></iframe>');
+        fnPart4Move($(this).attr("data-key"));
         //tracking----
-        FECommon.GAEvent('click','認識5G_中華優勢','認識5G_形象影片','');
+        FECommon.GAEvent('click','精彩看5G',$(this).attr("data-val"),'');
+        
     });
 
     
@@ -347,7 +349,22 @@ $(document).ready(function() {
         },300);
     });
 
+    $(".part4PicI,.part5Dot a").click(function(e) {
+        fnPart4Move($(this).attr("data-key"));
+    });
+  
 
+    $(".part4ArwR").click(function(e) {
+       
+        fnPart4Side(1);
+    });
+
+
+    $(".part4ArwL").click(function(e) {  
+        fnPart4Side(-1);
+    });
+    
+    
     $(".part5PicI,.part5Dot a").click(function(e) {
         fnPart5Move($(this).attr("data-key"));
     });
@@ -557,6 +574,40 @@ $(document).ready(function() {
 
 
 
+    function fnPart4Move(e) {
+        var k = $(".part4Con").attr("data-key");
+        var n = e;
+        if (n > 2) {
+            n = 1;
+        }
+        if (n < 1) {
+            n = 2;
+        } 
+        $(".part4"+k).removeClass("on");
+        $(".part4"+n).addClass("on");
+        $(".part4D"+k).removeClass("on");
+        $(".part4D"+n).addClass("on");
+        $(".part4VodieGroup .title1").html($(".part4"+n).attr("data-val"));
+        $(".part4Con").attr("data-key", n);
+    }
+    
+
+    function fnPart4Side(e) {
+     
+        var k = $(".part4Con").attr("data-key");
+        var n = parseInt(k) + e;
+        
+        if (n > 2) {
+            n = 1;
+        }
+        if (n < 1) {
+            n = 2;
+        }
+        
+       // $(".part5PicList").animate({ 'margin-left': ($(".part5Img").width() * (1 - n)) + "px" }, 100);
+        fnPart4Move(n);
+    }
+    
     function fnPart5Side(e) {
         var k = $(".part5Pic").attr("data-key");
         var n = parseInt(k) + e;
@@ -623,7 +674,30 @@ $(document).ready(function() {
     part7.addEventListener('mousedown',function(e){  $(".part7").attr("data-x",e.clientX); } , false);
     part7.addEventListener('mouseup', function(e){fnPart7Move(e.clientX)}, false); 
  
- 
+     var part41 = document.getElementById("part41"); 
+    
+    part41.addEventListener('touchstart',function(e){  $(".part41").attr("data-x",e.changedTouches[0].pageX); } , false);
+    part41.addEventListener('touchend', function(e){
+    
+        var tmpn= parseInt(e.changedTouches[0].pageX);
+        var tmpo=parseInt($(".part41").attr("data-x")); 
+        var tmpx=tmpn-tmpo;
+        tmpx=tmpx/Math.abs(tmpx); 
+        fnPart4Side(tmpx); 
+    }, false); 
+    
+      var part42 = document.getElementById("part42"); 
+    
+    part42.addEventListener('touchstart',function(e){  $(".part42").attr("data-x",e.changedTouches[0].pageX); } , false);
+    part42.addEventListener('touchend', function(e){
+    
+        var tmpn= parseInt(e.changedTouches[0].pageX);
+        var tmpo=parseInt($(".part42").attr("data-x")); 
+        var tmpx=tmpn-tmpo;
+        tmpx=tmpx/Math.abs(tmpx); 
+        fnPart4Side(tmpx); 
+    }, false); 
+    
  
     var part51 = document.getElementById("part5PicList"); 
     

@@ -684,6 +684,135 @@ a,a:hover{
     background: #1099ec;
     border-radius: 23px;
     }
+
+
+    .part4VodieGroup{
+        position: relative;  
+        width: 100%; 
+        padding: 100px 0 140px 0;
+        background: url(../img/bg_part5.png) 0 0 no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+    
+    .part4VodieGroup .title2{
+         color: #1099ec; 
+    }
+    
+    .part4VodieGroup .title1{
+         color: #000; 
+        padding: 30px 0 30px 0;
+    }
+    
+    .part4 .part4Info{
+
+        padding-top: 80px;
+    }
+    
+    
+    .part4Con {
+        position: relative;  
+        width: 80%;
+        margin-left: 10%;
+    }
+    .part4Con .part4ConNode {
+        position: relative;  
+        width: 50%; 
+        float: left;
+    }
+    
+    .part4Img{
+        display: block;
+        position: relative;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        max-width: 110%; 
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        cursor:pointer;
+        z-index: 4;
+    }
+    
+    .part4ConNode iframe{ 
+        width: 100%; 
+        height:100%;
+    }
+    
+    .part4ConNode.on .part4Img{
+        top: -5%;
+        left: -5%;
+        width: 110%;
+        z-index: 5;
+    }
+    
+    
+  
+.part4ArwL, .part4ArwR {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 100px;
+  top: 50%;
+  margin-top: -50px;
+  z-index: 9; }
+  .part4ArwL a, .part4ArwR a {
+    display: block;
+    width: 100%;
+    height: 100%; }
+
+.part4ArwL {
+  left: 1%; }
+  .part4ArwL a {
+    background: url(../img/icon_arw2L.png) 0 50% no-repeat; }
+
+.part4ArwR {
+  right: 1%; }
+  .part4ArwR a {
+    background: url(../img/icon_arw2R.png) right 50% no-repeat; }
+
+.part4Dot {
+  display: block;
+  position: absolute;
+  bottom: -90px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  z-index: 3; }
+  .part4Dot a {
+    display: inline-block;
+    width: 120px;
+    height: 7px;
+    border-radius: 5px;
+    background-color: #959595; }
+    .part4Dot a.on {
+      background-color: #00aeef; }
+
+
+.part4 .picHint { 
+    position: absolute;
+    width: 125%;
+    height: 100%;
+    margin-top: 0px;
+    top: 0px;
+    left: -12.5%;
+  }
+
+ .part4Con .clearboth{
+    clear:both;
+ }
+ 
+ 
+ .part4Con .videoplay{ 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:#000;
+    top:0;
+    left:0;
+    z-index:6; 
+ }
 /*=============================================
 =                    part5                    =
 =============================================*/
@@ -1439,7 +1568,7 @@ body.popShow {
   position: absolute;
   top: 0;
   left: 0;
-  width: 310px;
+  width: 367px;
   font-size: 3rem;
   font-weight: 700;
   text-shadow: 0 0 0 #fff;
@@ -1540,7 +1669,7 @@ body.popShow {
     .kvTitle i {
       font-size: 3.35vw; }
 
-  .part5ArwL a, .part5ArwR a, .part3ArwL a, .part3ArwR a {
+   .part4ArwL a, .part4ArwR a,  .part5ArwL a, .part5ArwR a, .part3ArwL a, .part3ArwR a {
     background-size: 30px auto; }
 
   .part3ArwL {
@@ -1981,12 +2110,35 @@ body.popShow {
     background-size: 20px auto;
 }
 
+ 
+
+
+.part4Con .part4ConNode { 
+    display: block;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    
+}
+
+.part4ConNode.on .part4Img {
+    top: 0%;
+    left: 0%;
+    width: 100%; 
+}
+
+.part4Con .part41{ 
+    position: absolute;
+}
+
 part5PicIx:hover .part5Img, .part5PicI.on .part5Img {
     top: 0%;
     left: 0%;
     width: 100%;
     z-index: 5;
 }
+
+
 
 .part5PicIx:hover .part5PicTxt, .part5PicI.on .part5PicTxt {
     opacity: 1;
