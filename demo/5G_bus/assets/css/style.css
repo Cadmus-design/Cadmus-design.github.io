@@ -38,9 +38,37 @@ html {
 	#wrap section:nth-of-type(3){
 		background: #deebf4;	
 	}
+	#wrap section{
+		display: flex;
+		justify-content: center;
+	}
 	#wrap section img{
-		display: block;
-		margin:0 auto;
-		max-width: 1200px;
+		
+		
+	}
+}
+@media screen and (max-width: 768px){
+	#wrap{
+	width:100%;
+	}
+	#wrap .kv{
+		width:100%;
+	}
+	#wrap .kv img{
+		width: 100%;
+	}
+	#wrap section:nth-of-type(2n-1){
+		width: 100%;
+		background: #fff;
+	}
+	#wrap section:nth-of-type(2n){
+		width:100%;
+		background: #abdef6;
+	}
+	#wrap section:nth-of-type(3){
+		background: #deebf4;	
+	}
+	#wrap section img{
+
 	}
 }
