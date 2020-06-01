@@ -363,7 +363,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             var offsetTop = $target.offset().top;
             var scrollTop = $(window).scrollTop();
             var fixed = $('.navbar').hasClass('on');
-            var top =  fixed ? offsetTop - differ : offsetTop - differ *2;
+            var top =  fixed ? offsetTop - differ : offsetTop - differ ;
             $('html, body').stop().animate({scrollTop: top}, 600);
         }
         $(window).bind('hashchange', onHashChange);
