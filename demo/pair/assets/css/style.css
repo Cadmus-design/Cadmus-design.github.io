@@ -88,7 +88,8 @@ a{color:#209cff;}
 		padding:0 4rem;
 	}
 	.container .feature .txt h3 span{
-		font-weight:normal;
+		font-weight:200;
+        font-size: 1.1rem;
 	}
 	.container .feature .txt ol{
 		padding:0 1rem;
