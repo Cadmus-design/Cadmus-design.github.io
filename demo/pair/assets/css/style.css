@@ -263,7 +263,8 @@ div#social-float img{width:25%;margin:0 auto;display: block;}
 		padding:0 .5rem;
 	}
 	.container .feature .txt h3 span{
-		font-weight:normal;
+		font-weight:200;
+		font-size: 1rem;
 	}
 	.container .feature .txt ol{
 		padding:0 1rem;
