@@ -26,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link href="https://web-eshop.cdn.hinet.net/eshop/css/datepicker.min.css" rel="stylesheet">
     <link href="https://www.cht.com.tw/home/eshop/css/rwd.css" rel="stylesheet">
     <link href="https://www.cht.com.tw/home/eshop/css/eshop-ui-rwd.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=1" type="text/css">
+    
     <script type="text/javascript" src="https://web-eshop.cdn.hinet.net/eshop/js/vendor.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<!--<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <link rel="stylesheet" href="assets/css/style.css?v=1" type="text/css">
     <!-- recpacha demo only - delete me-->
     <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" defer async></script>
 
@@ -101,6 +101,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </nav>
         </header>
     </section>
+     <section class="header-spacer">for space in mobile</section>
     <div id="wrap">
         <div class="kv">
             <img class="pc" src="assets/images/KV.jpg" />
@@ -113,8 +114,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		        <li><a href="https://eshop.cht.com.tw/Web/Personal/Cerb/PickPath?flowID=modadd&megaID=8C262A73-1A07-4809-BB45-81B24E0D4AB4&ProductID=661"  target="_blank">立即搶辦</a></li>
 		    </ul>
 		</nav>
-<div class="container">
-    <div class="feature" id="intro">
+    <div class="container">
+    <div class="feature" scroll-id="intro">
         <ul>
             <li><img src="assets/images/box_1.png"><p>飆網+看電視<br>一次申辦雙重划算</p></li>
             <li><img src="assets/images/box_2.png"><p>想看什麼頻道<br>自己選</p></li>
@@ -323,7 +324,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </table>
            
         </div>
-        <div class="price" id="rich">
+        <div class="price" scroll-id="rich">
             <img class="pc" src="assets/images/table.gif" >
             <img class="m" src="assets/images/table_m.gif" >
         </div>
@@ -347,7 +348,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     </div>
     <script type="text/javascript">
-    $(function(){
+
+   $(function(){
         var _header=$('.navbar').offset().top;
         var onScroll = function(e){
             var _wrapTop=$('.fbox').offset().top;
@@ -361,9 +363,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             var $target = $('[scroll-id="' + target + '"]');
             var differ = $('.navbar')[0].clientHeight;
             var offsetTop = $target.offset().top;
+            var kvTop = $('#KV').clientHeight;
             var scrollTop = $(window).scrollTop();
             var fixed = $('.navbar').hasClass('on');
-            var top =  fixed ? offsetTop - differ : offsetTop - differ ;
+            var top =  fixed ? offsetTop - differ : offsetTop - differ *2;
             $('html, body').stop().animate({scrollTop: top}, 600);
         }
         $(window).bind('hashchange', onHashChange);
@@ -373,7 +376,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             onHashChange();
         },1000)
     });
+   $(function () {
+            $('[slide-target]').click(function () {
+                var target = $(this).attr('slide-target');
+                var $target = $(target);
+                $target.stop().slideToggle(600)
+            })
 
+            function hashchange(f) {
+                var hash = window.location.hash.substring(window.location.hash.indexOf('#') + 1);
+                var $target = $('.' + hash);
+                var top = $target.offset().top;
+                $("html, body").stop().animate({
+                    scrollTop: top
+                }, 600);
+            }
+            
+        });
     function checkOffset() {
     if($('#social-float').offset().top + $('#social-float').height() 
                                            >= $('#footer').offset().top - 10)
@@ -386,22 +405,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         checkOffset();
     });
 </script>
-    <div class="fbox"></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+    
 	
     <section class="footer" id="footer">
         <div class="container">
@@ -423,5 +427,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </section>
+    <div class="fbox"></div>
 </body>
 </html>
