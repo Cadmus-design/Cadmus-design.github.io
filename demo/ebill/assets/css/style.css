@@ -86,13 +86,13 @@ img[usemap] {
 		vertical-align: top;
 	}
 	.container >ul:first-of-type{
-		width:15%;
+		width:11.5%;
 	}
 	.container >ul:first-of-type li{
 		font-weight: 600;
 	}
 	.container >ul:nth-of-type(2){
-		width: 80%;
+		width: 85%;
 	}
 	.container >ul li{
 		font-size: 1.25rem;
@@ -196,7 +196,7 @@ img[usemap] {
 		margin:0 auto;
 	}
 	.content .box h2{
-		font-size: 2.5rem;
+		font-size: 2rem;
 		color:#5dbc56;
 		margin:1rem 0;
 	}
@@ -220,7 +220,7 @@ img[usemap] {
 	}
 	.content .box ul:nth-of-type(2) li:nth-of-type(2){
 		font-size: 90%;
-		line-height: 488%;
+		line-height: 258%;
 		vertical-align: top;
 	}
 	.content .box ul:first-of-type li:nth-of-type(2):before{
@@ -232,8 +232,11 @@ img[usemap] {
 		width: 80%;
 	}
 	.content .box >ul li{
-		font-size: 1rem;
+		font-size: 1.25rem;
 		text-justify:inter-word;;
+	}
+	.content .box >ul li a{
+		text-decoration: underline;
 	}
 	.content .box h3{
 		font-size: 1.25rem;
@@ -248,7 +251,7 @@ img[usemap] {
 	}
 	.content .box >ul:nth-of-type(5){
 		width: 80%;
-		list-style-type: numeric;
+		list-style-type: decimal;
 	}
 	.content .box p{
 		color:#727171;
@@ -268,10 +271,18 @@ img[usemap] {
 		margin:0 auto;
 		font-size: 1rem;
 	}
+	.notice h3 span{
+		font-size: 150%;
+		line-height: 100%;
+	}
 	.notice ol{
 		max-width:1142px;
 		margin:0rem auto 0rem;
 		padding:0 2rem 2rem;
+	}
+	.notice ol li a{
+		font-weight: 600;
+		color: #000;
 	}
 	.notice ol li ul{
 		text-indent:-1rem;
