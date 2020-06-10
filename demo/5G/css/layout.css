@@ -717,7 +717,7 @@ a,a:hover{
     }
     .part4Con .part4ConNode {
         position: relative;  
-        width: 50%; 
+        width: 33%; 
         float: left;
     }
     
@@ -2127,7 +2127,7 @@ body.popShow {
     width: 100%; 
 }
 
-.part4Con .part41{ 
+.part4Con .part41, .part4Con .part42{ 
     position: absolute;
 }
 

@@ -356,7 +356,7 @@ $(document).ready(function() {
 
     $(".part4ArwR").click(function(e) {
        
-        fnPart4Side(1);
+        fnPart4Side(+1);
     });
 
 
@@ -572,16 +572,15 @@ $(document).ready(function() {
         
     }
 
-
-
+    
     function fnPart4Move(e) {
         var k = $(".part4Con").attr("data-key");
         var n = e;
-        if (n > 2) {
+        if (n > 3) {
             n = 1;
         }
         if (n < 1) {
-            n = 2;
+            n = 3;
         } 
         $(".part4"+k).removeClass("on");
         $(".part4"+n).addClass("on");
@@ -597,11 +596,11 @@ $(document).ready(function() {
         var k = $(".part4Con").attr("data-key");
         var n = parseInt(k) + e;
         
-        if (n > 2) {
+        if (n > 3) {
             n = 1;
         }
         if (n < 1) {
-            n = 2;
+            n = 3;
         }
         
        // $(".part5PicList").animate({ 'margin-left': ($(".part5Img").width() * (1 - n)) + "px" }, 100);
@@ -693,6 +692,18 @@ $(document).ready(function() {
     
         var tmpn= parseInt(e.changedTouches[0].pageX);
         var tmpo=parseInt($(".part42").attr("data-x")); 
+        var tmpx=tmpn-tmpo;
+        tmpx=tmpx/Math.abs(tmpx); 
+        fnPart4Side(tmpx); 
+    }, false); 
+
+        var part43 = document.getElementById("part43"); 
+    
+    part43.addEventListener('touchstart',function(e){  $(".part43").attr("data-x",e.changedTouches[0].pageX); } , false);
+    part43.addEventListener('touchend', function(e){
+    
+        var tmpn= parseInt(e.changedTouches[0].pageX);
+        var tmpo=parseInt($(".part43").attr("data-x")); 
         var tmpx=tmpn-tmpo;
         tmpx=tmpx/Math.abs(tmpx); 
         fnPart4Side(tmpx); 
