@@ -69,7 +69,7 @@ img[usemap] {
 		color:#fff;
 	}
 	.container{
-		max-width: 1280px;
+		max-width: 1142px;
 		margin:6rem auto 2rem;
 	}
 	.container h2{
@@ -103,7 +103,7 @@ img[usemap] {
 		margin:1rem 0;
 	}
 	.container .feature{
-		max-width: 1280px;
+		max-width: 1142px;
 		margin:0 auto;
 	}
 	.container .feature ul{
@@ -135,7 +135,7 @@ img[usemap] {
 		font-weight: bold;
 	}
 	.container .feature .txt{
-		max-width: 1280px;
+		max-width: 1142px;
 		margin:1rem auto 0;
 		padding:0 4rem;
 	}
@@ -148,7 +148,7 @@ img[usemap] {
 	}
 	.container .feature table{
 		width:88%;
-		max-width: 1280px;
+		max-width: 1142px;
 		margin:1rem auto 0;
 		color:#000;
 		border-collapse: collapse;
@@ -181,7 +181,7 @@ img[usemap] {
 	}
 	.container .feature .price{
 		width:88%;
-		max-width: 1280px;
+		max-width: 1142px;
 		margin:1rem auto 0;
 	}
 
