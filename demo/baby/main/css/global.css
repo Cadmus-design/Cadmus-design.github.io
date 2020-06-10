@@ -58,7 +58,7 @@ input[type="button"] {
 
 /*header*/
 /*.header{ width: 1000px; height: 80px; margin: 0 auto; padding: 25px 10px 0 270px; text-align: right; position: relative; box-sizing: border-box;}*/
-.header{ width: 1040px; height: 80px; margin: 0 auto; padding: 25px 10px 0 270px; text-align: right; position: relative; box-sizing: border-box;}
+.header{ width: 1280px; height: 80px; margin: 0 auto; padding: 25px 10px 0 270px; text-align: right; position: relative; box-sizing: border-box;}
 h1{ width: 252px; height: 40px; position: absolute; top: 20px; left: 10px; background: url(../images/logo.png) no-repeat; background-size: auto 40px;}
 h1 a{ width: 100%; height: 100%; display: block;}
 ul.webMenu{ }
@@ -114,7 +114,35 @@ ul.webMenu li:hover .layer_2nd{ top: 35px;  opacity: 1;}
 
 /*videoZone*/
 .videoZone{ width: 785px; height: 442px; margin: 0 auto; -moz-box-shadow:0px 8px 20px 0px rgba(0,0,0,0.7); -webkit-box-shadow:0px 8px 20px 0px rgba(0,0,0,0.7); box-shadow:0px 8px 20px 0px rgba(0,0,0,0.7); background-color: #000;}
-
+/*單購機20200610*/
+.fullpage .purchase{
+	max-width:1280px;
+	width:100%;
+	margin:0 auto;
+}
+.fullpage .purchase .price{
+	position:relative;
+}
+.fullpage .purchase .price p{
+	position:absolute;
+	top:80%;
+	left:50%;
+	color:#fff;
+	font-size: 2.3rem;
+}
+.fullpage .purchase .price em{
+	position:absolute;
+	top:86%;
+	left:50%;
+	color:#fff100;
+	font-size: 3.5rem;
+	font-weight: 600;
+}
+/*固定購買按鈕*/
+.buy{ font-size: 30px;width: 160px; height: 160px; padding-top: 70px;z-index: 9999; position: fixed; right: 20px; bottom: 200px; border-radius: 99em;box-sizing: border-box;  background: url(../img/btn_gobuy.png) center no-repeat;background-size: 170px auto; background-color: #f59c1e; opacity: 0.9;text-align: center;color: #000;}
+.buy a{ position: absolute; top: 0; bottom: 0; left: 0; right: 0;}
+.buy:hover{ background-color: #f79100;}
+.buy.show{ bottom: 120px; opacity: 1;}
 /*特色*/
 ul.feature{ display:flex; justify-content:space-between; }
 ul.feature li{ width: 300px; padding-top: 60px; position: relative;}
@@ -385,6 +413,27 @@ width:53%;
     border-radius: 0.5rem;
 	font-size: 0.85rem; 
 }
+.fullpage .purchase{
+	padding:3rem 0 0;
+}
+.fullpage .purchase .price{
+	position:relative;
+}
+.fullpage .purchase .price p{
+	position:absolute;
+	top:76%;
+	left:50%;
+	color:#fff;
+	font-size: 0.75rem;
+}
+.fullpage .purchase .price em{
+	position:absolute;
+	top:83%;
+	left:50%;
+	color:#fff100;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
 .pagesize{ width:100%; padding: 0 10px;}
 .main{ padding-bottom: 10px; min-height: calc(100vh - 215px);}
 	
@@ -397,6 +446,12 @@ ul.webMenu{ display: none;}
 .opemenu { display: inline-block; width: 20px; height: 20px; }
 .opemenu a { display: block; height: 20px; background: url(../images/icon_topmenu.png) center center no-repeat; background-size: 20px auto;}
 	
+/*固定購買按鈕*/
+.buy{ font-size: 15px;width: 60px; height: 60px; padding-top: 20px;z-index: 9999; position: fixed; right: 20px; bottom: 120px; border-radius: 99em;box-sizing: border-box;  background: url(../images/btn_gobuy.png) center no-repeat;background-size: 170px auto; background-color: #f59c1e;opacity:0.8; text-align: center;color: #fff;}
+.buy a{ position: absolute; top: 0; bottom: 0; left: 0; right: 0;}
+.buy:hover{ background-color: #f79100;}
+.buy.show{ bottom: 120px; opacity: 1;}
+
 /*topView*/
 .topView{ height:460px; padding-top: 50px;}
 .topView .pic{ width: 100%; height: 350px; background: url(../img/top_view.jpg) center center no-repeat; background-size: cover;}

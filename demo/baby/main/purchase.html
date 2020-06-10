@@ -1,0 +1,718 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no">
+
+
+<title>中華電信i寶貝智慧聲控服務</title>
+<meta name="description" content="中華電信i寶貝智慧聲控服務：搭配指定之智慧音箱或聲控終端設備，全面支援中文語音辨識，讓您聲控MOD、播KKBOX音樂、聽廣播、朗讀童書、有聲書、學英語、報股價、讀新聞、問天氣、設鬧鐘…通通一口搞定！" />
+<meta name="keywords" content="中華電信, i寶貝, AI, 聲控, 智慧音箱, 智慧聲控,">
+<meta name="author" content="中華電信 CHT Chunghwa Telecom"/>
+<meta property="og:title" content="中華電信i寶貝智慧聲控服務" />
+<meta property="og:Description" content="中華電信i寶貝智慧聲控服務：搭配指定之智慧音箱或聲控終端設備，全面支援中文語音辨識，讓您聲控MOD、播KKBOX音樂、聽廣播、朗讀童書、有聲書、學英語、報股價、讀新聞、問天氣、設鬧鐘…通通一口搞定！" />
+<meta property="og:image" content="https://ibobby.ai.hinet.net/images/logo.png" /> 
+
+
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<!-- <script type="text/javascript" language="javascript" src="js/jquery-3.2.1.min.js"></script>-->
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/set.js"></script>
+<script type="text/javascript" language="javascript" src="js/rwdmap.js"></script>
+<!-- 側選單-->
+<link href="css/jquery.mmenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/jquery.mmenu.js"></script>
+<script type="text/javascript">
+			$(function() {
+				$('nav#menu').mmenu();
+			});
+		</script>
+<script type="text/javascript">
+if(navigator.userAgent.match(/Android/i)
+  || navigator.userAgent.match(/webOS/i)
+  || navigator.userAgent.match(/iPhone/i)
+  || navigator.userAgent.match(/iPod/i)
+  || navigator.userAgent.match(/BlackBerry/i)
+  || navigator.userAgent.match(/Windows Phone/i)) {
+    document.write('<meta name="viewport" content="width=device-width, user-scalable=no" />');
+}
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NDBLPCX');</script>
+<!-- End Google Tag Manager -->
+<!-- Google Map API -->
+<style>
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    #map {
+        position: absolute;       
+        height: 100%;
+        width: 80%;
+        left: 10%; 
+    }   
+</style>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBK5VjgwsNtVGwBOEEmIgS-VOTnfr5sz44&callback=initMap"
+    async defer></script>
+
+<script>
+var map;
+var a = -1;//if click second time
+function initialize() {
+    var myOptions = {
+        zoom: 7.5,
+        center: { lat: 23.974533, lng: 120.979734 },
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+    var data_location = [
+     new google.maps.LatLng(25.03201, 121.52567),
+     new google.maps.LatLng(25.03813, 121.52381),
+     new google.maps.LatLng(25.05509, 121.52438),
+     new google.maps.LatLng(25.03555, 121.56728),
+     new google.maps.LatLng(25.08109, 121.5237),
+     new google.maps.LatLng(24.96701, 121.54142),
+     new google.maps.LatLng(25.03959, 121.51112),
+     new google.maps.LatLng(25.02483, 121.54814),
+     new google.maps.LatLng(25.0276, 121.50301),
+     new google.maps.LatLng(24.98879, 121.56748),
+     new google.maps.LatLng(25.05457, 121.60714),
+     new google.maps.LatLng(25.07253, 121.6093),
+     new google.maps.LatLng(25.03392, 121.56463),
+     new google.maps.LatLng(25.06064, 121.53658),
+     new google.maps.LatLng(25.10169, 121.52219),
+     new google.maps.LatLng(25.13555, 121.5031),
+     new google.maps.LatLng(25.17172, 121.43773),
+     new google.maps.LatLng(25.04521, 121.5309),
+     new google.maps.LatLng(25.0787, 121.57761),
+     new google.maps.LatLng(25.04359, 121.54847),
+     new google.maps.LatLng(25.05708, 121.51272),
+     new google.maps.LatLng(25.08904, 121.52675),
+     new google.maps.LatLng(25.11368, 121.5113),
+     new google.maps.LatLng(25.03362, 121.5679),
+     new google.maps.LatLng(25.05871, 121.56472),
+     new google.maps.LatLng(25.05172, 121.56146),
+     new google.maps.LatLng(25.07936, 121.58986),
+     new google.maps.LatLng(24.6785, 121.77062),
+     new google.maps.LatLng(24.75381, 121.76358),
+     new google.maps.LatLng(24.59591, 121.84598),
+     new google.maps.LatLng(24.8585, 121.82316),
+     new google.maps.LatLng(24.82118, 121.76974),
+     new google.maps.LatLng(23.97851, 121.60888),
+     new google.maps.LatLng(23.97457, 121.57695),
+     new google.maps.LatLng(23.33557, 121.31404),
+     new google.maps.LatLng(24.55794, 120.82064),
+     new google.maps.LatLng(24.68461, 120.88488),
+     new google.maps.LatLng(24.44196, 120.65364),
+     new google.maps.LatLng(24.61405, 120.78656),
+     new google.maps.LatLng(24.4881, 120.78654),
+     new google.maps.LatLng(24.9893, 121.30966),
+     new google.maps.LatLng(24.95617, 121.22431),
+     new google.maps.LatLng(24.91227, 121.14567),
+     new google.maps.LatLng(24.9921, 121.33503),
+     new google.maps.LatLng(24.86495, 121.21622),
+     new google.maps.LatLng(24.88184, 121.2888),
+     new google.maps.LatLng(25.064, 121.19427),
+     new google.maps.LatLng(24.95983, 121.29935),
+     new google.maps.LatLng(24.96894, 121.26163),
+     new google.maps.LatLng(25.05359, 121.2964),
+     new google.maps.LatLng(24.97146, 121.10906),
+     new google.maps.LatLng(24.98687, 121.29209),
+     new google.maps.LatLng(25.0123, 121.31231),
+     new google.maps.LatLng(25.04631, 121.29517),
+     new google.maps.LatLng(24.94121, 121.2193),
+     new google.maps.LatLng(25.13014, 121.74422),
+     new google.maps.LatLng(25.13178, 121.73424),
+     new google.maps.LatLng(25.06827, 121.66389),
+     new google.maps.LatLng(25.06352, 121.65937),
+     new google.maps.LatLng(25.12212, 121.72502),
+     new google.maps.LatLng(25.10744, 121.80607),
+     new google.maps.LatLng(25.09695, 121.71476),
+     new google.maps.LatLng(25.00857, 121.51954),
+     new google.maps.LatLng(25.00837, 121.46526),
+     new google.maps.LatLng(25.03893, 121.45184),
+     new google.maps.LatLng(25.06174, 121.49449),
+     new google.maps.LatLng(24.9547, 121.35032),
+     new google.maps.LatLng(25.02536, 121.46901),
+     new google.maps.LatLng(25.00057, 121.51756),
+     new google.maps.LatLng(25.02788, 121.47548),
+     new google.maps.LatLng(25.08448, 121.48092),
+     new google.maps.LatLng(25.07135, 121.36903),
+     new google.maps.LatLng(25.00953, 121.51975),
+     new google.maps.LatLng(25.00029, 121.49658),
+     new google.maps.LatLng(24.98027, 121.41647),
+     new google.maps.LatLng(24.93393, 121.36976),
+     new google.maps.LatLng(24.99192, 121.51355),
+     new google.maps.LatLng(24.98545, 121.45885),
+     new google.maps.LatLng(25.00995, 121.45937),
+     new google.maps.LatLng(25.08446, 121.48109),
+     new google.maps.LatLng(25.07173, 121.36908),
+     new google.maps.LatLng(25.02457, 121.42382),
+     new google.maps.LatLng(25.08835, 121.44196),
+     new google.maps.LatLng(24.93853, 121.37082),
+     new google.maps.LatLng(25.03967, 121.42486),
+     new google.maps.LatLng(24.80197, 120.96937),
+     new google.maps.LatLng(24.8286, 121.01088),
+     new google.maps.LatLng(24.80714, 120.96803),
+     new google.maps.LatLng(24.73583, 121.09195),
+     new google.maps.LatLng(24.79907, 121.0001),
+     new google.maps.LatLng(24.13751, 120.67756),
+     new google.maps.LatLng(24.16186, 120.67469),
+     new google.maps.LatLng(24.18658, 120.686),
+     new google.maps.LatLng(24.1496, 120.71605),
+     new google.maps.LatLng(24.12572, 120.71251),
+     new google.maps.LatLng(24.11718, 120.66309),
+     new google.maps.LatLng(24.1664, 120.65343),
+     new google.maps.LatLng(24.17554, 120.63999),
+     new google.maps.LatLng(24.15331, 120.69465),
+     new google.maps.LatLng(24.13676, 120.6368),
+     new google.maps.LatLng(24.10768, 120.6224),
+     new google.maps.LatLng(24.11881, 120.68525),
+     new google.maps.LatLng(24.14731, 120.6464),
+     new google.maps.LatLng(24.25152, 120.71327),
+     new google.maps.LatLng(24.34507, 120.62226),
+     new google.maps.LatLng(24.18091, 120.5838),
+     new google.maps.LatLng(24.24164, 120.56458),
+     new google.maps.LatLng(24.18478, 120.61103),
+     new google.maps.LatLng(24.17287, 120.71299),
+     new google.maps.LatLng(24.1848, 120.62082),
+     new google.maps.LatLng(24.30951, 120.71761),
+     new google.maps.LatLng(24.24164, 120.56458),
+     new google.maps.LatLng(24.11547, 120.67903),
+     new google.maps.LatLng(24.2581, 120.53761),
+     new google.maps.LatLng(24.26198, 120.57221),
+     new google.maps.LatLng(24.16629, 120.66422),
+     new google.maps.LatLng(24.21175, 120.70411),
+     new google.maps.LatLng(24.06535, 120.69864),
+     new google.maps.LatLng(22.75315, 121.15344),
+     new google.maps.LatLng(23.10063, 121.37839),
+     new google.maps.LatLng(23.04839, 121.16333),
+     new google.maps.LatLng(22.9879, 120.1974),
+     new google.maps.LatLng(23.02303, 120.25071),
+     new google.maps.LatLng(22.98263, 120.22705),
+     new google.maps.LatLng(22.99324, 120.1755),
+     new google.maps.LatLng(23.10576, 120.28009),
+     new google.maps.LatLng(23.30877, 120.30558),
+     new google.maps.LatLng(23.04476, 120.30317),
+     new google.maps.LatLng(23.35161, 120.41628),
+     new google.maps.LatLng(23.16418, 120.17585),
+     new google.maps.LatLng(22.97014, 120.25191),
+     new google.maps.LatLng(23.18204, 120.24815),
+     new google.maps.LatLng(23.57015, 119.5681),
+     new google.maps.LatLng(23.04283, 120.19615),
+     new google.maps.LatLng(22.9973, 120.21034),
+     new google.maps.LatLng(23.13231, 120.29721),
+     new google.maps.LatLng(23.01653, 120.19325),
+     new google.maps.LatLng(23.01754, 120.23911),
+     new google.maps.LatLng(22.9922, 120.21729),
+     new google.maps.LatLng(23.15592, 120.17934),
+     new google.maps.LatLng(23.30351, 120.31555),
+     new google.maps.LatLng(23.96587, 120.96638),
+     new google.maps.LatLng(23.9789, 120.6852),
+     new google.maps.LatLng(23.81228, 120.85404),
+     new google.maps.LatLng(23.83774, 120.70333),
+     new google.maps.LatLng(23.97038, 120.97238),
+     new google.maps.LatLng(23.92609, 120.6706),
+     new google.maps.LatLng(23.75448, 120.68261),
+     new google.maps.LatLng(23.90989, 120.68991),
+     new google.maps.LatLng(23.91016, 120.68451),
+     new google.maps.LatLng(22.67071, 120.48979),
+     new google.maps.LatLng(22.55153, 120.53904),
+     new google.maps.LatLng(22.59121, 120.48914),
+     new google.maps.LatLng(22.77393, 120.49443),
+     new google.maps.LatLng(22.61976, 120.56216),
+     new google.maps.LatLng(22.75434, 120.57471),
+     new google.maps.LatLng(22.36788, 120.59392),
+     new google.maps.LatLng(22.46972, 120.45165),
+     new google.maps.LatLng(22.01052, 120.74422),
+     new google.maps.LatLng(22.65786, 120.48625),
+     new google.maps.LatLng(22.64666, 120.29972),
+     new google.maps.LatLng(22.64839, 120.32039),
+     new google.maps.LatLng(22.63397, 120.30512),
+     new google.maps.LatLng(22.66583, 120.30877),
+     new google.maps.LatLng(22.65146, 120.28819),
+     new google.maps.LatLng(22.62313, 120.30148),
+     new google.maps.LatLng(22.65982, 120.30712),
+     new google.maps.LatLng(22.6277, 120.35703),
+     new google.maps.LatLng(22.64187, 120.3514),
+     new google.maps.LatLng(22.99788, 120.63435),
+     new google.maps.LatLng(22.63426, 120.36379),
+     new google.maps.LatLng(22.78437, 120.2958),
+     new google.maps.LatLng(22.88791, 120.48338),
+     new google.maps.LatLng(22.64122, 120.33249),
+     new google.maps.LatLng(22.60025, 120.33855),
+     new google.maps.LatLng(22.61822, 120.33083),
+     new google.maps.LatLng(22.65635, 120.42096),
+     new google.maps.LatLng(22.614, 120.38895),
+     new google.maps.LatLng(22.9022, 120.5402),
+     new google.maps.LatLng(22.70246, 120.34472),
+     new google.maps.LatLng(22.58641, 120.35857),
+     new google.maps.LatLng(22.51064, 120.39464),
+     new google.maps.LatLng(22.66469, 120.2983),
+     new google.maps.LatLng(22.63043, 120.32384),
+     new google.maps.LatLng(22.62708, 120.31588),
+     new google.maps.LatLng(22.65188, 120.32799),
+     new google.maps.LatLng(22.67944, 120.30319),
+     new google.maps.LatLng(22.66919, 120.29461),
+     new google.maps.LatLng(22.72063, 120.29111),
+     new google.maps.LatLng(22.79553, 120.29577),
+     new google.maps.LatLng(22.62146, 120.36008),
+     new google.maps.LatLng(22.6808, 120.34033),
+     new google.maps.LatLng(23.71094, 120.54575),
+     new google.maps.LatLng(23.64472, 120.43208),
+     new google.maps.LatLng(23.70513, 120.43041),
+     new google.maps.LatLng(23.70751, 120.43588),
+     new google.maps.LatLng(23.64222, 120.56187),
+     new google.maps.LatLng(23.761, 120.50289),
+     new google.maps.LatLng(23.79857, 120.45768),
+     new google.maps.LatLng(23.74639, 120.25616),
+     new google.maps.LatLng(23.56888, 120.30395),
+     new google.maps.LatLng(23.75553, 120.61284),
+     new google.maps.LatLng(23.69985, 120.53696),
+     new google.maps.LatLng(23.673, 120.47779),
+     new google.maps.LatLng(23.48178, 120.43045),
+     new google.maps.LatLng(23.46867, 120.44513),
+     new google.maps.LatLng(23.47981, 120.44695),
+     new google.maps.LatLng(23.47811, 120.45113),
+     new google.maps.LatLng(23.37846, 120.16701),
+     new google.maps.LatLng(23.60652, 120.45599),
+     new google.maps.LatLng(23.55769, 120.42531),
+     new google.maps.LatLng(23.42804, 120.40271),
+     new google.maps.LatLng(23.55509, 120.34624),
+     new google.maps.LatLng(23.46659, 120.24689),
+     new google.maps.LatLng(23.516, 120.54843),
+     new google.maps.LatLng(24.08018, 120.54071),
+     new google.maps.LatLng(24.0579, 120.43686),
+     new google.maps.LatLng(23.95759, 120.57701),
+     new google.maps.LatLng(24.11094, 120.49921),
+     new google.maps.LatLng(23.89959, 120.37478),
+     new google.maps.LatLng(23.92294, 120.54399),
+     new google.maps.LatLng(24.02425, 120.53904),
+     new google.maps.LatLng(23.97225, 120.47924),
+     new google.maps.LatLng(23.90422, 120.58407),
+     new google.maps.LatLng(23.8582, 120.58965),
+     new google.maps.LatLng(24.09209, 120.54248),
+     new google.maps.LatLng(23.8737, 120.52517)]
+
+    for (var i=0; i< data_location.length ; i++){
+      var marker = new google.maps.Marker({
+        position: data_location[i],
+        map: map
+      });   
+      addwindow(marker, i)
+    }
+
+    function addwindow(marker, number){
+      var data_infowindow = [
+       "東門服務中心<br/>地址：台北市大安區愛國東路35之1號",
+       "台北南區服務中心<br/>地址：台北市中正區仁愛路一段42號",
+       "長春服務中心<br/>地址：台北市中山區長春路27號",
+       "信義威秀服務中心<br/>地址：台北市信義區松壽路20號",
+       "士林服務中心<br/>地址：台北市士林區基河路10號",
+       "新店服務中心<br/>地址：新北市新店區北新路一段72號",
+       "博愛服務中心<br/>地址：台北市中正區博愛路168號(貴陽街口)",
+       "敦南服務中心<br/>地址：台北市大安區敦化南路二段162號1F",
+       "南機場服務中心<br/>地址：台北市萬華區西藏路125巷20號",
+       "木柵服務中心<br/>地址：台北市文山區木柵路三段79號",
+       "南港服務中心<br/>地址：台北市南港區南港路一段356號",
+       "康寧服務中心<br/>地址：台北市內湖區康寧路三段75巷22號",
+       "中華電信101服務中心<br/>地址：台北市信義區信義路五段7號35樓C室",
+       "台北北區服務中心<br/>地址：台北市中山區建國北路二段216號",
+       "芝山服務中心<br/>地址：台北市士林區福國路95號2F",
+       "北投服務中心<br/>地址：台北市北投區光明路176號",
+       "淡水服務中心<br/>地址：新北市淡水區中正路201號",
+       "台北三創服務中心<br/>地址：台北市中正區市民大道三段2號1樓",
+       "內湖服務中心<br/>地址：台北市內湖路一段596號",
+       "頂好服務中心<br/>地址：台北市敦化南路一段158號",
+       "大稻埕服務中心<br/>地址：台北市大同區民生西路305號",
+       "士林夜市服務中心<br/>地址：台北市士林區文林路158號",
+       "石牌服務中心<br/>地址：台北市北投區石牌路一段73號",
+       "東區服務中心<br/>地址：台北市信義區松仁路130號",
+       "民生服務中心<br/>地址：台北市松山區民生東路五段206號",
+       "南京東服務中心<br/>地址：台北市松山區南京東路五段135號",
+       "內湖成功服務中心<br/>地址：台北市內湖區成功路三段135 號",
+       "羅東服務中心<br/>地址：宜蘭縣羅東鎮公正路112號",
+       "宜蘭服務中心<br/>地址：宜蘭市東港路二段420號",
+       "蘇澳服務中心<br/>地址：宜蘭縣蘇澳鎮中山路一段220號",
+       "頭城服務中心<br/>地址：宜蘭縣頭城鎮民鋒路15號",
+       "礁溪服務中心<br/>地址：宜蘭縣礁溪鄉礁溪路四段128號",
+       "花蓮服務中心<br/>地址：花蓮市中正路595號",
+       "吉安服務中心<br/>地址：花蓮縣吉安鄉中山路三段76號",
+       "玉里服務中心<br/>地址：花蓮縣玉里鎮中山路二段137號",
+       "苗栗服務中心<br/>地址：苗栗縣苗栗市中正路560號",
+       "竹南服務中心<br/>地址：苗栗縣頭份鎮民族路739號",
+       "苑裡服務中心<br/>地址：苗栗縣苑裡鎮忠勇街17號",
+       "後龍服務中心<br/>地址：苗栗縣後龍鎮三民路110號",
+       "銅鑼服務中心<br/>地址：苗栗縣銅鑼鄉郵電街31號",
+       "桃園服務中心<br/>地址：桃園市桃園區復興路189號",
+       "中壢服務中心<br/>地址：桃園市中壢區中山路152號",
+       "楊梅服務中心<br/>地址：桃園市楊梅區大成路167號",
+       "龜山服務中心<br/>地址：桃園市龜山區中興路359號",
+       "龍潭服務中心<br/>地址：桃園市龍潭區中正路194巷25號",
+       "大溪服務中心<br/>地址：桃園市大溪區慈湖路78號",
+       "大園服務中心<br/>地址：桃園市大園區新興路42號",
+       "八德服務中心<br/>地址：桃園市八德區介壽路一段894號",
+       "內壢服務中心<br/>地址：桃園市中壢區興仁路一段188號",
+       "南崁服務中心<br/>地址：桃園市蘆竹區福祿五街6號",
+       "新屋服務中心<br/>地址：桃園市新屋區電信街10號",
+       "中平服務中心<br/>地址：桃園市桃園區宏昌六街237號",
+       "大業服務中心<br/>地址：桃園市桃園區大業路一段353號",
+       "蘆竹服務中心<br/>地址：桃園市蘆竹區南崁路128號",
+       "平鎮服務中心<br/>地址：桃園市平鎮區德育路二段175號",
+       "基隆服務中心<br/>地址：基隆市仁一路321號",
+       "安一服務中心<br/>地址：基隆市安樂區安一路123號",
+       "站前服務中心<br/>地址：新北市汐止區忠孝東路286號",
+       "汐止服務中心<br/>地址：新北市汐止區仁愛路12號",
+       "安樂服務中心<br/>地址：基隆市安樂路二段129號",
+       "瑞芳服務中心<br/>地址：新北市瑞芳區中正路65號2樓",
+       "七堵服務中心<br/>地址：基隆市七堵區崇智街2-5號",
+       "永和服務中心<br/>地址：新北市永和區國光路8號",
+       "板橋服務中心<br/>地址：新北市板橋區民族路166號",
+       "新莊服務中心<br/>地址：新北市新莊區中華路一段57號",
+       "三重服務中心<br/>地址：新北市三重區重新路三段27號",
+       "鶯歌服務中心<br/>地址：新北市鶯歌區國慶街93號",
+       "板橋新埔服務中心<br/>地址：新北市板橋區文化路二段51號",
+       "永和中正服務中心<br/>地址：新北市永和區中正路261號",
+       "江翠服務中心<br/>地址：新北市板橋區雙十路二段70巷2號",
+       "集賢服務中心<br/>地址：新北市蘆洲區集賢路338號1樓",
+       "林口忠孝服務中心<br/>地址：新北市林口區忠孝路370號1樓",
+       "新北營運處服務中心<br/>地址：新北市永和區警光街5號",
+       "連城服務中心<br/>地址：新北市中和區連城路94號",
+       "樹林服務中心<br/>地址：新北市樹林區中華路144號",
+       "三峽服務中心<br/>地址：新北市三峽區民權街36號",
+       "南勢角服務中心<br/>地址：新北市中和區景平路155號",
+       "土城服務中心<br/>地址：新北市土城區青雲路136號",
+       "府中服務中心<br/>地址：新北市板橋區府後街1號",
+       "蘆洲服務中心<br/>地址：新北市蘆洲區集賢路338號",
+       "林口服務中心<br/>地址：新北市林口區忠孝路370號1樓",
+       "後港服務中心<br/>地址：新北市新莊區四維路7號",
+       "五股服務中心<br/>地址：新北市五股區成泰路三段18號",
+       "三峽復興服務中心<br/>地址：新北市三峽區復興路172號",
+       "明志服務中心<br/>地址：新北市泰山區明志路三段155號",
+       "林森服務中心<br/>地址：新竹市東區林森路22號",
+       "竹北服務中心<br/>地址：新竹縣竹北市縣政九路136號",
+       "新竹服務中心<br/>地址：新竹市北區中正路105號",
+       "竹東服務中心<br/>地址：新竹縣竹東鎮杞林路68號",
+       "建新服務中心<br/>地址：新竹市東區建新路112號",
+       "南台中服務中心<br/>地址：台中市西區市府路37號1樓",
+       "北台中服務中心<br/>地址：台中市北區中清路一段347號",
+       "崇德服務中心<br/>地址：台中市崇德路三段165號",
+       "太平服務中心<br/>地址：台中市太平區樹孝路25號",
+       "永豐服務中心<br/>地址：台中市太平區太平路577號",
+       "工學服務中心<br/>地址：台中市南區工學路82號",
+       "惠來服務中心<br/>地址：台中市西屯區西屯路二段104號",
+       "逢甲服務中心<br/>地址：台中市西屯區逢甲路230號",
+       "力行服務中心<br/>地址：台中市北區進化路322號",
+       "南屯服務中心<br/>地址：台中市黎明路一段975號",
+       "烏日服務中心<br/>地址：台中市烏日區三民街212號",
+       "大里服務中心<br/>地址：台中市大里區市大智路727號",
+       "文心服務中心<br/>地址：台中市文心路一段351號",
+       "豐原服務中心<br/>地址：台中市豐原區豐西街21號",
+       "大甲服務中心<br/>地址：台中市大甲區順天路159號",
+       "國際服務中心<br/>地址：台中市龍井區遊園南路257號",
+       "大雅服務中心<br/>地址：台中市沙鹿區成功東街94號",
+       "永安服務中心<br/>地址：台中市西屯區台灣大道四段1238號",
+       "東山服務中心<br/>地址：台中市北屯區東山路一段212 之2號",
+       "永福服務中心<br/>地址：台中市西屯區永福路139號1樓",
+       "后里服務中心<br/>地址：台中市后里區甲后路一段641號",
+       "沙鹿服務中心<br/>地址：台中市沙鹿區成功東街94號",
+       "國光服務中心<br/>地址：台中市大里區國光路2段735號",
+       "梧棲服務中心<br/>地址：台中市梧棲區大智路2段197號",
+       "清水服務中心<br/>地址：台中市清水區中山路79號",
+       "華美服務中心<br/>地址：台中市西屯區漢口路二段292號",
+       "潭子服務中心<br/>地址：台中市潭子區潭興路3段40號",
+       "霧峰服務中心<br/>地址：台中市霧峰區中正路933號",
+       "台東服務中心<br/>地址：台東市大同路128號",
+       "成功服務中心<br/>地址：台東縣成功鎮中華路79號",
+       "關山服務中心<br/>地址：台東縣關山鎮民生路10號",
+       "台南營運處服務中心<br/>地址：台南市中西區西門路一段701號",
+       "永康服務中心<br/>地址：台南市永康區中山南路515號",
+       "台南東門服務中心<br/>地址：台南市東區東門路二段350號",
+       "華平服務中心<br/>地址：台南市安平區華平路500號",
+       "南科服務中心<br/>地址：台南市新市區南科六路6號之1",
+       "新營服務中心<br/>地址：台南市新營市民治路105號",
+       "新化服務中心<br/>地址：台南市新化區大德路30號",
+       "白河服務中心<br/>地址：台南市白河區三民路408號",
+       "佳里服務中心<br/>地址：台南市佳里區進學路256號",
+       "仁德服務中心<br/>地址：台南市仁德區中正路二段1136號",
+       "麻豆服務中心<br/>地址：台南市麻豆區興國路23號",
+       "澎湖服務中心<br/>地址：澎湖縣馬公市信義路3號",
+       "安南服務中心<br/>地址：台南市安中路一段678號",
+       "台南成功服務中心<br/>地址：台南市中西區成功路3號",
+       "善化服務中心<br/>地址：台南市善化區中山路246號",
+       "文賢服務中心<br/>地址：台南市北區文賢路815號",
+       "永康中山服務中心<br/>地址：台南市永康區中山南路462號",
+       "成大服務中心<br/>地址：台南市東區東寧路西段15號",
+       "佳里延平服務中心<br/>地址：台南市佳里區延平路106號",
+       "新營中山服務中心<br/>地址：台南市新營區中山路175之1號",
+       "埔里中正服務中心<br/>地址：埔里鎮中正路443號",
+       "草屯服務中心<br/>地址：草屯鎮中正路629號",
+       "水里服務中心<br/>地址：水里鄉博愛路35號",
+       "名間服務中心<br/>地址：名間鄉彰南路34號",
+       "埔里服務中心<br/>地址：埔里鎮中華路211號",
+       "南崗服務中心<br/>地址：南投市南崗三路26號",
+       "竹山服務中心<br/>地址：竹山鎮竹山路138號",
+       "南投服務中心<br/>地址：南投市民族路160號1樓",
+       "仁壽服務中心<br/>地址：南投市中山一街6號1樓",
+       "屏東服務中心<br/>地址：屏東市民生路343號",
+       "潮州服務中心<br/>地址：屏東縣潮州鎮新生路123號",
+       "萬丹服務中心<br/>地址：屏東縣萬丹鄉萬丹路一段406號",
+       "里港服務中心<br/>地址：屏東縣里港鄉中山路2號",
+       "內埔服務中心<br/>地址：屏東縣內埔鄉南寧路192號",
+       "鹽埔服務中心<br/>地址：屏東縣鹽埔鄉興學路3號",
+       "枋寮服務中心<br/>地址：屏東縣枋寮鄉中山路240號",
+       "東港服務中心<br/>地址：屏東縣東港鎮中正路227號",
+       "恆春服務中心<br/>地址：屏東縣恆春鎮省北路64號",
+       "建國服務中心<br/>地址：屏東縣屏東市棒球路10號",
+       "十全服務中心<br/>地址：高雄市三民區哈爾濱街185號",
+       "建工服務中心<br/>地址：高雄市三民區建工路569號",
+       "高雄服心服務中心<br/>地址：高雄市新興區林森一路230號",
+       "高雄自由服務中心<br/>地址：高雄市左營區自由二路340-1號",
+       "高雄美術館服務中心<br/>地址：高雄市鼓山區青海路116號",
+       "五福服務中心<br/>地址：高雄市新興區五福二路213號",
+       "至聖服務中心<br/>地址：高雄市左營區至聖路200號",
+       "曹公服務中心<br/>地址：高雄市鳳山區曹公路25號",
+       "文山服務中心<br/>地址：高雄市鳳山區青年路二段358-5號",
+       "六龜服務中心<br/>地址：高雄市六龜區華南街34號",
+       "鳳山服務中心<br/>地址：高雄市鳳山區經武路58號",
+       "岡山服務中心<br/>地址：高雄市岡山區介壽路27號",
+       "旗山服務中心<br/>地址：高雄市旗山區延平一路509號",
+       "大昌服務中心<br/>地址：高雄市三民區大昌二路28號",
+       "五甲服務中心<br/>地址：高雄市鳳山區五甲二路280號",
+       "武慶服務中心<br/>地址：高雄市苓雅區武昌路200號",
+       "九曲堂服務中心<br/>地址：高雄市大樹區復興街85號",
+       "大寮服務中心<br/>地址：高雄市大寮區鳳林四路6號",
+       "美濃服務中心<br/>地址：高雄市美濃區泰安路103號",
+       "仁武服務中心<br/>地址：高雄市仁武區鳳仁路280-8號",
+       "桂林服務中心<br/>地址：高雄市鳳山區鳳頂路61號",
+       "林園服務中心<br/>地址：高雄市林園區林園北路367號",
+       "文信服務中心<br/>地址：高雄市鼓山區文信路262號",
+       "大順服務中心<br/>地址：高雄市苓雅區大順三路18號",
+       "高雄文化服務中心<br/>地址：高雄市苓雅區廣州一街157號之3 ",
+       "高應大服務中心<br/>地址：高雄市三民區建工路432號",
+       "華夏服務中心<br/>地址：高雄市左營區華夏路771號",
+       "華榮服務中心<br/>地址：高雄市鼓山區華榮路414號",
+       "仁昌服務中心<br/>地址：高雄市楠梓區藍昌路296號",
+       "岡德服務中心<br/>地址：高雄市岡山區岡山路420號",
+       "鳳山中山服務中心<br/>地址：高雄市鳳山區中山路83號",
+       "澄觀服務中心<br/>地址：高雄市仁武區八德南路351號",
+       "斗六服務中心<br/>地址：斗六市文化路38號",
+       "大埤服務中心<br/>地址：大埤鄉中正路21號",
+       "虎科服務中心<br/>地址：虎尾鎮中正路281號",
+       "虎尾服務中心<br/>地址：雲林縣虎尾鎮新生路136號",
+       "古坑服務中心<br/>地址：古坑鄉中華路25號",
+       "莿桐服務中心<br/>地址：莿桐鄉和平路74號",
+       "西螺服務中心<br/>地址：西螺鎮平和路111號 ",
+       "麥寮服務中心<br/>地址：麥寮鄉光復南路342號",
+       "北港服務中心<br/>地址：北港鎮中正路20-1號 ",
+       "林內服務中心<br/>地址：林內鄉中正路382號",
+       "雲科服務中心<br/>地址：斗六市民生南路246號",
+       "斗南服務中心<br/>地址：斗南鎮南昌路147號",
+       "嘉義服務中心<br/>地址：嘉義市中興路322號",
+       "興業服務中心<br/>地址：嘉義市興業西路34號",
+       "嘉義中山服務中心<br/>地址：嘉義市西區中山路360號",
+       "光彩服務中心<br/>地址：嘉義市光彩街269號",
+       "布袋服務中心<br/>地址：嘉義縣布袋鎮自由路8號",
+       "大林服務中心<br/>地址：嘉義縣大林鎮中正路621號",
+       "民雄服務中心<br/>地址：嘉義縣民雄鄉保生街291號",
+       "水上服務中心<br/>地址：嘉義縣水上鄉中正路49號",
+       "新港服務中心<br/>地址：嘉義縣新港鄉中正路8號之1號",
+       "朴子服務中心<br/>地址：嘉義縣朴子市山通路21號",
+       "竹崎服務中心<br/>地址：嘉義縣竹崎鄉坑仔坪160號",
+       "彰化服務中心<br/>地址：彰化市和平路52號",
+       "鹿港服務中心<br/>地址：彰化縣鹿港鎮民權路82號",
+       "員林服務中心<br/>地址：彰化縣員林市員東路二段498號",
+       "和美服務中心<br/>地址：彰化縣和美鎮彰美路五段323號",
+       "二林服務中心<br/>地址：彰化縣二林鎮斗苑路四段613號",
+       "永靖服務中心<br/>地址：彰化縣永靖鄉瑚璉路433號",
+       "花壇服務中心<br/>地址：彰化縣花壇鄉花壇村平和街135號",
+       "溪湖服務中心<br/>地址：彰化縣溪湖鎮彰水路四段323號",
+       "社頭服務中心<br/>地址：彰化縣社頭鄉員集路二段555號",
+       "田中服務中心<br/>地址：彰化縣田中鎮中州路一段77號",
+       "永安服務中心<br/>地址：彰化縣彰化市永安街379號",
+       "北斗服務中心<br/>地址：彰化縣北斗鎮宮後街27號"];
+      var infowindow =new google.maps.InfoWindow(
+      {
+        content: data_infowindow[number],
+      });
+      google.maps.event.addListener(marker, 'click', function(){
+        a = a * -1;
+        if(a > 0){
+          infowindow.open(map, marker);
+        }else{
+          infowindow.close();
+        }        
+      });
+    }
+
+}
+window.onload = initialize;
+</script>
+
+    
+<!-- END Google Map API -->
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDBLPCX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script charset="utf-8" src="//t.ssp.hinet.net/campaign/event.js" async></script>   <!-- 大數據處追蹤埋code -->
+
+<div class="fullpage wh">
+  <div class="header">
+    <h1><a href="index.html"></a></h1>
+	<a href="program-LUCIAmini.html" class="applyButton">申辦</a>
+    <ul class="webMenu">
+      <li><a href="function.html"></a>功能簡介</li>
+      <li>內容清單
+        <div class="layer_2nd">
+          <ul>
+            <li><a href="fm.html"></a>愛播聽書FM</li>
+            <li><a href="funpark.html"></a>童書夢工廠</li>
+            <li><a href="broadcast.html"></a>廣播</li>
+            <li><a href="funplay.html"></a>放心播</li>
+            <li><a href="funpark_song.html"></a>經典中英文兒歌</li>
+          </ul>
+        </div>
+      </li>
+      <li>音箱款式
+        <div class="layer_2nd">
+          <ul>
+            <li><a href="speaker1.html"></a>高階款-MS2806</li>
+			<li><a href="speaker-LUCIA.html"></a>高階款-LUCIA</li>
+			<li><a href="speaker-LUCIAmini.html"></a>入門款-LUCIA mini</li>
+            <li><a href="speaker2.html"></a>入門款-A02</li>
+          </ul>
+        </div>
+      </li>
+      <li>優惠方案
+        <div class="layer_2nd">
+          <ul>
+            <li><a href="program1.html"></a>高階款-MS2806</li> 
+			<li><a href="program-LUCIA.html"></a>高階款-LUCIA</li>
+			<li><a href="program-LUCIAmini.html"></a>入門款-LUCIA mini</li>
+            <!-- <li><a href="program2.html"></a>入門款-A02</li> -->
+          </ul>
+        </div>
+      </li>
+      <li><a href="teach.html"></a>安裝教學</li>
+      <li><a href="qa.html"></a>QA</li>
+      <li><a href="https://ibobby.ai.hinet.net/smartlife.html"></a>智慧家電</li>
+      <li><a href="mother_day.html"></a>寶貝抖內媽咪去</li>
+    </ul>
+    <div class="menu-btn opemenu"><a href="#menu"></a></div>
+  </div>  
+</div>
+
+<div class="fullpage">
+	<section class="purchase">
+		<img src="img/purchase_01.jpg" usemap="#purchase">
+		<map name="purchase">
+		    <area target="_blank" alt="" title="" href="https://ibobby.ai.hinet.net/speaker-LUCIAmini.html" coords="139,1225,606,1389" shape="rect">
+		    <area target="_blank" alt="" title="" href="https://eshop.cht.com.tw/Ace/Device/Verify?applytype=NEW&applicanttype=Personal&isMOB=true&chtModel=AI000002&color=%E7%99%BD&productID=020000002778" coords="679,1224,1141,1389" shape="rect">
+		</map>
+		<img src="img/purchase_02.jpg" />
+		<div class="videoZone">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wDobtEno0H0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+		
+		<img src="img/purchase_04.jpg" />
+		<img src="img/purchase_05.jpg" />
+		<div class="price">
+			<img src="img/purchase_06.jpg" usemap="#price">
+			<p><strike>原價:2490</strike></p>
+			<em>現在只要：1990</em>
+			<map name="price">
+			    <area target="_blank" alt="" title="" href="https://eshop.cht.com.tw/Ace/Device/Verify?applytype=NEW&applicanttype=Personal&isMOB=true&chtModel=AI000002&color=%E7%99%BD&productID=020000002778" coords="134,830,604,988" shape="rect">
+			</map>
+		</div>
+	</section>
+  <div class="buy">
+  立即購買<a href="https://eshop.cht.com.tw/Ace/Device/Verify?applytype=NEW&applicanttype=Personal&isMOB=true&chtModel=AI000002&color=%E7%99%BD&productID=020000002778" target="_blank"></a>
+</div>
+<div class="footer">
+  <div class="footer_in">
+    <p class="link">
+        <a href="./pdf/service_contract_v1.pdf" charset="UTF-8" target="_blank">服務條款</a> |
+        <a href="https://www.hinet.net/copyright.html" target="_blank">著作權保護</a> | 
+        <a href="https://www.hinet.net/privacy.html" target="_blank">隱私權說明</a> | 
+        <a href="https://www.cht.com.tw/home/cht/sustainability/sustainability-management/csr-vision" target="_blank">企業社會責任</a> | <a href="https://www.hinet.net/kid.html" target="_blank">兒童網路安全</a> | 
+        <a href="https://www.hinet.net/app/ad_normal.html" target="_blank">刊登廣告</a> | 
+        <a href="https://www.cht.com.tw/home/cht/recruit-and-training/recruit/recruit-information" target="_blank">人才招募</a> | 
+        <a href="http://service.hinet.net/2004/ncsc/index.htm" target="_blank">聯絡我們</a></p>
+    <p>中華電信數據通信分公司版權所有 © 2019 HiNet Internet Service by Chunghwa Telecom All Rights Reserved. </p>
+  </div>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no">
+  </br>
+</div>
+<div class="btn_goTop">TOP<a href="#"></a></div>
+
+<div class="view_footer">
+  <div align="center" class="info">
+	請至中華電信門市洽詢及申辦，<a href="https://www.cht.com.tw/home/cht/about-cht/business-group/store-locator"
+        target="_blank">門市地點查詢</a>；免費客服專線：0800-080-412
+  </div>  
+</div>
+
+<!-- 側選單-->
+<nav id="menu">
+  <ul>
+    <li><a href="function.html">功能簡介</a></li>
+    <li><a href="#">內容清單</a>
+      <ul>
+        <li><a href="fm.html">愛播聽書FM</a></li>
+        <li><a href="funpark.html">童書夢工廠</a></li>
+        <li><a href="broadcast.html">廣播</a></li>
+        <li><a href="funplay.html">放心播</a></li>
+        <li><a href="funpark_song.html">經典中英文兒歌</a></li>
+      </ul>
+    </li>
+    <li><a href="#">音箱款式</a>
+      <ul>
+        <li><a href="speaker1.html">高階款-MS2806</a></li>
+        <li><a href="speaker-LUCIA.html">高階款-LUCIA</a></li>
+		<li><a href="speaker-LUCIAmini.html">入門款-LUCIA mini</a></li>
+        <li><a href="speaker2.html">入門款-A02</a></li>
+      </ul>
+    </li>
+    <li><a href="#">優惠方案</a>
+      <ul>
+        <li><a href="program1.html">高階款-MS2806</a></li>
+        <li><a href="program-LUCIA.html">高階款-LUCIA</a></li>
+		<li><a href="program-LUCIAmini.html">入門款-LUCIA mini</a></li>
+        <!-- <li><a href="program2.html">入門款-A02</a></li> -->
+      </ul>
+    </li>
+    <li><a href="teach.html">安裝教學</a></li>
+    <li><a href="qa.html">QA</a></li>
+    <li><a href="https://ibobby.ai.hinet.net/smartlife.html">智慧家電</a></li>
+    <li><a href="mother_day.html">寶貝抖內媽咪去</a></li>
+  </ul>
+</nav>
+
+</body>
+<script>
+    $(function() {
+        $('img[usemap]').rwdImageMaps();
+    });
+    </script>
+</html>
+<!--
+<footer>  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="format-detection" content="telephone=no">
+  <p align="center">
+	請至中華電信門市洽詢及申辦，<a href="https://www.cht.com.tw/home/cht/about-cht/business-group/store-locator"
+        target="_blank">門市地點查詢</a>；
+  </p>       
+</footer>
+-->
