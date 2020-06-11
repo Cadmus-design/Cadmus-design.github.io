@@ -27,7 +27,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- library-->
     <link href="https://cdn.jsdelivr.net/jquery.tooltipster/4.2.5/css/tooltipster.bundle.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/	OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/jquery.tooltipster/4.2.5/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" rel="stylesheet">
     <link href="https://web-eshop.cdn.hinet.net/eshop/css/datepicker.min.css" rel="stylesheet">
@@ -39,13 +39,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="text/javascript" src="https://web-eshop.cdn.hinet.net/eshop/js/all.js" defer></script>
     <!-- custom -->
     <script type="text/javascript" src="https://web-eshop.cdn.hinet.net/eshop/js/custom/custom.js"></script>
-	 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <!--<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
      <link rel="stylesheet" href="assets/css/style.css?v=1" type="text/css">
-    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <!--<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- recpacha demo only - delete me-->
     <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" defer async></script>
-    <script src="assets/js/rwdmap.js"></script>
+    <script type="text/javascript" language="javascript" src="assets/js/rwdmap.js"></script>
     <!-- favicon-->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     
@@ -111,9 +112,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!--<div class="h1">blank header</div>-->
     <div id="wrap">
         <div class="kv">
-        	<img src="assets/images/header.jpg" />
-            <img src="assets/images/KV.jpg" />
-            <!--<img class="m" src="assets/images/KV_m.jpg" />-->
+        	<img class="pc" src="assets/images/header.jpg" />
+            <img class="pc" src="assets/images/KV.jpg" />
+            <img class="m" src="assets/images/KV_m.jpg" />
         </div>
 		<nav>
 		    <ul class="navbar">
@@ -133,15 +134,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     		<li>2020/6/15-2020/9/30</li>
     		<li>活動期間內本國自然人為以下任一種e化帳單，依e化帳單設備數(含帳單代表號及其子號)，每一號設備可獲得1次中獎機會，申辦設備數越多，中獎機會越大。 (外國人及獨資客戶不列入)。</li>
     	</ul>
-    	<img src="assets/images/target.png" />
+    	<img class="pc" src="assets/images/target.png" />
+    	<img class="m" src="assets/images/target_m.png" />
     	<h3>立即申辦</h3>
     <div class="feature" >
         <ul>
-            <li><a href="https://123.cht.com.tw/m/" target="_blank"><img src="assets/images/box_1.png"><p>申辦電子/簡訊帳單</p></a></li>
+            <li><a href="https://123.cht.com.tw/m/" target="_blank"><img class="pc" src="assets/images/box_1.png"><img class="m" src="assets/images/box_1_m.png"><p>申辦電子/<span></span>簡訊帳單</p></a></li>
             <li><img src="assets/images/arrow.png"></li>
-            <li><a href="https://www.cht.com.tw/home/cht/bill/autopay" target="_blank"><img src="assets/images/box_2.png"><p>申辦轉帳代繳</p></a></li>
+            <li><a href="https://www.cht.com.tw/home/cht/bill/autopay" target="_blank"><img class="pc" src="assets/images/box_2.png"><img class="m" src="assets/images/box_2_m.png"><p>申辦轉帳<span></span>代繳</p></a></li>
             <li><img src="assets/images/arrow.png"></li>
-            <li><a href="https://pse.is/PQAB9" target="_blank"><img src="assets/images/box_3.png"><p>Hami Pay下載</p></a></li>
+            <li><a  href="https://pse.is/PQAB9" target="_blank"><img class="pc" src="assets/images/box_3.png"><img class="m" src="assets/images/box_3_m.png"><p>Hami Pay<span></span>下載</p></a></li>
         </ul>
      </div>
  	</div>
@@ -151,30 +153,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      		<h2>點數月月抽</h2>
      		<ul>
      			<li>◆活動內容：<span></span></li>
-     			<li>◆歡樂抽點數：</li>
+     			<li>活動期間登入<a href="https://www.cht.com.tw/home/chtweb/ebill/index.html" target="_blank">電子帳單網站</a>瀏覽每月帳單，每一號碼有一次中獎機會，最高可抽Hami Point 988點！</li>
+     			
      		</ul>
      		<ul>
-     			<li>活動期間登入<a href="https://www.cht.com.tw/home/chtweb/ebill/index.html" target="_blank">電子帳單網站</a>瀏覽每月帳單，每一號碼有一次中獎機會，最高可抽Hami Point 988點！</li>
+     			<li>◆歡樂抽點數：</li>
      			<li>Hami Point 1點價值1元，兌點詳閱Hami Point官網，活動期間共62,130個獎項。</li>
      		</ul>
-     		<img src="assets/images/point.png" />
+     		<img class="pc" src="assets/images/point.png" />
+     		<img class="m" src="assets/images/point_m.jpg" />
      		<ul>
      			<li>◆抽獎步驟：</li>
      		</ul>
-     		<img src="assets/images/step.png" usemap="#step-image-map">
+     		<img class="pc" src="assets/images/step.png" usemap="#step-image-map">
 			<map name="step-image-map">
-			    <area target="_blank" alt="登入我的電子帳單" title="登入我的電子帳單" href="https://www.cht.com.tw/home/chtweb/ebill/index.html " coords="501,6,744,142" shape="rect">
+			    <area target="_blank" alt="登入我的電子帳單" title="登入我的電子帳單" href="https://www.cht.com.tw/home/chtweb/ebill/index.html" coords="501,6,744,142" shape="rect">
+			</map>
+			<img class="m" src="assets/images/step_m.jpg" usemap="#step-image-map-m">
+			<map name="step-image-map-m">
+			    <area target="_blank" title="登入我的電子帳單" href="https://www.cht.com.tw/home/chtweb/ebill/index.html" coords="357,13,472,96" shape="rect">
 			</map>
      		<h2 scroll-id="act">好禮加碼抽</h2>
      		<ul>
      			<li>◆活動內容：<span></span></li>
      			
      		</ul>
-     		<ul>
+     		<ol>
      			<li>系統依據109年9月符合抽獎資格客戶設備號碼，一對一轉換抽獎點數，每一抽獎點數有一次中獎機會，申辦設備數越多，中獎機會越大。</li>
      			<li>每客戶僅限一次中獎機會，如有重複中獎時，將以中獎最高獎項給予。</li>
-     		</ul>
-     		<img src="assets/images/award.png" usemap="#award-image-map">
+     		</ol>
+     		<img class="pc" src="assets/images/award.png" usemap="#award-image-map">
 			<!-- 2020/10月更新
 			<map name="award-image-map">
 			    <area target="_blank" alt="中獎名單" title="中獎名單" href="#" coords="611,98,738,155" shape="rect">
@@ -183,8 +191,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			    <area target="_blank" alt="申報資料下載" title="申報資料下載" href="#" coords="752,327,928,392" shape="rect">
 			</map>
 			-->
+			<img class="m" src="assets/images/award_m.jpg" usemap="#award-image-map-m">
+			<!-- 2020/10月更新
+			<map name="award-image-map-m">
+			    <area target="_blank" alt="" title="" href="" coords="256,247,385,309" shape="rect">
+			    <area target="_blank" alt="" title="" href="" coords="400,248,558,310" shape="rect">
+			    <area target="_blank" alt="" title="" href="" coords="260,564,385,621" shape="rect">
+			    <area target="_blank" alt="" title="" href="" coords="398,566,561,625" shape="rect">
+			</map>
+			-->
      		<p>※ 圖片僅供參考，請以實際收到獎品為準。 <br>※ 依照中華民國稅法規定需開立扣繳憑單。獎品金額超過NT$20,000者，須扣繳10%機會中獎稅。</p>
      	</div>
+
     </div>
     <!--content end -->
     <div class="notice" scroll-id="notice">
@@ -238,7 +256,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             var kvTop = $('#KV').clientHeight;
             var scrollTop = $(window).scrollTop();
             var fixed = $('.navbar').hasClass('on');
-            var top =  fixed ? offsetTop - differ : offsetTop - differ *2;
+            var top =  fixed ? offsetTop - differ : offsetTop - differ;
             $('html, body').stop().animate({scrollTop: top}, 600);
         }
         $(window).bind('hashchange', onHashChange);
