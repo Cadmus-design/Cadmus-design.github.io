@@ -256,7 +256,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             var kvTop = $('#KV').clientHeight;
             var scrollTop = $(window).scrollTop();
             var fixed = $('.navbar').hasClass('on');
-            var top =  fixed ? offsetTop - differ : offsetTop - differ;
+            var top =  fixed ? offsetTop - differ : offsetTop - differ*2;
             $('html, body').stop().animate({scrollTop: top}, 600);
         }
         $(window).bind('hashchange', onHashChange);
