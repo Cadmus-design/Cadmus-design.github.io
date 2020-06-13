@@ -450,8 +450,10 @@ div#social-float img{width:25%;margin:0 auto;display: block;}
 	.container .feature ul li:nth-of-type(2n) img{
 		width:100%;
 	}
-	.container .feature ul li img{
+	.container .feature ul li a .m{
 		max-width: 100%;
+		display: block;
+		margin:0 auto;
 	}
 	.container .feature ul li p{
 		position: absolute;
