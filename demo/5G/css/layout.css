@@ -1214,7 +1214,7 @@ a,a:hover{
 
 .timelineWrap {
   position: relative; 
-  width: 1880px;
+  width: 2080px;
   height: 100%;
   left:30px;
    background: url(../img/icon_line1.png) 0 50% repeat-x
@@ -2226,7 +2226,7 @@ part5PicIx:hover .part5Img, .part5PicI.on .part5Img {
   margin-top: -11px;
   }
   .timelineWrap {
-    width:1235px;
+    width:1340px;
     margin-left: -110px; }
 
   .timelineI {
