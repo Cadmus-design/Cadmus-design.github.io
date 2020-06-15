@@ -707,6 +707,19 @@ table .new520:nth-of-type(2),table .new520:nth-of-type(3){
 .table table .new520 .sub-title, .table table .new520 div{
     color: :#ffffff;
 }
+.table{position: relative;}
+.table .pattern{
+    position: absolute;
+    top:0%;
+    left:70%;
+    z-index: 5;
+}
+.table .pattern2{
+    position: absolute;
+    top:27%;
+    left:70%;
+    z-index: 5;
+}
 .event{
     color:#666;
     font-weight:bold;
@@ -885,6 +898,22 @@ table .new520:nth-of-type(2),table .new520:nth-of-type(3){
     color: #666666;
     padding-top: 5px;
     text-align:right;
+}
+.table{position: relative;}
+.table .pattern, .table .pattern2{
+    width:20%;
+}
+.table .pattern{
+    position: absolute;
+    top:0%;
+    left:78%;
+    z-index: 5;
+}
+.table .pattern2{
+    position: absolute;
+    top:26.3%;
+    left:78%;
+    z-index: 5;
 }
 .table .note{
     font-size: 22px;
