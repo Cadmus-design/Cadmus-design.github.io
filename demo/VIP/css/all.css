@@ -1328,7 +1328,7 @@ a:hover {
   .vip_main .qualifications .icon_text {
     margin-top: 25px; }
     .vip_main .qualifications .icon_text span, .vip_main .qualifications p span{
-      color:#C2AA80;
+      color:#796213;
     }
 
 .vip_main .question {
@@ -2425,9 +2425,10 @@ a:hover {
 .addService_hamiVideo .pageTitle .text_group {
   float: none;
   margin: 120px 0 0 0; }
-
+/*
 .addService_hamiVideo .pageTitle br {
   display: none; }
+  */
 
 .addService_hamiVideo .linkText{
   margin-left: 100px;
@@ -3622,6 +3623,9 @@ a:hover {
           justify-content: space-around;
           align-items: center;
 
+        }
+        .birthday .spotContent .content .birthday_group .birthday_item2 ul li{
+          width:27%;
         }
         .birthday .spotContent .content .birthday_group .birthday_item2 ul li img{
           width:80%;
