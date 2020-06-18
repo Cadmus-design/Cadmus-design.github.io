@@ -470,12 +470,12 @@ a {
     font-size: 1.2rem;
     font-weight: 700; }
   .box5TdI:nth-child(2) .mTd {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     text-align: justify; }
   .box5TdI:nth-child(3) .mTd {
-    font-size: 0.95rem; }
+    font-size: 0.85rem; }
   .box5TdI:nth-child(4) .mTd {
-    font-size: 0.95rem; }
+    font-size: 0.85rem; }
   .box5TdI:not(:last-child) {
     border-right: 1px solid #4a77b8; }
 
