@@ -1377,11 +1377,20 @@ a:hover {
       top: -25px;
       left: -65px; }
     .vip_main .question .question_item .subAnswer p {
-      display: inline; }
+      display: inline;       }
     .vip_main .question .question_item .subAnswer .start {
       width: 120px; }
     .vip_main .question .question_item .subAnswer .content {
-      width: calc(100% - 120px); }
+      width: calc(100% - 120px);}
+       .vip_main .question .question_item .subAnswer .start2 {
+      width: 120px;
+      display: inline-block; }
+      .vip_main .question .question_item .subAnswer .content2 {
+         width: calc(100% - 120px);
+         display: inline-block;
+      padding:0 0 0 5.8rem;
+      text-align: justify;
+      }
     .vip_main .question .question_item .subAnswer-dot .start {
       margin-left: 40px;
       width: 40px; }
@@ -2025,7 +2034,7 @@ a:hover {
       margin-bottom: 10px;
       width: 100%;
       color: #000;
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 600;
       text-align: center;
       line-height: 1.3; }
@@ -3581,9 +3590,19 @@ a:hover {
           align-items: center;
 
         }
+        .birthday .spotContent .content .birthday_group .birthday_item1 ul li .moreBtn{
+          margin-top:2rem;
+        }
+        .birthday .spotContent .content .birthday_group .birthday_item1 ul li:nth-of-type(2){
+          padding:1rem 0 0 0;
+        }
+        .birthday .spotContent .content .birthday_group .birthday_item1 ul li a img{
+          width:80%;
+          margin:1rem auto 0;
+        }
         .birthday .spotContent .content .birthday_group .birthday_item1 ul li p:before{
-          content:"\A";
-          white-space: pre;
+          /*content:"\A";
+          white-space: pre;*/
         }
         .birthday .spotContent .content .birthday_group .birthday_item1 ul li p{
           line-height: 1.2rem;
@@ -3625,7 +3644,7 @@ a:hover {
 
         }
         .birthday .spotContent .content .birthday_group .birthday_item2 ul li{
-          width:27%;
+          width:30%;
         }
         .birthday .spotContent .content .birthday_group .birthday_item2 ul li img{
           width:80%;
@@ -3675,6 +3694,10 @@ a:hover {
 .birthday .Remind .remind_content {
   display: none; }
   .birthday .Remind .custom_container .remind_content ul li a{
+    color:#207cc4;
+    text-decoration: underline;
+  }
+  .remind_content ul li a{
     color:#207cc4;
     text-decoration: underline;
   }
@@ -3747,6 +3770,14 @@ a:hover {
         .birthday .spotContent .content .birthday_group .birthday_item2 ul{
           width:95%;
         }
+        .birthday .spotContent .content .birthday_group .birthday_item2 ul li{
+          width:33%;
+          font-size: 85%;
+        }
+        .birthday .spotContent .content .birthday_group .birthday_item2 ul li b:before{
+          white-space: pre;
+          content: "\A";
+        }
         .birthday .spotContent .content .birthday_group .birthday_item .step img{
           width:65%;
         }
@@ -3783,7 +3814,12 @@ a:hover {
       font-size: 26px; }
     .birthday .spotContent .content .moreBtn {
       margin: 40px auto;
-      font-size: 28px; } }
+      font-size: 28px; } 
+    .birthday .spotContent .content .birthday_group .birthday_item1 ul li .moreBtn{
+       margin: 20px auto 10px;
+    }
+
+  }
 
 .limitedOffer .pageTitle .custom_container {
   width: 650px;
