@@ -813,6 +813,20 @@ a,a:hover{
     left:0;
     z-index:6; 
  }
+
+ .part4VodieGroup .logos p{
+  line-height: 3rem;
+  font-size: 90%;
+  padding:0 0 2rem 0;
+ }
+ .part4VodieGroup .swiper-button-next{
+  position:absolute;
+  right:5px;
+ }
+ .part4VodieGroup .swiper-button-prev{
+  position:absolute;
+  left:5px;
+ }
 /*=============================================
 =                    part5                    =
 =============================================*/

@@ -50,12 +50,12 @@
     
     <!-- main contnet -->
     <link href="css/layout.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper.css">
     <script src="js/plugin/jquery-2.2.4.js"></script>
     <script src="js/plugin/jquery.waitforimages.js"></script>
     <script src="js/plugin/imagesLoaded.js"></script>
     <script src="https://www.youtube.com/player_api"></script>
     <script src="js/FECommon.js"></script>
-
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88250123-4"></script>
 	<script>
@@ -65,7 +65,6 @@
 
 	  gtag('config', 'UA-88250123-4');
 	</script>
-    
     <!-- 如有引入 Bootstrap 請把以下的style 打開   -->
     <style>
     html {
@@ -94,7 +93,7 @@
       transition: all linear .3s;
      }
     }
-  </style> 
+	</style>
 
 
 </head>
@@ -340,7 +339,46 @@ src="https://www.facebook.com/tr?id=1590690414516177&ev=PageView&noscript=1"
 		<div class="part part4" id="good">
 		    <div class='part4VodieGroup'>
 			    <div class="wrap1"> 
-			
+			    	<!-- swiper -->
+			    	<section>
+			    	<div class="title2">精彩看5G </div>
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="logos">
+								<p>中華電信5G形象廣告  值得期待篇</p>
+							 	<a id='part41' class="part4ConNode part41 on"  data-key='1' data-vo='32-WT82ORyg' data-val='中華電信5G形象廣告  值得期待篇'>
+							 		<img src="img/pic_part4-1.jpg" />
+							 		
+							 	</a>
+						 	</div>
+						 </div>
+
+						 <div class="swiper-slide">
+								<div class="logos">
+									<p>中華電信領航5G 速度篇</p>
+								<a id='part42' class="part42 part4ConNode"  data-key='2' data-vo='NTnALmTVYjY' >
+									<img src="img/pic_part4-2.jpg" />
+									
+								</a>
+							</div>
+						 </div>	
+						 <div class="swiper-slide">
+						 	<div class="logos">
+						 		<p>中華電信領航5G   VR演唱會篇</p>
+								<a id='part43' class="part43 part4ConNode"  data-key='3'  data-vo='NSii_tXtHXk'>
+									<img src="img/pic_part4-3.jpg" />
+									
+								</a>
+							</div>
+						 </div>			 
+					 </div>
+				  <div class="swiper-pagination "></div>
+				  <div class="swiper-button-next "></div>
+				  <div class="swiper-button-prev "></div>
+				  </div>
+				</section>
+			    	<!-- swiper -->
 				<div class="title2">精彩看5G </div>
 				    <div class="title1">中華電信5G形象廣告  值得期待篇</div>
 			    </div>
@@ -817,39 +855,13 @@ src="https://www.facebook.com/tr?id=1590690414516177&ev=PageView&noscript=1"
             </div>
         </div>
     </div>
-	  
-	
-	
-	
-	
-	
 	
 	<!-- end Content -->
 	
-    
-    
-    
-    
-    
-    
-    
     </div>
+
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
     <section class="footer" id="footer">
         <div class="container">
             <div class="nekos" style="display: block; text-align: center;">
@@ -871,4 +883,22 @@ src="https://www.facebook.com/tr?id=1590690414516177&ev=PageView&noscript=1"
         </div>
     </section>
 </body>
+ <script src="js/swiper.js "></script>
+	<script>
+    var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+    	delay: 8000,
+  		},
+       navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+    </script>
 </html>
