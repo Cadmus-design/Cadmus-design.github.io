@@ -2882,8 +2882,8 @@ a:hover {
       text-align: left;
       margin-left: 60px;
       padding: 10px; }
-.roaming .RoamingContent .Roaming_dataTable .table-textLeft li a{
-    color:#000;
+      .roaming .RoamingContent .Roaming_dataTable .table-textLeft li a{
+    color:#23527c;
 }
     .roaming .RoamingContent .Roaming_dataTable small {
       font-size: 12px; }
@@ -2999,6 +2999,10 @@ a:hover {
       text-align: left;
       margin-left: 60px;
       padding: 10px; }
+      .roaming .RoamingContent .Roaming_dataTable .table-textLeft li a{
+      color:#23527c;
+      }
+
     .roaming .RoamingContent .Roaming_dataTable small {
       font-size: 12px; }
     .roaming .RoamingContent .Roaming_dataTable .rightNowBtn {
@@ -3602,7 +3606,7 @@ a:hover {
           padding:1rem 0 0 0;
         }
         .birthday .spotContent .content .birthday_group .birthday_item1 ul li a img{
-          width:80%;
+          width:90%;
           margin:1rem auto 0;
         }
         .birthday .spotContent .content .birthday_group .birthday_item1 ul li p:before{
@@ -3694,7 +3698,8 @@ a:hover {
     font-size: 20px;
     font-weight: 500; }
   .birthday .spotContent .content .moreBtn {
-    margin: 100px auto 0 auto; }
+    margin: 100px auto 0 auto; 
+    font-size: 26px;}
 
 .birthday .Remind .remind_content {
   display: none; }
@@ -3819,7 +3824,7 @@ a:hover {
       font-size: 26px; }
     .birthday .spotContent .content .moreBtn {
       margin: 40px auto;
-      font-size: 28px; } 
+      font-size: 20px; } 
     .birthday .spotContent .content .birthday_group .birthday_item1 ul li .moreBtn{
        margin: 20px auto 10px;
     }
