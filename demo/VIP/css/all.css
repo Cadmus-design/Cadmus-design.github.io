@@ -2882,6 +2882,9 @@ a:hover {
       text-align: left;
       margin-left: 60px;
       padding: 10px; }
+.roaming .RoamingContent .Roaming_dataTable .table-textLeft li a{
+    color:#000;
+}
     .roaming .RoamingContent .Roaming_dataTable small {
       font-size: 12px; }
     .roaming .RoamingContent .Roaming_dataTable .rightNowBtn {
@@ -3192,7 +3195,9 @@ a:hover {
 
 .roaming .Roaming_table1 .fixed_R_wrap .fixed_R_static .sub_content {
   border-right: 0; }
-
+.roaming .Roaming_table1 .fixed_R_wrap .fixed_R_static .sub_content p a{
+    color:#000;
+}
 .roaming .Roaming_table2 .fixed_R_wrap .fixed_R_float_g {
   width: 100%;
   overflow-x: auto;
