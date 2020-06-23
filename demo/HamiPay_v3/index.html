@@ -227,26 +227,6 @@
 	$('img[usemap]').rwdImageMaps();
 
 	});
-
-/*hide begin*/
-	$(function () {
-            $('[slide-target]').click(function () {
-                var target = $(this).attr('slide-target');
-                var $target = $(target);
-                $target.stop().slideToggle(600)
-            })
-
-            function hashchange(e) {
-                var hash = window.location.hash.substring(window.location.hash.indexOf('#') + 1);
-                var $target = $('.' + hash);
-                var top = $target.offset().top;
-                $("html, body").stop().animate({
-                    scrollTop: top
-                }, 600);
-            }
-            
-        });
-		/*hide end*/
 </script>
 </body>
 </html>
