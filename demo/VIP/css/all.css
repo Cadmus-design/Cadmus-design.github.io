@@ -2588,7 +2588,7 @@ a:hover {
       line-height: 1.8;
       text-align: center;
       color: #795d20;
-      font-size: 34px;
+      font-size: 30px;
       font-weight: 900; }
     .hamiPass .spotContent .content .descriptioon_text {
       margin: 25px 0 20px 0;
@@ -3200,7 +3200,7 @@ a:hover {
 .roaming .Roaming_table1 .fixed_R_wrap .fixed_R_static .sub_content {
   border-right: 0; }
 .roaming .Roaming_table1 .fixed_R_wrap .fixed_R_static .sub_content p a{
-    color:#000;
+    color:#209cff;
 }
 .roaming .Roaming_table2 .fixed_R_wrap .fixed_R_float_g {
   width: 100%;
