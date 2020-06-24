@@ -72,6 +72,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "微軟正黑體";
+
   }
 @media screen and (min-width: 769px){
   .m{
@@ -81,6 +82,7 @@ body {
       width:100%;
       max-width: 1440px;
       margin:0 auto;
+      
   }
   #wrapper #KV{
     line-height: 0;
