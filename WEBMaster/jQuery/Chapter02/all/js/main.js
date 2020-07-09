@@ -383,6 +383,7 @@ $(function(){
 
 */
 //CH3 this
+
 $(function(){
     $('header, #typo, footer').on('mouseover', function(){
         $(this).css(
