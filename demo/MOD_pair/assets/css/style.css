@@ -119,13 +119,13 @@ a{color:#209cff;}
 		background: #2a71b9;
 		color:#fff;
 	}
-	.container .feature table tr:nth-child(2) td{
+	.container .feature table tr:nth-child(2) td, .container .feature table tr:nth-child(6) td{
 		background: #74d1f1
 	}
-	.container .feature table tr:nth-child(3) td{
+	.container .feature table tr:nth-child(3) td, .container .feature table tr:nth-child(7) td{
 		background: #76d0e3
 	}
-	.container .feature table tr:nth-child(4) td{
+	.container .feature table tr:nth-child(4) td, .container .feature table tr:nth-child(8) td{
 		background: #77d0d3
 	}
 	.container .feature table tr:nth-child(5) td{
@@ -311,13 +311,13 @@ div#social-float img{width:25%;margin:0 auto;display: block;}
 		color:#000;
 		font-weight:bold;
 	}
-	.container .feature table:nth-child(2) tr td:nth-child(2){
+	.container .feature table:nth-child(2) tr td:nth-child(2), .container .feature table:nth-child(5) tr td:nth-child(2){
 		background: #76d0e3;
 	}
-	.container .feature table:nth-child(3) tr td:nth-child(2){
+	.container .feature table:nth-child(3) tr td:nth-child(2), .container .feature table:nth-child(6) tr td:nth-child(2){
 		background: #77d0d3;
 	}
-	.container .feature table:nth-child(4) tr td:nth-child(2){
+	.container .feature table:nth-child(4) tr td:nth-child(2), .container .feature table:nth-child(7) tr td:nth-child(2){
 		background: #b5dbbd;
 	}
 	.container .feature .extra{
