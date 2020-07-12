@@ -67,16 +67,18 @@
     .reveal-box .reveal-action-less a {
         -webkit-tap-highlight-color: transparent;
         display: block;
-        height: 40px;
-        line-height: 10px;
+        height: 60px;
+        line-height: 18px;
         background:#FEF9E6;
+        color:#000;
+        text-decoration: none;
     }
 
 .reveal-box .reveal-action-more {
     text-align: center;
     position: absolute;
     top: 200px;
-    padding-top: 180px;
+    padding-top: 135px;
     width: 100%;
     left: 0;
     bottom: 0;
@@ -89,9 +91,11 @@
 
     .reveal-box .reveal-action-more a {
         -webkit-tap-highlight-color: transparent;
-        line-height: 10px;
+        line-height: 18px;
         display: block;
-        height: 40px
+        height: 60px;
+        color:#000;
+        text-decoration: none;
     }
 		#wrapper{
 		width:100%;
@@ -105,12 +109,13 @@
 		width:100%
 		}
 		#wrapper .content_page{
-		width:1447px;
+		/*width:1447px;*/
+		width:100%;
 		margin:0 auto;
 		
 		}
 		#wrapper .content_page img{
-		width:100%;
+		max-width:100%;
 		}
 		#wrapper .content_page ul{
 			width:50%;
@@ -131,10 +136,11 @@
 		#wrapper .btn_r{
 			width:100%;
 			margin:0 auto;
+			display: flex;
 		}
 		#wrapper .btn_r img{
 			width:80%;
-			display:block;
+			
 			margin:0 auto;
 		}
 		.open01,.open02,.open03,.open04 {
@@ -213,12 +219,12 @@
 			color: #fff;
 		}
 		#wrapper .btn_r{
-			width:60%;
+			width:100%;
 			margin:0 auto;
 		}
 		#wrapper .btn_r img{
-			width:90%;
-			display:block;
+			width:100%;
+			
 			margin:0 auto;
 		}
 		#wrapper .reminder h2{
@@ -309,15 +315,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     	</div>
     	<div class="content_page">
     		<img class="pc" src="images/intro.jpg">
-    		<img class="m" src="images/intro.jpg">
+    		<img class="m" src="images/intro_m.jpg">
     		<img class="pc" src="images/table.jpg" >
-    		<img class="m" src="images/table.jpg" >
+    		<img class="m" src="images/table_m.jpg" >
     		<ul>
     			<!-- <li><a onclick="gtag('event', 'hk-1g', {'event_category': 'Hami_immediately', 'event_label': 'Hamipay'});" href="https://eshop.cht.com.tw/RoamingWeb/Personal/Cerb/PickPath?flowID=roaming">立即申辦</a></li>-->
     			<li><a target="_blank" onclick="gtag('event', '點擊', {'event_category': 'Hami Pay子頁', 'event_label': 'Hami Pay子頁_了解更多方案'});" href="https://www.cht.com.tw/home/campaign/roaming/index.html">了解其他漫遊方案</a></li>
     		</ul>
     	</div>
-    	<div class="btn_r" ><img src="images/btn.jpg" alt="">
+    	<div class="btn_r" >
+    		<img class="pc" src="images/btn.jpg" alt="">
+    		<img class="m" src="images/btn_m.jpg" alt="">
     		</div>
     	<div class="reminder ">
     		<div class="reveal-box">
@@ -337,8 +345,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<li>客戶所使用的終端若無法收受簡訊，可透過中華電信APP或客服專線修改為e-mail通知。</li>
 				<li>因經營成本及其他相關因素之變動，本公司保留修改或終止上述專屬方案費率之權利，詳細費率及活動內容以本公司網站公告為主。</li>
 			</ol>
-			<div class="reveal-action-more"><a onclick="return false;">顯示更多...</a></div>
-			<div class="reveal-action-less"><a href="#revealbox">顯示更少...</a></div>
+			<div class="reveal-action-more"><a onclick="return false;">▼<br>顯示更多</a></div>
+			<div class="reveal-action-less"><a href="#revealbox">▲<br>顯示更少</a></div>
 		</div>
 		</div>
 		<!-- reminder end -->
