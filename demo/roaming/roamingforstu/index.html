@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="text/javascript" src="https://web-eshop.cdn.hinet.net/eshop/js/vendor.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.5/jquery.lazy.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-    <script type="text/javascript" src="https://web-eshop.cdn.hinet.net/eshop/js/all.js" defer></script>
+    <!--<script type="text/javascript" src="https://web-eshop.cdn.hinet.net/eshop/js/all.js" defer></script>-->
     <!-- custom -->
     <script type="text/javascript" src="https://web-eshop.cdn.hinet.net/eshop/js/custom/custom.js"></script>
 	
@@ -127,7 +127,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
 		body{
 		background:url(img/bg-s.jpg) no-repeat;
-		background-size:contian;
+		background-size:cover;
 		background-attachment: fixed;
 		}
 		#wrapper section .reveal-box {
@@ -195,11 +195,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		position:fixed;
 		bottom:30px;
 		right:60px;
+        z-index: 150;
 		}
 		#wrapper .button-s{
 		width:28vw;
-		margin:1vw 9.6vw;
-		display:inline-block;
+		margin:1vw auto;
+		
 		}
 
 		#wrapper .button-s img{
@@ -242,12 +243,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		position:fixed;
 		bottom:10px;
 		right:-120px;
+        z-index: 150;
 		}
 		#wrapper .btn img{
 		width:50%;
 		}
 		#wrapper .button-s{
-		width:80vw;
+		width:40vw;
 		padding:0;
 		margin:0 auto;
 		}
@@ -339,14 +341,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
     <section class="header-spacer">for space in mobile</section>
     <div id="wrapper">
-        <!--
+        
 		<div class="btn pc">
-			<a target="_blank" href="https://www.cht.com.tw/Web/personal/roaming/flashsale"><img src="img/button-s.png" /></a>
+			<a target="_blank"  href="https://eshop.cht.com.tw/RoamingWeb/Personal/roaming/buylist_1" target="_blank"
+            onclick="gtag('event', '點擊', {'event_category': '5g', 'event_label': '促購按鈕_立即申辦'});"><img src="img/button.png" /></a>
 		</div>
 		<div class="btn m">
-			<a target="_blank" href="https://www.cht.com.tw/Mobile/personal/roaming/flashsale"><img src="img/button-s.png" /></a>
+			<a target="_blank" href="https://eshop.cht.com.tw/RoamingWeb/Personal/roaming/buylist_1" target="_blank"
+            onclick="gtag('event', '點擊', {'event_category': '5g', 'event_label': '促購按鈕_立即申辦'});"><img src="img/button.png" /></a>
 		</div>
-        -->
+        
 		<div class="KV">
 			<img class="pc" src="img/KV-s.png" />
             <img class="m" src="img/KV_m.png" />
@@ -360,14 +364,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
            </a>
         </div> -->
 		  <!--申購大小網Button start-->
-        <div class="button_fix button-s">
+        <!--<div class="button_fix button-s">
             <a class="pc" href="https://eshop.cht.com.tw/RoamingWeb/Personal/roaming/buylist_1" target="_blank" onclick="gtag('event', '點擊', {'event_category': '學生方案子頁', 'event_label': '學生方案子頁_立即申辦'});">
                 <img src="img/button-1.png" border="0">
             </a>
 			<a class="m" href="https://eshop.cht.com.tw/RoamingMobile/Personal/roaming/buylist_1" target="_blank" onclick="gtag('event', '點擊', {'event_category': '學生方案子頁', 'event_label': '學生方案子頁_立即申辦'});">
                 <img src="img/button-1.png" border="0">
             </a>
-        </div>
+        </div>-->
 		<div class="button_fix button-s">
             <a class="pc" href="https://www.cht.com.tw/home/Campaign/roaming/index.html" target="_blank" onclick="gtag('event', '點擊', {'event_category': '學生方案子頁', 'event_label': '學生方案子頁_了解其他漫遊方案'});">
                 <img src="img/button-2.png" border="0">

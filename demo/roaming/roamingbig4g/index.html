@@ -44,6 +44,34 @@
 	 <!--css-->
 	 <link rel="stylesheet" href="css/lightbox.css">
 	<style type="text/css">
+		
+.button_fix {
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  z-index: 1;
+}
+
+@media all and (max-width: 768px) {
+  .button_fix {
+    right: -13%;
+  }
+}
+
+.button_fix a {
+  display: block;
+  max-width: 200px;
+}
+
+@media all and (max-width: 768px) {
+  .button_fix a {
+    width: 70%;
+    text-align: right;
+  }
+  .button_fix a > img {
+    width: 100%;
+  }
+}
 				#wrapper .reminder .reveal-box {
     position: relative;
     height: 400px;
@@ -118,7 +146,7 @@
 		width:100%;
 		}
 		#wrapper .content_page ul{
-			width:50%;
+			width:70%;
 			margin:0 auto 2em;
 			display: flex;
 			justify-content: space-around;
@@ -308,6 +336,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
     <section class="header-spacer">for space in mobile</section>
     <div id="wrapper">
+    	<div class="button_fix">
+
+        <a id="button_fix_big" href="https://eshop.cht.com.tw/RoamingWeb/Personal/roaming/buylist_1" target="_blank"
+            onclick="gtag('event', '點擊', {'event_category': '5g', 'event_label': '促購按鈕_立即申辦'});">
+            <img src="images/button.png" border="0">
+        </a>
+        <a id="button_fix_small" style="display: none;" href="https://eshop.cht.com.tw/RoamingWeb/Personal/roaming/buylist_1" target="_blank"
+            onclick="gtag('event', '點擊', {'event_category': '5g', 'event_label': '促購按鈕_立即申辦'});">
+            <img src="images/button.png" border="0">
+        </a>
+    </div>
+    <!--申購大小網Button end-->
     	<div class="KV">
     		<img src="images/KV.jpg" alt="">
     	</div>
@@ -340,7 +380,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</div>
     		<ul>
     		<ul>
-    			<li><a href="https://eshop.cht.com.tw/RoamingWeb/Personal/Cerb/PickPath?flowID=roaming" onclick="gtag('event', '點擊', {'event_category': '大4G子頁', 'event_label': '大4G子頁_立即申辦'});">立即申辦</a></li>
+    			<!--<li><a href="https://eshop.cht.com.tw/RoamingWeb/Personal/Cerb/PickPath?flowID=roaming" onclick="gtag('event', '點擊', {'event_category': '大4G子頁', 'event_label': '大4G子頁_立即申辦'});">立即申辦</a></li>-->
     			<li><a href="https://www.cht.com.tw/home/Campaign/roaming/index.html" onclick="gtag('event', '點擊', {'event_category': '大4G子頁', 'event_label': '大4G子頁_了解其他漫遊方案'});">了解其他漫遊方案</a></li>
     		</ul>
     	</div>

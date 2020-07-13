@@ -1884,12 +1884,15 @@ h1.tit {
   left: 225px;
 }
 .wrapper .section .content .c-title-04 p span{
-  color:#fff;
+ /* color:#fff;
   font-size: 70%;
   line-height: 120%;
   padding:.1rem .2rem;
   border-radius:.3rem;
-  background: #ff0000;
+  background: #ff0000;*/
+}
+.wrapper .section .content .c-title-04 p span img{
+  width:2.35rem;
 }
 .wrapper .section .content .c-title-04 p em{
   color:#ff0000;
