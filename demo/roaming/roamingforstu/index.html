@@ -76,7 +76,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 .reminder section {
     padding:20px;
-    width:63%;
+    
     margin:0 auto;
     z-index: 1;
 }
@@ -269,13 +269,14 @@ section .l-title-02{
         text-align: center;
         margin:0 auto;
 		}
-		
-		.note{
+	
+    .note{ 
 		max-width:16%;
 		display: block;
 		margin:1rem auto;
 		padding:1rem;
 		}
+
 		#wrapper .reminder ol{
 		width:63%;
 		margin:0 auto;
@@ -307,6 +308,29 @@ section .l-title-02{
         display: table;
 		margin:0 auto;
 		}
+
+    #wrapper .content_page ul{
+      width:70%;
+      margin:0 auto 2em;
+      
+      
+      list-style: none;
+    }
+    #wrapper .content_page ul li{
+      background: #0269b4;
+      border-radius:2em;
+      padding: 1.5rem 6rem;
+      display: table;
+      margin:0 auto;
+      text-align: center;
+    }
+    #wrapper .content_page ul li a{
+      text-decoration: none;
+      color: #fff;
+    }
+    #wrapper .reminder section{
+      width: 63%;
+    }
 		#wrapper .reminder h2{
 		background:#5eb0df;
 		font-size:2.5rem;
@@ -352,6 +376,22 @@ section .l-title-02{
 		padding:0;
 		margin:0 auto;
 		}
+    #wrapper .content_page ul{
+      width:100%;
+      margin:0 auto 2em;
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+    }
+    #wrapper .content_page ul li{
+      background: #0269b4;
+      border-radius:2em;
+      padding: 1em 2.3em;
+    }
+    #wrapper .content_page ul li a{
+      text-decoration: none;
+      color: #fff;
+    }
 
 		#wrapper .button-s img{
 		width:100%;
@@ -458,27 +498,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<img class="pc" src="img/content01.png" border="0" usemap="#Map" >
             <img class="m" src="img/content01_m.png" border="0"  >
         </div>
-		<!-- <div class="button-s">
-			<a target="_blank" href="https://www.cht.com.tw/home/Campaign/roaming/index.html"><img src="img/button-s.png" border="0"  >
-           </a>
-        </div> -->
-		  <!--申購大小網Button start-->
-        <!--<div class="button_fix button-s">
-            <a class="pc" href="https://eshop.cht.com.tw/RoamingWeb/Personal/roaming/buylist_1" target="_blank" onclick="gtag('event', '點擊', {'event_category': '學生方案子頁', 'event_label': '學生方案子頁_立即申辦'});">
-                <img src="img/button-1.png" border="0">
-            </a>
-			<a class="m" href="https://eshop.cht.com.tw/RoamingMobile/Personal/roaming/buylist_1" target="_blank" onclick="gtag('event', '點擊', {'event_category': '學生方案子頁', 'event_label': '學生方案子頁_立即申辦'});">
-                <img src="img/button-1.png" border="0">
-            </a>
-        </div>-->
-		<div class="button_fix button-s">
-            <a class="pc" href="https://www.cht.com.tw/home/Campaign/roaming/index.html" target="_blank" onclick="gtag('event', '點擊', {'event_category': '學生方案子頁', 'event_label': '學生方案子頁_了解其他漫遊方案'});">
-                <img src="img/button-2.png" border="0">
-            </a>
-			<a class="m" href="https://www.cht.com.tw/home/Campaign/roaming/index.html" target="_blank" onclick="gtag('event', '點擊', {'event_category': '學生方案子頁', 'event_label': '學生方案子頁_了解其他漫遊方案'});">
-                <img src="img/button-2.png" border="0">
-            </a>
-        </div>
+	
+		
+    <div class="content_page">
+        <ul>
+          <!--<li><a href="https://eshop.cht.com.tw/RoamingWeb/Personal/Cerb/PickPath?flowID=roaming" onclick="gtag('event', '點擊', {'event_category': '大4G子頁', 'event_label': '大4G子頁_立即申辦'});">立即申辦</a></li>-->
+          <li><a href="https://www.cht.com.tw/home/Campaign/roaming/index.html" onclick="gtag('event', '點擊', {'event_category': '大4G子頁', 'event_label': '大4G子頁_了解其他漫遊方案'});">了解其他漫遊方案</a></li>
+        </ul>
+      </div>
         <!--申購大小網Button end-->
         <!--<img class="note" src="img/note.png" />-->
 		<div class="reminder">
