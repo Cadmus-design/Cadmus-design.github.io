@@ -283,7 +283,7 @@ h1.tit {
   margin: 0 auto;
   z-index: 1;
 }
-.wrapper .section .five_content > .btn{
+.wrapper .section .five_content > .btnn{
   background: #28b384;
   color:#fff;
   display: table;
@@ -294,7 +294,7 @@ h1.tit {
   width:90%;
     font-weight: 800;
 }
-.wrapper .section .five_content .btn a{
+.wrapper .section .five_content .btnn a{
   color: #fff;
   text-decoration: none;
   text-align: center;
