@@ -289,9 +289,9 @@ h1.tit {
   display: table;
   margin:2rem auto 0;
   border-radius: 2rem;
-  padding:.8rem 4rem;
+  padding:.8rem 6rem;
   text-align: center;
-  width:90%;
+  
     font-weight: 800;
 }
 .wrapper .section .five_content .btnn a{
@@ -303,6 +303,17 @@ h1.tit {
   .wrapper .section .five_content {
     padding: 50px 20px;
   }
+  .wrapper .section .five_content > .btnn{
+  background: #28b384;
+  color:#fff;
+  display: table;
+  margin:2rem auto 0;
+  border-radius: 2rem;
+  padding:.8rem 2.5rem;
+  text-align: center;
+  width:85%;
+    font-weight: 800;
+}
 }
 
 .wrapper .section .five_content .item {
