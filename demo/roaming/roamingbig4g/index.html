@@ -45,6 +45,105 @@
 	 <link rel="stylesheet" href="css/lightbox.css">
 	<style type="text/css">
 		
+.reminder section {
+    padding:20px;
+    
+    margin:0 auto;
+    z-index: 1;
+}
+.reminder section .l-title-02 {
+  position: relative;
+  text-align: center;
+  z-index: 0;
+  margin-bottom: 0px;
+}
+
+section .l-title-02{
+    
+    margin:0 auto;
+}
+@media (max-width: 768px) {
+  .l-title-02 {
+    margin-bottom: 30px;
+  }
+}
+
+.l-title-02::before {
+  content: '';
+  position: absolute;
+  width: calc(50% - 209px);
+  height: 13px;
+  border-radius: 15px 0 0 15px;
+  background-color: #0e2f8e;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .l-title-02::before {
+    width: calc(50% - 110px);
+    height: 6px;
+    border-radius: 20px 0 0 20px;
+    top: 48%;
+  }
+}
+
+.l-title-02::after {
+  content: '';
+  position: absolute;
+  width: calc(50% - 209px);
+  height: 13px;
+  border-radius: 0 15px 15px 0;
+  background-color: #0e2f8e;
+  top: 50%;
+  right: 0;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .l-title-02::after {
+    width: calc(50% - 110px);
+    height: 6px;
+    border-radius: 0 20px 20px 0;
+    top: 48%;
+  }
+}
+
+.l-title-02 h3 {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  width: 440px;
+  padding: 35px 20px 30px;
+  color: #fff;
+  z-index: 0;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .l-title-02 h3 {
+    font-size: 26px;
+    letter-spacing: 2px;
+    width: 230px;
+    padding: 16px 15px 13px;
+  }
+}
+
+.l-title-02 h3::before {
+  content: '';
+  position: absolute;
+  background-image: url("images/title_bg_02.png");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 .button_fix {
   position: fixed;
   right: 2%;
@@ -201,7 +300,9 @@
 		bottom:30px;
 		right:60px;
 		}
-		
+		.reminder section{
+			width:63%;
+		}
 		#wrapper .reminder h2{
 		background:#5eb0df;
 		font-size:2.5rem;
@@ -395,11 +496,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     			<li><a href="https://www.cht.com.tw/home/Campaign/roaming/index.html" onclick="gtag('event', '點擊', {'event_category': '大4G子頁', 'event_label': '大4G子頁_了解其他漫遊方案'});">了解其他漫遊方案</a></li>
     		</ul>
     	</div>
-    	<div class="btn_r">
+    	<!--<div class="btn_r">
     			<img class="pc" src="images/title.jpg" alt="">
     			<img class="m" src="images/title_m.jpg" alt="">
-    		</div>
+    		</div>-->
     	<div class="reminder">
+    		<section>
+                <div class="l-title-02">
+                    <h3>貼心小叮嚀</h3>
+                </div>
+            </section>
     		<div class="reveal-box">
 			<ol>
 				<li>本活動期間內申辦大4G方案月繳999元以上且租期為24個月以上者，於合約租期內可透過中華電信官網、APP或手機直撥800客服，申請「大4G日租型」及「大4G定量型」漫遊上網方案。</li>

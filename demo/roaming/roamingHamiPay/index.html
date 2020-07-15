@@ -44,6 +44,105 @@
 	 <!--css-->
 	 <link rel="stylesheet" href="css/lightbox.css">
 	<style type="text/css">
+		.reminder section {
+    padding:20px;
+    
+    margin:0 auto;
+    z-index: 1;
+}
+.reminder section .l-title-02 {
+  position: relative;
+  text-align: center;
+  z-index: 0;
+  margin-bottom: 0px;
+}
+
+section .l-title-02{
+    
+    margin:0 auto;
+}
+@media (max-width: 768px) {
+  .l-title-02 {
+    margin-bottom: 30px;
+  }
+}
+
+.l-title-02::before {
+  content: '';
+  position: absolute;
+  width: calc(50% - 209px);
+  height: 13px;
+  border-radius: 15px 0 0 15px;
+  background-color: #ffcf3f;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .l-title-02::before {
+    width: calc(50% - 110px);
+    height: 6px;
+    border-radius: 20px 0 0 20px;
+    top: 48%;
+  }
+}
+
+.l-title-02::after {
+  content: '';
+  position: absolute;
+  width: calc(50% - 209px);
+  height: 13px;
+  border-radius: 0 15px 15px 0;
+  background-color: #ffcf3f;
+  top: 50%;
+  right: 0;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .l-title-02::after {
+    width: calc(50% - 110px);
+    height: 6px;
+    border-radius: 0 20px 20px 0;
+    top: 48%;
+  }
+}
+
+.l-title-02 h3 {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  width: 440px;
+  padding: 35px 20px 30px;
+  color: #000;
+  z-index: 0;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .l-title-02 h3 {
+    font-size: 26px;
+    letter-spacing: 2px;
+    width: 230px;
+    padding: 16px 15px 13px;
+  }
+}
+
+.l-title-02 h3::before {
+  content: '';
+  position: absolute;
+  background-image: url("images/title_bg_02.png");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 		#wrapper .reminder .reveal-box {
     position: relative;
     height: 400px;
@@ -171,7 +270,9 @@
 		bottom:30px;
 		right:60px;
 		}
-		
+		#wrapper .reminder section{
+			width:63%;
+		}
 		#wrapper .reminder h2{
 		background:#5eb0df;
 		font-size:2.5rem;
@@ -237,6 +338,9 @@
 		color:#fff;
 		text-align:center;
 		line-height:1.8rem;
+		}
+		#wrapper .reminder ol {
+			width: 85%;
 		}
 		#wrapper .reminder ol li{
 		font-size:0.8rem;
@@ -327,11 +431,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     			<li><a target="_blank" onclick="gtag('event', '點擊', {'event_category': 'Hami Pay子頁', 'event_label': 'Hami Pay子頁_了解更多方案'});" href="https://www.cht.com.tw/home/campaign/roaming/index.html">了解其他漫遊方案</a></li>
     		</ul>
     	</div>
-    	<div class="btn_r" >
-    		<img class="pc" src="images/btn.jpg" alt="">
-    		<img class="m" src="images/btn_m.jpg" alt="">
-    		</div>
+    	
     	<div class="reminder ">
+    		<section>
+                <div class="l-title-02">
+                    <h3>貼心小叮嚀</h3>
+                </div>
+            </section>
     		<div class="reveal-box">
 			<ol>
 				<li>「Hami Pay專屬漫遊上網方案」限於活動期間至<a href="https://www.cht.com.tw/home/cht/about-cht/business-group/store-locator" target="_blank">中華電信服務據點</a>，以Hami Pay悠遊卡/一卡通支付申請。方案生效期間僅限各方案表列國家使用(各方案內含國家可合併計費)，方案於收到開通簡訊後生效，於內含上網量2GB使用完畢後結束；方案生效期間不可加購方案，須於方案結束後，才可購買其他漫遊上網方案。方案生效期間至不適用國家、船舶漫遊及航空漫遊，系統會自動暫停您的漫遊上網服務，以避免產生高額漫遊費用；方案結束前，若您再次回到適用國家後，系統會自動恢復漫遊上網服務。若您在方案不適用國家仍有漫遊上網需求，請撥免費*122#、依簡訊指示回傳對應代碼(國外須付費)或洽客服專線(中華行動電話直撥+886-928-000-086免付費客服專線)申請開啟漫遊上網服務即可，用量將依漫遊上網原價計收。</li>
