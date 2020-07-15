@@ -283,7 +283,7 @@ h1.tit {
   margin: 0 auto;
   z-index: 1;
 }
-.wrapper .section .five_content .btn{
+.wrapper .section .five_content > .btn{
   background: #28b384;
   color:#fff;
   display: table;
