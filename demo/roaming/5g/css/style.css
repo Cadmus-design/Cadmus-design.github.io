@@ -432,7 +432,7 @@ h1.tit {
 }
 
 .wrapper .section .five_content .note {
-  padding: 0 20px;
+  padding: 0 30px;
   height: 400px;
   overflow: hidden;
 }
@@ -559,7 +559,7 @@ h1.tit {
   margin-bottom: 50px;
 }
 section .l-title-02{
-    width:93%;
+    width:98.3%;
     margin:0 auto 2rem;
 }
 @media (max-width: 768px) {
