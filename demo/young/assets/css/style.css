@@ -39,7 +39,49 @@ a:hover{color:inherit;}
 	left: 0;
 	z-index: 654;
 }
+/*lightbox*/
+#fl2{
+	padding:0 1rem;
+	overflow-x: hidden;
+}
+@media screen and (min-width: 769px){
+#fl2 .empty{
+	width:42rem;
+	height:1rem;
+}
+}
+#fl2 h2{
+	
+	text-align: center;
+}
 
+#fl2 table{
+	width:100%;
+	border-radius: .5rem;
+	box-shadow: 0rem .1rem .2rem #ddd;
+	margin:2rem auto;
+	box-sizing: border-box;
+}
+#fl2 table tr th{
+	background: #5ebc56;
+	border-top-right-radius: .5rem;
+	border-top-left-radius: .5rem;
+	padding:.5rem;
+	color:#fff;
+	text-align: center;
+}
+@media screen and (max-width: 768px){
+#fl2 table tr th, #fl2 table tr td{
+	font-size: .75rem;
+}
+}
+#fl2 table tr td{
+	border-bottom-right-radius: .5rem;
+	border-bottom-left-radius: .5rem;
+	padding:.5rem;
+	text-align: center;
+}
+/*lightbox end */
 /*header*/
 #header_page {
 	width: 100%;
@@ -260,7 +302,25 @@ a {
 	#wrap .intro ul li em{
 		font-weight:bold;
 	}
-
+	#wrap .intro .award{
+		background: #ed7d31;
+		margin:1rem auto;
+		width:50%;
+		font-size:1em;
+		line-height:2rem;
+		padding:0.8rem 1.2rem;
+		text-align: center;
+		border-radius: 3rem;
+		display: block;
+		transition: all .2s ease-out;
+	}
+	#wrap .intro .award a{
+		text-decoration: none;
+		color: #fff;
+	}
+	#wrap .intro .award:hover{
+		transform: scale(1.2);
+	}
 	/*container_page inside*/
 	#wrap #container_page{
 		width:1280px;
@@ -792,7 +852,25 @@ a {
 	#wrap .intro ul li em{
 		font-weight:bold;
 	}
-
+	#wrap .intro .award{
+		background: #ed7d31;
+		margin:1rem auto;
+		width:50%;
+		font-size:1em;
+		line-height:2rem;
+		padding:0.8rem 1.2rem;
+		text-align: center;
+		border-radius: 3rem;
+		display: block;
+		transition: all .2s ease-out;
+	}
+	#wrap .intro .award a{
+		text-decoration: none;
+		color: #fff;
+	}
+	#wrap .intro .award:hover{
+		transform: scale(1.2);
+	}
 	/*container_page inside*/
 	#wrap #container_page h1, #wrap #container_page2 h1{
 		font-size:2rem;
@@ -1213,6 +1291,25 @@ a {
 		text-decoration: none;
 		color: #fff;
 		
+	}
+	#wrap .intro .award{
+		background: #ed7d31;
+		margin:1rem auto;
+		width:60%;
+		font-size:.85em;
+		line-height:2rem;
+		padding:0.4rem 0.8rem;
+		text-align: center;
+		border-radius: 3rem;
+		display: block;
+		transition: all .2s ease-out;
+	}
+	#wrap .intro .award a{
+		text-decoration: none;
+		color: #fff;
+	}
+	#wrap .intro .award:hover{
+		transform: scale(1.2);
 	}
 	/*container_page inside*/
 	#wrap #container_page h1, #wrap #container_page2 h1{
