@@ -1,0 +1,407 @@
+body {
+        width: 100%;
+        margin: 0;
+        font-family: Arial, Microsoft JhengHei; 
+        outline: none;     
+		background-color: #e9e9e9;
+}
+
+.clearBoth{
+	clear: both;
+}
+
+.clicknode{ 
+	cursor:pointer;	
+}
+.bluebg{ 
+	background:#195d99;
+}
+
+.greenbg{ 
+	background:#339d38;
+}
+
+#menubg{
+	display:none;
+}
+#menu{
+	position:fixed;
+	width:100%;
+	height:110px;
+	background-color:#fff; 
+    box-shadow: 0px 0px 13px 2px #aaa;
+	z-index:10;
+	min-width:1350px;
+}  
+#menu .logoArea,#menu .itemArea{
+	position:absolute; 
+	width:auto;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+
+#menu .logoArea{ 
+	height:45px; 
+	margin-left:10px;
+}
+
+#menu .logoArea .logo{
+	position:relative;
+	display:inline-block;  
+	margin-left:40px;
+}
+
+
+#menu .logoArea .chtlogo img{ 
+	width:135px;
+	height:45px; 
+} 
+
+
+#menu .logoArea .phrlogo img{ 
+	width:191px;
+	height:45px; 
+} 
+
+
+#menu .itemArea{
+	right:100px;
+	height:100%;   
+}
+
+/*339d38*/
+#menu .itemArea .item{ 
+	position:relative;
+	display:inline-block;
+	height:100%; 
+	color:#195d99;
+	cursor:pointer;  
+}
+
+#menu .itemArea .item .mainTxt{
+	font-size:24px;
+	font-weight:bold;
+	position:relative;
+	display:inline-block; 
+	height:30px;
+	line-height:30px;
+	padding :0 30px;
+	border-right:2px solid #195d99;
+	letter-spacing:5px; 
+	top: 50%;
+	transform: translateY(-50%);
+}
+#menu .itemArea .item .mainTxtcover{
+	color: rgb(50,151,203);
+}
+#menu .itemArea .noborder,#menu .itemArea .item .noborder{  
+	border:0px; 
+}
+
+#menu .itemArea .item .subItem{ 
+	position:absolute;
+	width:101%;
+	left:0px;
+	top:110px;
+	color:#fff;
+	font-size:21px; 
+	display:none	;
+}
+ 
+#menu .itemArea .item .subItem .subTxt{
+	position:relative;
+	width:150px;
+	height:auto;
+	border-bottom:1px solid #fff;
+	left:50%;
+    transform: translateX(-50%);
+	text-align:center;
+	padding:8px 0px;
+	letter-spacing:2px;
+	
+}
+ 
+	
+#menu .itemArea .item .subItem .noborder{  
+	border:0px; 
+}	
+		
+		
+#cont{
+	position:relative;
+	width:100%;
+	height:auto; 
+	min-height:300px; 
+	padding-top:110px;
+}  
+
+#footer{
+	position:relative;
+	width:100%;
+	height:140px;
+	background-color:#e9e9e9; 
+	color:#999; 
+}  
+
+#footer .cont{ 
+	position:relative;
+	width:780px; 
+	height:65px;
+	top:50%;
+	left:50%;
+    transform: translate(-50%,-50%);
+	font-size:16px;   
+	
+}
+/*727171*/
+#footer .cont .rows{
+	position:relative;
+	display:block;
+	width:100%;
+	height:40px;
+	
+}
+
+#footer .cont .rows .col{
+	position:relative;
+	display:inline-block;
+	height:16px;
+	
+	
+}
+
+#footer .cont .rows .col .node{ 
+	position:relative;
+	display:inline-block;
+	line-height:14px;
+	padding:0 10px;
+	border-right:2px solid #999; 
+}
+
+#footer .cont .rows .col .noborder{
+	border:0px;
+}
+
+#footer .cont .rows .m140{
+	margin-left:43px;
+}
+
+#footer .cont .rows .m130{
+	margin-left:25px;
+}
+
+
+#menu .ctrlarea {display:none;}
+
+  
+@media only screen and (max-width: 750px) { 
+
+	.greenbg{ 
+		background-color:#195d99;
+	}
+	#menu{ 
+		height:130px; 
+		box-shadow: 0px 0px 13px 2px #aaa;
+		z-index:10;
+		min-width:750px;
+	}   
+	
+	#menu .logoArea,#menu .itemArea{
+		position:absolute; 
+		width:auto;
+		top: 50%;
+		transform: translateY(-50%); 
+	} 
+	
+	
+	#menu .logoArea{ 
+		height:65px;  
+	}
+ 
+
+	#menu .logoArea .logo{ 
+		margin-left:20px;
+	}
+ 
+
+	#menu .logoArea .chtlogo img{ 
+		width:195px;
+		height:65px; 
+	} 
+
+
+	#menu .logoArea .phrlogo img{ 
+		width:276px;
+		height:65px; 
+	} 
+
+	#menu .ctrlarea{ 
+		position:absolute; 
+		width:45px;
+		height:40px;
+		top: 50%;
+		transform: translateY(-50%); 
+		right:40px;
+		 
+	}
+
+
+	#menu .ctrlarea {
+		display:block;
+		}
+	#menu .ctrlarea div{  
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);  
+		display:block;
+	} 
+	
+	#menu .ctrlarea .menuctrlopen{ 
+		position:absolute; 
+		width:45px;
+		height:40px; 
+		display:block;
+	}
+	
+	#menu .ctrlarea .menuctrlclose{ 
+		position:absolute; 
+		width:35px;
+		height:35px; 
+		display:none;
+	}
+
+	#menu .itemArea{	
+		position:absolute; 
+		width:100%;
+		height:1500px; 
+		top: 0%;
+		right:0;
+		transform: translateY(0%); 
+		display: none;  
+		background-color: rgba(0, 0, 0, 0.55);
+	}
+ 
+	
+	#menu .itemArea .menubg{	
+		position:absolute; 
+		top:0;
+		right:0;
+		width:83%; 
+		width:0%; 
+		height:100%;
+		display:block ;
+		background-color:#195d99;
+	}
+	
+	#menu .itemArea .rwdMT200{ 
+		margin-top:80px;
+	}
+	
+	#menu .itemArea .item{ 
+		position:relative;
+		display:block;
+		height:auto; 
+		color:#fff;  
+		margin-left:836px; 
+		/*margin-left:236px; */
+		width:460px; 
+		border-bottom:2px solid #fff;
+		padding-bottom:20px;
+		margin-bottom:20px;
+		
+	}
+
+	#menu .itemArea .item .mainTxt{
+		font-size:40px; 
+		height:50px;
+		line-height:50px;
+		padding :0 0px; 
+		top: 0%;
+		transform: translateY(-0%);
+		color:#fff;  
+	}
+	  
+
+	#menu .itemArea .item .subItem{ 
+		position:relative;
+		width:90%;
+		left:10%;
+		top:15px;
+		color:#fff;
+		font-size:36px; 
+		display: block	; 
+	}
+	 
+	#menu .itemArea .item .subItem .subTxt{ 
+		width:100%;
+		height:auto;
+		border:0px;
+		left:0%;
+		transform: translateX(-0%);
+		text-align:left;
+		padding:8px 0px; 
+		
+	}
+	 
+		 
+	#menu .itemArea .noborder,#menu .itemArea .item .noborder{  
+		border:0px; 
+	}
+	#menu .itemArea .iconT{  
+		position:relative;
+		display:inline-block;
+		width:30px;
+		height:30px;
+		margin-right:3px;
+		background-image:url(../img/iconT.png);
+	}
+			 
+
+	#footer{
+		position:relative;
+		width:100%;
+		height:230px;
+		background-color:#e9e9e9; 
+		color:#999; 
+	}  
+
+	#footer .cont{ 
+		position:relative;
+		width:100%; 
+		height:150px; 
+		font-size:20px; 
+	text-align:center;		
+		
+	} 
+	#footer .cont .rows{ 
+		height:85px;
+		
+	}
+
+	#footer .cont .rows .col{
+		position:relative;
+		display:block;
+		height:40px;  
+	}
+
+	#footer .cont .rows .col .node{ 
+		position:relative;
+		display:inline-block;
+		line-height:14px;
+		padding:0 10px;
+		border-right:2px solid #999; 
+	}
+
+	#footer .cont .rows .col .noborder{
+		border:0px;
+	}
+
+	#footer .cont .rows .m140{
+		margin-left:0px;
+	}
+
+	#footer .cont .rows .m130{
+		margin-left:0px;
+	}  
+}

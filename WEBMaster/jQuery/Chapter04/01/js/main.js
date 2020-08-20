@@ -33,6 +33,20 @@
             });
         //第2列結束
         //第3列
+        /*
+        $('#buttons1 button:nth-child(n+9)')
+        .on('mouseover',function(){
+            $(this).find('> span').stop(true).animate({
+                width: '100%',
+            },duration,'easeOutQuad');
+        })
+        .on('mouseout', function(){
+            $(this).find('>span').stop(true).animate({
+                width: '0%'
+            },duration,'easeOutQuad');
+        });
+        });
+*/
         $('#buttons1 button:nth-child(n+9)')
             .on('mouseover', function(){
                 $(this).find('> span').stop(true).animate({

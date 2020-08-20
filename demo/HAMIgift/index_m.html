@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>中華電信</title>
+    <meta content="zh-tw" http-equiv="Content-Language">
+    <!--meta-->
+    <meta name="title" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <!--facebook:og -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:image" content="img/fb.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <!--facebook:og-->
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <!--css-->
+    <link rel="stylesheet" href="css/style_m.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-15669330-30"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-15669330-30');
+    </script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="header">
+            <div class="menu">
+                <div class="logo">
+                    <a href="https://www.cht.com.tw/home/consumer" target="_blank">
+                        <img src="img/logo.png">
+                    </a>
+                </div>
+                <div class="logo_02">
+                    <a href=" https://hamipoint.cht.com.tw/" target="_blank">
+                        <img src="img/logo02.jpg">
+                    </a></div>
+            </div>
+        </div>
+
+
+        <div class="content">
+            
+            <img src="img/kv01_m.png">
+            <img src="img/new_title_m.png">
+            <div class="section">
+                <img src="img/tab02_kv01.jpg">
+                    <div class="tab02_section_btn">
+                        <a href="https://member.cht.com.tw/HiReg/checkcookieservlet?version=1.0&curl=https%3A%2F%2Fhamipoint.cht.com.tw%2Fauthorize.php&siteid=95&sessionid=&channelurl=https%3A%2F%2Fhamipoint.cht.com.tw%2Fsearch_point.php&others=cheersZend&checksum=455015c7fce0edcfdaba794f22741fc5&cp_reg_info=portal&movip=" target="_blank">
+                            <img src="img/btn_query_02.png"> </a></div>
+
+                     <div class="tab02_section_btn_2">
+                        <a href="https://hamipoint.cht.com.tw/device_point.php" target="_blank">
+                            <img src="img/btn_unregister_02.png">  </a>
+                    </div>
+                    </div>
+                <img class="top_bar2" src="img/bottom_bar_m.png" />
+                <div class="tabs_bar2">
+
+                    <button class="tablinkaa active" onclick="openPageaa('tab03', this, '#fff0')" id="defaultOpen"> <img src="img/bt_tab01b.png"><img
+                            src="img/bt_tab01bb.png"></button><!--
+                    --><button class="tablinkaa" onclick="openPageaa('tab04', this, '#fff0')"><img src="img/bt_tab02b.png"><img src="img/bt_tab02bb.png"></button>
+                </div>
+
+                <div id="tab03" class="tabcontentaa ">
+                    <div class="section">
+                        <img src="img/tab3_main_kv_m.jpg" alt="">
+                        <div class="tab03_section_btn">
+                        <a href="https://event.hamipoint.cht.com.tw/download_hamipay" target="_blank">
+                            <img src="img/btn_download.png"> </a>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="tab04" class="tabcontentaa">
+                    <div class="section">
+                        <img src="img/tab4_main_kv_m.jpg" alt="">
+                        <div class="tab03_section_btn">
+                        <a href="https://m.emome.net/app.do" target="_blank">
+                            <img src="img/btn_download.png"> </a>
+                    </div>
+                    </div>
+                </div>
+            
+
+
+            <div class="hami_point">
+                <img src="img/tab01_main04.png">
+                <div class="hami_point_btn">
+                    <a href="https://hamipoint.cht.com.tw/trans_point_index.php" target="_blank">
+                        <img src="img/tab01_main04_bt.png"></a></div>
+
+            </div>
+            </div><!-- 123456 -->
+
+            
+
+       
+
+        <div class="footer"> <img src="img/footer.png"></div>
+        <div class="top"><a href="#">
+                <img src="img/bt_top.png"></a></div>
+    </div>
+
+     </div>
+
+
+
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+
+        //child tab//
+        function openPageaa(pageName, elmnt, color) {
+            var i, tabcontentaa, tablinksaa;
+            tabcontentaa = document.getElementsByClassName("tabcontentaa");
+            for (i = 0; i < tabcontentaa.length; i++) {
+                tabcontentaa[i].style.display = "none";
+            }
+            tablinksaa = document.getElementsByClassName("tablinkaa");
+            for (i = 0; i < tablinksaa.length; i++) {
+                tablinksaa[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+</body>
+
+
+</html>

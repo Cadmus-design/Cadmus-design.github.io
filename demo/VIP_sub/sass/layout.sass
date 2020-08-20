@@ -1,0 +1,448 @@
+
+@import 'var'
+// @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC')
+// @import url('https://fonts.googleapis.com/css?family=Jua')
+// body
+//     overflow-x: hidden
+//     overflow-y: scroll
+html, body
+    background-color: #fff
+    color: $mainColor
+    font-family: 'Noto Sans TC', "微軟正黑體", "黑體-繁", "微软雅黑", 'sans-serif'
+    font-size: 1rem
+    margin: 0 auto
+    text-align: center
+@media screen and (max-width: 768px)
+    html
+        overflow-x: hidden
+        overflow-y: scroll
+
+
+// @media screen and (max-width: 768px)
+//         &.modal-open
+//             position: fixed
+            
+img
+    width: 100%
+    max-width: 100%
+dl, ol, ul
+    padding-left: 15px
+a
+    cursor: pointer
+
+/**
+ **
+ ** =clear,clearfix
+ **
+ **
+
+.clear
+    clear: both
+
+.clearfix
+    display: inline-block
+
+.clearfix:after
+    display: block
+    visibility: hidden
+    clear: both
+    height: 0
+    font-size: 0
+    content: "."
+
+/* hides from IE-mac \
+* html .clearfix
+    height: 1%
+
+.clearfix
+    display: block
+
+*:focus,
+.form-control:focus,
+button:focus,
+.btn:focus
+    outline: none
+    box-shadow: none
+
+a
+    color: inherit
+    text-decoration: none
+    &:hover
+        color: inherit
+        text-decoration: none
+
+ul
+    list-style: none
+    padding: 0
+    margin: 0
+
+.row
+    margin: 0
+// header
+header
+    position: relative
+    z-index: 6
+    width: 100%
+    min-height: 540px
+    padding-top: 50px
+    background: #efe6d5 url('../../images/mvip2019/header.png') center top no-repeat
+    background-size: 100%
+    &.special_area
+        background: #A6D4B2
+        color: #fff
+        label
+            background-color: #F8E995
+            color: #73947C
+            width: 150px
+            margin: 0 auto
+            border-radius: 50px
+        p
+            color: #6C757D
+            .text-yellow
+                color: #ffffff
+    .form-group label
+        color: #A98830
+    form 
+        margin-top: 80px
+
+
+
+    .logo
+        width: 30%
+    @media screen and (max-width: 768px)
+        .logo
+            width: 50%
+    @media screen and (max-width: 1920px)
+        max-width: 1920px
+    @media screen and (max-width: 1440px)
+        max-width: 1440px
+        background: #efe6d5 url(../../images/mvip2019/header@0,75x.png) center top no-repeat
+        background-size: cover
+    @media screen and (max-width: 1280px)
+        max-width: 1280px
+    @media screen and (max-width: 1024px)
+        max-width: 1024px
+    @media screen and (max-width: 768px)
+        max-width: 768px
+        height: auto
+        // padding-top: 100px
+        background: #efe6d5 url(../../images/mvip2019/header@0,5x.png) center top no-repeat
+        background-size: cover
+        &:after
+            height: 40px
+            background-size: 65px 39px
+#toTop
+    display: block
+    position: fixed
+    right: 20px
+    bottom: 60px
+    z-index: 99
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    background: rgba(51, 51, 51, 0.4) url('../../images/mvip2019/top.svg') center center no-repeat
+// nav
+.bg-light
+    background-color: #fff !important
+.navbar-light
+    .navbar-brand
+        color: $mainColor
+    .navbar-brand-right
+        display: none
+    .navbar-nav
+        .nav-link
+            color: #BCDDC5
+        .active
+            color: #73947C
+            border-bottom: 2px solid
+            >.nav-link
+                color: #73947C
+        @media screen and (max-width: 768px)
+            .active
+                border-bottom: none
+    @media screen and (max-width: 767px)
+        .navbar-brand
+            display: none
+        .navbar-brand-right
+            display: block
+            position: absolute
+            right: 0
+.navbar
+    // max-width: 1600px
+    padding: 5px 160px
+@media screen and (max-width: 768px)
+    .navbar
+        padding: 5px .5rem
+        // height: 3rem
+nav
+    .menu,.home
+        width: 25px
+    .home
+        vertical-align: sub
+    .nav-top
+        display: flex
+        justify-content: space-between
+        // width: 100%
+// title
+.title
+    width: 50%
+    font-size: 24px
+    color: #A98830
+    margin: 0 auto
+@media screen and (max-width: 768px)
+    .title
+        width: 100%
+// main
+.process-bg-top
+    position: relative
+    z-index: 6
+    width: 100%
+    height: 20rem
+    margin-top: 0
+    background: #efe6d5 url('../../images/mvip2019/process.png') center top no-repeat
+    background-size: cover
+    &.process-bg-top-white
+        height: 25rem
+        background: #A6D4B2 url('../../images/mvip2019/process_white.png') center top no-repeat
+        background-size: cover
+    &.index
+        margin-top: -96px
+@media screen and (max-width: 1440px)
+    .process-bg-top, .process-bg-top.process-bg-top-white
+        height: 15rem
+@media screen and (max-width: 1280px)
+    .process-bg-top, .process-bg-top.process-bg-top-white
+        height: 12rem
+@media screen and (max-width: 768px)
+    .process-bg-top, .process-bg-top.process-bg-top-white
+        height: 7.7rem
+@media screen and (max-width: 480px)
+    .process-bg-top, .process-bg-top.process-bg-top-white
+        height: 4rem
+main
+    background-color: #A6D4B2
+    color: #fff
+
+footer
+    width: 100%
+    height: 40px
+    background-color: #fff
+    letter-spacing: 0.3px
+    text-align: center
+    line-height: 40px
+
+
+.content
+    max-width: 860px
+    // padding: 0 0 80px
+    margin: 0 auto
+    margin-top: 2rem
+    .item
+        // max-width: 460px
+        padding: 0
+        margin: 0 15px
+        .item-content
+            display: block
+            width: 100%
+            min-height: 240px
+            height: auto
+            padding: 0
+            border-radius: 20px
+            background-color: #fff
+            box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.2)
+            transition: .6s
+            h4
+                b
+                    color: #d40000
+                    padding: 0 8px
+                    font-size: 24px
+            &.lg
+                padding-bottom: 1rem
+                img
+                    width: 70%
+                    margin-bottom: 1.5rem
+                .link-area
+                    margin-top: 1.5rem
+                    position: relative
+            img
+                width: 80%
+                &.hamipoint
+                    width: 47%
+                    padding: 1.5rem
+                @media screen and (max-width: 768px)
+                    &.hamipoint
+                        width: 52%
+                        padding: 0
+            @media screen and (max-width: 768px)
+                img
+                    width: 95%
+            .badge
+                display: block
+                position: absolute
+                top: -2px
+                left: -2px
+                padding: 0
+                transition: .6s
+            .item-head
+                color: #ffffff
+                height: 64px
+                background: #73947C
+                background-size: 20px
+                border-top-right-radius: 20px
+                border-top-left-radius: 20px
+                & *
+                    color: #ffffff
+                &.un-bg
+                    background: transparent
+                    background-size: 20px
+                @media screen and (max-width: 768px)
+                    background: #73947C
+                    background-size: 16px
+                    &.un-bg
+                        background: transparent
+                        background-size: 16px
+                h4
+                    display: inline-block
+                    font-weight: bold
+                    font-size: 21px
+                    line-height: 64px
+                    span
+                        color: #d40000
+                        padding-left: 8px
+                        font-size: 24px
+                        vertical-align: 2px
+                    &.pizza
+                        line-height: 41px
+                        margin-bottom: 0
+            .item-body
+                padding-top: 8px
+                text-align: center
+                position: relative
+                &.disabled
+                    &:after
+                        content: '已領取完畢'
+                        position: absolute
+                        background-color: rgba(#000,.5)
+                        width: 100%
+                        background-size: cover
+                        height: 200px
+                        z-index: 5
+                        left: 0
+                        top: 0
+                        padding-top: 60px
+                        color: #fff
+                        font-size: 32px
+                @media screen and (max-width: 768px)
+                    &.disabled
+                        &:after
+                            height: 155px
+            &:hover
+                margin-top: -16px
+                margin-bottom: 16px
+                .badge
+                    top: -18px
+                .item-body
+                    .price
+                        &:before
+                            transform: scale(1.2) rotateZ(-20deg)
+                        &:after
+                            transform: scale(1.2) rotateZ(20deg)
+        .date
+            padding-top: 12px
+            margin: 0
+            color: rgba(255, 255, 255, .6)
+            font-size: 24px
+            line-height: 1.7
+    @media screen and (max-width: 1024px)
+        max-width: 944px
+    @media screen and (max-width: 768px)
+        max-width: 600px
+        // padding-bottom: 50px
+        .item
+            max-width: 280px
+            .item-content
+                &.lg
+                    height: 300px
+                .item-head
+                    height: 40px
+                    &.pizza
+                        height: auto
+                        min-height: 40px
+                    h4
+                        font-size: .9rem
+                        line-height: 40px
+                        &.pizza
+                            line-height: 35px
+                        span
+                            font-size: 14px
+                .item-body
+                    padding-top: 12px
+                    .price
+                        width: 95px
+                        margin-bottom: 8px
+                        font-size: 40px
+                    p
+                        font-size: 14px
+                &:hover
+                    margin-top: 0
+                    margin-bottom: 0
+                    .item-body
+                        .badge
+                            top: -2px
+                        .price
+                            &:before
+                                transform: scale(1) rotateZ(0)
+                            &:after
+                                transform: scale(1) rotateZ(0)
+            .date
+                font-size: 14px
+    @media screen and (max-width: 561px)
+        .item
+            margin-bottom: 24px
+            &:nth-of-type(even)
+                margin-bottom: 0
+
+// process
+.process
+    ul
+        display: flex
+        justify-content: space-between
+    @media screen and (max-width: 768px)
+        >*
+            display: none !important
+    li
+        // width: 20%
+        &.arrow
+            align-self: center
+            img
+                width: 50%
+#processMobileControls
+    display: none
+@media screen and (max-width: 768px)
+    #processMobileControls
+        display: block
+.card-img-top
+    flex-shrink: 0
+    // height: 100%
+@media screen and (max-width: 768px)
+    .card-img-top
+        width: 80%
+        margin: 0 auto
+.goodies
+    .card
+        background: transparent
+        // margin-bottom: 1rem
+.max-width
+    max-width: 1600px
+    padding: 0 11rem
+    margin: 0 auto
+@media screen and (max-width: 768px)
+    .max-width
+        padding: 0 3rem
+.special_content
+    max-width: 1140px
+    li
+        padding-bottom: 30px
+.notice-text
+    li
+        text-align: left

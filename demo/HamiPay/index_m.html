@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>HamiPay悠遊卡、一卡通，開通儲值消費！</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<meta name="viewport" content="width=device-width">  
+<style type="text/css">
+</style>
+    <link href="style_m.css" rel="stylesheet" type="text/css"/>
+<script>
+	/*! jQuery v1.7 jquery.com | jquery.org/license */
+	
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript">
+	!function(e){"use strict";function t(e,n){if(!(this instanceof t)){var r=new t(e,n);return r.open(),r}this.id=t.id++,this.setup(e,n),this.chainCallbacks(t._callbackChain)}function n(e,t){var n={};for(var r in e)r in t&&(n[r]=e[r],delete e[r]);return n}function r(e,t){var n={},r=new RegExp("^"+t+"([A-Z])(.*)");for(var i in e){var o=i.match(r);if(o){var a=(o[1]+o[2].replace(/([A-Z])/g,"-$1")).toLowerCase();n[a]=e[i]}}return n}if("undefined"==typeof e)return void("console"in window&&window.console.info("Too much lightness, Featherlight needs jQuery."));var i=[],o=function(t){return i=e.grep(i,function(e){return e!==t&&e.$instance.closest("body").length>0})},a={allowfullscreen:1,frameborder:1,height:1,longdesc:1,marginheight:1,marginwidth:1,name:1,referrerpolicy:1,scrolling:1,sandbox:1,src:1,srcdoc:1,width:1},s={keyup:"onKeyUp",resize:"onResize"},c=function(n){e.each(t.opened().reverse(),function(){return n.isDefaultPrevented()||!1!==this[s[n.type]](n)?void 0:(n.preventDefault(),n.stopPropagation(),!1)})},u=function(n){if(n!==t._globalHandlerInstalled){t._globalHandlerInstalled=n;var r=e.map(s,function(e,n){return n+"."+t.prototype.namespace}).join(" ");e(window)[n?"on":"off"](r,c)}};t.prototype={constructor:t,namespace:"featherlight",targetAttr:"data-featherlight",variant:null,resetCss:!1,background:null,openTrigger:"click",closeTrigger:"click",filter:null,root:"body",openSpeed:250,closeSpeed:250,closeOnClick:"background",closeOnEsc:!0,closeIcon:"&#10005;",loading:"",persist:!1,otherClose:null,beforeOpen:e.noop,beforeContent:e.noop,beforeClose:e.noop,afterOpen:e.noop,afterContent:e.noop,afterClose:e.noop,onKeyUp:e.noop,onResize:e.noop,type:null,contentFilters:["jquery","image","html","ajax","iframe","text"],setup:function(t,n){"object"!=typeof t||t instanceof e!=0||n||(n=t,t=void 0);var r=e.extend(this,n,{target:t}),i=r.resetCss?r.namespace+"-reset":r.namespace,o=e(r.background||['<div class="'+i+"-loading "+i+'">','<div class="'+i+'-content">','<button class="'+i+"-close-icon "+r.namespace+'-close" aria-label="Close">',r.closeIcon,"</button>",'<div class="'+r.namespace+'-inner">'+r.loading+"</div>","</div>","</div>"].join("")),a="."+r.namespace+"-close"+(r.otherClose?","+r.otherClose:"");return r.$instance=o.clone().addClass(r.variant),r.$instance.on(r.closeTrigger+"."+r.namespace,function(t){var n=e(t.target);("background"===r.closeOnClick&&n.is("."+r.namespace)||"anywhere"===r.closeOnClick||n.closest(a).length)&&(r.close(t),t.preventDefault())}),this},getContent:function(){if(this.persist!==!1&&this.$content)return this.$content;var t=this,n=this.constructor.contentFilters,r=function(e){return t.$currentTarget&&t.$currentTarget.attr(e)},i=r(t.targetAttr),o=t.target||i||"",a=n[t.type];if(!a&&o in n&&(a=n[o],o=t.target&&i),o=o||r("href")||"",!a)for(var s in n)t[s]&&(a=n[s],o=t[s]);if(!a){var c=o;if(o=null,e.each(t.contentFilters,function(){return a=n[this],a.test&&(o=a.test(c)),!o&&a.regex&&c.match&&c.match(a.regex)&&(o=c),!o}),!o)return"console"in window&&window.console.error("Featherlight: no content filter found "+(c?' for "'+c+'"':" (no target specified)")),!1}return a.process.call(t,o)},setContent:function(t){var n=this;return t.is("iframe")&&n.$instance.addClass(n.namespace+"-iframe"),n.$instance.removeClass(n.namespace+"-loading"),n.$instance.find("."+n.namespace+"-inner").not(t).slice(1).remove().end().replaceWith(e.contains(n.$instance[0],t[0])?"":t),n.$content=t.addClass(n.namespace+"-inner"),n},open:function(t){var n=this;if(n.$instance.hide().appendTo(n.root),!(t&&t.isDefaultPrevented()||n.beforeOpen(t)===!1)){t&&t.preventDefault();var r=n.getContent();if(r)return i.push(n),u(!0),n.$instance.fadeIn(n.openSpeed),n.beforeContent(t),e.when(r).always(function(e){n.setContent(e),n.afterContent(t)}).then(n.$instance.promise()).done(function(){n.afterOpen(t)})}return n.$instance.detach(),e.Deferred().reject().promise()},close:function(t){var n=this,r=e.Deferred();return n.beforeClose(t)===!1?r.reject():(0===o(n).length&&u(!1),n.$instance.fadeOut(n.closeSpeed,function(){n.$instance.detach(),n.afterClose(t),r.resolve()})),r.promise()},resize:function(e,t){if(e&&t){this.$content.css("width","").css("height","");var n=Math.max(e/(parseInt(this.$content.parent().css("width"),10)-1),t/(parseInt(this.$content.parent().css("height"),10)-1));n>1&&(n=t/Math.floor(t/n),this.$content.css("width",""+e/n+"px").css("height",""+t/n+"px"))}},chainCallbacks:function(t){for(var n in t)this[n]=e.proxy(t[n],this,e.proxy(this[n],this))}},e.extend(t,{id:0,autoBind:"[data-featherlight]",defaults:t.prototype,contentFilters:{jquery:{regex:/^[#.]\w/,test:function(t){return t instanceof e&&t},process:function(t){return this.persist!==!1?e(t):e(t).clone(!0)}},image:{regex:/\.(png|jpg|jpeg|gif|tiff|bmp|svg)(\?\S*)?$/i,process:function(t){var n=this,r=e.Deferred(),i=new Image,o=e('<img src="'+t+'" alt="" class="'+n.namespace+'-image" />');return i.onload=function(){o.naturalWidth=i.width,o.naturalHeight=i.height,r.resolve(o)},i.onerror=function(){r.reject(o)},i.src=t,r.promise()}},html:{regex:/^\s*<[\w!][^<]*>/,process:function(t){return e(t)}},ajax:{regex:/./,process:function(t){var n=e.Deferred(),r=e("<div></div>").load(t,function(e,t){"error"!==t&&n.resolve(r.contents()),n.fail()});return n.promise()}},iframe:{process:function(t){var i=new e.Deferred,o=e("<iframe/>"),s=r(this,"iframe"),c=n(s,a);return o.hide().attr("src",t).attr(c).css(s).on("load",function(){i.resolve(o.show())}).appendTo(this.$instance.find("."+this.namespace+"-content")),i.promise()}},text:{process:function(t){return e("<div>",{text:t})}}},functionAttributes:["beforeOpen","afterOpen","beforeContent","afterContent","beforeClose","afterClose"],readElementConfig:function(t,n){var r=this,i=new RegExp("^data-"+n+"-(.*)"),o={};return t&&t.attributes&&e.each(t.attributes,function(){var t=this.name.match(i);if(t){var n=this.value,a=e.camelCase(t[1]);if(e.inArray(a,r.functionAttributes)>=0)n=new Function(n);else try{n=JSON.parse(n)}catch(s){}o[a]=n}}),o},extend:function(t,n){var r=function(){this.constructor=t};return r.prototype=this.prototype,t.prototype=new r,t.__super__=this.prototype,e.extend(t,this,n),t.defaults=t.prototype,t},attach:function(t,n,r){var i=this;"object"!=typeof n||n instanceof e!=0||r||(r=n,n=void 0),r=e.extend({},r);var o,a=r.namespace||i.defaults.namespace,s=e.extend({},i.defaults,i.readElementConfig(t[0],a),r),c=function(a){var c=e.extend({$source:t,$currentTarget:e(this)},i.readElementConfig(t[0],s.namespace),i.readElementConfig(this,s.namespace),r),u=o||e(this).data("featherlight-persisted")||new i(n,c);"shared"===u.persist?o=u:u.persist!==!1&&e(this).data("featherlight-persisted",u),c.$currentTarget.blur(),u.open(a)};return t.on(s.openTrigger+"."+s.namespace,s.filter,c),c},current:function(){var e=this.opened();return e[e.length-1]||null},opened:function(){var t=this;return o(),e.grep(i,function(e){return e instanceof t})},close:function(e){var t=this.current();return t?t.close(e):void 0},_onReady:function(){var t=this;t.autoBind&&(e(t.autoBind).each(function(){t.attach(e(this))}),e(document).on("click",t.autoBind,function(n){if(!n.isDefaultPrevented()){var r=t.attach(e(n.currentTarget));r(n)}}))},_callbackChain:{onKeyUp:function(t,n){return 27===n.keyCode?(this.closeOnEsc&&e.featherlight.close(n),!1):t(n)},beforeOpen:function(t,n){return this._previouslyActive=document.activeElement,this._$previouslyTabbable=e("a, input, select, textarea, iframe, button, iframe, [contentEditable=true]").not("[tabindex]").not(this.$instance.find("button")),this._$previouslyWithTabIndex=e("[tabindex]").not('[tabindex="-1"]'),this._previousWithTabIndices=this._$previouslyWithTabIndex.map(function(t,n){return e(n).attr("tabindex")}),this._$previouslyWithTabIndex.add(this._$previouslyTabbable).attr("tabindex",-1),document.activeElement.blur(),t(n)},afterClose:function(t,n){var r=t(n),i=this;return this._$previouslyTabbable.removeAttr("tabindex"),this._$previouslyWithTabIndex.each(function(t,n){e(n).attr("tabindex",i._previousWithTabIndices[t])}),this._previouslyActive.focus(),r},onResize:function(e,t){return this.resize(this.$content.naturalWidth,this.$content.naturalHeight),e(t)},afterContent:function(e,t){var n=e(t);return this.$instance.find("[autofocus]:not([disabled])").focus(),this.onResize(t),n}}}),e.featherlight=t,e.fn.featherlight=function(e,n){return t.attach(this,e,n),this},e(document).ready(function(){t._onReady()})}(jQuery);
+	</script>
+<script type="text/javascript">
+/* goto top*/
+    $(function(){$("a").each(function(){var n=$(this),t=n.attr("href");if(t&&"#"==t[0]){var e=t.substring(1);$(this).click(function(){var n=$("[name='"+e+"']"),t=$("#"+e),i=null;if(n.length>0?i=n:t.length>0&&(i=t),i){var r=i.offset();window.parent.scrollTo(r.left,r.top)}return!1})}})});
+	/**/
+</script>
+<!-- GA -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112390676-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-137034355-3');
+  gtag('config', 'UA-112390676-5');
+  gtag('event', 'Landing', {
+  // Event parameters
+  'event_category': 'Landing',
+  'event_label': 'Menu-HamiPay',
+  'event_label': 'Menu-Sale',
+  'event_label': 'Menu-Function',
+  'event_label': 'Menu-life',
+  'event_label': 'Menu-Step',
+  'event_label': 'Menu-Service',
+  'event_label': 'Menu-CHTcard',
+  'event_label': '回到上方',
+  // ...
+});
+</script>
+</script>
+<script type="text/javascript" class="amnet_dmp_tag">
+    var amnet_i_src = 'pt.amnetgroup.com.tw/acjs/cyd_ChunghwaTelecom.js';
+    var amnet_i_ct = document.createElement('script');
+    var src = (location.protocol == 'https:') ? 'https://' : 'http://';
+      amnet_i_ct.setAttribute('src',src+amnet_i_src); amnet_i_ct.charset = 'utf-8';
+    var amnet_i_cts = document.getElementsByTagName('script')[0];
+    amnet_i_cts.parentNode.insertBefore(amnet_i_ct, amnet_i_cts);
+</script>
+</head>
+<body>
+<script>
+//start dmp
+(function(a,b,c,d){
+a[d]=a[d]||function(){(a[d].q=a[d].q||[]).push(arguments)};var r=b.createElement(c),s=b.getElementsByTagName(c)[0];
+r.type="text/javascript";r.async=1;r.src="//m.vpadn.com/dmp/vpadn-tracking.js";
+s.parentNode.insertBefore(r,s)})(window,document,"script","Vpadn");
+Vpadn("create","vp97163871875");
+Vpadn("page_view",{title:document.title||"1910_Hami",current:location.href,previous:document.referrer});
+
+window.addEventListener?window.addEventListener("load",function(){window.addEventListener("scroll",isScroll,false)}):window.attachEvent("onscroll",isScroll);
+var scrollCount=0;
+function isScroll(){
+++scrollCount;
+if(scrollCount==2){
+window.removeEventListener("scroll",isScroll);
+Vpadn("element_interact",{name:"web",action:"scroll",value:location.href})
+}};
+//end dmp
+</script>
+<div id="wrapper">
+	<div id="KV">
+		<img src="images/KV_m.jpg" />
+	</div><!-- KV end -->
+	<div class="box">
+		<ul class="btn">
+			<li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'menu_easy' });" href="#news"><img src="images/01.png" /></a></li><!--
+			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'menu_gift'  });amnet_b('250048');Vpadn('element_interact',{name:'web',action:'interact',value:'ev_0_超值優惠送好康'})" href="#SP"><img src="images/02.png" /></a></li><!--
+			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'menu_discount' });" href="#COMM"><img src="images/03.png" /></a></li><!--
+			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'menu_step'  });amnet_b('250051');Vpadn('element_interact',{name:'web',action:'interact',value:'ev_3_如何綁定及使用電子票證卡'})" data-featherlight="#fl0" href="#"><img src="images/04.png" /></a></li><!--
+			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'menu_more'  });amnet_b('250052');Vpadn('element_interact',{name:'web',action:'interact',value:'ev_4_更多回饋輕鬆Pay'})" target="_blank" href="https://www.ctbcbank.com/content/dam/minisite/long/creditcard/CHT/index.html"><img src="images/05.png" /></a></li><!--
+			--><li><a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'menu_official'  });" target="_blank" href="http://hamipay.emome.net/"><img src="images/06.png" /></a></li>
+			</ul>
+		<img id="news" src="images/title_01_m.jpg" >
+		<div class="videoWrap" >
+				<iframe width="100%" height="100%"  src="https://www.youtube.com/embed/FoG7GJabCQo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		<img  src="images/section_01_m.jpg">
+		<img id="SP" src="images/title_02_m.jpg" >
+		<img  src="images/section_02_m.jpg" usemap="#image-map00">
+		<map name="image-map00">
+		    <area onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'SP_ number'  });" data-featherlight="#fl1" href="#" coords="291,556,439,572" shape="rect">
+		</map>
+		<img id="COMM" src="images/title_03_m.jpg" >
+		<img  src="images/section_03_m.jpg" usemap="#image-map01">
+		<map name="image-map01">
+		    <area onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'gift_easycard'  });amnet_b('250049');Vpadn('element_interact',{name:'web',action:'interact',value:'ev_1_Hami Pay悠遊卡熱銷商品'})" data-featherlight="#fl2" href="#" coords="19,28,307,245" shape="rect">
+		    <area onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'gift_iPASS'  });amnet_b('250050');Vpadn('element_interact',{name:'web',action:'interact',value:'ev_2_Hami Pay一卡通熱銷商品'})" data-featherlight="#fl3" href="#" coords="337,27,620,245" shape="rect">
+		</map>
+		<img src="images/title_04_m.jpg" >
+		
+		<map name="image-map002">
+		    <area onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'Pi Store'  });" href="https://web.piapp.com.tw/enterprise_partners/" coords="300,976,505,1007" shape="rect">
+		</map>
+			
+		</div>
+		
+		<div class="content">
+			<ol>
+                    <li>指定商品5折起係指與原價比較後之折扣。</li>
+					<li>優惠商品以中華電信服務據點現場為準，數量有限售完為止。中華電信保留商品項目及優惠內容修改、終止之權利。</li>
+					<li>咖啡隨行杯、頸部按摩儀等節能商品配送僅含台灣本島，不含離島地區。</li>
+					<li>商品保固依產品保證書所定條件、期限提供保固。</li>
+					<li>醫用口罩、隱形眼鏡商品須至持有「藥商許可證」之服務據點購買。</li>
+					<li>中華電信直營服務據點適用Hami Pay悠遊卡及Hami Pay一卡通儲值及消費，神腦特約服務據點適用Hami Pay悠遊卡儲值及消費。</li>
+					<li>悠遊卡公司、一卡通公司及中華電信保留活動修改、終止之權利。</li>
+					<li>漫遊上網方案：
+						<ol>
+							<li>生效期間僅限各方案表列國家使用(各方案內含國家可合併計費)，方案於收到開通簡訊後生效。方案生效期間至不適用國家、船舶漫遊及航空漫遊，系統會自動暫停您的漫遊上網服務，以避免產生高額漫遊費用；方案結束前，若您再次回到適用國家後，系統會自動恢復漫遊上網服務。若您在方案不適用國家仍有漫遊上網需求，請撥免費*122#、依簡訊指示回傳對應代碼(國外須付費)或洽客服專線(中華行動電話直撥+886-928-000-086免付費客服專線)申請開啟漫遊上網服務即可，用量將依漫遊上網原價計收。</li>
+							<li>各方案為單次租用型服務，客戶申請成功後，無法申請退費或調改其他方案，僅能以退租處理，即使於方案申請成功當天退租，仍將依方案計費方式收費。 </li>
+							<li>為避免產生額外之漫遊上網費用，「出國上飛機前」、「於國外上網服務使用後」或於「國外使用Wi-Fi時」，請關閉行動數據、漫遊上網及手機同步等功能。</li>
+							<li>漫遊上網實際傳輸速率會因國外業者提供之網路系統、涵蓋、上網地點之地形、氣候、建築物遮蔽情形及所使用之終端設備、使用人數、手機APP應用軟體等因素而有所差異，上網品質無法完全與國內相同；且因各國外漫遊網對個人熱點分享開放策略不同，可否使用須視客戶註冊之漫遊網而定。若在國外發生無法使用時，建議重新開機，以利系統為您自動註冊適用網路，或以中華行動電話直撥+886-928-000-086免付費客服專線。</li>
+							<li>為避免產生鉅額漫遊費用，手機、終端設備或SIM卡在國外遺失或被竊時，應立即通知本公司客服中心(中華行動電話直撥+886-928-000-086免付費客服專線)辦理掛失，若您未主動通知客服辦理停話，您仍需支付相關漫遊費用。</li>
+							<li>各方案係透過中華門號註冊當地網路時使用，若您另有申請環球卡服務，請依您的使用需求，將門號切換至適用的模式，以避免產生非預期之漫遊話費。</li>
+							<li>各方案適用期間、涵蓋國家、方案內容、使用說明及申請方式依本公司網站公告為準，中華電信保有隨時修改、暫停、終止漫遊上網方案之權利。</li>
+						</ol>
+					</li>
+					<li>Hami Pay一卡通消費送咖啡：
+						<ol>
+							<li>本活動係指以Hami Pay一卡通或一卡通聯名卡功能扣款之交易。交易計算回饋期間均依一卡通入帳作業時間為準。</li>
+							<li>持卡人於活動期間完成一次一卡通交易即可獲得咖啡一杯；以該卡所綁定之門號做為回饋，每門號每月限回饋一次。</li>
+							<li>於活動期間當月符合資格者，將於次月底前簡訊發送「咖啡兌換券序號」，該序號須透過全家便利商店FamiPort輸入，每一序號僅能輸入一次，無法重複輸入，持列印出「咖啡兌換券」一張至結帳櫃檯，兌換中杯熱美式一杯。兌換流程請參考<a href="https://goo.gl/HpYxVY">https://goo.gl/HpYxVY</a>，活動期間係指108/11/1-109/2/29，限量5萬份，送完為止。</li>
+							<li>「咖啡兌換券」不得要求找零、折抵現金或優惠購買非指定商品；結帳時請出示本券，兌換後店舖人員將會收回此券，且不得重覆使用；本券請妥善保管，若遺失、毀損或保存不當而造成模糊辨識不清，恕不補發；影印亦不得使用；相關使用方式及限制，依券上所載及全家便利商店規定為準，詳細兌換方式以實際FamiPort操作流程為準。</li>
+							<li>若一卡通交易發生取消、金額調整、退貨、簽單爭議等情事，則不符贈送資格。</li>
+							<li>一卡通公司保留隨時修改、變更、取消本活動之權利，亦有權對本活動之所有事宜做出解釋或決定，並於網站活動網頁公告後實施。</li>
+						</ol>
+					</li>
+				</ol>
+		</div>
+		<img src="images/note_m.gif" />
+	</div>
+	<div class="lightbox" id="fl0">
+		<img src="images/use_m.jpg" />
+	</div>
+	<div class="lightbox" id="fl1">
+		<img src="images/card_m.jpg" />
+	</div>
+	<div class="lightbox" id="fl2">
+		<img src="images/hot_01_m.jpg" style="display: block;">
+		<a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'easycard_more'  });" href="https://www.cht.com.tw/home/Campaign/roaming/index.html?utm_source=hamipay.emome.net&utm_medium=referral&utm_campaign=roaming"><img src="images/hot_02_m.jpg" style="cursor:pointer;display: block;"></a>
+		<img src="images/hot_03_m.jpg" style="display: block;">
+	</div>
+	<div class="lightbox" id="fl3">
+		<img src="images/one_01_m.jpg" style="display: block;">
+		<a onclick="gtag('event', 'click ',{'event_category':'Landing','event_label': 'iPASS_more'  });" href="https://www.cht.com.tw/home/Campaign/roaming/index.html?utm_source=hamipay.emome.net&utm_medium=referral&utm_campaign=roaming"><img src="images/one_02_m.jpg" style="cursor:pointer;display: block;"></a>
+		<img src="images/one_03_m.jpg" style="display: block;">
+	</div>
+	<!-- reminder end -->
+</div><!-- wrapper end -->
+<script type="text/javascript" src="js/youtube.js"></script>
+<script type="text/javascript">
+	// create the back to top button
+	$('body').prepend('<a onclick="gtag("event", "click",{"event_category":"Landing","event_label": "回到上方" });"  target="_blank" href="#" class="back-to-top">Back to Top</a>');
+
+	var amountScrolled = 300;
+
+	$(window).scroll(function() {
+		if ( $(window).scrollTop() > amountScrolled ) {
+			$('a.back-to-top').fadeIn('slow');
+		} else {
+			$('a.back-to-top').fadeOut('slow');
+		}
+	});
+
+	$('a.back-to-top, a.simple-back-to-top').click(function() {
+		$('html, body').animate({
+			scrollTop: 265
+		}, 700);
+		return false;
+	});
+	/*hide begin*/
+	$(function () {
+            $('[slide-target]').click(function () {
+                var target = $(this).attr('slide-target');
+                var $target = $(target);
+                $target.stop().slideToggle(600)
+            })
+
+            function hashchange(e) {
+                var hash = window.location.hash.substring(window.location.hash.indexOf('#') + 1);
+                var $target = $('.' + hash);
+                var top = $target.offset().top;
+                $("html, body").stop().animate({
+                    scrollTop: top
+                }, 600);
+            }
+            
+        });
+		/*hide end*/
+	</script>
+		<script>
+;(function(a){a.fn.rwdImageMaps=function(){var c=this;var b=function(){c.each(function(){if(typeof(a(this).attr("usemap"))=="undefined"){return}var e=this,d=a(e);a("<img />").load(function(){var g="width",m="height",n=d.attr(g),j=d.attr(m);if(!n||!j){var o=new Image();o.src=d.attr("src");if(!n){n=o.width}if(!j){j=o.height}}var f=d.width()/100,k=d.height()/100,i=d.attr("usemap").replace("#",""),l="coords";a('map[name="'+i+'"]').find("area").each(function(){var r=a(this);if(!r.data(l)){r.data(l,r.attr(l))}var q=r.data(l).split(","),p=new Array(q.length);for(var h=0;h<p.length;++h){if(h%2===0){p[h]=parseInt(((q[h]/n)*100)*f)}else{p[h]=parseInt(((q[h]/j)*100)*k)}}r.attr(l,p.toString())})}).attr("src",d.attr("src"))})};a(window).resize(b).trigger("resize");return this}})(jQuery);
+
+    $(document).ready(function(e) {
+        $('img[usemap]').rwdImageMaps();
+    });
+</script> 
+</body>
+</html>

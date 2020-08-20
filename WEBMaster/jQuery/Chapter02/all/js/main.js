@@ -383,7 +383,7 @@ $(function(){
 
 */
 //CH3 this
-
+/*
 $(function(){
     $('header, #typo, footer').on('mouseover', function(){
         $(this).css(
@@ -398,3 +398,29 @@ $(function(){
      });
 }); 
 var num = 10-5*345/97;
+*/
+
+var chan = function(){
+	$(this).css('color','#ffff00');
+}
+$(function(){
+	$('#typo').on('mouseover', chan)});
+
+
+/*
+$(function(){
+    $('#typo').on('mouseover' ,function(){
+        $(this).css('color', '#ebc000');
+    });
+
+    $('#header').on('mouseover' ,function(){        
+        $(this).css('color', '#ebc000');
+     });
+ });
+ */
+ var a=1;
+ if(a<10){
+ 	a+=a;
+ }else{
+ 	return;;
+ }
