@@ -246,7 +246,7 @@ color:red;
 	margin: 0
 }
 #wrapper main .container ul > li > ol{
-	padding:0 0 0 0.5em;
+	padding:0 0 0 1.5em;
 }
 #wrapper main .container ul > li > ol > li > ol{
 	list-style:lower-roman;
