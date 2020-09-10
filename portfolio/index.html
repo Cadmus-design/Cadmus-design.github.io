@@ -16,16 +16,23 @@
 	<a class="logo" href="#"><img src="assets/images/logo.png" alt="Cadmus"></a>
 	<h1>體驗生活，生活體驗</h1>
 	<p>嗨！我是彥志，<span>熱愛數位產品，經歷網站設計與數位產品規劃超過10年經驗，</span>擅長解決網站課題，跨團隊溝通與協調。</p>
-	<ul>
-		<!--<li><a class="btn btn-default" href="assets/doc/CV_Zh_Tw.pdf" data-featherlight="iframe" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-width="800em" data-featherlight-iframe-height="60em">簡歷</a></li>-->
-		<li><a onclick="gtag('event', 'click',{'event_category':'Menu','document_PDF': '簡歷' });" href="assets/doc/CV_Zh_Tw.pdf">簡歷</a></li>
-		<li><a onclick="gtag('event', 'click',{'event_category':'Menu','anchor': '作品' });" href="#case">作品展示</a></li>
-	</ul>
+	<nav>
+		<ul class="navbar">
+			<!--<li><a class="btn btn-default" href="assets/doc/CV_Zh_Tw.pdf" data-featherlight="iframe" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-width="800em" data-featherlight-iframe-height="60em">簡歷</a></li>-->
+			<li><a onclick="gtag('event', 'click',{'event_category':'Menu','document_PDF': '簡歷' });" href="assets/doc/CV_Zh_Tw.pdf">簡歷</a></li>
+			<li><a onclick="gtag('event', 'click',{'event_category':'Menu','anchor': '作品' });" href="#case">作品展示</a></li>
+		</ul>
+	</nav>
 </header>
 <!-- header end -->
 <main>
 	<div class="container" id="case">
 		<ul>
+			<li><a onclick="gtag('send', 'event', 'web_dev', 'inner_link', 'plan_好房網新建案')"; href="case_newhouse.html"><img src="assets/images/case/plan/newhouse.jpg" alt="好房網新建案">
+				<h2>好房網新屋頻道</h2>
+				<p><span>專案建置</span></p>
+			</a>
+			</li>
 			<li><a  onclick="gtag('send', 'event', 'web_dev', 'inner_link', 'plan_ibon售票系統網站')"; href="case_ticket.html"><img src="assets/images/case/plan/ticketWEB.jpg" alt="ibon售票系統網站">
 				<h2>ibon售票系統網站</h2>
 				<p><span>網站規劃改版</span></p>
@@ -36,9 +43,14 @@
 				<p><span>網站規劃改版</span></p>
 			</a>
 			</li>
-			<li><a onclick="gtag('send', 'event', 'web_dev', 'inner_link', 'CSS_新北市門牌')"; href="case_NT_add.html"><img src="assets/images/case/css/NT/CSS_NT.jpg" alt="CSS 新北市門牌製作">
-				<h2>CSS 新北市門牌製作</h2>
-				<p><span>HTML5</span><span>CSS3</span><span>UI element</span></p>
+			<li><a onclick="gtag('send', 'event', 'web_dev', 'inner_link', '這點特有感')"; href="case_hamipoint.html"><img src="assets/images/case/web/p_web_07.jpg" alt="中華電信Hami Point 這點特有感">
+				<h2>中華電信Hami Point 這點特有感</h2>
+				<p><span>HTML5</span><span>CSS3</span><span>jQuery</span></p>
+			</a>
+			</li>
+			<li><a onclick="gtag('send', 'event', 'web_dev', 'inner_link', '台北美食月')"; href="case_food.html"><img src="assets/images/case/web/p_web_06.jpg" alt="台北美食月Hami Wallet抽潮好禮">
+				<h2>台北美食月Hami Wallet抽潮好禮</h2>
+				<p><span>HTML5</span><span>CSS3</span><span>jQuery</span></p>
 			</a>
 			</li>
 			<li><a onclick="gtag('send', 'event', 'web_dev', 'inner_link', '升4G購機方案')"; href="case_upgrade4g.html"><img src="assets/images/case/web/p_web_01.jpg" alt="升4G購機方案">
@@ -63,16 +75,6 @@
 			</li>
 			<li><a onclick="gtag('send', 'event', 'web_dev', 'inner_link', '愛在十載')"; href="case_love10years.html"><img src="assets/images/case/web/p_web_05.jpg" alt="愛在十載老客戶抽獎活動">
 				<h2>愛在十載老客戶抽獎活動</h2>
-				<p><span>HTML5</span><span>CSS3</span><span>jQuery</span></p>
-			</a>
-			</li>
-			<li><a onclick="gtag('send', 'event', 'web_dev', 'inner_link', '台北美食月')"; href="case_food.html"><img src="assets/images/case/web/p_web_06.jpg" alt="台北美食月Hami Wallet抽潮好禮">
-				<h2>台北美食月Hami Wallet抽潮好禮</h2>
-				<p><span>HTML5</span><span>CSS3</span><span>jQuery</span></p>
-			</a>
-			</li>
-			<li><a onclick="gtag('send', 'event', 'web_dev', 'inner_link', '這點特有感')"; href="case_hamipoint.html"><img src="assets/images/case/web/p_web_07.jpg" alt="中華電信Hami Point 這點特有感">
-				<h2>中華電信Hami Point 這點特有感</h2>
 				<p><span>HTML5</span><span>CSS3</span><span>jQuery</span></p>
 			</a>
 			</li>
@@ -126,6 +128,11 @@
 				<p><span>FLASH</span><span>Photoshop</span></p>
 			</a>
 			</li>
+			<li><a onclick="gtag('send', 'event', 'web_dev', 'inner_link', 'CSS_新北市門牌')"; href="case_NT_add.html"><img src="assets/images/case/css/NT/CSS_NT.jpg" alt="CSS 新北市門牌製作">
+				<h2>CSS 新北市門牌製作</h2>
+				<p><span>HTML5</span><span>CSS3</span><span>UI element</span></p>
+			</a>
+			</li>
 		</ul>
 	</div>
 </main>
@@ -143,7 +150,36 @@
 		<a href="mailto:cadmus.sung@gmail.com"><img src="assets/images/footer/mail.png" alt=""></a>
 	</div>
 </footer>
+<div class="fbox"></div>
 </div>
+<script type="text/javascript">
+	$(function(){
+		var _header=$('.navbar').offset().top;
+		var onScroll = function(e){
+			var _wrapTop=$('.fbox').offset().top;
+			if(_wrapTop > _header) $('.navbar').addClass('on');
+			else $('.navbar').removeClass('on');
+		}
+		var onHashChange = function(e){
+			if(e){e.preventDefault();}
+			var $this = $(this);
+			var target = window.location.hash.slice(1);
+			var $target = $('[scroll-id="' + target + '"]');
+			var differ = $('.navbar')[0].clientHeight;
+			var offsetTop = $target.offset().top;
+			var scrollTop = $(window).scrollTop();
+			var fixed = $('.navbar').hasClass('on');
+			var top =  fixed ? offsetTop - differ : offsetTop - differ *2;
+			$('html, body').stop().animate({scrollTop: top}, 600);
+		}
+		$(window).bind('hashchange', onHashChange);
+		$(window).bind('scroll', onScroll);
+
+		setTimeout(function(e){
+			onHashChange();
+		},1000)
+	});
+	</script>
 <!-- wrapper end-->
 </body>
 </html>
