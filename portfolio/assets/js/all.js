@@ -14,14 +14,11 @@ $( window ).resize(function() {
 
 	  gtag('config', 'UA-6789868-5');
 */
-/*gtag manager*/
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KTR3PGW');
-/*gtag manager*/
-/* Google Tag Manager (noscript)*/
-$(document).ready(function() {
-    $(document.body).prepend('<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTR3PGW"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>');
-});/* Google Tag Manager (noscript)*/
+})(window,document,'script','dataLayer','GTM-KTR3PGW');</script>
+<!-- End Google Tag Manager -->
