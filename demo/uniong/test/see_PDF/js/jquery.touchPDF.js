@@ -635,8 +635,8 @@
 
 			$element.find(".pdf-outerdiv")
 				.css("transform", "scale("+scale+")")
-				.css("width", pdfWidth + BORDER_WIDTH*2)
-				.css("height", pdfHeight + TOOLBAR_HEIGHT + BORDER_WIDTH*2)
+				.css("width", pdfWidth*1.5 + BORDER_WIDTH*2)
+				.css("height", pdfHeight*1.5 + TOOLBAR_HEIGHT + BORDER_WIDTH*2)
 				.css("padding", "0 "+tabWidth+"px")
 				.css("left", (winWidth - scale*(pdfWidth + tabWidth*2 + BORDER_WIDTH*2))/2);
 			
