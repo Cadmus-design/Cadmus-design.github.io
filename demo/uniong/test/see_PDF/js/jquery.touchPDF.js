@@ -343,11 +343,11 @@
 				
 				$element.find(".pdf-toolbar").html(
 					'<div class="pdf-title">'+options.title+'</div>'
-				 	+ '<div class="pdf-button"><button class="pdf-prev">上一頁</button></div>'
+				 	+ '<div class="pdf-button"><button class="pdf-prev">&lt;</button></div>'
 				 	+ '<div class="pdf-button"><span class="pdf-page-count"></span></div>'
-				 	+ '<div class="pdf-button"><button class="pdf-next">下一頁</button></div>'
-				 	+ (options.disableZoom? '':'<div class="pdf-button"><button class="pdf-zoomin">放大</button></div>'
-				 		+ '<div class="pdf-button"><button class="pdf-zoomout">縮小</button></div>')
+				 	+ '<div class="pdf-button"><button class="pdf-next">&gt;</button></div>'
+				 	+ (options.disableZoom? '':'<div class="pdf-button"><button class="pdf-zoomin">+</button></div>'
+				 		+ '<div class="pdf-button"><button class="pdf-zoomout">-</button></div>')
 				 	);
 				
 				$element.find(".pdf-toolbar > .pdf-title").on("click", function() {
@@ -635,8 +635,8 @@
 
 			$element.find(".pdf-outerdiv")
 				.css("transform", "scale("+scale+")")
-				.css("width", pdfWidth*1.5 + BORDER_WIDTH*2)
-				.css("height", pdfHeight*1.5 + TOOLBAR_HEIGHT + BORDER_WIDTH*2)
+				.css("width", pdfWidth + BORDER_WIDTH*2)
+				.css("height", pdfHeight + TOOLBAR_HEIGHT + BORDER_WIDTH*2)
 				.css("padding", "0 "+tabWidth+"px")
 				.css("left", (winWidth - scale*(pdfWidth + tabWidth*2 + BORDER_WIDTH*2))/2);
 			
