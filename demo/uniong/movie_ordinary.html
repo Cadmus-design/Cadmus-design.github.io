@@ -1,0 +1,478 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel='stylesheet' type='text/css' media="all" />
+    <!-- //bootstrap -->
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+    <!-- Custom Theme files -->
+    <link href="assets/css/style-movie.css" rel='stylesheet' type='text/css' media="all" />
+    <link href="icon/css/font-awesome.css" rel="stylesheet">
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/responsiveslides.min.js"></script>
+    <script>
+	// You can also use "$(window).load(function() {"
+	$(function () {
+	  // Slideshow 4
+	  $("#slider3").responsiveSlides({
+		auto: true,
+		pager: false,
+		nav: true,
+		speed: 500,
+		namespace: "callbacks",
+		before: function () {
+		  $('.events').append("<li>before event fired.</li>");
+		},
+		after: function () {
+		  $('.events').append("<li>after event fired.</li>");
+		}
+	  });
+
+	});
+  </script>
+  <script>
+	// You can also use "$(window).load(function() {"
+	$(function () {
+	  // Slideshow 4
+	  $("#slider4").responsiveSlides({
+		auto: true,
+		pager: false,
+		nav: true,
+		speed: 500,
+		namespace: "callbacks",
+		before: function () {
+		  $('.events').append("<li>before event fired.</li>");
+		},
+		after: function () {
+		  $('.events').append("<li>after event fired.</li>");
+		}
+	  });
+
+	});
+  </script>
+  <script language="javascript" type="text/javascript">
+	function showdiv() {            
+				document.getElementById("bg").style.display ="block";
+				document.getElementById("show").style.display ="block";
+			}
+	function hidediv() {
+				document.getElementById("bg").style.display ='none';
+				document.getElementById("show").style.display ='none';
+			}
+	</script>
+</head>
+
+<body>
+<input id="btnshow" type="button" value="Show" onclick="showdiv();"/>
+<div id="bg"></div>
+<div id="show">
+	<div class="標題">登入資料</div>
+	<div style="margin:5px">
+        【機關名稱】
+        <input type="text" name="textfield" id="textfield">        
+        <input type="checkbox" name="checkbox" id="checkbox">
+        本機關有使用WebITR差勤系統。
+    </div>
+    <div style="margin:5px">
+        【姓名】
+        <input type="text" name="textfield" id="textfield">           
+    </div>
+    <div style="margin:5px">
+        【驗證碼】
+        <img src="images/驗證碼.jpg" style="height:46px">
+        <input type="text" name="text" id="text" style="width:150px; margin-left:5px">        
+    </div>
+    <div style="margin:10px; text-align:center">
+        <input type="submit" value="送出" style="background-color:#0080FF; width:100px; color:#FFF" onclick="hidediv();">
+        <input type="submit" value="清除" style="width:100px;">
+    </div>
+</div>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top" style="border-bottom:1px solid #ddd">
+    <div style="float:left; padding:0 10px">
+    	<img src="images/logo.png" alt="" width="53" height="38" />
+        <span style="font-size:18px; margin:10px 0 0 10px;">凱發科技-一般人員教育影片</span>
+    </div>
+</nav>
+<div class="copyrights" style="background-color:#FFF"></div>
+<div class="col-sm-3 col-md-2 sidebar">
+	<div class="top-navigation">
+        <div class="t-menu">MENU</div>
+        <div class="t-img">
+            <img src="images/lines.png" alt="" />
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+    <div class="drop-navigation drop-navigation">
+          <ul class="nav nav-sidebar">
+          	<li class="on"><a href="#"><span class="fa fa-lg fa-home" style="margin-right:10px"></span>首頁</a></li>
+            <li><a href="#" class="menu"><span class="fa fa-film" style="margin-right:10px"></span>WebITR<span class="fa fa-chevron-down" style="margin-left:5px"></span></a></li>
+            	<ul class="cl-effect-1">
+                    <li><a href="movie_single.html">差勤管理</a></li>                                             
+                    <li><a href="movie_single.html">出差管理</a></li>
+                    <li><a href="movie_single.html">請假管理</a></li> 
+                    <li><a href="movie_single.html">出勤管理</a></li>  
+                </ul>
+                <!-- script-for-menu -->
+              <script>
+                    $( "li a.menu" ).click(function() {
+                    $( "ul.cl-effect-1" ).slideToggle( 300, function() {
+                    // Animation complete.
+                    });
+                    });
+              </script>
+            <li><a href="#" class="menu"><span class="fa fa-film" style="margin-right:10px"></span>Ezdoor</a></li>
+            <li><a href="movies.html"><span class="fa fa-film" style="margin-right:10px"></span>票選系統</a></li>
+            <li><a href="news.html"><span class="fa fa-film" style="margin-right:10px"></span>新進報到系統</a></li>
+          </ul>
+        <script>
+				$( ".top-navigation" ).click(function() {
+				$( ".drop-navigation" ).slideToggle( 300, function() {
+				// Animation complete.
+				});
+				});
+			</script>
+    </div>
+</div>
+
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+<!-----------------------webitr------------------------>
+<div id="top" class="callbacks_container">
+<div class="recommended-info" style="float:left">
+    <h3>WebITR</h3>
+</div>
+<div style="float:right; margin-right:15px">
+	<a href="movie_single.html"><input type="button" name="button" id="button" value="More>>" style="font-size:12px; background-color:#0080FF"></a>
+</div>
+<ul class="rslides" id="slider3">
+    <li>
+        <div class="animated-grids">
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5>
+                    	<a href="movie_single.html" class="title">WebITR-停止上班、上課登記</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test.jpg" alt="" /></a> 
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">WebITR-人員組織樹</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">WebITR-出勤資料報表</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">WebITR-出勤異常處理</a></h5>
+                </div>
+        	</div>
+            <div class="clearfix"> </div>
+        </div>
+    </li>
+    <li>
+        <div class="animated-grids">
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">WebITR-轉成出勤資料</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">WebITR-刷卡資料維護</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">WebITR-臨時組別維護</a></h5>
+
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">WebITR-系統頁面說明</a></h5>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </li>
+    <li>
+        <div class="animated-grids">
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">Varius sit sed viverra viverra nullam nullam interdum metus</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">Nullam interdum metus viverra nullam varius sit sed viverra</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">varius sit sed viverra viverra nullam Nullam interdum metus</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">Nullam interdum metus viverra nullam varius sit sed viverra</a></h5>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </li>
+    <li>
+        <div class="animated-grids">
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">Varius sit sed viverra viverra nullam nullam interdum metus</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">Nullam interdum metus viverra nullam varius sit sed viverra</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">varius sit sed viverra viverra nullam Nullam interdum metus</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">Nullam interdum metus viverra nullam varius sit sed viverra</a></h5>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </li>
+</ul>
+</div>
+
+<!-----------------------ezdoor------------------------>
+<div id="top" class="callbacks_container">
+<div class="recommended-info" style="float:left">
+    <h3>Ezdoor</h3>
+</div>
+<div style="float:right">
+	<div style="float:right; margin-right:15px">
+	<input type="button" name="button" id="button" value="More>>" style="font-size:12px; background-color:#0080FF">
+</div>
+</div>
+<ul class="rslides" id="slider4">
+    <li>
+        <div class="animated-grids">
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test2.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5>
+                    	<a href="movie_single.html" class="title">WebITR-停止上班、上課登記</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test2.jpg" alt="" /></a> 
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">WebITR-請假資料維護</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test2.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">WebITR-出勤資料報表</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test2.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">WebITR-出勤異常處理</a></h5>
+                </div>
+        	</div>
+            <div class="clearfix"> </div>
+        </div>
+    </li>
+    <li>
+        <div class="animated-grids">
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test2.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">WebITR-轉成出勤資料</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test2.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">WebITR-刷卡資料維護</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test2.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">WebITR-臨時組別維護</a></h5>
+
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test2.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">WebITR-系統頁面說明</a></h5>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </li>
+    <li>
+        <div class="animated-grids">
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test2.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">Varius sit sed viverra viverra nullam nullam interdum metus</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test2.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">Nullam interdum metus viverra nullam varius sit sed viverra</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test2.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">varius sit sed viverra viverra nullam Nullam interdum metus</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test2.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">Nullam interdum metus viverra nullam varius sit sed viverra</a></h5>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </li>
+    <li>
+        <div class="animated-grids">
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test2.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">Varius sit sed viverra viverra nullam nullam interdum metus</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test2.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">Nullam interdum metus viverra nullam varius sit sed viverra</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test2.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">varius sit sed viverra viverra nullam Nullam interdum metus</a></h5>
+                </div>
+            </div>
+            <div class="col-md-3 resent-grid recommended-grid slider-first">
+                <div class="resent-grid-img recommended-grid-img">
+                    <a href="movie_single.html"><img src="images/test2.jpg" alt="" /></a>
+                </div>
+                <div class="resent-grid-info recommended-grid-info">
+                    <h5><a href="movie_single.html" class="title">Nullam interdum metus viverra nullam varius sit sed viverra</a></h5>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>
