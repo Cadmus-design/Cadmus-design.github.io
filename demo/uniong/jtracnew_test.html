@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  Solid State by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
       <head>
@@ -14,8 +14,8 @@
       <link rel="stylesheet" href="assets/css/style2.css" />
       <link href="assets/css/away.css" rel="stylesheet" type="text/css">
       <!--[if IE 8]>
-			<link rel="stylesheet" type="text/css" href="assets/css/ie8.css">
-		<![endif]-->
+      <link rel="stylesheet" type="text/css" href="assets/css/ie8.css">
+    <![endif]-->
       <!-- Scripts -->
       <script src="assets/js/skel.min.js"></script>
       <script src="assets/js/jquery.min.js"></script>
@@ -27,12 +27,12 @@
       <script type="text/javascript" src="assets/js/away.js"></script>
       <script src="assets/js/jquery-1.7.1.js"></script>
       <script type="text/javascript">
-			$(document).ready(function(){
-			  $("button").click(function(){
-			  $("p").toggle();
-			  });
-			});
-	   </script>
+      $(document).ready(function(){
+        $("button").click(function(){
+        $("p").toggle();
+        });
+      });
+     </script>
      <!-- 20210310 begin-->
     <script>
         dataLayer = [];
@@ -52,98 +52,98 @@
     <!-- 20120302 GTM end -->
       <!---------------------------最新消息-另開訊息視窗js------------------------------->
       <script type="text/javascript">
-			function centerHandler(){/*設定置中的函式*/
-			var scrollDist=$(window).scrollTop();/*取得捲動長度*/ 
-			var myTop=($(window).height()-$("#popWindow").height())/2+scrollDist; 
-			/*取得垂直中央位置*/ 
-			var myLeft=($(window).width()-$("#popWindow").width())/2; 
-			/*取得水平中央位置*/ 
-			$("#popWindow").offset({top:myTop,left:myLeft}); 
-			/*設定區塊於水平與垂直置中*/
-			}
-			centerHandler(); /*呼叫置中函式，使廣告區塊置中*/
-			$(window).scroll(centerHandler); /*當網頁捲動時呼叫置中函式*/
-			$(window).resize(centerHandler); /*當視窗縮放時呼叫置中函式*/ 
-		</script>
+      function centerHandler(){/*設定置中的函式*/
+      var scrollDist=$(window).scrollTop();/*取得捲動長度*/ 
+      var myTop=($(window).height()-$("#popWindow").height())/2+scrollDist; 
+      /*取得垂直中央位置*/ 
+      var myLeft=($(window).width()-$("#popWindow").width())/2; 
+      /*取得水平中央位置*/ 
+      $("#popWindow").offset({top:myTop,left:myLeft}); 
+      /*設定區塊於水平與垂直置中*/
+      }
+      centerHandler(); /*呼叫置中函式，使廣告區塊置中*/
+      $(window).scroll(centerHandler); /*當網頁捲動時呼叫置中函式*/
+      $(window).resize(centerHandler); /*當視窗縮放時呼叫置中函式*/ 
+    </script>
       <!---------------------------最新消息js------------------------------->
       <script type="text/javascript">
-			$(function(){
-				// 先取得 div#abgne_marquee ul
-				// 接著把 ul 中的 li 項目再重覆加入 ul 中(等於有兩組內容)
-				// 再來取得 div#abgne_marquee 的高來決定每次跑馬燈移動的距離
-				// 設定跑馬燈移動的速度及輪播的速度
-				var $marqueeUl = $('div#abgne_marquee ul'),
-					$marqueeli = $marqueeUl.append($marqueeUl.html()).children(),
-					_height = $('div#abgne_marquee').height() * -1,
-					scrollSpeed = 600,
-					timer,
-					speed = 3000 + scrollSpeed;
-			 
-				// 幫左邊 $marqueeli 加上 hover 事件
-				// 當滑鼠移入時停止計時器；反之則啟動
-				$marqueeli.hover(function(){
-					clearTimeout(timer);
-				}, function(){
-					timer = setTimeout(showad, speed);
-				});
-			 
-				// 控制跑馬燈移動的處理函式
-				function showad(){
-					var _now = $marqueeUl.position().top / _height;
-					_now = (_now + 1) % $marqueeli.length;
-			 
-					// $marqueeUl 移動
-					$marqueeUl.animate({
-						top: _now * _height
-					}, scrollSpeed, function(){
-						// 如果已經移動到第二組時...則馬上把 top 設 0 來回到第一組
-						// 藉此產生不間斷的輪播
-						if(_now == $marqueeli.length / 2){
-							$marqueeUl.css('top', 0);
-						}
-					});
-			 
-					// 再啟動計時器
-					timer = setTimeout(showad, speed);
-				}
-			 
-				// 啟動計時器
-				timer = setTimeout(showad, speed);
-			 
-				$('a').focus(function(){
-					this.blur();
-				});
-			});
-		</script>
+      $(function(){
+        // 先取得 div#abgne_marquee ul
+        // 接著把 ul 中的 li 項目再重覆加入 ul 中(等於有兩組內容)
+        // 再來取得 div#abgne_marquee 的高來決定每次跑馬燈移動的距離
+        // 設定跑馬燈移動的速度及輪播的速度
+        var $marqueeUl = $('div#abgne_marquee ul'),
+          $marqueeli = $marqueeUl.append($marqueeUl.html()).children(),
+          _height = $('div#abgne_marquee').height() * -1,
+          scrollSpeed = 600,
+          timer,
+          speed = 3000 + scrollSpeed;
+       
+        // 幫左邊 $marqueeli 加上 hover 事件
+        // 當滑鼠移入時停止計時器；反之則啟動
+        $marqueeli.hover(function(){
+          clearTimeout(timer);
+        }, function(){
+          timer = setTimeout(showad, speed);
+        });
+       
+        // 控制跑馬燈移動的處理函式
+        function showad(){
+          var _now = $marqueeUl.position().top / _height;
+          _now = (_now + 1) % $marqueeli.length;
+       
+          // $marqueeUl 移動
+          $marqueeUl.animate({
+            top: _now * _height
+          }, scrollSpeed, function(){
+            // 如果已經移動到第二組時...則馬上把 top 設 0 來回到第一組
+            // 藉此產生不間斷的輪播
+            if(_now == $marqueeli.length / 2){
+              $marqueeUl.css('top', 0);
+            }
+          });
+       
+          // 再啟動計時器
+          timer = setTimeout(showad, speed);
+        }
+       
+        // 啟動計時器
+        timer = setTimeout(showad, speed);
+       
+        $('a').focus(function(){
+          this.blur();
+        });
+      });
+    </script>
       <!---------------------------字數顯示限制js------------------------------->
       <script>
-			$(function(){
-				var len = 45; // 超過55個字以"..."取代
-				$(".textword").each(function(i){
-					if($(this).text().length>len){
-						var text=$(this).text().substring(0,len-1)+"...";
-						$(this).text(text);
-					}
-				});
-			});
-	 	</script>
+      $(function(){
+        var len = 45; // 超過55個字以"..."取代
+        $(".textword").each(function(i){
+          if($(this).text().length>len){
+            var text=$(this).text().substring(0,len-1)+"...";
+            $(this).text(text);
+          }
+        });
+      });
+    </script>
       <script>
-			$(function(){
-				var len = 15; // 超過15個字以"..."取代
-				$(".movieword").each(function(i){
-					if($(this).text().length>len){
-						var text=$(this).text().substring(0,len-1)+"...";
-						$(this).text(text);
-					}
-				});
-			});
-	 	</script>
+      $(function(){
+        var len = 15; // 超過15個字以"..."取代
+        $(".movieword").each(function(i){
+          if($(this).text().length>len){
+            var text=$(this).text().substring(0,len-1)+"...";
+            $(this).text(text);
+          }
+        });
+      });
+    </script>
 
       <!---------------------------banner輪播------------------------------->
       <script type="text/javascript">
-			$(document).ready(function() {
-			$('.slideshow').cycle();
-			});
+      $(document).ready(function() {
+      $('.slideshow').cycle();
+      });
         </script>
       <!---------------------------廣告區js------------------------------->
       <script type="text/javascript" language="javascript">
@@ -178,6 +178,20 @@
          }
  
       </script>
+      <!--常見問題多字省略-->
+      <script>
+        window.onload = function () {
+          textShow(box_elis, 45)
+        }
+        function textShow(obj, num) {
+          var oSpan = obj.getElementsByTagName("span")[0];
+          var oA = obj.getElementsByTagName("i")[0];
+          var str = oSpan.innerHTML;
+          oSpan.innerHTML = str.substring(0, num);
+          oA.innerHTML = "...";
+        }
+      </script>
+
      <!--2021/04/10-彥志：客服網站改版-->
       <script src="assets/js/chart.js@2.8.0"></script>
       <script src="assets/js/chartjs-plugin-labels.js"></script>
@@ -318,20 +332,24 @@
           height:420px;
           margin:3px 0px;
           border:1px dashed #aaa;
+          padding: 0 8px;
+          overflow: hidden;
         }
         .learningSearch_li{
           border-bottom:1px solid #ccc;
 /*           margin:2px 0px; */
-          padding: 6px 4px 6px 10px;
+          padding: 4px 10px 4px 10px;
           font-size: 20px;
         }
         .learningSearch_li:hover{
            background-color: #f1f1f1; 
         }
-        .learningSearch_li span{
-           color:#666; 
-           width:100%;
-           float:left;
+        .morden-div{
+           height: 61px;
+           overflow: hidden;
+           position: relative;
+           display: flex;
+           align-items: center;
         }
         .morden-circle{
            display: inline-block;
@@ -345,6 +363,8 @@
            width:95%;
            margin-left: 8px;
            text-align: justify;
+           color:#666;
+           line-height: 30px;
         }
         /*數據實績*/
         .piediv{
@@ -383,11 +403,20 @@
             width: 50%;
 /*            height: 150px;*/
           }
+        .main_div{
+            width: 100%;
+          }
         }
 
         @media (max-width: 767px) {
         .leavetypecard_sm {
             width: 100%;
+          }
+        .main_div{
+            width: 100%;
+          }
+        .panellist_css{
+            height: 100%;    
           }
         }
           
@@ -1502,7 +1531,7 @@
 <div id="survey_div">
   <div class="black_user" id="black_user" style="display: block;"></div> 
   <div class="clickuser" id="survey" style="display: block;"> 
- 	  <div id="btclose">
+    <div id="btclose">
           <button type="button" class="close" onclick="document.getElementById('black_user').style.display='none';document.getElementById('survey').style.display='none';">&times;</button>
       </div>
        <div class="表格外距">
@@ -1891,7 +1920,7 @@
          <div align="center" style="margin-top:15px;">
              <button type="button" class="btn-primary" style="width:80px; font-size:14px" onclick="document.getElementById('black_user').style.display='none';document.getElementById('survey').style.display='none';">送出</button>
          </div>
-	   </div>
+     </div>
   </div>
 </div>
 <!--chart.js 圖表顯示-->
