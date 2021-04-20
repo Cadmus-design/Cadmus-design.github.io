@@ -1,0 +1,2092 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+      <head>
+      <title>凱發科技股份有限公司</title>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="assets/css/main.css" />
+      <link rel="stylesheet" href="assets/css/style2.css" />
+      <link href="assets/css/away.css" rel="stylesheet" type="text/css">
+      <!--[if IE 8]>
+			<link rel="stylesheet" type="text/css" href="assets/css/ie8.css">
+		<![endif]-->
+      <!-- Scripts -->
+      <script src="assets/js/skel.min.js"></script>
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+      <script src="assets/js/cycle.all.js"></script>
+      <script src="assets/js/rater.js"></script>
+      <script type="text/javascript" src="assets/js/away.js"></script>
+      <script src="assets/js/jquery-1.7.1.js"></script>
+      <script type="text/javascript">
+			$(document).ready(function(){
+			  $("button").click(function(){
+			  $("p").toggle();
+			  });
+			});
+	   </script>
+
+      <!---------------------------最新消息-另開訊息視窗js------------------------------->
+      <script type="text/javascript">
+			function centerHandler(){/*設定置中的函式*/
+			var scrollDist=$(window).scrollTop();/*取得捲動長度*/ 
+			var myTop=($(window).height()-$("#popWindow").height())/2+scrollDist; 
+			/*取得垂直中央位置*/ 
+			var myLeft=($(window).width()-$("#popWindow").width())/2; 
+			/*取得水平中央位置*/ 
+			$("#popWindow").offset({top:myTop,left:myLeft}); 
+			/*設定區塊於水平與垂直置中*/
+			}
+			centerHandler(); /*呼叫置中函式，使廣告區塊置中*/
+			$(window).scroll(centerHandler); /*當網頁捲動時呼叫置中函式*/
+			$(window).resize(centerHandler); /*當視窗縮放時呼叫置中函式*/ 
+		</script>
+      <!---------------------------最新消息js------------------------------->
+      <script type="text/javascript">
+			$(function(){
+				// 先取得 div#abgne_marquee ul
+				// 接著把 ul 中的 li 項目再重覆加入 ul 中(等於有兩組內容)
+				// 再來取得 div#abgne_marquee 的高來決定每次跑馬燈移動的距離
+				// 設定跑馬燈移動的速度及輪播的速度
+				var $marqueeUl = $('div#abgne_marquee ul'),
+					$marqueeli = $marqueeUl.append($marqueeUl.html()).children(),
+					_height = $('div#abgne_marquee').height() * -1,
+					scrollSpeed = 600,
+					timer,
+					speed = 3000 + scrollSpeed;
+			 
+				// 幫左邊 $marqueeli 加上 hover 事件
+				// 當滑鼠移入時停止計時器；反之則啟動
+				$marqueeli.hover(function(){
+					clearTimeout(timer);
+				}, function(){
+					timer = setTimeout(showad, speed);
+				});
+			 
+				// 控制跑馬燈移動的處理函式
+				function showad(){
+					var _now = $marqueeUl.position().top / _height;
+					_now = (_now + 1) % $marqueeli.length;
+			 
+					// $marqueeUl 移動
+					$marqueeUl.animate({
+						top: _now * _height
+					}, scrollSpeed, function(){
+						// 如果已經移動到第二組時...則馬上把 top 設 0 來回到第一組
+						// 藉此產生不間斷的輪播
+						if(_now == $marqueeli.length / 2){
+							$marqueeUl.css('top', 0);
+						}
+					});
+			 
+					// 再啟動計時器
+					timer = setTimeout(showad, speed);
+				}
+			 
+				// 啟動計時器
+				timer = setTimeout(showad, speed);
+			 
+				$('a').focus(function(){
+					this.blur();
+				});
+			});
+		</script>
+      <!---------------------------字數顯示限制js------------------------------->
+      <script>
+			$(function(){
+				var len = 45; // 超過55個字以"..."取代
+				$(".textword").each(function(i){
+					if($(this).text().length>len){
+						var text=$(this).text().substring(0,len-1)+"...";
+						$(this).text(text);
+					}
+				});
+			});
+	 	</script>
+      <script>
+			$(function(){
+				var len = 15; // 超過15個字以"..."取代
+				$(".movieword").each(function(i){
+					if($(this).text().length>len){
+						var text=$(this).text().substring(0,len-1)+"...";
+						$(this).text(text);
+					}
+				});
+			});
+	 	</script>
+
+      <!---------------------------banner輪播------------------------------->
+      <script type="text/javascript">
+			$(document).ready(function() {
+			$('.slideshow').cycle();
+			});
+        </script>
+      <!---------------------------廣告區js------------------------------->
+      <script type="text/javascript" language="javascript">
+ 
+         $.noConflict();
+ 
+         jQuery(document).bind("ready", function () {
+ 
+            jQuery.ajaxSetup({
+                  cache: false
+            });
+ 
+            jQuery("#a1").bind("click touch", function () {
+                  jQuery("#player").html(videopanel("tt6LQUg9faM"));
+            });
+ 
+            jQuery("#a2").bind("click touch", function () {
+                  jQuery("#player").html(videopanel("aPye9IFZzaw"));
+            });
+ 
+            jQuery("#a3").bind("click touch", function () {
+                  jQuery("#player").html(videopanel("k2yEhRBhilA"));
+            });
+
+         });
+ 
+         function videopanel(id) {
+ 
+            str = '<iframe width="100%" height="250" src="http://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe>';
+            return str;
+ 
+         }
+ 
+      </script>
+      <!--常見問題多字省略-->
+      <script>
+        window.onload = function () {
+          textShow(box_elis, 45)
+        }
+        function textShow(obj, num) {
+          var oSpan = obj.getElementsByTagName("span")[0];
+          var oA = obj.getElementsByTagName("i")[0];
+          var str = oSpan.innerHTML;
+          oSpan.innerHTML = str.substring(0, num);
+          oA.innerHTML = "...";
+        }
+      </script>
+
+     <!--2021/04/10-彥志：客服網站改版-->
+      <script src="assets/js/chart.js@2.8.0"></script>
+      <script src="assets/js/chartjs-plugin-labels.js"></script>
+      <style>
+        .guide_div{
+            margin-bottom: 8px;      
+        }
+          /* 操作問題: 按鈕-形狀設定 */
+        .leavetypecard {
+            box-shadow: 1px 1px 0 rgba(255, 255, 255, .1) inset;
+            float: left;
+            position: relative;
+            background: #73A1BF;
+            background: linear-gradient(90deg, #73A1BF, #92C4D1);
+            background: -webkit-gradient(linear, left top, right bottom, from(#73A1BF), to(#92C4D1));
+            background: -moz-linear-gradient(linear, left top, right bottom, from(#73A1BF), to(#92C4D1));
+            background: -o-linear-gradient(linear, left top, right bottom, from(#73A1BF), to(#92C4D1));
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border: 5px solid transparent;
+            background-clip: padding-box;
+            box-sizing: border-box;
+            -webkit-transition: .2s;
+            -moz-transition: .2s;
+            -ms-transition: .2s;
+            -o-transition: .2s;
+            transition: .2s;
+        }
+        .leavetypecard:hover {
+            transform: scale(.97, .97);
+            -ms-transform: scale(.97, .97);
+            -moz-transform: scale(.97, .97);
+            -webkit-transform: scale(.97, .97);
+            -o-transform: scale(.97, .97);
+        }
+        .leavetypecard a {
+            display: block;
+            height: 100%;
+            position: relative;
+/*            box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);*/
+            border-radius: 5px;
+        }
+        .leavetypecard > a:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        /* 操作問題: 按鈕-顏色樣式設定 */
+        .leavetype_tolerance {
+            background: #B7E38B;
+/*
+            background: linear-gradient(45deg, #73B3BF, #92D1CC);
+            background: -webkit-gradient(linear, left top, right bottom, from(#73B3BF), to(#92D1CC));
+            background: -moz-linear-gradient(linear, left top, right bottom, from(#73B3BF), to(#92D1CC));
+            background: -o-linear-gradient(linear, left top, right bottom, from(#73B3BF), to(#92D1CC));
+            background-repeat: no-repeat;
+*/
+            background-clip: padding-box;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        /* 操作問題: 按鈕-尺寸設定 */
+        .leavetypecard_sm {
+            width: 50%;
+            height: 100px;
+            margin: 2px 0px;
+            /*原6個
+            height: 120px;
+            margin: 10px 0px;*/
+        }
+        /* 操作問題: 按鈕-icon 位置、寬度設定 */
+        .leavetypecard .leavetype_img {
+            width: 100%;
+            max-width: 150px;
+            opacity: .1;
+            position: absolute;
+            top: 35%;
+            transform: translateY(-30%);
+            right: 5%;
+            overflow: hidden;
+        }
+        .leavetypecard_sm .leavetype_img {
+            width: 40%;
+        }
+        /* 操作問題: 按鈕-內容(大字) */
+        .leavetype_name {
+            display: inline-block;
+            width: 100%;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            max-height: 200px;
+            padding: 10%;
+            font-size: 1.4rem;
+            /*font-size: 1.5rem;*/
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            line-height: 30px;
+        }
+        /* 操作問題: 按鈕-內容(小字) */
+        .leavetype_timeuse {
+            width: auto;
+            position: absolute;
+            top: 55%;
+            left: 10%;
+            font-size: 14px;
+            color: #fff;
+            line-height: 1.2;
+            letter-spacing: 1.2px;
+        }
+          
+        /* 常見操作問題 */
+        .main_div{
+          float:left;
+          border-radius:3px;
+          width: 49%;
+          background-color: #fff;
+          margin-left: 0.5%;
+          margin-right: 0.5%;
+          margin-top: 2px;
+        }
+        .orgbg{
+          background-color: #f59330 !important;
+          margin: 0px;
+        }
+        .title_i{
+          margin-left: 3px;
+          font-size: 22px;
+          position: absolute;
+          top: 16px;
+        }
+        .title_b{
+          font-size:22px;
+          position: relative;
+          left: 30px;
+        }
+        .panellist_css{
+          height:420px;
+          margin:3px 0px;
+          border:1px dashed #aaa;
+/*          padding: 0 8px;*/
+          overflow: hidden;
+        }
+        .learningSearch_li{
+          border-bottom:1px solid #ccc;
+/*           margin:2px 0px; */
+          padding: 4px 10px 4px 10px;
+          font-size: 20px;
+        }
+        .learningSearch_li:hover{
+           background-color: #f1f1f1; 
+        }
+        .morden-div{
+           height: 61px;
+           overflow: hidden;
+           position: relative;
+           display: flex;
+           align-items: center;
+        }
+        .morden-circle{
+           display: inline-block;
+           float: left;
+           width:3%;
+           color: #333;
+        }
+        .morden-txt{
+           display: inline-block;
+           float: left;
+           width:95%;
+           margin-left: 8px;
+           text-align: justify;
+           color:#666;
+           line-height: 30px;
+        }
+        /*數據實績*/
+        .piediv{
+           float: left;
+           width: 50%;
+           text-align: center;
+        }
+        .piedata{
+           background-color: #eee;
+           margin: 3px 15px;
+        }
+        .piedata div{
+           font-weight: bold;
+        }
+        .chart_txt{
+          width: 80%;
+          margin: 6px auto;
+          font-weight: bold;
+        }
+        .chart_part{
+          height:270px;
+          margin:0px 3px;
+          border:1px dashed #b9b6ed;
+          overflow: hidden;
+        }
+/*
+        .chart_tip{
+          float: left;
+          width: 50%;
+          font-weight: bold;
+          text-align: center;
+        }
+*/
+         .news-scroll li{
+            height: auto; 
+            padding: 5px 5px 5px 19px;
+         }
+        @media (max-width: 1024px) {
+        .leavetypecard_sm {
+            width: 50%;
+/*            height: 150px;*/
+          }
+        .main_div{
+            width: 100%;
+          }
+        }
+
+        @media (max-width: 767px) {
+        .leavetypecard_sm {
+            width: 100%;
+          }
+        .main_div{
+            width: 100%;
+          }
+        .panellist_css{
+            height: 100%;    
+          }
+        }
+          
+      </style>
+      
+</head>
+
+<body style="background-image:none; background-color:#fff;">
+        <!-- Page Wrapper -->
+        <div id="page-wrapper"> 
+            <!-- Header -->
+      <header id="header">
+            <h1 id="headerh1">
+              <a href="index.html">
+              <span class="fa fa-lg fa-home" style="margin-right:2px"></span>首頁 
+              </a>
+            </h1>
+            <nav id="headernav">
+               <span>凱大發</span>
+               <a href="#">登出</a>
+               <a href="#menu">Menu</a>
+            </nav>
+      </header>
+            <!-- Menu -->
+            <nav id="menu">
+        <div class="inner">
+         <h2>Menu</h2>
+          <ul class="links">
+            <li><a href="index.html">回首頁</a></li>
+            <li><a href="software.html">軟體導入</a></li>
+            <li><a href="cooperation.html">廠商合作</a></li>
+            <li><a href="aboutus.html">公司介紹</a></li>
+            <li><a href="assist.html">技術支援</a></li>
+            <li><a href="bsc.html">後台管理</a></li>
+          </ul>
+                <a href="#" class="close">Close</a>
+        </div>
+      </nav>
+            <div style="clear:both"></div>
+            <!-- Wrpper -->
+            <section style="width:100%; margin-top:45px;"><!------拿掉id="wrapper"------->
+        <div id="all">
+          <header>
+                <div id="leftarea" style="margin-left:20px; float:left;border-radius:3px;"><!----拿掉class="inner"-------> 
+                    <!-----------------操作教學&常見問題------------------->
+                    
+                    <div class="guide_div">
+                        <!--左區塊-->
+                        <div class="main_div">
+                            <!--panel-heading 標題列-->
+                            <div class="panel-heading primary 標題框 orgbg">
+                               <h3>
+                                 <i class="fa fa-lg fa-hand-pointer-o title_i"></i>
+                                 <b class="title_b">基本操作教學</b>
+                               </h3>
+                            </div>
+                            <!--panel-list 內容-->
+                            <div class="panellist panellist_css">
+                                 <div class="leavetypecard leavetype_tolerance leavetypecard_sm">
+                                    <a href="helper_PDF_index.html" target="_blank">
+                                        <div class="leavetype_name">加班時數核算</div>
+                                    </a>
+                                </div>
+                                <div class="leavetypecard leavetype_tolerance leavetypecard_sm">
+                                    <a href="helper_PDF_index.html" target="_blank">
+                                        <div class="leavetype_name">行事曆維護</div>
+                                    </a>
+                                </div>
+                                <div class="leavetypecard leavetype_tolerance leavetypecard_sm">
+                                    <a href="helper_PDF_index.html" target="_blank">
+                                        <div class="leavetype_name">新進人員到職設定方式</div>
+                                    </a>
+                                </div>
+                                <div class="leavetypecard leavetype_tolerance leavetypecard_sm">
+                                    <a href="helper_PDF_index.html" target="_blank">
+                                        <div class="leavetype_name">休假天數計算</div>
+                                    </a>
+                                </div>
+                                <div class="leavetypecard leavetype_tolerance leavetypecard_sm">
+                                    <a href="helper_PDF_index.html" target="_blank">
+                                        <div class="leavetype_name">人員組織樹設定</div>
+                                    </a>
+                                </div>
+                                <div class="leavetypecard leavetype_tolerance leavetypecard_sm">
+                                    <a href="helper_PDF_index.html" target="_blank">
+                                        <div class="leavetype_name">機關差勤規定</div>
+                                    </a>
+                                </div>
+                                <div class="leavetypecard leavetype_tolerance leavetypecard_sm">
+                                    <a href="helper_PDF_index.html" target="_blank">
+                                        <div class="leavetype_name">2222</div>
+                                    </a>
+                                </div>
+                                <div class="leavetypecard leavetype_tolerance leavetypecard_sm">
+                                    <a href="helper_PDF_index.html" target="_blank">
+                                        <div class="leavetype_name">55656</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--右區塊-->
+                        <div class="main_div">
+                            <!--panel-heading 標題列-->
+                            <div class="panel-heading primary 標題框 orgbg">
+                               <h3>
+                                 <i class="fa fa-lg fa-question-circle-o title_i"></i>
+                                 <b class="title_b">常見操作問題</b>
+                               </h3>
+                            </div>
+                            <!--panel-list 內容-->
+                            <div class="panellist panellist_css">
+                                 <ul id="box_elis" class="learningSearch" style="padding-left: 0px;">
+                                    <a href="helper_PDF_index.html" target="_blank">
+                                        <li class="learningSearch_li">
+                                            <div class="morden-div">
+                                                   <div class="morden-circle">●</div>
+                                                   <div class="morden-txt">
+                                                    <span>(文字過多示意)同仁申請公差卻發現出勤異常/刷卡不一致?同仁申請公差卻發現出勤異常/刷卡不一致?刷卡不一致?刷卡不一致刷卡不一致刷卡不一致刷卡不一致  </span>                                     
+                                                    <i></i>
+                                                   </div>                                                 
+                                                <div style="clear: both;"></div>
+                                            </div> 
+                                             <div style="clear:both"></div>
+                                        </li>
+                                    </a>
+                                    <a href="helper_PDF_index.html" target="_blank">
+                                        <li class="learningSearch_li">
+                                            <div class="morden-div">
+                                                   <div class="morden-circle">●</div>
+                                                   <div class="morden-txt">
+                                                       <span>同仁申請公差卻發現出勤異常/刷卡不一致
+                                                       </span>
+                                                       <i></i>
+                                                   </div>
+                                                   <div style="clear: both;"></div>
+                                               </div>
+                                            
+                                             <div style="clear:both"></div>
+                                        </li>
+                                    </a>
+                                    <a href="helper_PDF_index.html" target="_blank">
+                                        <li class="learningSearch_li">                                             
+                                             <div class="morden-div">
+                                                <div class="morden-circle">●</div>
+                                                <div class="morden-txt">
+                                                    <span>同仁代理職務後沒辦法申請休假?</span>
+                                                    <i></i>
+                                                </div>
+                                                <div style="clear: both;"></div>
+                                             </div> 
+                                             <div style="clear:both"></div>
+                                        </li>
+                                    </a>
+                                    <a href="helper_PDF_index.html" target="_blank">
+                                       <li class="learningSearch_li">
+                                            <div class="morden-div">
+                                                <div class="morden-circle">●</div>
+                                                <div class="morden-txt">
+                                                    <span>怎麼設定跨單位代理/兼任職位?</span>
+                                                    <i></i>
+                                                </div>
+                                                <div style="clear: both;"></div>
+                                            </div> 
+                                            <div style="clear:both"></div>
+                                       </li>
+                                    </a>
+                                    <a href="helper_PDF_index.html" target="_blank">
+                                       <li class="learningSearch_li">
+                                           <div class="morden-div">
+                                                <div class="morden-circle">●</div>
+                                                <div class="morden-txt">
+                                                    <span>直屬主管為何不能查看同仁的出勤狀況?</span>
+                                                    <i></i>
+                                                </div>
+                                                <div style="clear: both;"></div>
+                                           </div>                                             
+                                           <div style="clear:both"></div>
+                                       </li>
+                                    </a>
+                                    <a href="helper_PDF_index.html" target="_blank">
+                                       <li class="learningSearch_li">
+                                           <div class="morden-div">
+                                                <div class="morden-circle">●</div>
+                                                <div class="morden-txt">
+                                                    <span>直屬主管為何不能查看同仁的出勤狀況?</span>
+                                                    <i></i>
+                                                </div>
+                                                <div style="clear: both;"></div>
+                                           </div>                                             
+                                           <div style="clear:both"></div>
+                                       </li>
+                                    </a>                             
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                    <!-----------------廣告影片------------------->
+                    <div id="animation" style="display: none;">
+                        <iframe id="player" style="float:left; width:64%" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="100%" height="320" src="https://www.youtube.com/embed/1ZfIcnRNpJY?enablejsapi=1&amp;origin=https%3A%2F%2Fwww.uniong.com.tw&amp;widgetid=1"></iframe>
+                        <div id="playerlist" style="float:left; width:36%; overflow-y:auto; overflow-x:hidden">
+            <ul style="padding-left:0.3em">
+
+                    <li class="link" data-url="1ZfIcnRNpJY">
+                        <a href="#" class="linkmovie">
+                            <i class="fa fa-lg fa-film"></i>
+                            <span class="movieword">1070702_勞基法修法概述</span>
+                        </a>
+                    </li>
+
+                    <li class="link" data-url="U9-D0uEYvCc">
+                        <a href="#" class="linkmovie">
+                            <i class="fa fa-lg fa-film"></i>
+                            <span class="movieword">1070702_勞基法修法重點</span>
+                        </a>
+                    </li>
+
+                    <li class="link" data-url="ywHf6-Z2APQ">
+                        <a href="#" class="linkmovie">
+                            <i class="fa fa-lg fa-film"></i>
+                            <span class="movieword">1070702_休息日加班費核實計算</span>
+                        </a>
+                    </li>
+
+                    <li class="link" data-url="ft7GsgJKQ4s">
+                        <a href="#" class="linkmovie">
+                            <i class="fa fa-lg fa-film"></i>
+                            <span class="movieword">1070702_加班工作時數依勞工意願選擇補休</span>
+                        </a>
+                    </li>
+
+                    <li class="link" data-url="zDH9ssZYXFQ">
+                        <a href="#" class="linkmovie">
+                            <i class="fa fa-lg fa-film"></i>
+                            <span class="movieword">1070702_輪班換班休息時間</span>
+                        </a>
+                    </li>
+
+                    <li class="link" data-url="pj8188U_rwo">
+                        <a href="#" class="linkmovie">
+                            <i class="fa fa-lg fa-film"></i>
+                            <span class="movieword">1070702_七休一原則不改變</span>
+                        </a>
+                    </li>
+
+                    <li class="link" data-url="deTcsNlsZKo">
+                        <a href="#" class="linkmovie">
+                            <i class="fa fa-lg fa-film"></i>
+                            <span class="movieword">OES-費用系統</span>
+                        </a>
+                    </li>
+
+            </ul>
+        </div>
+                    </div>
+                    <div style="clear:both"></div>
+                    <!-------------------------------問題單選項------------------------------->
+                    <div id="tab_qtap" class="tabdiv">
+                        <div id="qtap" class="panel-heading primary">
+                                    <h3 style="float:left; margin-top:5px">
+                                        <i class="fa fa-lg fa-list" style="margin:0px 3px"></i>
+                                        <b style="font-size:20px">問題清單</b>
+                                    </h3>
+
+                                    <div class="panellist" style="float:left; margin-left:10px">
+                                        <button data-id="utracOpen" type="button" class="btn-primaryon">
+                                            <i class="fa fa-lg fa-pencil-square-o"></i>建立問題單
+                                        </button>
+                                        <button data-id="utracProcess" type="button" class="btn">
+                                            <i class="fa fa-lg fa-paper-plane-o"></i>處理中
+                                        </button>
+                                        <button data-id="utracHistory" type="button" class="btn">
+                                            <i class="fa fa-lg fa-clock-o"></i>歷史紀錄
+                                        </button>
+
+                                        <button data-id="jtrac" type="button" class="btn" onclick="hrefUtrac()">
+                                            <i class="fa fa-lg fa-question-circle"></i>進階查詢
+                                        </button>
+                                    </div>
+
+                                    <div style="clear:both"></div>
+                                    <div id="utracOpen" class="左邊區塊" style="border:1px dashed #ccc;">
+                                        <style>
+                                            input[type="file"] {
+                                                color: #000;
+                                            }
+                                        </style>
+                                        <form id="form1" name="form1" method="post" action="">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="3" style="font-family:'微軟正黑體';" id="utracOpenTable">
+
+            <input type="hidden" id="filekey" name="filekey">
+            <tbody><tr>
+                <td width="150" align="right" nowrap="" class="問題表格_項目">
+                    <span style="color:#F00">*</span>
+                    專案空間
+                </td>
+                <td align="left" class="問題表格_右明細">
+                    <select name="space_id">
+
+                    </select>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td align="right" nowrap="" class="問題表格_項目">
+                    <span style="color:#F00">*</span>
+                    摘要
+                </td>
+                <td align="left" class="問題表格_右明細">
+                    <input type="text" name="summary">
+                </td>
+            </tr>
+            <tr>
+                <td align="right" nowrap="" class="問題表格_項目">
+                    <span style="color:#F00">*</span>
+                    細節
+                </td>
+                <td align="left" class="問題表格_右明細"><textarea name="detail"></textarea></td>
+            </tr>
+            <tr>
+                <td align="right" nowrap="" class="問題表格_項目">
+                    <span style="color:#F00">*</span>
+                    功能類別
+                </td>
+                <td align="left" class="問題表格_右明細">
+                    <select name="cus_int_06" style="width:250px !important;">
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" nowrap="" class="問題表格_項目">
+                    <span style="color:#F00">*</span>
+                    詢問人機關／單位
+                </td>
+                <td align="left" class="問題表格_右明細">
+                    <input type="text" name="cus_str_04" value="UnionG / 系統設計部">
+                </td>
+            </tr>
+            <tr>
+                <td align="right" nowrap="" class="問題表格_項目">
+                    <span style="color:#F00">*</span>
+                    詢問人姓名
+                </td>
+                <td align="left" class="問題表格_右明細">
+                    <input type="text" name="cus_str_05" style="width:20%" value="林袖微">
+                </td>
+            </tr>
+            <tr>
+                <td align="right" nowrap="" class="問題表格_項目">
+                    <span style="color:#F00">*</span>
+                    詢問人電話
+                </td>
+                <td align="left" class="問題表格_右明細">
+                    <input type="text" name="cus_str_03" style="width:30%" value="127">
+                </td>
+            </tr>
+            <tr>
+                <td align="right" nowrap="" class="問題表格_項目">檔案上傳</td>
+                <td align="left" class="問題表格_右明細">
+                    <span id="fileSpan"><form id="createForm_fileSpan_form" action="/file/uploadFile/NORMAL/?_csrf=faaf9885-9b0c-4bcf-9ca3-c6b6bb2072aa" method="POST" enctype="multipart/form-data"><input type="file" name="file" class="通用選單按鈕"></form><div id="createForm_fileSpan_progress" style="position: relative; width: 95%; border: 1px solid rgb(221, 221, 221); padding: 1px; border-radius: 3px; height: 20px; display: none;"><div id="createForm_fileSpan_bar" style="background-color: rgb(180, 245, 180); width: 0%; height: 20px; border-radius: 3px; float: left;"></div><div id="createForm_fileSpan_percent" style="position: absolute; display: inline-block; top: 3px; left: 48%;">0%</div></div></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" class="問題表格_右明細">
+                    <button type="button" class="btn-primary" style="width:80px; font-size:14px" onclick="sendUtrac()">送出</button>
+                    <button type="button" class="btn-primary" style="width:80px; font-size:14px" onclick="cleanUtracOpen()">清除</button>
+
+
+                    <div style="border-bottom:1px dashed #999; margin:8px 0px"></div>
+                </td>
+            </tr>
+
+            <input type="hidden" id="action" name="action" value="">
+
+
+        </tbody></table>
+                                        </form>
+                                    </div>
+                                    <div id="utracProcess" class="左邊區塊" style="display: none;border:1px dashed #ccc;"></div>
+                                    <div id="utracHistory" class="左邊區塊" style="display: none;border:1px dashed #ccc;"></div>
+                                </div>
+                    </div>
+                    <div class="panel-heading primary 標題框" style="display: none;">
+                        <h3>
+                            <i class="fa fa-lg fa-gratipay" style="margin:0px 3px"></i>
+                            <b style="font-size:20px">滿意度調查</b>
+                        </h3>
+                    </div>
+                    <!--方法一：套用icon-->
+<!--
+                    <div id="satisfied" class="panellist" style="height:129px; overflow:hidden; margin:0px 3px; border:1px dashed #77A88D">
+                        <div style="padding:3px; background-color:#FFF; text-align:center">
+                            <div style="float:left; width:16%">&nbsp;</div>
+                            <div style="float:left; width:16%">
+                                <div class="starscroe">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div style="font-size:16px;">非常清楚</div>
+                            </div>
+                            <div style="float:left; width:16%">
+                                <div class="starscroe">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div style="font-size:16px">大概了解</div>
+                            </div>
+                            <div style="float:left; width:16%">
+                                <div class="starscroe">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div style="font-size:16px">模稜兩可</div>
+                            </div>
+                            <div style="float:left; width:16%">
+                                <div class="starscroe">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div style="font-size:16px">無法理解</div>
+                            </div>
+                            <div style="float:left; width:16%">
+                                <div class="starscroe">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div style="font-size:16px">回答錯誤</div>
+                            </div>
+
+                            <div style="clear:both"></div>
+
+                            <div id="abgne_marquee" style="width:100%; margin-top:8px">
+                                <ul style="width: 100%; top: -75px;">
+                                    <li style="width:100%;">
+                                        <div style="float:left; width:16%"><a href="#">近一週</a></div>
+                                        <div style="float:left; width:16%"><a href="#">93</a></div>
+                                        <div style="float:left; width:16%"><a href="#">1</a></div>
+                                        <div style="float:left; width:16%"><a href="#">3</a></div>
+                                        <div style="float:left; width:16%"><a href="#">1</a></div>
+                                        <div style="float:left; width:16%"><a href="#">1</a></div>
+                                        <div style="clear:both"></div>
+                                    </li>
+                                    <li style="width:100%;">
+                                        <div style="float:left; width:16%"><a href="#">近三個月</a></div>
+                                        <div style="float:left; width:16%"><a href="#">846</a></div>
+                                        <div style="float:left; width:16%"><a href="#">34</a></div>
+                                        <div style="float:left; width:16%"><a href="#">5</a></div>
+                                        <div style="float:left; width:16%"><a href="#">16</a></div>
+                                        <div style="float:left; width:16%"><a href="#">4</a></div>
+                                        <div style="clear:both"></div>
+                                    </li>
+                                    <li style="width:100%;">
+                                        <div style="float:left; width:16%"><a href="#">近半年</a></div>
+                                        <div style="float:left; width:16%"><a href="#">2326</a></div>
+                                        <div style="float:left; width:16%"><a href="#">117</a></div>
+                                        <div style="float:left; width:16%"><a href="#">16</a></div>
+                                        <div style="float:left; width:16%"><a href="#">55</a></div>
+                                        <div style="float:left; width:16%"><a href="#">32</a></div>
+                                        <div style="clear:both"></div>
+                                    </li>
+                                    <li style="width:100%;">
+                                        <div style="float:left; width:16%"><a href="#">總計</a></div>
+                                        <div style="float:left; width:16%"><a href="#">91.97%</a></div>
+                                        <div style="float:left; width:16%"><a href="#">4.28%</a></div>
+                                        <div style="float:left; width:16%"><a href="#">0.68%</a></div>
+                                        <div style="float:left; width:16%"><a href="#">2.03%</a></div>
+                                        <div style="float:left; width:16%"><a href="#">1.04%</a></div>
+                                        <div style="clear:both"></div>
+                                    </li>
+                                    <li style="width:100%;">
+                                        <div style="float:left; width:16%"><a href="#">近一週</a></div>
+                                        <div style="float:left; width:16%"><a href="#">93</a></div>
+                                        <div style="float:left; width:16%"><a href="#">1</a></div>
+                                        <div style="float:left; width:16%"><a href="#">3</a></div>
+                                        <div style="float:left; width:16%"><a href="#">1</a></div>
+                                        <div style="float:left; width:16%"><a href="#">1</a></div>
+                                        <div style="clear:both"></div>
+                                    </li>
+                                    <li style="width:100%;">
+                                        <div style="float:left; width:16%"><a href="#">近三個月</a></div>
+                                        <div style="float:left; width:16%"><a href="#">846</a></div>
+                                        <div style="float:left; width:16%"><a href="#">34</a></div>
+                                        <div style="float:left; width:16%"><a href="#">5</a></div>
+                                        <div style="float:left; width:16%"><a href="#">16</a></div>
+                                        <div style="float:left; width:16%"><a href="#">4</a></div>
+                                        <div style="clear:both"></div>
+                                    </li>
+                                    <li style="width:100%;">
+                                        <div style="float:left; width:16%"><a href="#">近半年</a></div>
+                                        <div style="float:left; width:16%"><a href="#">2326</a></div>
+                                        <div style="float:left; width:16%"><a href="#">117</a></div>
+                                        <div style="float:left; width:16%"><a href="#">16</a></div>
+                                        <div style="float:left; width:16%"><a href="#">55</a></div>
+                                        <div style="float:left; width:16%"><a href="#">32</a></div>
+                                        <div style="clear:both"></div>
+                                    </li>
+                                    <li style="width:100%;">
+                                        <div style="float:left; width:16%"><a href="#">總計</a></div>
+                                        <div style="float:left; width:16%"><a href="#">91.97%</a></div>
+                                        <div style="float:left; width:16%"><a href="#">4.28%</a></div>
+                                        <div style="float:left; width:16%"><a href="#">0.68%</a></div>
+                                        <div style="float:left; width:16%"><a href="#">2.03%</a></div>
+                                        <div style="float:left; width:16%"><a href="#">1.04%</a></div>
+                                        <div style="clear:both"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+-->
+                    
+                    <!--方法二：套用圖片-->
+                    <div id="satisfied" class="panellist" style="height:129px; overflow:hidden; margin:0px 3px; border:1px dashed #77A88D;display: none;">
+                        <div style="padding:3px; background-color:#FFF; text-align:center">
+                            <div style="float:left; width:16%">&nbsp;</div>
+                            <div style="float:left; width:16%">
+                                <img src="images/我聽懂了.png">
+                                <div style="font-size:16px;">我聽懂了</div>
+                            </div>
+                            <div style="float:left; width:16%">
+                                <img src="images/一知半解.png">
+                                <div style="font-size:16px">一知半解</div>
+                            </div>
+                            <div style="float:left; width:16%">
+                                <img src="images/模稜兩可.png">
+                                <div style="font-size:16px">模稜兩可</div>
+                            </div>
+                            <div style="float:left; width:16%">
+                                <img src="images/完全不懂.png">
+                                <div style="font-size:16px">完全不懂</div>
+                            </div>
+                            <div style="float:left; width:16%">
+                                <img src="images/回答錯誤.png">
+                                <div style="font-size:16px">回答錯誤</div>
+                            </div>
+
+                            <div style="clear:both"></div>
+
+                            <div id="abgne_marquee" style="width:100%; margin-top:8px">
+                                <ul style="width: 100%; top: -75px;">
+                                    <li style="width:100%;">
+                                        <div style="float:left; width:16%"><a href="#">近一週</a></div>
+                                        <div style="float:left; width:16%"><a href="#">93</a></div>
+                                        <div style="float:left; width:16%"><a href="#">1</a></div>
+                                        <div style="float:left; width:16%"><a href="#">3</a></div>
+                                        <div style="float:left; width:16%"><a href="#">1</a></div>
+                                        <div style="float:left; width:16%"><a href="#">1</a></div>
+                                        <div style="clear:both"></div>
+                                    </li>
+                                    <li style="width:100%;">
+                                        <div style="float:left; width:16%"><a href="#">近三個月</a></div>
+                                        <div style="float:left; width:16%"><a href="#">846</a></div>
+                                        <div style="float:left; width:16%"><a href="#">34</a></div>
+                                        <div style="float:left; width:16%"><a href="#">5</a></div>
+                                        <div style="float:left; width:16%"><a href="#">16</a></div>
+                                        <div style="float:left; width:16%"><a href="#">4</a></div>
+                                        <div style="clear:both"></div>
+                                    </li>
+                                    <li style="width:100%;">
+                                        <div style="float:left; width:16%"><a href="#">近半年</a></div>
+                                        <div style="float:left; width:16%"><a href="#">2326</a></div>
+                                        <div style="float:left; width:16%"><a href="#">117</a></div>
+                                        <div style="float:left; width:16%"><a href="#">16</a></div>
+                                        <div style="float:left; width:16%"><a href="#">55</a></div>
+                                        <div style="float:left; width:16%"><a href="#">32</a></div>
+                                        <div style="clear:both"></div>
+                                    </li>
+                                    <li style="width:100%;">
+                                        <div style="float:left; width:16%"><a href="#">總計</a></div>
+                                        <div style="float:left; width:16%"><a href="#">91.97%</a></div>
+                                        <div style="float:left; width:16%"><a href="#">4.28%</a></div>
+                                        <div style="float:left; width:16%"><a href="#">0.68%</a></div>
+                                        <div style="float:left; width:16%"><a href="#">2.03%</a></div>
+                                        <div style="float:left; width:16%"><a href="#">1.04%</a></div>
+                                        <div style="clear:both"></div>
+                                    </li>
+                                    <li style="width:100%;">
+                                        <div style="float:left; width:16%"><a href="#">近一週</a></div>
+                                        <div style="float:left; width:16%"><a href="#">93</a></div>
+                                        <div style="float:left; width:16%"><a href="#">1</a></div>
+                                        <div style="float:left; width:16%"><a href="#">3</a></div>
+                                        <div style="float:left; width:16%"><a href="#">1</a></div>
+                                        <div style="float:left; width:16%"><a href="#">1</a></div>
+                                        <div style="clear:both"></div>
+                                    </li>
+                                    <li style="width:100%;">
+                                        <div style="float:left; width:16%"><a href="#">近三個月</a></div>
+                                        <div style="float:left; width:16%"><a href="#">846</a></div>
+                                        <div style="float:left; width:16%"><a href="#">34</a></div>
+                                        <div style="float:left; width:16%"><a href="#">5</a></div>
+                                        <div style="float:left; width:16%"><a href="#">16</a></div>
+                                        <div style="float:left; width:16%"><a href="#">4</a></div>
+                                        <div style="clear:both"></div>
+                                    </li>
+                                    <li style="width:100%;">
+                                        <div style="float:left; width:16%"><a href="#">近半年</a></div>
+                                        <div style="float:left; width:16%"><a href="#">2326</a></div>
+                                        <div style="float:left; width:16%"><a href="#">117</a></div>
+                                        <div style="float:left; width:16%"><a href="#">16</a></div>
+                                        <div style="float:left; width:16%"><a href="#">55</a></div>
+                                        <div style="float:left; width:16%"><a href="#">32</a></div>
+                                        <div style="clear:both"></div>
+                                    </li>
+                                    <li style="width:100%;">
+                                        <div style="float:left; width:16%"><a href="#">總計</a></div>
+                                        <div style="float:left; width:16%"><a href="#">91.97%</a></div>
+                                        <div style="float:left; width:16%"><a href="#">4.28%</a></div>
+                                        <div style="float:left; width:16%"><a href="#">0.68%</a></div>
+                                        <div style="float:left; width:16%"><a href="#">2.03%</a></div>
+                                        <div style="float:left; width:16%"><a href="#">1.04%</a></div>
+                                        <div style="clear:both"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            <!--------------------------------最新消息----------------------------->
+                <div id="rightarea" style="float:left; margin:0px 10px 0px 15px;"><!----拿掉class="inner"------->
+                    <div style="padding:0px;display: none;"><!----拿掉class="inner"------->
+                        <div id="bannerarea" class="panel-heading">
+                            <div class="panel-heading" style="margin-top:-3px">
+                                <div class="slideshow" style="position: relative; width: 430px; height: 321px;">
+                                   <a href="#" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 3; opacity: 1; width: 430px; height: 320px;">
+                                        <img id="bmg-s" src="images/webitr2.0.jpg" width="100%" style="cursor:pointer" alt="WebITR2.0全新改版">
+                                        <img id="bmg" src="images/webitr2.0_banner.jpg" width="100%" style="cursor:pointer" alt="WebITR2.0全新改版">
+                                    </a>
+                                    <a href="#" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0; width: 430px; height: 320px;">
+                                        <img id="bmg-s" src="images/修正法規.jpg" width="100%" style="cursor:pointer" alt="修正法規">
+                                        <img id="bmg" src="images/修正法規_banner.jpg" width="100%" style="cursor:pointer" alt="修正法規">
+                                    </a>
+                                    <a href="#" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0; width: 430px; height: 320px;">
+                                        <img id="bmg-s" src="images/合作使用數.jpg" width="100%" style="cursor:pointer" alt="合作使用數">
+                                        <img id="bmg" src="images/合作使用數_banner.jpg" width="100%" style="cursor:pointer" alt="合作使用數">
+                                    </a>
+                                    <a href="#" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0; width: 430px; height: 320px;">
+                                        <img id="bmg-s" src="images/雲端服務-藍.jpg" width="100%" style="cursor:pointer" alt="雲端服務">
+                                        <img id="bmg" src="images/雲端服務-藍_banner.jpg" width="100%" style="cursor:pointer" alt="雲端服務">
+                                    </a>
+                                    <a href="#" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0; width: 430px; height: 320px;">
+                                        <img id="bmg-s" src="images/無障礙設計.jpg" width="100%" style="cursor:pointer" alt="無障礙設計">
+                                        <img id="bmg" src="images/無障礙設計_banner.jpg" width="100%" style="cursor:pointer" alt="無障礙設計">
+                                    </a>
+                                    <a href="#" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0; width: 430px; height: 320px;">
+                                        <img id="bmg-s" src="images/線上費用系統.jpg" width="100%" style="cursor:pointer" alt="線上費用系統">
+                                        <img id="bmg" src="images/線上費用系統_banner.jpg" width="100%" style="cursor:pointer" alt="線上費用系統">
+                                    </a>
+                                    <a href="#" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0; width: 430px; height: 320px;">
+                                        <img id="bmg-s" src="images/差勤資料彙整平台.jpg" width="100%" style="cursor:pointer" alt="差勤資料彙整平台">
+                                        <img id="bmg" src="images/差勤資料彙整平台_banner.jpg" width="100%" style="cursor:pointer" alt="差勤資料彙整平台">
+                                    </a>
+                                    <a href="#" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0; width: 430px; height: 320px;">
+                                        <img id="bmg-s" src="images/加班餘數併計優化.jpg" width="100%" style="cursor:pointer" alt="加班餘數併計優化">
+                                        <img id="bmg" src="images/加班餘數併計優化_banner.jpg" width="100%" style="cursor:pointer" alt="加班餘數併計優化">
+                                    </a>
+                                    <a href="#" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0; width: 430px; height: 320px;">
+                                        <img id="bmg-s" src="images/加班餘數併計優化_1.jpg" width="100%" style="cursor:pointer" alt="加班餘數併計優化">
+                                        <img id="bmg" src="images/加班餘數併計優化_banner_1.jpg" width="100%" style="cursor:pointer" alt="加班餘數併計優化">
+                                    </a>
+                                    <a href="#" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0; width: 430px; height: 320px;">
+                                        <img id="bmg-s" src="images/報到離職.jpg" width="100%" style="cursor:pointer" alt="報到離職系統">
+                                        <img id="bmg" src="images/報到離職_banner.jpg" width="100%" style="cursor:pointer" alt="報到離職">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-heading primary 標題框">
+                        <h3>
+                            <i class="fa fa-lg fa-newspaper-o" style="margin:0px 3px"></i>
+                               <b style="font-size:22px">最新消息</b>
+                        </h3>
+                    </div>
+                    <div id="newsList" class="panellist" style="height:687px; margin:0px 3px; border:1px dashed #b9b6ed;overflow: hidden;">
+                        <div class="news-scroll">
+                            <ul>
+
+                <li data-sn="37" data-sn-code="aGdDxvXY_m357a94sKClg0PWOgMklnd31ydd90c8XXSoxsIxwgDDjqH5ujmxhcZLxKqrKlHRsU0BMj-LntxqKrFTSo7u9Aix3Dn7SxkdVUBH7-KdXhHURLMi_St6LbJkpSMleMk-QX6QOh02p-259w">
+                    <a href="#">
+                        <span style="color:#0080FF; font-weight:800; float:left; width:78%">【操作手冊】51勞動節勞工休假人事人員操作說明</span></a>
+                    <span style="float:right; font-size:12px; width:21%; text-align:right">108-04-15</span>
+                    <div style="clear:both"></div>
+                    <div class="textword">5/1勞動節為法定休假日(勞工適用)，附件為勞基法人員放假日設定之流程步驟。</div>
+                </li>
+                <li data-sn="37" data-sn-code="aGdDxvXY_m357a94sKClg0PWOgMklnd31ydd90c8XXSoxsIxwgDDjqH5ujmxhcZLxKqrKlHRsU0BMj-LntxqKrFTSo7u9Aix3Dn7SxkdVUBH7-KdXhHURLMi_St6LbJkpSMleMk-QX6QOh02p-259w">
+                    <a href="#">
+                        <span style="color:#0080FF; font-weight:800; float:left; width:78%">【操作手冊】51勞動節勞工休假人事人員操作說明</span></a>
+                    <span style="float:right; font-size:12px; width:21%; text-align:right">108-04-15</span>
+                    <div style="clear:both"></div>
+                    <div class="textword">5/1勞動節為法定休假日(勞工適用)，附件為勞基法人員放假日設定之流程步驟。</div>
+                </li>
+                <li data-sn="37" data-sn-code="aGdDxvXY_m357a94sKClg0PWOgMklnd31ydd90c8XXSoxsIxwgDDjqH5ujmxhcZLxKqrKlHRsU0BMj-LntxqKrFTSo7u9Aix3Dn7SxkdVUBH7-KdXhHURLMi_St6LbJkpSMleMk-QX6QOh02p-259w">
+                    <a href="#">
+                        <span style="color:#0080FF; font-weight:800; float:left; width:78%">【操作手冊】51勞動節勞工休假人事人員操作說明</span></a>
+                    <span style="float:right; font-size:12px; width:21%; text-align:right">108-04-15</span>
+                    <div style="clear:both"></div>
+                    <div class="textword">5/1勞動節為法定休假日(勞工適用)，附件為勞基法人員放假日設定之流程步驟。</div>
+                </li>
+                <li data-sn="37" data-sn-code="aGdDxvXY_m357a94sKClg0PWOgMklnd31ydd90c8XXSoxsIxwgDDjqH5ujmxhcZLxKqrKlHRsU0BMj-LntxqKrFTSo7u9Aix3Dn7SxkdVUBH7-KdXhHURLMi_St6LbJkpSMleMk-QX6QOh02p-259w">
+                    <a href="#">
+                        <span style="color:#0080FF; font-weight:800; float:left; width:78%">【操作手冊】51勞動節勞工休假人事人員操作說明</span></a>
+                    <span style="float:right; font-size:12px; width:21%; text-align:right">108-04-15</span>
+                    <div style="clear:both"></div>
+                    <div class="textword">5/1勞動節為法定休假日(勞工適用)，附件為勞基法人員放假日設定之流程步驟。</div>
+                </li>
+                <li data-sn="37" data-sn-code="aGdDxvXY_m357a94sKClg0PWOgMklnd31ydd90c8XXSoxsIxwgDDjqH5ujmxhcZLxKqrKlHRsU0BMj-LntxqKrFTSo7u9Aix3Dn7SxkdVUBH7-KdXhHURLMi_St6LbJkpSMleMk-QX6QOh02p-259w">
+                    <a href="#">
+                        <span style="color:#0080FF; font-weight:800; float:left; width:78%">【操作手冊】51勞動節勞工休假人事人員操作說明</span></a>
+                    <span style="float:right; font-size:12px; width:21%; text-align:right">108-04-15</span>
+                    <div style="clear:both"></div>
+                    <div class="textword">5/1勞動節為法定休假日(勞工適用)，附件為勞基法人員放假日設定之流程步驟。</div>
+                </li>
+                <li data-sn="37" data-sn-code="aGdDxvXY_m357a94sKClg0PWOgMklnd31ydd90c8XXSoxsIxwgDDjqH5ujmxhcZLxKqrKlHRsU0BMj-LntxqKrFTSo7u9Aix3Dn7SxkdVUBH7-KdXhHURLMi_St6LbJkpSMleMk-QX6QOh02p-259w">
+                    <a href="#">
+                        <span style="color:#0080FF; font-weight:800; float:left; width:78%">【操作手冊】51勞動節勞工休假人事人員操作說明</span></a>
+                    <span style="float:right; font-size:12px; width:21%; text-align:right">108-04-15</span>
+                    <div style="clear:both"></div>
+                    <div class="textword">5/1勞動節為法定休假日(勞工適用)，附件為勞基法人員放假日設定之流程步驟。</div>
+                </li>
+            </ul>
+                            <form id="attachmentDownloadForm" action="/file/download/open/" method="post" target="_blank">
+                                <input type="hidden" name="serial">
+                                <div>
+                                  <input type="hidden" name="_csrf" value="faaf9885-9b0c-4bcf-9ca3-c6b6bb2072aa">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!---------------------------教育影片---------------------------------->
+<!--
+                    <div class="panel-heading primary 標題框">
+                        <h3>
+                                    <i class="fa fa-lg fa-film" style="margin:0px 3px"></i>
+                                    <b style="font-size:22px">人事人員教育訓練影片</b>
+                                </h3>
+                    </div>
+-->
+<!--
+                    <div id="learningList" class="panellist" style="height:325px; overflow-x:auto; margin:0px 3px 3px 3px; background-color:#FFF; border:1px dashed #99a9c6">
+                        <div style="padding:3px" id="learningList">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="3" style="margin:0px">
+                                <tbody>
+                                   <tr>
+                                     <td colspan="2" align="center" nowrap="" class="問題表格_右明細">
+                                        <div class="tabPanel" id="box">
+                                                <div class="tab-content" id="con1" onclick="recordLearningVideo('1123')" style="display: block;">
+                                                    <a href="https://www.youtube.com/watch?v=ovKazgIXVGU" target="_blank">
+                                                        <img src="https://img.youtube.com/vi/ovKazgIXVGU/mqdefault.jpg" width="100%" alt="2.新進人員報到如何在系統上新增並給予職位">
+                                                    </a>
+                                                </div>
+                                                <div class="tab-content" id="con2" onclick="recordLearningVideo('1124')" style="display: none;">
+                                                    <a href="https://www.youtube.com/watch?v=AdaIfExgZ10" target="_blank">
+                                                        <img src="https://img.youtube.com/vi/AdaIfExgZ10/mqdefault.jpg" width="100%" alt="3.當有同仁在機關內調單位，要如何在系統上異動">
+                                                    </a>
+                                                </div>
+                                                <div class="tab-content" id="con3" onclick="recordLearningVideo('1150')" style="display: none;">
+                                                    <a href="https://www.youtube.com/watch?v=WNKHWBpDp1A" target="_blank">
+                                                        <img src="https://img.youtube.com/vi/WNKHWBpDp1A/mqdefault.jpg" width="100%" alt="30.流程修改多一關人事">
+                                                    </a>
+                                                </div>
+                                                <ul class="listReset switch" id="learningStarList">
+                                                    <li data-seq="1"><a href="javascript:;" id="tab1" class="now-tab">2.新進人員報到如何在系統上新增並給予職位</a></li>
+                                                    <li data-seq="2"><a href="javascript:;" id="tab2" class="">3.當有同仁在機關內調單位，要如何在系統上異動</a></li>
+                                                    <li data-seq="3"><a href="javascript:;" id="tab3" class="">30.流程修改多一關人事</a></li>
+                                                </ul>
+                                          </div>
+                                       </td>
+                                   </tr>
+                                   <tr>
+                                     <td align="left" nowrap="" class="問題表格_右明細">
+                                        <div style="width:45%; float:left">
+                                            【系統類別】<br>
+                                            <select id="type" style="width:90%">
+                                                <option value="A">WebITR</option>
+                                            </select>
+                                        </div>
+                                        <div style="width:45%; float:left">
+                                            【關鍵字】<br>
+                                            <input type="text" id="key" style="width:100%" value="全部">
+                                            <button style="background-color: #2793e6;padding: 0px 7px;" onclick="search()"><span class="fa fa-lg fa-search"></span></button>
+                                        </div>
+                                        <div style="clear:both"></div>
+                                        <div style="border-bottom:1px dashed #999; margin:8px 0px"></div>
+                                     </td>
+                                   </tr>
+                                </tbody>
+                            </table>
+                            <ul class="learningSearch" style="margin-left: -15px;">
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1122" onclick="recordLearningVideo(1122, this)">
+                                    <a href="https://www.youtube.com/watch?v=ExZUoThi_5Q" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">1.新年度開始，如何執行執行年資累加的動作</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1123" onclick="recordLearningVideo(1123, this)">
+                                    <a href="https://www.youtube.com/watch?v=ovKazgIXVGU" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">2.新進人員報到如何在系統上新增並給予職位</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1124" onclick="recordLearningVideo(1124, this)">
+                                    <a href="https://www.youtube.com/watch?v=AdaIfExgZ10" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#99a9c6; width:90%; float:left; margin-top:-8px">3.當有同仁在機關內調單位，要如何在系統上異動</span><div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1125" onclick="recordLearningVideo(1125, this)">
+                                    <a href="https://www.youtube.com/watch?v=dgza39ObFyU" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">4.當有同仁要離職，要如何在系統上操作</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1126" onclick="recordLearningVideo(1126, this)">
+                                    <a href="https://www.youtube.com/watch?v=umSZ0diKh4M" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#99a9c6; width:90%; float:left; margin-top:-8px">5.同仁離職又復職，如何操作</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1152" onclick="recordLearningVideo(1152, this)">
+                                    <a href="https://www.youtube.com/watch?v=09BQbw4PWR8" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">6.留職停薪</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1127" onclick="recordLearningVideo(1127, this)">
+                                    <a href="https://www.youtube.com/watch?v=FjHlPs8vFO8" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">7.A單位主管無人，須由B單位主管代理</span><div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1128" onclick="recordLearningVideo(1128, this)">
+                                    <a href="https://www.youtube.com/watch?v=cI4McdxrpHc" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">8.流程對錯</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1129" onclick="recordLearningVideo(1129, this)">
+                                    <a href="https://www.youtube.com/watch?v=e-nnpQXE8qE" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">9.停止上班上課登記</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1130" onclick="recordLearningVideo(1130, this)">
+                                    <a href="https://www.youtube.com/watch?v=bsV0QPy2nC0" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">10.彈性行事曆</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1131" onclick="recordLearningVideo(1131, this)">
+                                    <a href="https://www.youtube.com/watch?v=ubPgVXJ8VEo" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">11.機關差勤規定</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1132" onclick="recordLearningVideo(1132, this)">
+                                    <a href="https://www.youtube.com/watch?v=jCH6zmwq_TM" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">12.刷卡資料維護</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1133" onclick="recordLearningVideo(1133, this)">
+                                    <a href="https://www.youtube.com/watch?v=NZSlt5b5BUI" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">13.後臺協助修改卡別</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1134" onclick="recordLearningVideo(1134, this)">
+                                    <a href="https://www.youtube.com/watch?v=HHZ68CUmPj8" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">14.重新轉出勤</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1135" onclick="recordLearningVideo(1135, this)">
+                                    <a href="https://www.youtube.com/watch?v=vhP9Tnqrmk0" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">15.出勤異常處理</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1136" onclick="recordLearningVideo(1136, this)">
+                                    <a href="https://www.youtube.com/watch?v=0YdFK3IpSdI" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">16.新增休假資料</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1137" onclick="recordLearningVideo(1137, this)">
+                                    <a href="https://www.youtube.com/watch?v=Nn_SHsh1IhQ" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">17.公假後台補勾可領差旅費</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1138" onclick="recordLearningVideo(1138, this)">
+                                    <a href="https://www.youtube.com/watch?v=a7NeEAzrRw4" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">18.後台新增加班補休假</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1139" onclick="recordLearningVideo(1139, this)">
+                                    <a href="https://www.youtube.com/watch?v=jnetKsPIBSo" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">19.婚假未請就要延長</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1140" onclick="recordLearningVideo(1140, this)">
+                                    <a href="https://www.youtube.com/watch?v=skptAY15qgw" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">20.婚假已請要延長</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1141" onclick="recordLearningVideo(1141, this)">
+                                    <a href="https://www.youtube.com/watch?v=PxZ3TI5pnC0" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">21.新增出差資料</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1142" onclick="recordLearningVideo(1142, this)">
+                                    <a href="https://www.youtube.com/watch?v=8bQJFp9nBwE" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">22.後台補勾公差含假日</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1143" onclick="recordLearningVideo(1143, this)">
+                                    <a href="https://www.youtube.com/watch?v=mMeQ6lk3MN0" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">23.專案立案</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1144" onclick="recordLearningVideo(1144, this)">
+                                    <a href="https://www.youtube.com/watch?v=zUMrZhUlf9I" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">24.加班時數計算即未核算原因說明</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1145" onclick="recordLearningVideo(1145, this)">
+                                    <a href="https://www.youtube.com/watch?v=xdM3XiocRTw" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">25.免刷卡忘了勾，人事如何處理</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1146" onclick="recordLearningVideo(1146, this)">
+                                    <a href="https://www.youtube.com/watch?v=H6nhicGP0NQ" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">26.離職人員查詢功能</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1147" onclick="recordLearningVideo(1147, this)">
+                                    <a href="https://www.youtube.com/watch?v=-HwlzR_NXx4" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">27.新增公告</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1148" onclick="recordLearningVideo(1148, this)">
+                                    <a href="https://www.youtube.com/watch?v=SpXXrRp3Fdo" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">28.個人權限設定</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1149" onclick="recordLearningVideo(1149, this)">
+                                    <a href="https://www.youtube.com/watch?v=JRtkSxNIv0s" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">29.流程查詢</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1150" onclick="recordLearningVideo(1150, this)">
+                                    <a href="https://www.youtube.com/watch?v=WNKHWBpDp1A" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#666; width:90%; float:left; margin-top:-8px">30.流程修改多一關人事</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                                <li style="border-bottom:1px solid #ccc; margin:2px 0px; padding:3px" data-sn="1151" onclick="recordLearningVideo(1151, this)">
+                                    <a href="https://www.youtube.com/watch?v=7lbfa0jct80" target="_blank">
+                                        <i class="fa fa-lg fa-film" style="color:#000; float:left; width:7%"></i>
+                                        <span style="color:#99a9c6; width:90%; float:left; margin-top:-8px">31.表單進度查詢</span>
+                                        <div style="clear:both"></div>
+                                    </a>
+                                </li>
+                          </ul>
+                        </div>
+                    </div>
+-->
+                    <!---------------------------數據實績 chart ---------------------------------->
+
+                    <div class="panel-heading primary 標題框">
+                        <h3>
+                            <i class="fa fa-lg fa-pie-chart title_i"></i>
+                            <b class="title_b">數據實績</b>
+                        </h3>
+                    </div>
+                    <div class="panellist chart_part">
+                         <!--圖示說明-->
+                         <div class="chart_txt" align="center">
+                             <span style="color: #4BC0C0;">■ 成功解答率</span>&emsp;
+                             <span style="color: #FF6384;">■ 再提問率</span>
+                         </div>
+                         <!--圓餅圖-->
+                         <div style="width: 100%;">
+                             <!--左圓-->
+                             <div class="piediv">
+                                 <div>
+                                     <canvas id="myChart" aria-label="上週數據實績" role="img"></canvas>
+                                 </div>
+                                 <div class="piedata">
+                                     <div>上週</div>
+                                     <div>02/15~02/21</div>
+                                 </div>
+                             </div>
+                             <!--右圓-->
+                             <div class="piediv">
+                                 <div>
+                                     <canvas id="myChart2" aria-label="上週數據實績" role="img"></canvas>
+                                 </div>
+                                 <div class="piedata">
+                                     <div>近半個月</div>
+                                     <div>02/08~02/14</div>
+                                 </div>
+                             </div>
+                             <div style="clear: both"></div>
+                         </div>
+                    </div>
+                </div>
+                <div style="clear:both"></div>
+                <div style="text-align:center; color:#333; margin:12px 0px; font-size:17px; display:"> <img src="images/logo.png" width="31" height="22"> 凱發科技股份有限公司
+                        &nbsp;&nbsp;&copy;地址：台北市南港區忠孝東路6段21號8樓之6
+                        &nbsp;&nbsp;&nbsp;&nbsp;聯絡電話：02-7722-3313
+                        &nbsp;&nbsp;&nbsp;&nbsp;聯絡我們
+                        <button class="fa fa-envelope-o" style="box-shadow:none; width:30px; height:20px;" onClick="document.getElementById('mailcontext').style.display=''"></button>
+                </div>
+                <div id="mailcontext" style="width:80%; margin:0 auto; display:none">
+                    <h2 class="major">
+                        <span style="color:#000">聯絡我們</span>
+                        <span class="fa fa-envelope-o" style="color:#000"></span>
+                        <div style="border-bottom:2px solid #999"></div>
+                    </h2>
+                    <div>
+                        <span style="color:#000">姓名</span>
+                        <input type="text" name="name" id="name" style="color:#000">
+                    </div>
+                    <div>
+                        <span style="color:#000">Email</span>
+                        <input type="email" name="email" id="email" style="color:#000"/>
+                    </div>
+                    <div>
+                        <span style="color:#000">聯絡電話</span>
+                        <input type="text" name="phone" id="phone" style="color:#000"/>
+                    </div>
+                    <div>
+                        <span style="color:#000">內容</span>
+                        <textarea name="message" id="message" rows="4" style="color:#000"></textarea>
+                    </div>
+                    <div style="margin:5px 0px; text-align:center">
+                        <input type="submit" value="送出" style="background-color:#0080FF" onClick="document.getElementById('mailcontext').style.display='none'">
+                        <input type="submit" value="取消" style="background-color:#0080FF" onClick="document.getElementById('mailcontext').style.display='none'">
+                    </div>
+                </div>
+          </header>
+        </div>
+      </section>
+        </div>
+
+<!--滿意度調查區塊-->
+<div id="survey_div">
+  <div class="black_user" id="black_user" style="display: block;"></div> 
+  <div class="clickuser" id="survey" style="display: block;"> 
+ 	  <div id="btclose">
+          <button type="button" class="close" onclick="document.getElementById('black_user').style.display='none';document.getElementById('survey').style.display='none';">&times;</button>
+      </div>
+       <div class="表格外距">
+        <div class="title_h1">您之前提出的問題已處理完畢，請協助填寫問題回覆滿意度~</div>
+           <div id="desktable">
+             <table class="fixtablehead">
+                <tr class="fixtr">
+                    <td style="width: 9.9%;">單號</td>
+                    <td style="width: 11.9%;">摘要</td>
+                    <td>處理回覆</td>
+                    <td class="width79">我聽<br>懂了</td>
+                    <td class="width79">一知<br>半解</td>
+                    <td class="width79">模稜<br>兩可</td>
+                    <td class="width79">完全<br>不懂</td>
+                    <td class="width79">回答<br>錯誤</td>
+                    <td style="width: 1%;"></td>
+                </tr>
+            </table>
+            <div class="fixtablebodyBox">
+                <table class="fixtablebody" style="margin: 0px;">
+                  <tr>
+                    <td class="width140"><a href="https://utrac.uniong.com.tw/app/monad/detail.ug?questionNo=058_50_SW-569"  target="_blank">058_50_SW-569</a></td>
+                    <td class="width180" style="text-align: left;">協助上傳卡檔</td>
+                    <td style="text-align: left;">
+                        <dl>
+                          <dt>問題描述:</dt>
+                          <dd>因電腦硬碟壞了，無法自動上傳卡檔請協助手動匯入如附件發生原因:需協助匯入刷卡資料</dd>
+                          <dt>處理方式:</dt>
+                          <dd>已協助匯入完成，請人事人員確認，如有任何問題再煩請填單詢問，謝謝</dd>
+                          <span id="yu_sug">
+                              <dt style="margin: 5px 0px;">您的建議:</dt>
+                              <dd><textarea name="detail" rows="5" style="width: 100%;"></textarea></dd>
+                          </span>
+                        </dl>
+                    </td>
+                    <td class="width80"><input type="radio" name="rating1" onclick="document.getElementById('yu_sug').style.display='none';"></td>
+                    <td class="width80">
+                        <input type="radio" checked name="rating1" onclick="document.getElementById('yu_sug').style.display='';">
+                    </td>
+                    <td class="width80"><input type="radio" name="rating1" onclick="document.getElementById('yu_sug').style.display='';"></td>
+                    <td class="width80"><input type="radio" name="rating1" onclick="document.getElementById('yu_sug').style.display='';"></td>
+                    <td class="width80"><input type="radio" name="rating1" onclick="document.getElementById('yu_sug').style.display='';"></td>
+                  </tr>
+                  <tr>
+                    <td class="width140"><a href="https://utrac.uniong.com.tw/app/monad/detail.ug?questionNo=194_SW-973"  target="_blank">194_SW-973</a></td>
+                    <td class="width180" style="text-align: left;">文化園區人事由呂月鳳轉為洪韡珊，差勤批核還是會經過呂月鳳 請協助修改</td>
+                    <td style="text-align: left;">
+                        <dl>
+                           <dt>問題描述:</dt>
+                           <dd>文化園區人事由呂月鳳轉為洪韡珊，差勤批核還是會經過呂月鳳 請協助修改</dd>
+                           <dt>處理方式:</dt>
+                           <dd>已經協助將文化園區流程經過呂月鳳轉為洪韡珊，在請之前申請差假單請同仁重新申請，或是先行由舊人事進行批核，再請人事檢視確認，謝謝您。</dd>
+                        </dl>
+                    </td>
+                    <td class="width80"><input type="radio" name="rating2"></td>
+                    <td class="width80"><input type="radio" name="rating2"></td>
+                    <td class="width80"><input type="radio" name="rating2"></td>
+                    <td class="width80"><input type="radio" name="rating2"></td>
+                    <td class="width80"><input type="radio" name="rating2"></td>
+                  </tr>
+                  <tr>
+                    <td class="width140"><a href="https://utrac.uniong.com.tw/app/monad/detail.ug?questionNo=143_21_SW-125"  target="_blank">143_21_SW-125</a></td>
+                    <td class="width180" style="text-align: left;">3天同一公差事由代理人可否點不同2人</td>
+                    <td style="text-align: left;">
+                        <dl>
+                           <dt>問題描述:</dt>
+                           <dd>有同仁需申請7/20至7/22，共3天同一公差事由代理人可否點不同2人。</dd>
+                           <dt>處理方式:</dt>
+                           <dd>已與李先生電話說明，系統同筆差假申請僅可選擇一位代理人，如需分兩位代理人，請分兩張公差申請，請檢視確認謝謝您。</dd>
+                        </dl>
+                    </td>
+                    <td class="width80"><input type="radio" name="rating3"></td>
+                    <td class="width80"><input type="radio" name="rating3"></td>
+                    <td class="width80"><input type="radio" name="rating3"></td>
+                    <td class="width80"><input type="radio" name="rating3"></td>
+                    <td class="width80"><input type="radio" name="rating3"></td>
+                  </tr>
+                  <tr>
+                    <td class="width140"><a href="https://utrac.uniong.com.tw/app/monad/detail.ug?questionNo=111_11_MP-22"  target="_blank">111_11_MP-22</a></td>
+                    <td class="width180" style="text-align: left;">各單位主管人員如何查看所屬人員差勤動態？</td>
+                    <td style="text-align: left;">
+                        <dl>
+                          <dt>問題描述:</dt>
+                          <dd>各單位主管人員如何查看所屬人員差勤動態？</dd>
+                          <dt>處理方式:</dt>
+                          <dd>已與承辦人說明，可於差勤作業 / 其它所屬差勤資料查詢。</dd>
+                        </dl>
+                    </td>
+                    <td class="width80"><input type="radio" name="rating4"></td>
+                    <td class="width80"><input type="radio" name="rating4"></td>
+                    <td class="width80"><input type="radio" name="rating4"></td>
+                    <td class="width80"><input type="radio" name="rating4"></td>
+                    <td class="width80"><input type="radio" name="rating4"></td>
+                  </tr>
+                </table>
+            </div>
+         </div>
+         
+          <div id="RWD_table">
+            <table class="cell-table" style="width: 100%;">
+                <thead>
+                    <tr>
+                      <th width="12%" class="text-center">單號</th>
+                      <th width="12%" class="text-center">摘要</th>
+                      <th class="text-center">處理回覆</th>
+                      <th width="5%" class="text-center">我聽<br>懂了</th>
+                      <th width="5%" class="text-center">一知<br>半解</th>
+                      <th width="5%" class="text-center">模稜<br>兩可</th>
+                      <th width="5%" class="text-center">完全<br>不懂</th>
+                      <th width="5%" class="text-center">回答<br>錯誤</th>
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr class="cell_row">
+                       <td align="center">
+                           <div class="grayth cell_left">單號</div>
+                           <div class="cell_right">
+                              <a href="#">058_50_SW-569</a>
+                           </div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">摘要</div>
+                           <div class="cell_right">協助上傳卡檔</div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">處理回覆</div>
+                           <div class="cell_right">
+                               <dl>
+                                 <dt>問題描述:</dt>
+                                 <dd>因電腦硬碟壞了，無法自動上傳卡檔請協助手動匯入如附件發生原因:需協助匯入刷卡資料</dd>
+                                 <dt>處理方式:</dt>
+                                 <dd>已協助匯入完成，請人事人員確認，如有任何問題再煩請填單詢問，謝謝</dd>
+                                 <span id="you_suggest" style="display: none;">
+                                     <dt style="margin: 5px 0px;">您的建議:</dt>
+                                     <dd><textarea rows="8" class="textarea_css" style="width: 98%;"></textarea></dd>
+                                 </span>
+                               </dl>
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">我聽懂了</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating1" onclick="document.getElementById('you_suggest').style.display='none';">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">一知半解</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating1" onclick="document.getElementById('you_suggest').style.display='';">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">模稜兩可</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating1" checked onclick="document.getElementById('you_suggest').style.display='';">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">完全不懂</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating1" onclick="document.getElementById('you_suggest').style.display='';">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">回答錯誤</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating1" onclick="document.getElementById('you_suggest').style.display='';">
+                           </div>
+                       </td>
+                   </tr>
+                   <tr class="cell_row">
+                       <td align="center">
+                           <div class="grayth cell_left">單號</div>
+                           <div class="cell_right">
+                              <a href="#">194_SW-973</a>
+                           </div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">摘要</div>
+                           <div class="cell_right">文化園區人事由呂月鳳轉為洪韡珊，差勤批核還是會經過呂月鳳 請協助修改</div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">處理回覆</div>
+                           <div class="cell_right">
+                               <dl>
+                                 <dt>問題描述:</dt>
+                                 <dd>文化園區人事由呂月鳳轉為洪韡珊，差勤批核還是會經過呂月鳳 請協助修改</dd>
+                                 <dt>處理方式:</dt>
+                                 <dd>已經協助將文化園區流程經過呂月鳳轉為洪韡珊，在請之前申請差假單請同仁重新申請，或是先行由舊人事進行批核，再請人事檢視確認，謝謝您。</dd>
+                               </dl>
+                              </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">我聽懂了</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating2">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">一知半解</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating2">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">模稜兩可</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating2">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">完全不懂</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating2">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">回答錯誤</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating2">
+                           </div>
+                       </td>
+                   </tr>
+                   <tr class="cell_row">
+                       <td align="center">
+                           <div class="grayth cell_left">單號</div>
+                           <div class="cell_right">
+                              <a href="#">143_21_SW-125</a>
+                           </div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">摘要</div>
+                           <div class="cell_right">3天同一公差事由代理人可否點不同2人</div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">處理回覆</div>
+                           <div class="cell_right">
+                               <dl>
+                                 <dt>問題描述:</dt>
+                                 <dd>有同仁需申請7/20至7/22，共3天同一公差事由代理人可否點不同2人。</dd>
+                                 <dt>處理方式:</dt>
+                                 <dd>已與李先生電話說明，系統同筆差假申請僅可選擇一位代理人，如需分兩位代理人，請分兩張公差申請，請檢視確認謝謝您。</dd>
+                               </dl>
+                              </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">我聽懂了</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating3">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">一知半解</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating3">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">模稜兩可</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating3">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">完全不懂</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating3">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">回答錯誤</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating3">
+                           </div>
+                       </td>
+                   </tr>
+                   <tr class="cell_row">
+                       <td align="center">
+                           <div class="grayth cell_left">單號</div>
+                           <div class="cell_right">
+                              <a href="#">111_11_MP-22</a>
+                           </div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">摘要</div>
+                           <div class="cell_right">各單位主管人員如何查看所屬人員差勤動態？</div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">處理回覆</div>
+                           <div class="cell_right">
+                               <dl>
+                                 <dt>問題描述:</dt>
+                                 <dd>各單位主管人員如何查看所屬人員差勤動態？</dd>
+                                 <dt>處理方式:</dt>
+                                 <dd>已與承辦人說明，可於差勤作業 / 其它所屬差勤資料查詢。</dd>
+                               </dl>
+                              </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">我聽懂了</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating4">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">一知半解</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating4">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">模稜兩可</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating4">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">完全不懂</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating4">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">回答錯誤</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating4">
+                           </div>
+                       </td>
+                   </tr>
+                   <tr class="cell_row">
+                       <td align="center">
+                           <div class="grayth cell_left">單號</div>
+                           <div class="cell_right">
+                              <a href="#">111_11_MP-22</a>
+                           </div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">摘要</div>
+                           <div class="cell_right">各單位主管人員如何查看所屬人員差勤動態？</div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">處理回覆</div>
+                           <div class="cell_right">
+                               <dl>
+                                 <dt>問題描述:</dt>
+                                 <dd>各單位主管人員如何查看所屬人員差勤動態？</dd>
+                                 <dt>處理方式:</dt>
+                                 <dd>已與承辦人說明，可於差勤作業 / 其它所屬差勤資料查詢。</dd>
+                               </dl>
+                              </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">我聽懂了</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating5">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">一知半解</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating5">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">模稜兩可</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating5">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">完全不懂</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating5">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">回答錯誤</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating5">
+                           </div>
+                       </td>
+                   </tr>
+                </tbody>
+            </table>
+         </div>
+         <div align="center" style="margin-top:15px;">
+             <button type="button" class="btn-primary" style="width:80px; font-size:14px" onclick="document.getElementById('black_user').style.display='none';document.getElementById('survey').style.display='none';">送出</button>
+         </div>
+	   </div>
+  </div>
+</div>
+<!--chart.js 圖表顯示-->
+ <script>
+    //上週圖表
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['再提問率', '成功解答率'],
+            datasets: [{
+                label: '# of answerrate',
+                data: [2.8, 97.2],
+                backgroundColor: [
+                    '#FF6384',
+                    '#4BC0C0',
+                ],
+                borderColor: "#fff",
+                borderWidth: 1
+            }]
+        },
+        options: {
+            //滑鼠滑過不顯示註解
+//            tooltips: {
+//                enabled:false
+//            },
+            //與RWD相關
+            maintainAspectRatio: false,
+            //滑鼠滑過顯示文字跟%
+            tooltips: {
+                callbacks: {
+                    label: function (tooltipItem, data) {
+                        return data.labels[tooltipItem.index] + ' (' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] + '%)';
+                    }
+                }
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="' + chart.id + '-legend">');
+
+                var data = chart.data;
+                var datasets = data.datasets;
+                var labels = data.labels;
+
+                if (datasets.length) {
+                    for (var i = 0; i < datasets[0].data.length; ++i) {
+                        text.push('<li><span style="background-color:' + datasets[0].backgroundColor[i] + '"></span>');
+                        if (labels[i]) {
+                            text.push(labels[i] + ' (' + datasets[0].data[i] + '%)');
+                        }
+                        text.push('</li>');
+                    }
+                }
+                text.push('</ul>');
+                return text.join('');
+            },
+           //標籤圖示隱藏
+            legend: {
+                display: false
+            },
+            
+            responsive: true,
+            scales: {
+              //X軸資料：gridlines是框線
+                xAxes: [{
+                    display: false,
+                    gridLines: {
+                        display:false
+                    }
+                }],
+              //Y軸資料：gridlines是框線,ticks是比例尺
+                yAxes: [{
+                    display: false,
+                    gridLines: {
+                        display:false
+                    },
+                    ticks: {
+                        display:false
+//                      beginAtZero: true
+                    },
+                }]
+            },
+           plugins: {
+              labels: [
+                  {
+                     render: 'percentage',
+                     precision: 2,
+                     fontColor: ['white', 'black'],
+                     fontSize: 20
+                  }
+              ]
+            }, 
+        }
+    });
+    //近半個月圖表
+    var ctx = document.getElementById('myChart2');
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['再提問率', '成功解答率'],
+            datasets: [{
+                label: '# of answerrate',
+                data: [3.6, 96.4],
+                backgroundColor: [
+                    '#FF6384',
+                    '#4BC0C0',
+                ],
+                borderColor: "#fff",
+                borderWidth: 1
+            }]
+        },
+        options: {
+            //滑鼠滑過不顯示註解
+//            tooltips: {
+//                enabled:false
+//            },
+            //與RWD相關
+            maintainAspectRatio: false,
+            //滑鼠滑過顯示文字跟%
+            tooltips: {
+                callbacks: {
+                    label: function (tooltipItem, data) {
+                        return data.labels[tooltipItem.index] + ' (' + data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index] + '%)';
+                    }
+                }
+            },
+            legendCallback: function (chart) {
+                var text = [];
+                text.push('<ul class="' + chart.id + '-legend">');
+
+                var data = chart.data;
+                var datasets = data.datasets;
+                var labels = data.labels;
+
+                if (datasets.length) {
+                    for (var i = 0; i < datasets[0].data.length; ++i) {
+                        text.push('<li><span style="background-color:' + datasets[0].backgroundColor[i] + '"></span>');
+                        if (labels[i]) {
+                            text.push(labels[i] + ' (' + datasets[0].data[i] + '%)');
+                        }
+                        text.push('</li>');
+                    }
+                }
+                text.push('</ul>');
+                return text.join('');
+            },
+           //標籤圖示隱藏
+            legend: {
+                display: false
+            },
+            
+            responsive: true,
+            scales: {
+              //X軸資料：gridlines是框線
+                xAxes: [{
+                    display: false,
+                    gridLines: {
+                        display:false
+                    }
+                }],
+              //Y軸資料：gridlines是框線,ticks是比例尺
+                yAxes: [{
+                    display: false,
+                    gridLines: {
+                        display:false
+                    },
+                    ticks: {
+                        display:false
+//                      beginAtZero: true
+                    },
+                }]
+            },
+            plugins: {
+              labels: [
+                  {
+                     render: 'percentage',
+                     precision: 2,
+                     fontColor: ['white', 'black'],
+                     fontSize: 20
+                  }
+              ]
+            },
+            
+        }
+    });
+</script>      
+        
+</body>
+</html>
