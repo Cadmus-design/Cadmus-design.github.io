@@ -64,7 +64,8 @@
             text-align: center;
             padding: 0px;
             font-size: 20px;
-            background-color: #FFFF00;
+            /*background-color: #FFFF00;*/
+            background-color: #c6f249;
          }
          table tbody th,table tbody td{
             padding: 0px;
@@ -89,9 +90,50 @@
          .line-b-0{
             border-bottom: none !important; 
          }
-     </style>   
+        /*標題*/
+        .title_i{
+/*            margin-left: 3px;*/
+            font-size: 22px;
+        }
+        .orgbg{
+            background-color: #f59330 !important;
+            margin: 0px;
+            color: #fff;
+            width: 190px;
+            border-radius: 3px;
+            font-size: 22px;
+            padding: 5px 2px;
+            font-weight: bold;
+        }
+          .listcontent li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+     </style>
+    <!-- 20210310 begin-->
+    <script>
+        dataLayer = [];
+       dataLayer.push({'userID': '${sessionScope.USER.id}'});
+    </script>
+    <!-- 20210310 end-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109843959-2"></script>
+    <!-- 20210302 GTM begin -->
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-P3SZDW3');</script>
+        <!-- End Google Tag Manager -->
+    <!-- 20120302 GTM end -->
    </head>
    <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3SZDW3"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
           <div id="page-wrapper">         
             <!-- Header -->
             <header id="header">
@@ -129,7 +171,7 @@
                       <!--麵包屑-->
                       <div id="bread_crumbs" style="margin-top: 55px;">
                         <ul class="listcontent" style="margin: 0px;padding-left: 0px;">
-                            <li class="item">基本操作說明</li>
+                            <li class="orgbg"><i class="fa fa-lg fa-hand-pointer-o title_i"></i>&nbsp;基本操作教學</li>
                         </ul>
                       </div>
                       <!--文件表格-->
@@ -273,7 +315,7 @@
                       <!--麵包屑-->
                       <div id="bread_crumbs" style="margin-top: 55px;">
                         <ul class="listcontent" style="margin: 0px;padding-left: 0px;">
-                            <li class="item" id="morden-qa">常見操作問題</li>
+                            <li class="orgbg" id="morden-qa"><i class="fa fa-lg fa-question-circle-o title_i"></i>&nbsp;常見操作問題</li>
                         </ul>
                       </div>
                       <!--文件表格-->
