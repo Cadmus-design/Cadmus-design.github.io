@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/報到離職.dwt" codeOutsideHTMLIsLocked="false" -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>小幫手</title>
+    <!-- InstanceEndEditable -->
+    <!-- Bootstrap -->
+    
+    <script src="js/jquery_new.js"></script>
+    <script src="iframe/js/bootstrap.min.js"></script>
+    <link href="iframe/css/bootstrap.min.css" rel="stylesheet">
+    <!-- vue-treeselect-->
+    <script src="iframe/js/vue.min.js"></script>
+    <script src="iframe/js/vue-treeselect.min.js"></script>
+    <link rel="stylesheet" href="iframe/css/vue-treeselect.min.css">
+    
+    <link rel="stylesheet" href="icon/css/fontawesome-all.css">
+    <link rel="stylesheet" href="iframe/css/style.css">
+    <link rel="stylesheet" href="iframe/css/slickbar.css">
+ </head>
+<body style="background-color: transparent;">
+    <!--問題單內容-->
+<div id="問題單內容" class="modal" role="dialog" data-backdrop="static" data-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-lg" style="width: 95%; max-width: 1300px">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header"><button type="button" class="close" data-dismiss="modal" role="button" aria-label="關閉視窗">&times;</button></div>
+                <div class="modal-body">                   
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">                           
+                            <div>
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                              <span class="glyphicon glyphicon-exclamation-sign"></span>&nbsp;處理進度
+                                              <a style="float: right" href="#" data-toggle="modal" data-target="#問題單查詢"><i class="fas fa-search"></i></a>
+                                          </a>
+                                        </h4>
+                                      </div>
+                                      <div id="collapse1" class="panel-collapse collapse">
+                                        <div class="panel-body panel_divwidth">
+                                            <table width="100%" class="cell-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="60" class="grayth text-center">開單者</th>
+                                                        <th width="80" class="grayth text-center">功能類別</th>
+                                                        <th class="grayth text-center">問題說明</th>
+                                                        <th class="grayth text-center">狀態</th>
+                                                        <th width="80" class="grayth text-center">處理人員</th>
+                                                        <th class="grayth text-center">問題單號</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="cell_row">
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">開單者</div>
+                                                            <div class="cell_right">林曉鈴</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">功能類別</div>
+                                                            <div class="cell_right">其他</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">問題說明</div>
+                                                            <div class="cell_right text-left">請問操作手冊可去哪邊下載?</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">狀態</div>
+                                                            <div class="cell_right">Open</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">處理人員</div>
+                                                            <div class="cell_right">郭儀伶</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">問題單號</div>
+                                                            <div class="cell_right"><a href="https://www.uniong.com.tw/internal/index/" target="_blank" title="Utrac問題單反應系統">134_85_SW-200</a></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="cell_row">
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">開單者</div>
+                                                            <div class="cell_right">林曉鈴</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">功能類別</div>
+                                                            <div class="cell_right">其他</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">問題說明</div>
+                                                            <div class="cell_right text-left">請問操作手冊可去哪邊下載?</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">狀態</div>
+                                                            <div class="cell_right">Open</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">處理人員</div>
+                                                            <div class="cell_right">郭儀伶</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">問題單號</div>
+                                                            <div class="cell_right"><a href="https://www.uniong.com.tw/internal/index/" target="_blank" title="Utrac問題單反應系統">134_85_SW-200</a></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="cell_row">
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">開單者</div>
+                                                            <div class="cell_right">林曉鈴</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">功能類別</div>
+                                                            <div class="cell_right">其他</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">問題說明</div>
+                                                            <div class="cell_right text-left">請問操作手冊可去哪邊下載?</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">狀態</div>
+                                                            <div class="cell_right">Open</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">處理人員</div>
+                                                            <div class="cell_right">郭儀伶</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left" style="width:100px;">問題單號</div>
+                                                            <div class="cell_right"><a href="https://www.uniong.com.tw/internal/index/" target="_blank" title="Utrac問題單反應系統">134_85_SW-200</a></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="cell_row">
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">開單者</div>
+                                                            <div class="cell_right">林曉鈴</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">功能類別</div>
+                                                            <div class="cell_right">其他</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">問題說明</div>
+                                                            <div class="cell_right text-left">請問操作手冊可去哪邊下載?</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">狀態</div>
+                                                            <div class="cell_right">Open</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">處理人員</div>
+                                                            <div class="cell_right">郭儀伶</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">問題單號</div>
+                                                            <div class="cell_right"><a href="https://www.uniong.com.tw/internal/index/" target="_blank" title="Utrac問題單反應系統">134_85_SW-200</a></div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="cell_row">
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">開單者</div>
+                                                            <div class="cell_right">林曉鈴</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">功能類別</div>
+                                                            <div class="cell_right">其他</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">問題說明</div>
+                                                            <div class="cell_right text-left">請問操作手冊可去哪邊下載?</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">狀態</div>
+                                                            <div class="cell_right">Open</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">處理人員</div>
+                                                            <div class="cell_right">郭儀伶</div>
+                                                        </td>
+                                                        <td align="center">
+                                                            <div class="grayth cell_left">問題單號</div>
+                                                            <div class="cell_right"><a href="https://www.uniong.com.tw/internal/index/" target="_blank" title="Utrac問題單反應系統">134_85_SW-200</a></div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><span class="glyphicon glyphicon-comment"></span>&nbsp;您之前提出的問題已處理完畢，請協助撥冗填寫以下滿意度調查，謝謝！</a>
+                                        </h4>
+                                      </div>
+                                      <div id="collapse2" class="panel-collapse collapse in">
+                                        <div class="panel-body panel_divwidth">
+                                           <div class="panel panel-info">
+                                              <div class="panel-heading">問題單號：<a href="https://www.uniong.com.tw/internal/index/" target="_blank" title="Utrac問題單反應系統">134_85_SW-200</a>，狀態：Closed</div>
+                                              <div class="panel-body">
+                                                  <dl>
+                                                      <dt>問題回覆滿意度：</dt>
+                                                      <dd>
+                                                        <label><input type="radio" name="satisfaction" onclick="document.getElementById('feeback').style.display='none';">&ensp;&nbsp;我聽懂了&ensp;</label>
+                                                        <label><input type="radio" name="satisfaction" onclick="document.getElementById('feeback').style.display='';">&ensp;&nbsp;一知半解&ensp;</label>
+                                                        <label><input type="radio" name="satisfaction" onclick="document.getElementById('feeback').style.display='';">&ensp;&nbsp;模稜兩可&ensp;</label>
+                                                        <label><input type="radio" name="satisfaction" onclick="document.getElementById('feeback').style.display='';">&ensp;&nbsp;完全不懂&ensp;</label>
+                                                        <label><input type="radio" name="satisfaction" onclick="document.getElementById('feeback').style.display='';">&ensp;&nbsp;回答錯誤&ensp;</label>
+                                                      </dd>
+                                                      <span id="feeback" style="display: none;">
+                                                      <dt>您的建議：</dt>
+                                                      <dd>
+                                                        <textarea cols="30" rows="10" class="ug_commonform"></textarea>
+                                                      </dd>
+                                                      </span>
+                                                  </dl>
+                                              </div>
+                                            </div>
+                                            <div class="panel panel-info">
+                                              <div class="panel-heading">問題單號：<a href="https://www.uniong.com.tw/internal/index/" target="_blank" title="Utrac問題單反應系統">134_85_SW-200</a>，狀態：Closed</div>
+                                              <div class="panel-body">
+                                                  <dl>
+                                                      <dt>問題回覆滿意度：</dt>
+                                                      <dd>
+                                                        <label><input type="radio" name="satisfaction1" onclick="document.getElementById('feeback1').style.display='none';">&ensp;&nbsp;我聽懂了&ensp;</label>
+                                                        <label><input type="radio" name="satisfaction1" onclick="document.getElementById('feeback1').style.display='';">&ensp;&nbsp;一知半解&ensp;</label>
+                                                        <label><input type="radio" name="satisfaction1" onclick="document.getElementById('feeback1').style.display='';">&ensp;&nbsp;模稜兩可&ensp;</label>
+                                                        <label><input type="radio" name="satisfaction1" onclick="document.getElementById('feeback1').style.display='';">&ensp;&nbsp;完全不懂&ensp;</label>
+                                                        <label><input type="radio" name="satisfaction1" onclick="document.getElementById('feeback1').style.display='';">&ensp;&nbsp;回答錯誤&ensp;</label>
+                                                      </dd>
+                                                      <span id="feeback1" style="display: none;">
+                                                      <dt>您的建議：</dt>
+                                                      <dd>
+                                                        <textarea cols="30" rows="10" class="ug_commonform"></textarea>
+                                                      </dd>
+                                                      </span>
+                                                  </dl>
+                                              </div>
+                                            </div>
+                                            <div class="panel panel-info">
+                                              <div class="panel-heading">問題單號：<a href="https://www.uniong.com.tw/internal/index/" target="_blank" title="Utrac問題單反應系統">134_85_SW-200</a>，狀態：Closed</div>
+                                              <div class="panel-body">
+                                                  <dl>
+                                                      <dt>問題回覆滿意度：</dt>
+                                                      <dd>
+                                                        <label><input type="radio" name="satisfaction2" onclick="document.getElementById('feeback2').style.display='none';">&ensp;&nbsp;我聽懂了&ensp;</label>
+                                                        <label><input type="radio" name="satisfaction2" onclick="document.getElementById('feeback2').style.display='';">&ensp;&nbsp;一知半解&ensp;</label>
+                                                        <label><input type="radio" name="satisfaction2" onclick="document.getElementById('feeback2').style.display='';">&ensp;&nbsp;模稜兩可&ensp;</label>
+                                                        <label><input type="radio" name="satisfaction2" onclick="document.getElementById('feeback2').style.display='';">&ensp;&nbsp;完全不懂&ensp;</label>
+                                                        <label><input type="radio" name="satisfaction2" onclick="document.getElementById('feeback2').style.display='';">&ensp;&nbsp;回答錯誤&ensp;</label>
+                                                      </dd>
+                                                      <span id="feeback2" style="display: none;">
+                                                      <dt>您的建議：</dt>
+                                                      <dd>
+                                                        <textarea cols="30" rows="10" class="ug_commonform"></textarea>
+                                                      </dd>
+                                                      </span>
+                                                  </dl>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center bt_area_margin">
+                                            <button name="submit_sent" type="button" class="btn btn-primary">送出</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>                                
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <div class="panel panel-default" style="max-height: 600px;">
+                               <h4 class="sr-only">建立問題單</h4>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center" colspan="2"><i class="fas fa-edit"></i>&nbsp;建立問題單</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th width="130" class="text-right"><span class="ps">*</span>發生問題<br>人員姓名</th>
+                                            <td>
+                                                <div id="selectunit" class="option_200" style="display: inline-block;">
+                                                    <treeselect :options="options" placeholder="請選擇" v-model="value" style="margin-bottom: 0px;"/>
+                                                </div>
+                                                <div id="selectpeople" class="option_200" style="display: inline-block;">
+                                                    <treeselect :options="options" placeholder="請選擇" v-model="value" style="margin-bottom: 0px;" />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th width="130" class="text-right"><span class="ps">*</span>問題說明</th>
+                                            <td>
+                                                <div class="ps_blue">【請說明發生問題或缺少的欄位名稱，並提供正確、需要新增的項目】</div>
+                                                <textarea name="" id="" aria-label="問題說明(必填)" cols="30" rows="10" class="ug_commonform" style="height: 80px"></textarea>
+                                                <div class="ps">(目前已輸入0個字，最多可輸入300個字。)</div>
+                                                <div>
+                                                    <ul class="ex_color" style="margin-left: -20px;">
+                                                        <li>範例(一)：新進人員-林○○送出報到程序表後，才發現基本資料的「派令文號」填寫錯誤，正確為10911190001，請問該如何修改?</li>
+                                                        <li style="margin-top: 5px;">範例(二)：承辦人-李一科在批核報到申請時，才發現報到人員-凱○○缺少以下流程:單位: 秘書室，類別:總務事項，業務內容: 門禁卡申請，承辦人: 林OO，分機:8655
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+<!--
+                                        <tr>
+                                            <th width="130" class="text-right"><span class="ps">*</span>摘要</th>
+                                            <td><input type="text" aria-label="摘要(必填)" class="ug_commonform" />
+                                                <div class="ps">(目前已輸入0個字，最多可輸入50個字。)</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th width="130" class="text-right"><span class="ps">*</span>細節</th>
+                                            <td><textarea name="" id="" aria-label="細節(必填)" cols="30" rows="10" class="ug_commonform" style="height: 80px"></textarea><div class="ps">(目前已輸入0個字，最多可輸入300個字。)</div></td>
+                                        </tr>
+                                        <tr>
+                                            <th width="130" class="text-right"><span class="ps">*</span>系統別</th>
+                                            <td>
+                                                <div class="ug_celltd">
+                                                    <select name="" id="" aria-label="系統別(必填)" class="ug_commonform option_200">
+                                                        <option value="" selected>請選擇</option>
+                                                        <option value="">差勤</option>
+                                                        <option value="">派車</option>
+                                                        <option value="">領物</option>
+                                                        <option value="">會議室</option>
+                                                        <option value="">報到離退</option>
+                                                    </select>                                                    
+                                                </div>
+                                            </td>
+                                        </tr>
+-->
+                                        <tr>
+                                            <th width="130" class="text-right"><span class="ps">*</span>功能類別</th>
+                                            <td>
+                                                <div class="ug_celltd">
+                                                    <select aria-label="功能類別(必填)" class="ug_commonform option_200">
+                                                        <option>報到申請</option>
+                                                        <option selected>報到人員維護</option>
+                                                        <option>報到範本維護</option>
+                                                        <option>離職申請</option>
+                                                        <option>離職人員維護</option>
+                                                        <option>離職範本維護</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th width="130" class="text-right">檔案上傳</th>
+                                            <td>
+                                                <div name="fileinput" class="input-group" style="max-width: 350px;">
+                                                <label class="input-group-btn">
+                                                    <span class="btn btn-primary">
+                                                        上傳檔案… <input type="file" class="sr-only" value="" aria-label="請上傳檔案" multiple>
+                                                    </span>
+                                                </label>
+                                                <input type="text" class="form-control" aria-label="請上傳檔案" readonly disabled="" style="max-width: 250px;">
+                                            </div>
+                                                <div class="ps">(檔案不得超過10M)</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-center bt_area_margin">
+                                <button type="button" class="btn btn-default">清除</button>
+                                <button name="submit_sent" type="button" class="btn btn-primary">送出</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+               
+            </div>
+        </div>
+    </div>
+<!-- 問題單查詢功能-->
+<div id="問題單查詢" class="modal" role="dialog" data-backdrop="static">
+        <div class="modal-dialog-alignment">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" role="button" aria-label="關閉視窗">&times;</button>
+                    </div>
+                    <div class="modal-body">                        
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center" colspan="2"><i class="fas fa-search"></i>&nbsp;查詢條件</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+<!--
+                                    <tr>
+                                        <th class="text-right" style="vertical-align: middle">系統別</th>
+                                        <td>
+                                            <div class="ug_celltd">
+                                                <select name="" id="" aria-label="系統別(必填)" class="ug_commonform" style="width: 200px;">
+                                                        <option value="" selected>請選擇</option>
+                                                        <option value="">差勤</option>
+                                                        <option value="">派車</option>
+                                                        <option value="">領物</option>
+                                                        <option value="">會議室</option>
+                                                        <option value="">報到離退</option>
+                                                    </select>  
+                                            </div>
+                                        </td>
+                                    </tr>
+-->
+                                    <tr>
+                                        <th class="text-right">功能類別</th>
+                                        <td>
+                                            <div class="ug_celltd">
+                                               <select aria-label="功能類別(必填)" class="ug_commonform option_200">
+                                                    <option>報到申請</option>
+                                                    <option selected>報到人員維護</option>
+                                                    <option>報到範本維護</option>
+                                                    <option>離職申請</option>
+                                                    <option>離職人員維護</option>
+                                                    <option>離職範本維護</option>
+                                                </select>
+<!--
+                                                <select aria-label="功能類別(必填)" class="ug_commonform" style="width: 200px;">
+                                                        <optgroup label="首頁">
+                                                            <option>首頁</option>
+                                                        </optgroup> 
+                                                        <optgroup label="差勤作業">
+                                                            <option>一般請假</option>
+                                                            <option>週期請假</option>
+                                                            <option>公假</option>
+                                                            <option>婚娩陪產前假</option>
+                                                            <option>喪、流產假</option>
+                                                            <option>多次請假</option>
+                                                            <option>群組請假</option>
+                                                            <option>出國或赴大陸</option>
+                                                            <option>補休申請</option>
+                                                            <option>一般加班</option>
+                                                            <option>週期加班</option>
+                                                            <option>群組多次</option>
+                                                            <option>專案加班</option>
+                                                            <option>公差</option>
+                                                            <option>公出</option>
+                                                            <option>多次公差</option>
+                                                            <option>群組公差</option>
+                                                            <option>群組公出</option>
+                                                        </optgroup>
+                                                    </select>
+-->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-right">狀態</th>
+                                        <td>
+                                            <div class="ug_celltd">
+                                                <select name="" id="" class="ug_commonform option_200">
+                                                    <option value="" selected>不限</option>
+                                                    <option value="">Open</option>
+                                                    <option value="">Processing</option>
+                                                    <option value="">Support</option>
+                                                    <option value="">Desk</option>
+                                                    <option value="">Closed</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-right">關鍵字</th>
+                                        <td><input type="text" class="ug_commonform" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="grayth text-center" colspan="2">
+                                            <button type="button" class="btn btn-primary">查詢</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blackall" id="blackall" style="display: block;"></div>
+    <div class="sideall" id="sideall">
+                     <div class="sidebar" id="sidebar">
+                        <div class="sidetext">
+                              <div class="panel panel-default orgborder">
+<!--                                  <div class="panel-heading orgbg orgborder">您現在所在的功能為「報到人員維護」，您是想問這個功能的問題嗎?</div>-->
+                                  <div class="panel-body panel_text">
+<!--
+                                      <ol type="1">
+                                          <li><a href="#" class="alert-link" onclick="document.getElementById('answeryes').style.display='';document.getElementById('answerno').style.display='none';">是</a></li>
+                                          <li><a href="#" class="alert-link" onclick="document.getElementById('answeryes').style.display='none';document.getElementById('answerno').style.display='';">否</a></li>
+                                      </ol>
+-->
+<!--                                      <div id="answeryes" style="display: none;">-->
+                                          <div class="alert alert-success">
+                                              <b>基本操作教學：</b>
+                                                <ol type="1" style="margin-top: 10px;">
+                                                    <li><a href="../客服網站/helper_PDF_index.html" class="alert-link" target="_blank">新進人員報到，如何在系統上新增並給予職位</a></li>
+                                                    <li><a href="../客服網站/helper_PDF_index.html" class="alert-link" target="_blank">當有同仁要離職，要如何在系統上操作?</a></li>
+                                                    <li><a href="../客服網站/helper_PDF_index.html" class="alert-link" target="_blank">同仁離職又復職，如何操作?</a></li>
+                                                    <li>
+                                                       <a href="#" class="alert-link" onclick="document.getElementById('text_ans').style.display='';">我有其他問題！</a>
+                                                        <div id="text_ans" class="text_ans" style="display: none;">答：請至<button type="button" class="btn btn-link" title="問題單反應(展開視窗)" onclick="window.open('https://www.uniong.com.tw/internal/index/')">【問題單填寫功能】</button>說明您遇到的問題，客服人員將會盡快為您處理，造成您的不便，敬請見諒，謝謝！</div>
+                                                    </li>
+                                                </ol>
+                                          </div>
+<!--                                      </div>-->
+<!--
+                                      <div id="answerno" style="display: none;">
+                                          <div class="alert alert-warning">
+                                                 <dl>
+                                                   <dt>請選擇您要詢問的功能，再開啟小幫手! </dt>
+                                                       <dd><span class="glyphicon glyphicon-share-alt"></span><a href="onboard_group_cog.html">&ensp;報到範本維護</a></dd>
+                                                       <dd><span class="glyphicon glyphicon-share-alt"></span><a href="resign_quitpeople_cog.html">&ensp;離職人員維護</a></dd>
+                                                       <dd><span class="glyphicon glyphicon-share-alt"></span><a href="resign_group_cog.html">&ensp;離職範本維護</a></dd>
+                                                 </dl>                                                
+                                          </div>
+                                      </div>
+-->
+                                  </div>
+                                  
+                              </div>
+                              <div class="panel panel-default orgborder">
+                                  <div class="panel-body panel_text">
+                                          <div class="alert alert-success">
+                                              <b>常見操作問題：</b>
+                                                <ol type="1" style="margin-top: 10px;">
+                                                    <li><a href="../客服網站/helper_PDF_index.html" class="alert-link" target="_blank">同仁基本資料無法修改?</a></li>
+                                                    <li><a href="../客服網站/helper_PDF_index.html" class="alert-link" target="_blank">新進同仁基本資料完成後查無此人</a></li>
+                                                    <li>
+                                                       <a href="#" class="alert-link" onclick="document.getElementById('text_ans_1').style.display='';">我有其他問題！</a>
+                                                       <div id="text_ans_1" class="text_ans" style="display: none;">答：請至
+                                                        <button type="button" class="btn btn-link" title="問題單反應(展開視窗)" onclick="window.open('https://www.uniong.com.tw/internal/index/')">【問題單填寫功能】</button>
+                                                       【問題單填寫功能】說明您遇到的問題，客服人員將會盡快為您處理，造成您的不便，敬請見諒，謝謝！</div>
+                                                    </li>
+                                                    <!--若沒有任何個案，顯示以下區塊-->
+                                                    <li>
+                                                       <div><a href="#" class="alert-link" onclick="window.open('https://www.uniong.com.tw/internal/index/')">目前暫無教學個案，若有操作問題請開立問題單</a></div>
+                                                    </li>
+                                                </ol>
+                                          </div>
+                                  </div>
+                              </div>
+                        </div>
+                     </div> 
+                     <div class="askbtn" id="askbtn"><i class="fas fa-times"></i> 關閉</div>
+                  </div> 
+<!--側邊訊息拖曳-->
+<script type="text/javascript">
+	  $('.askbtn').on("click",function(){
+		   $('.sidebar').toggleClass('side');
+//           $("#display_helper",parent.document).addClass('nodiv');
+	  });      
+//	window.onload=function() 
+//	{ 
+//	 var blackall=document.getElementById("blackall");  
+//	 var askbtn=document.getElementById("askbtn");  
+//	 askbtn.onclick=function() 
+//	 { 
+//	  blackall.style.display="none"; 
+//	  askbtn.style.display="none";
+//	 } 
+//	} 
+	</script>
+	<script>
+        // register the component
+        Vue.component('treeselect', VueTreeselect.Treeselect)
+        new Vue({
+            el: '#selectpeople',
+            data: {
+                // define the default value
+                value: null,
+                // define options
+                options:
+
+                    [
+                    {
+                        id: '凱大發 (1111)',
+                        label: '凱大發 (1111)',
+                    }, {
+                        id: '凱一技 (1010)',
+                        label: '凱一技 (1010)',
+                    }, {
+                        id: '葉噗噗 (1220)',
+                        label: '葉噗噗 (1220)',
+                    },
+                 {
+                        id: '陳○○ (1310)',
+                        label: '陳○○ (1310)',
+                    },
+                ],
+
+            },
+        });
+        new Vue({
+            el: '#selectunit',
+            data: {
+                // define the default value
+                value: null,
+                // define options
+                options:
+
+                    [
+                    {
+                        id: '客服中心',
+                        label: '客服中心',
+                    }, {
+                        id: '人事室',
+                        label: '人事室',
+                    }, {
+                        id: '秘書室',
+                        label: '秘書室',
+                    },
+                 {
+                        id: '資訊中心',
+                        label: '資訊中心',
+                    },
+                ],
+
+            },
+        })
+    </script>
+</body>
+
+<!-- InstanceEnd --></html>

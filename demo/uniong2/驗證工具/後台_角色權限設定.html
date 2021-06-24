@@ -1,0 +1,1957 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/驗證工具.dwt" codeOutsideHTMLIsLocked="false" --><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- InstanceBeginEditable name="Edit_title" -->
+    <title>角色權限設定</title>
+    <!-- InstanceEndEditable -->
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery_new.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!------------------------ Bootstrap nav ----------------------->
+    <link rel="stylesheet" href="css/bootstrap-submenu.min.css">
+    <script src="js/bootstrap-submenu.min.js"></script>
+    <script type="text/javascript">
+        //$('[data-submenu]').submenupicker();
+        $(function() {
+            // Dropdown fix
+            $('.dropdown > a[tabindex]').keydown(function(event) {
+                // 13: Return
+                if (event.keyCode == 13) {
+                    $(this).dropdown('toggle');
+                }
+            });
+            $('.dropdown-submenu > a').submenupicker();
+        });
+    </script><!-- bootstrap timepicker -->
+	<link href="css/bootstrap-datetimepicker.css" rel="stylesheet" />
+	<script src="js/moment.js" type="text/javascript"></script>
+	<script src="js/bootstrap-datetimepicker.min.js"></script>
+	<!-- 時間 -->
+	<script type="text/javascript">
+        $(function() {
+            $('.time').datetimepicker({
+                format: 'HH:mm'
+            });
+        });
+    </script><!-- vue-treeselect-->
+    <script src="js/vue.min.js"></script>
+    <script src="js/vue-treeselect.min.js"></script>
+    <link rel="stylesheet" href="css/vue-treeselect.min.css">
+    
+    <!--  jquery.stickytable -->
+    <link rel="stylesheet" href="css/jquery.stickytable.min.css">
+    <script src="js/jquery.stickytable.min.js" type="text/javascript"></script>
+    
+    <!-- sweetalert -->
+    <script src="js/sweetalert2.all.js"></script>
+    <script src="js/promise.min.js"></script>
+     <!-- 檢核文字 -->
+    <script type="text/javascript">
+        $(function() {
+             $("[name='確認驗證']").click(function() {
+                swal({
+                    title: '是否確認驗證全部機關、全部單位？',
+
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#DD6B55',
+                    confirmButtonText: '確定'
+                }).then(function(result) {
+                    if (result.value) {
+                        swal(
+                            '已確認驗證',
+                            '',
+                            'success'
+                        )
+                    }
+                })
+            }); 
+			$("[name='確認驗證2']").click(function() {
+                swal({
+                    title: '是否確認驗證全部機關、全部單位及全部人員？',
+
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#DD6B55',
+                    confirmButtonText: '確定'
+                }).then(function(result) {
+                    if (result.value) {
+                        swal(
+                            '已確認驗證',
+                            '',
+                            'success'
+                        )
+                    }
+                })
+            }); 
+			$("[name='確認驗證3']").click(function() {
+                swal({
+                    title: '是否確認驗證全部人員？',
+
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#DD6B55',
+                    confirmButtonText: '確定'
+                }).then(function(result) {
+                    if (result.value) {
+                        swal(
+                            '已確認驗證',
+                            '',
+                            'success'
+                        )
+                    }
+                })
+            }); 
+			$("[name='確認驗證4']").click(function() {
+                swal({
+                    title: '是否確認驗證全部單位？',
+
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#DD6B55',
+                    confirmButtonText: '確定'
+                }).then(function(result) {
+                    if (result.value) {
+                        swal(
+                            '已確認驗證',
+                            '',
+                            'success'
+                        )
+                    }
+                })
+            });
+			$("[name='確認驗證5']").click(function() {
+                swal({
+                    title: '是否確認驗證全部機關？',
+
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#DD6B55',
+                    confirmButtonText: '確定'
+                }).then(function(result) {
+                    if (result.value) {
+                        swal(
+                            '已確認驗證',
+                            '',
+                            'success'
+                        )
+                    }
+                })
+            });
+        });
+    </script>
+    <!-- chosen -->
+    <link rel="stylesheet" href="css/chosen.min.css">
+    <script src="js/chosen.jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#機關').chosen();
+            $('#單位').chosen();
+            $('#人員').chosen();
+            $('#組別').chosen();
+        });
+        
+    </script>
+    
+    <!-- InstanceBeginEditable name="Edit_套件" --><!-- 套件區 --><!-- InstanceEndEditable -->
+    <!-- icon -->
+    <link rel="stylesheet" href="icon/css/fontawesome-all.css">
+    <!----------------------------- style ------------------------->
+    <link rel="stylesheet" href="css/license_style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- InstanceBeginEditable name="頁面CSS" -->
+    <style>
+        .navbar-default {background-color: #eee;box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);}
+       .table .table {background-color:inherit;}
+        .table>tbody>tr>td {border-top: 0px;}  
+    </style>    
+    <!-- InstanceEndEditable -->
+</head>
+
+<body>
+<!-- InstanceBeginEditable name="頁面DIV" --><!-- 頁面DIV --><!-- InstanceEndEditable -->
+<!-- InstanceBeginRepeat name="頁面上DIV重複區" --><!-- InstanceBeginRepeatEntry -->
+<!-- 管轄權限-機關 -->
+<div id="管轄權限_機關" class="modal" role="dialog" data-backdrop="static">
+  <div class="modal-dialog-alignment">
+    <div class="modal-dialog modal-dialog-centered">
+      <!-- Modal content-->
+      <div class="modal-content" style="width: 100%;max-width:1000px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <span style="font-size:18px;">請選擇管轄機關</span>
+          <div class="input-group" style="width:300px;float: right"> <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+            <input name="manage_org_search_input" class="ug_commonform" placeholder="請輸入關鍵字" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;">
+          </div>
+        </div>
+        <div class="modal-body" style="max-height:400px;overflow: auto;">
+          <table name="manage_org_data" class="table table-bordered">
+            <tr>
+              <td width="25%"><label>
+                <input type="checkbox">
+                人事行政總處</label></td>
+              <td width="25%"><label>
+                <input type="checkbox">
+                司法院</label></td>
+              <td width="25%"><label>
+                <input type="checkbox">
+                統一資訊股份有限公司</label></td>
+              <td width="25%"><label>
+                <input type="checkbox">
+                高雄市政府</label></td>
+            </tr>
+            <tr>
+              <td><label>
+                <input type="checkbox">
+                新竹縣政府</label></td>
+              <td><label>
+                <input type="checkbox">
+                教育部</label></td>
+              <td><label>
+                <input type="checkbox">
+                行政院</label></td>
+              <td><label>
+                <input type="checkbox">
+                南投縣政府</label></td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default">全選</button>
+          <button type="button" class="btn btn-default">取消全選</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 管轄權限-單位 -->
+<div id="管轄權限_單位" class="modal" role="dialog" data-backdrop="static">
+  <div class="modal-dialog-alignment">
+    <div class="modal-dialog modal-dialog-centered">
+      <!-- Modal content-->
+      <div class="modal-content" style="width: 100%;max-width:1000px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <span style="font-size:18px;">請選擇管轄單位</span>
+          <div class="input-group" style="width:300px;float: right"> <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+            <input name="manage_unit_search_input" class="ug_commonform" placeholder="請輸入關鍵字" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;">
+          </div>
+        </div>
+        <div class="modal-body" style="max-height:400px;overflow: auto;">
+          <table name="manage_unit_data" class="table table-bordered">
+            <tr>
+              <th width="150" class="text-center grayth" rowspan="2" style="vertical-align: middle">人事行政總處</th>
+              <td width="150"><label>
+                <input type="checkbox">
+                客服中心</label></td>
+              <td width="150"><label>
+                <input type="checkbox">
+                資訊中心</label></td>
+              <td width="150"><label>
+                <input type="checkbox">
+                人事處</label></td>
+              <td width="150"><label>
+                <input type="checkbox">
+                政風處</label></td>
+            </tr>
+            <tr>
+              <td width="150"><label>
+                <input type="checkbox">
+                應用服務處</label></td>
+              <td width="150"><label>
+                <input type="checkbox">
+                ○○處</label></td>
+              <td width="150"><label>
+                <input type="checkbox">
+                ○○處</label></td>
+              <td width="150"><label>
+                <input type="checkbox">
+                ○○處</label></td>
+            </tr>
+            <tr>
+              <th width="150" class="text-center grayth" rowspan="2" style="vertical-align: middle">司法院</th>
+              <td width="150"><label>
+                <input type="checkbox">
+                客服中心</label></td>
+              <td width="150"><label>
+                <input type="checkbox">
+                資訊中心</label></td>
+              <td width="150"><label>
+                <input type="checkbox">
+                人事處</label></td>
+              <td width="150"><label>
+                <input type="checkbox">
+                政風處</label></td>
+            </tr>
+            <tr>
+              <td width="150"><label>
+                <input type="checkbox">
+                應用服務處</label></td>
+              <td width="150"><label>
+                <input type="checkbox">
+                ○○處</label></td>
+              <td width="150"><label>
+                <input type="checkbox">
+                ○○處</label></td>
+              <td width="150"><label>
+                <input type="checkbox">
+                ○○處</label></td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default">全選</button>
+          <button type="button" class="btn btn-default">取消全選</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">確定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--訊息內容-->
+<div class="modal" id="訊息內容" role="dialog" data-backdrop="static" data-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" role="button" aria-label="關閉視窗">&times;</button>
+        <h4 class="modal-title">信件匣</h4>
+      </div>
+      <div class="modal-body">
+        <!-- 商調結果詢問 範例 -->
+        <div id="訊息內容_項次1" style="display: none">
+          <table align="center" width="99%" class="table table-bordered" summary="訊息表格，表格共五列，第一列為發送人，第二列為信件主旨，第三列為信件內容，第四列為回復期限，第五列為回復內容。">
+            <tbody>
+              <tr>
+                <th class="text-right" width="180">發送人</th>
+                <td align="left">陳○○</td>
+              </tr>
+              <tr>
+                <th class="text-right">信件主旨</th>
+                <td align="left">商調結果詢問</td>
+              </tr>
+              <tr>
+                <th class="text-right">信件內容</th>
+                <td align="left"><p>王○○因錄取青年署人事人員科員一職，請准於108-09-15離職以利後續報到事宜。</p></td>
+              </tr>
+              <tr>
+                <th class="text-right">回復期限</th>
+                <td align="left">108-08-31(六)</td>
+              </tr>
+              <tr>
+                <th class="text-right">回復內容</th>
+                <td align="left"><select class="ug_commonform" style="width:150px">
+                  <option value="" hidden>尚未回復</option>
+                  <option value="同意">同意</option>
+                  <option value="不同意">不同意</option>
+                </select></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- 商調意願確認 範例 -->
+        <div id="訊息內容_項次2" style="display: none">
+          <table align="center" width="99%" class="table table-bordered" summary="訊息表格，表格共五列，第一列為發送人，第二列為信件主旨，第三列為信件內容，第四列為回復期限，第五列為回復內容。">
+            <tbody>
+              <tr>
+                <th class="text-right" width="180">發送人</th>
+                <td align="left">李○○</td>
+              </tr>
+              <tr>
+                <th class="text-right">信件主旨</th>
+                <td align="left">商調意願確認</td>
+              </tr>
+              <tr>
+                <th class="text-right">信件內容</th>
+                <td align="left"><p>您已錄取教育部人事人員科員一職，請回復商調意願以利商調程序進行。</p></td>
+              </tr>
+              <tr>
+                <th class="text-right">回復期限</th>
+                <td align="left">108-07-31(三)</td>
+              </tr>
+              <tr>
+                <th class="text-right">回復內容</th>
+                <td align="left"><select class="ug_commonform" style="width:150px">
+                  <option value="" hidden>尚未回復</option>
+                  <option value="有意願">有意願</option>
+                  <option value="無意願">無意願</option>
+                </select></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- 面試出席確認 範例 -->
+        <div id="訊息內容_項次5" style="display: none">
+          <table align="center" width="99%" class="table table-bordered" summary="訊息表格，表格共五列，第一列為發送人，第二列為信件主旨，第三列為信件內容，第四列為回復期限，第五列為回復內容。">
+            <tbody>
+              <tr>
+                <th class="text-right" width="180">發送人</th>
+                <td align="left">李○○</td>
+              </tr>
+              <tr>
+                <th class="text-right">信件主旨</th>
+                <td align="left">面試出席確認</td>
+              </tr>
+              <tr>
+                <th class="text-right">信件內容</th>
+                <td align="left"><p>您報名的教育部人事人員內陞職缺，您已進入面試者名單，面試時間為108-05-10，地點於臺北市中正區中山南路5號，請回復出席意願，以利面試時程安排。</p></td>
+              </tr>
+              <tr>
+                <th class="text-right">回復期限</th>
+                <td align="left">108-04-30(二)</td>
+              </tr>
+              <tr>
+                <th class="text-right">回復內容</th>
+                <td align="left"><select class="ug_commonform" style="width:150px">
+                  <option value="" hidden>尚未回復</option>
+                  <option value="出席" selected>出席</option>
+                  <option value="不克出席">不克出席</option>
+                </select></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- 考核流程確認 範例 -->
+        <div id="訊息內容_項次6" style="display: none">
+          <table align="center" width="99%" class="table table-bordered" summary="訊息表格，表格共五列，第一列為發送人，第二列為信件主旨，第三列為信件內容，第四列為回復期限，第五列為回復內容。">
+            <tbody>
+              <tr>
+                <th class="text-right" width="180">發送人</th>
+                <td align="left">林○○</td>
+              </tr>
+              <tr>
+                <th class="text-right">信件主旨</th>
+                <td align="left">107年度考核流程確認</td>
+              </tr>
+              <tr>
+                <th class="text-right">信件內容</th>
+                <td align="left"><p>107年度人事人員平時考核即將開放，請承辦人確認同仁考核流程是否正確。</p></td>
+              </tr>
+              <tr>
+                <th class="text-right">回復期限</th>
+                <td align="left"><span class="text-danger">108-03-31(日)</span></td>
+              </tr>
+              <tr>
+                <th class="text-right">回復內容</th>
+                <td align="left"><select class="ug_commonform" style="width:150px">
+                  <option value="" hidden>尚未回復</option>
+                  <option value="已確認">已確認</option>
+                  <option value="待確認">待確認</option>
+                </select></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">送出</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" id="訊息內容_系統" role="dialog" data-backdrop="static" data-keyboard="false" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" role="button" aria-label="關閉視窗">&times;</button>
+        <h4 class="modal-title">信件匣</h4>
+      </div>
+      <div class="modal-body">
+        <!-- 商調結果詢問 範例 -->
+        <table align="center" width="99%" class="table table-bordered" summary="訊息表格，表格共三列，第一列為訊息主旨，第二列為訊息內容，第三列為附件下載。">
+          <tbody>
+            <tr>
+              <th class="text-right" nowrap>主旨</th>
+              <td align="left">自強活動-花蓮2天1夜</td>
+            </tr>
+            <tr>
+              <th class="text-right" nowrap>內容</th>
+              <td align="left"> 請參加活動同仁留意相關辦法規章，若有問題請聯繫各單位承辦人員。 </td>
+            </tr>
+            <tr>
+              <th class="text-right" nowrap>附件</th>
+              <td align="left"><div>
+                <div><a href="#">活動簡章.pdf <i class="fas fa-download"></i></a></div>
+                <div><a href="#">活動行程.pdf <i class="fas fa-download"></i></a></div>
+              </div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+<!-- InstanceBeginRepeat name="系統外層功能選單" --><!-- InstanceBeginRepeatEntry -->
+<!-- 小藍板 -->
+<div class="modal fade" id="smallBluePlate" role="dialog" style="z-index: 9999">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">人員切換</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+          <!-- 查詢方式 -->
+          <div class="form-group">
+            <label class="col-sm-3 col-xs-12 control-label">查詢方式：</label>
+            <div class="col-sm-9 col-xs-12">
+              <select class="ug_commonform" name="" id="" style="width: 180px">
+                <option value="">預設</option>
+                <option value="">姓名查詢</option>
+                <option value="">卡號查詢</option>
+              </select>
+            </div>
+          </div>
+          <!-- 預設查詢 -->
+          <div class="form-group">
+            <label class="col-sm-3 col-xs-12 control-label">選擇人員：</label>
+            <div class="col-sm-9 col-xs-12">
+              <div class="col-sm-5 col-xs-12 nopadding">
+                <select class="ug_commonform" name="" id="uniongSmallblueplate-orgSelector">
+                  <option value="">機關名稱</option>
+                  <option value="">機關名稱</option>
+                </select>
+              </div>
+              <div class="col-sm-4 col-xs-12 nopadding">
+                <select class="ug_commonform" name="" id="uniongSmallblueplate-unitSelector">
+                  <option value="">單位名稱</option>
+                  <option value="">單位名稱</option>
+                </select>
+              </div>
+              <div class="col-sm-3 col-xs-12 nopadding">
+                <select class="ug_commonform" name="" id="uniongSmallblueplate-personSelector">
+                  <option value="">凱○○</option>
+                  <option value="">凱一技</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- 以姓名查詢 -->
+          <div class="form-group" style="display: none">
+            <label class="col-sm-3 col-xs-12 control-label">請輸入姓名：</label>
+            <div class="col-sm-9 col-xs-12">
+              <input type="text" class="ug_commonform" style="max-width:190px">
+              <button type="button" class="btn btn-info" onclick="document.getElementById('小藍板查詢成功').style.display='';"> <span class="glyphicon glyphicon-search"></span>查詢 </button>
+              <div id="小藍板查詢成功" class="alert alert-success" style="display: none"> 已查詢完畢!並更新登入人員 </div>
+            </div>
+          </div>
+          <div class="form-group" style="display: none">
+            <label class="col-sm-3 col-xs-12 control-label">選擇人員：</label>
+            <div class="col-sm-9 col-xs-12">
+              <select class="ug_commonform" name="">
+                <option selected="">凱○○(客服中心[人事行政總處])</option>
+              </select>
+            </div>
+          </div>
+          <!-- 以卡號查詢 -->
+          <div class="form-group" style="display: none">
+            <label class="col-sm-3 col-xs-12 control-label">請輸入卡號：</label>
+            <div class="col-sm-9 col-xs-12">
+              <input type="text" class="ug_commonform" style="max-width:180px">
+              <button type="button" class="btn btn-info" onclick="document.getElementById('卡號查詢失敗').style.display='';"> <span class="glyphicon glyphicon-search"></span>查詢 </button>
+              <div id="卡號查詢失敗" class="alert alert-danger" style="display: none"> 無符合查詢條件的人員 </div>
+            </div>
+          </div>
+          <div class="form-group" style="display: none">
+            <label class="col-sm-3 col-xs-12 control-label">選擇人員：</label>
+            <div class="col-sm-9 col-xs-12">
+              <select class="ug_commonform" name="">
+                <option selected="">凱○○(客服中心[人事行政總處])</option>
+              </select>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="col-sm-6 col-xs-6 text-left nopadding">
+          <button type="button" id="originalLogin" class="btn btn-default" data-dismiss="modal">回登入者身分</button>
+        </div>
+        <div class="col-sm-6 col-xs-6 nopadding">
+          <button type="button" id="adminLogin" class="btn btn-primary" data-dismiss="modal">確定</button>
+          <button type="button" id="admincancel" class="btn btn-default" data-dismiss="modal">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 系統外層功能選單 -->
+<!-- 通知訊息 -->
+<div class="notifications">
+  <button id="通知訊息關閉按鈕" type="button" class="close" role="button" aria-label="關閉視窗" style="font-size: 35px;">×</button>
+  <h3 style="margin:10px;">通知訊息</h3>
+  <ul class="nav nav-pills mailboxtype" style="background-color: #fff;">
+    <li class="active"><a data-toggle="pill" href="#notifications_系統">系統 (1)</a></li>
+    <li><a data-toggle="pill" href="#notifications_差勤">差勤 (2)</a></li>
+    <li><a data-toggle="pill" href="#notifications_甄補">甄補 (5)</a></li>
+    <li><a data-toggle="pill" href="#notifications_平時考核">平時考核 (1)</a></li>
+  </ul>
+  <div class="tab-content" style="max-height: 400px;overflow: auto;padding: 0 1% 2% 1%;">
+    <div id="notifications_系統" class="tab-pane fade in active">
+      <table width="100%" class="cell-table table-striped">
+        <thead>
+          <tr>
+            <th class="text-center" width="50">項次</th>
+            <th class="text-center">主旨</th>
+            <th class="text-center">發送人</th>
+            <th class="text-center" width="180">發送時間</th>
+            <th class="text-center" width="50">刪除</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="cell_row">
+            <td align="center"><div class="grayth cell_left">項次</div>
+              <div class="cell_right">1</div></td>
+            <td align="center"><div class="grayth cell_left">主旨</div>
+              <div class="cell_right"> <a href="#" title="自強活動-花蓮2天1夜(展開視窗)" data-target="#訊息內容_系統" data-toggle="modal">自強活動-花蓮2天1夜</a> </div></td>
+            <td align="center"><div class="grayth cell_left">發送人</div>
+              <div class="cell_right">陳○○</div></td>
+            <td align="center"><div class="grayth cell_left">發送時間</div>
+              <div class="cell_right">108-10-22(二) 15:32</div></td>
+            <td align="center"><div class="grayth cell_left">刪除</div>
+              <div class="cell_right">
+                <button type="button" class="fa-lg fas fas fa-trash-alt" title="alert詢問是否確認要刪除訊息" onclick="confirm('是否確認要刪除訊息')"></button>
+              </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="notifications_差勤" class="tab-pane fade">
+      <table width="100%" class="cell-table table-striped">
+        <thead>
+          <tr>
+            <th class="text-center">項次</th>
+            <th class="text-center">差假別</th>
+            <th class="text-center">差假起訖時間</th>
+            <th class="text-center">通知訊息描述</th>
+            <th class="text-center">發送人</th>
+            <th class="text-center">刪除</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="cell_row">
+            <td align="center"><div class="grayth cell_left">項次</div>
+              <div class="cell_right">1</div></td>
+            <td align="center"><div class="grayth cell_left">差假別</div>
+              <div class="cell_right">出國或赴大陸</div></td>
+            <td align="center"><div class="grayth cell_left">差假起訖時間</div>
+              <div class="cell_right">107-05-08(五) 08:30<br>
+                107-05-15(五) 17:30</div></td>
+            <td align="center"><div class="grayth cell_left">通知訊息描述</div>
+              <div class="cell_right"><a>請盡速填寫赴大陸返臺意見表</a></div></td>
+            <td align="center"><div class="grayth cell_left">發送人</div>
+              <div class="cell_right">系統</div></td>
+            <td align="center"><div class="grayth cell_left">刪除</div>
+              <div class="cell_right">
+                <button type="button" class="fa-lg fas fas fa-trash-alt" title="alert詢問是否確認要刪除訊息" onclick="confirm('是否確認要刪除訊息')"></button>
+              </div></td>
+          </tr>
+          <tr class="cell_row">
+            <td align="center"><div class="grayth cell_left">項次</div>
+              <div class="cell_right">2</div></td>
+            <td align="center"><div class="grayth cell_left">差假別</div>
+              <div class="cell_right">休假</div></td>
+            <td align="center"><div class="grayth cell_left">差假起訖時間</div>
+              <div class="cell_right">108-02-18(一) 08:00<br>
+                108-02-18(一) 17:30</div></td>
+            <td align="center"><div class="grayth cell_left">通知訊息描述</div>
+              <div class="cell_right">常用片語123</div></td>
+            <td align="center"><div class="grayth cell_left">發送人</div>
+              <div class="cell_right">凱大發</div></td>
+            <td align="center"><div class="grayth cell_left">刪除</div>
+              <div class="cell_right">
+                <button type="button" class="fa-lg fas fas fa-trash-alt" title="alert詢問是否確認要刪除訊息" onclick="confirm('是否確認要刪除訊息')"></button>
+              </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="notifications_甄補" class="tab-pane fade">
+      <table width="100%" class="cell-table table-striped">
+        <thead>
+          <tr>
+            <th class="text-center">項次</th>
+            <th class="text-center">主旨</th>
+            <th class="text-center">發送人</th>
+            <th class="text-center">發送日期</th>
+            <th class="text-center">回復期限</th>
+            <th class="text-center">回復內容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="cell_row">
+            <td align="center"><div class="grayth cell_left">項次</div>
+              <div class="cell_right">1</div></td>
+            <td align="center"><div class="grayth cell_left">主旨</div>
+              <div class="cell_right"> <a href="#" title="商調結果詢問(展開視窗)" data-target="#訊息內容" data-toggle="modal" onclick="
+                    document.getElementById('訊息內容_項次1').style.display='';
+                    document.getElementById('訊息內容_項次2').style.display='none';
+                    document.getElementById('訊息內容_項次5').style.display='none';
+                    document.getElementById('訊息內容_項次6').style.display='none';
+                    ">商調結果詢問</a> </div></td>
+            <td align="center"><div class="grayth cell_left">發送人</div>
+              <div class="cell_right">李○○</div></td>
+            <td align="center"><div class="grayth cell_left">發送日期</div>
+              <div class="cell_right">108-08-01(四)</div></td>
+            <td align="center"><div class="grayth cell_left">回復期限</div>
+              <div class="cell_right">108-08-31(六)</div></td>
+            <td align="center"><div class="grayth cell_left">回復內容</div>
+              <div class="cell_right"> 尚未回復 </div></td>
+          </tr>
+          <tr class="cell_row">
+            <td align="center"><div class="grayth cell_left">項次</div>
+              <div class="cell_right">2</div></td>
+            <td align="center"><div class="grayth cell_left">主旨</div>
+              <div class="cell_right"> <a href="#" title="商調意願詢問(展開視窗)" data-target="#訊息內容" data-toggle="modal" onclick="
+                    document.getElementById('訊息內容_項次1').style.display='none';
+                    document.getElementById('訊息內容_項次2').style.display='';
+                    document.getElementById('訊息內容_項次5').style.display='none';
+                    document.getElementById('訊息內容_項次6').style.display='none';
+                    ">商調意願確認</a> </div></td>
+            <td align="center"><div class="grayth cell_left">發送人</div>
+              <div class="cell_right">李○○</div></td>
+            <td align="center"><div class="grayth cell_left">發送日期</div>
+              <div class="cell_right">108-07-01(三) </div></td>
+            <td align="center"><div class="grayth cell_left">回復期限</div>
+              <div class="cell_right">108-07-31(三)</div></td>
+            <td align="center"><div class="grayth cell_left">回復內容</div>
+              <div class="cell_right"> 尚未回復 </div></td>
+          </tr>
+          <tr class="cell_row">
+            <td align="center"><div class="grayth cell_left">項次</div>
+              <div class="cell_right">3</div></td>
+            <td align="center"><div class="grayth cell_left">主旨</div>
+              <div class="cell_right"> <a href="#">甄審出席詢問</a> </div></td>
+            <td align="center"><div class="grayth cell_left">發送人</div>
+              <div class="cell_right">李○○</div></td>
+            <td align="center"><div class="grayth cell_left">發送日期</div>
+              <div class="cell_right">108-06-01(六)</div></td>
+            <td align="center"><div class="grayth cell_left">回復期限</div>
+              <div class="cell_right"><span class="text-danger">108-06-30(日)</span></div></td>
+            <td align="center"><div class="grayth cell_left">回復內容</div>
+              <div class="cell_right"> <span class="text-danger">尚未回復</span> </div></td>
+          </tr>
+          <tr class="cell_row">
+            <td align="center"><div class="grayth cell_left">項次</div>
+              <div class="cell_right">4</div></td>
+            <td align="center"><div class="grayth cell_left">主旨</div>
+              <div class="cell_right"> <a href="#">面試出席詢問</a> </div></td>
+            <td align="center"><div class="grayth cell_left">發送人</div>
+              <div class="cell_right">李○○</div></td>
+            <td align="center"><div class="grayth cell_left">發送日期</div>
+              <div class="cell_right">108-04-01(一) </div></td>
+            <td align="center"><div class="grayth cell_left">回復期限</div>
+              <div class="cell_right">108-05-31(五)</div></td>
+            <td align="center"><div class="grayth cell_left">回復內容</div>
+              <div class="cell_right"> 已回復：不克出席 </div></td>
+          </tr>
+          <tr class="cell_row">
+            <td align="center"><div class="grayth cell_left">項次</div>
+              <div class="cell_right">5</div></td>
+            <td align="center"><div class="grayth cell_left">主旨</div>
+              <div class="cell_right"> <a href="#" title="面試出席確認(展開視窗)" data-target="#訊息內容" data-toggle="modal" onclick="
+                    document.getElementById('訊息內容_項次1').style.display='none';
+                    document.getElementById('訊息內容_項次2').style.display='none';
+                    document.getElementById('訊息內容_項次5').style.display='';
+                    document.getElementById('訊息內容_項次6').style.display='none';
+                    ">面試出席確認</a> </div></td>
+            <td align="center"><div class="grayth cell_left">發送人</div>
+              <div class="cell_right">李○○</div></td>
+            <td align="center"><div class="grayth cell_left">發送日期</div>
+              <div class="cell_right">108-04-01(一) </div></td>
+            <td align="center"><div class="grayth cell_left">回復期限</div>
+              <div class="cell_right">108-04-30(二)</div></td>
+            <td align="center"><div class="grayth cell_left">回復內容</div>
+              <div class="cell_right"> 已回復：出席 </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="notifications_平時考核" class="tab-pane fade">
+      <table width="100%" class="cell-table table-striped">
+        <thead>
+          <tr>
+            <th class="text-center">項次</th>
+            <th class="text-center">主旨</th>
+            <th class="text-center">發送人</th>
+            <th class="text-center">發送日期</th>
+            <th class="text-center">回復期限</th>
+            <th class="text-center">回復內容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="cell_row">
+            <td align="center"><div class="grayth cell_left">項次</div>
+              <div class="cell_right">1</div></td>
+            <td align="center"><div class="grayth cell_left">主旨</div>
+              <div class="cell_right"> <a href="#" title="商調意願詢問(展開視窗)" data-target="#訊息內容" data-toggle="modal" onclick="
+                    document.getElementById('訊息內容_項次1').style.display='none';
+                    document.getElementById('訊息內容_項次2').style.display='none';
+                    document.getElementById('訊息內容_項次5').style.display='none';
+                    document.getElementById('訊息內容_項次6').style.display='';
+                    ">107年度考核流程確認</a> </div></td>
+            <td align="center"><div class="grayth cell_left">發送人</div>
+              <div class="cell_right">林○○</div></td>
+            <td align="center"><div class="grayth cell_left">發送日期</div>
+              <div class="cell_right">108-03-01(五)</div></td>
+            <td align="center"><div class="grayth cell_left">回復期限</div>
+              <div class="cell_right"><span class="text-danger">108-03-31(日)</span></div></td>
+            <td align="center"><div class="grayth cell_left">回復內容</div>
+              <div class="cell_right"> <span class="text-danger">尚未回復</span> </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<nav name="navsystem" class="navbar navbar-fixed-top navsystem visible-lg">
+  <div class="navsystem">
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr>
+          <td width="2%" height="55" align="center" nowrap="nowrap">&nbsp;</td>
+          <td width="200" height="55" align="left" nowrap="nowrap"><div class="navsystem_logo"> <a href="verifytool_index.html" title="首頁"><img src="images/ug_logo_blue.png" alt=""></a></div></td>
+          <td height="55" align="left" nowrap="nowrap">
+<!--
+                <button type="button" class="選單" onclick="location='index.html'"> <b class="glyphicon glyphicon-home"></b>&nbsp;&nbsp;首頁</button>
+                <button type="button" class="選單" onclick="location='apply_all.html'">差勤</button>
+                <button type="button" class="選單" onclick="location='費用/2-2.html'">費用</button>
+                <button type="button" class="選單" onclick="location='甄選評核/甄審_職缺報名紀錄.html'">甄補</button>
+                <button type="button" class="選單" onclick="location='甄選評核/平時考核.html'">平時考核</button>
+                <button type="button" class="選單" onclick="location='query_work.html'">個人</button>
+                <button type="button" class="選單" onclick="location='後台_角色權限設定.html'">系統管理</button>
+-->
+
+            <button type="button" class="選單 底線" onclick="location='verifytool_index.html'"><i class="fas fa-wrench"></i> 導入驗證</button>             
+            
+            </td>
+          <td height="55" align="right" nowrap="nowrap"><button type="button" id="notifications" class="選單" style="border:0px;"> <b class="fa fa-lg fa-comment-dots"></b>&nbsp;&nbsp;8則訊息</button>
+            ｜
+            <button type="button" class="選單" style="border:0px;" data-toggle="modal" data-target="#smallBluePlate"><i class="fas fa-user"></i> 人員切換</button>
+            ｜
+            <button type="button" class="選單" style="border:0px;" onclick="window.location.href='login.html'">李○○&nbsp;登出</button></td>
+          <td width="2%" height="55" align="center" nowrap="nowrap">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</nav>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat --><!-- InstanceBeginRepeat name="系統功能選單" --><!-- InstanceBeginRepeatEntry -->
+<!-- 系統功能選單 -->
+<nav name="menu" class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-header">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+    <button class="navbar-toggle" type="button" data-toggle="modal" data-target="#smallBluePlate" style="width:44px;height:34px;"> <span class="fas fa-user" style="color: #fff;position: relative;top: -3px;font-size: 22px;"></span> </button>
+    <button id="notifications_mobile" class="navbar-toggle" type="button" style="width:44px;height:34px;"> <span class="fa fa-lg fa-comment-dots" style="color: #fff;position: relative;top: -3px;font-size: 22px;"></span> <span class="badge notification">8</span> </button>
+    <a href="index.html" class="navbar-brand hidden-lg"> WebITR</a></div>
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav navbar-right hidden-lg" style="margin-right: 5px;">
+      <li class="hidden-sm hidden-xs"> <a id="notifications" style="display: inline-block;"><i class="fa fa-lg fa-comment-dots"></i>&nbsp;&nbsp;11則訊息</a> </li>
+      <li class="hidden-sm hidden-xs"> <a data-toggle="modal" data-target="#smallBluePlate" style="display: inline-block;"><i class="fas fa-user"></i> 人員切換</a> </li>
+      <li> <a href="login.html" style="display: inline-block;"><i class="fas fa-sign-out-alt"></i> 凱○○ 登出</a> </li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="#">導入工具</a></li>
+      <li><a href="verifytool_index.html">驗證工具</a></li>
+      <li><a href="verifytool_驗證進度總覽.html">驗證進度查詢</a></li>
+      <li><a href="後台_角色權限設定.html">角色權限設定</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- 自然人憑證 -->
+<!-- to工程師：若登入者還沒綁定自然人憑證顯示此div可註冊自然人憑證 -->
+<div class="modal" id="yet_registered" role="dialog" data-backdrop="static" data-keyboard="false" tabindex="-1">
+  <div class="modal-dialog-alignment">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="自然人憑證">
+        <h1><span class="fa fa-credit-card"></span>&nbsp;註冊自然人憑證</h1>
+        <p>請將自然人憑證卡片插上電腦的讀卡機</p>
+        <p>再輸入代碼驗證</p>
+        <p>
+          <input type="password" name="textfield5" title="請輸入代碼" id="textfield5" class="ug_commonform" style="width:250px;">
+        </p>
+        <p>
+          <input type="button" name="button" value="進行憑證註冊" class="btn btn-warning" onclick="location.href='verifytool_人員資料.html';">
+          <input type="button" name="button" id="button" value="取消" class="btn btn-warning orangebtn" data-dismiss="modal">
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- to工程師：若登入者已經綁定自然人憑證顯示此div -->
+<div class="modal" id="manage_registered" role="dialog" tabindex="-1" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog-alignment">
+    <div class="modal-dialog modal-dialog-centered">
+      <div id="registered" class="自然人憑證">
+        <h1><span class="fa fa-credit-card"></span>&nbsp;自然人憑證管理</h1>
+        <p>請將自然人憑證卡片插上電腦的讀卡機</p>
+        <p>請選擇欲執行項目</p>
+        <p>
+          <input type="button" name="button" id="button" value="換卡" class="btn btn-warning" onclick="document.getElementById('registered').style.display='none';document.getElementById('changecard').style.display='';">
+          <input type="button" name="button" id="button" value="註銷憑證" class="btn btn-warning" onclick="confirm('是否確定刪註銷自然人憑證？');" data-dismiss="modal">
+          <input type="button" name="button" id="button" value="取消" class="btn btn-warning orangebtn" data-dismiss="modal">
+        </p>
+      </div>
+      <!-- 自然人憑證換卡 -->
+      <div id="changecard" class="自然人憑證" style="display:none;">
+        <h1><span class="fa fa-credit-card"></span>&nbsp;自然人憑證換卡註冊</h1>
+        <p>變更自然人憑證需重新註冊</p>
+        <p>請將要註冊的自然人憑證插入讀卡機，並輸入PIN碼：</p>
+        <p>
+          <input type="password" name="textfield5" title="請輸入PIN碼" id="textfield5" class="ug_commonform" style="width:250px;">
+        </p>
+        <p>輸入身分證字號</p>
+        <p>
+          <input type="password" name="textfield5" title="請輸入身分證字號" id="textfield5" class="ug_commonform" style="width:250px;">
+        </p>
+        <p>
+          <input type="button" name="button" id="button" value="進行換卡註冊" class="btn btn-warning" data-dismiss="modal">
+          <input type="button" name="button" id="button" value="取消" class="btn btn-warning orangebtn" data-dismiss="modal">
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+
+<!-- InstanceBeginRepeat name="回報問題" --><!-- InstanceBeginRepeatEntry -->	
+     <div class="modal fade" id="回報問題信件" role="dialog">
+       <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+           <div class="modal-header">
+             <button type="button" class="close" data-dismiss="modal">&times;</button>
+             <h4 class="modal-title">問題回報信件</h4>
+           </div>
+           <div class="modal-body">
+             <div id="letterbtn" style="margin-bottom: 5px;">
+                 <button type="button" class="btn btn-warning orangebtn" onclick="document.getElementById('撰寫回報信件').style.display='';document.getElementById('letterbtn').style.display='none';document.getElementById('letterinbox').style.display='none';document.getElementById('sentletter').style.display='';"><i class="fas fa-plus"></i> 撰寫回報信件</button>
+             </div>
+             <div id="letterinbox" class="sticky-table sticky-ltr-cells topfix">
+                  <table class="table table-bordered">
+                        <thead>
+                            <tr class="sticky-header">
+                                <th class="text-center darkgreenth sticky-cell" nowrap>信件主旨</th>
+                                <th width="20%" class="text-center darkgreenth sticky-cell" nowrap>寄發時間</th>
+                                <th width="20%" class="text-center darkgreenth sticky-cell" nowrap>處理狀態</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-left blueword sticky-cell">修改休假時數</td>
+                                <td class="text-center sticky-cell">108-09-11(三) 10:02</td>
+                                <td class="text-center sticky-cell">108-09-11(三) 10:30</td>
+                            </tr>
+                            <tr class="pstext">
+                                <td class="text-left sticky-cell" colspan="4" style="vertical-align: text-top;">請協助修改吳美鈴104年休假時數為1日0小時。</td>
+                            </tr>
+                        </tbody>
+                     </table>
+                 </div>
+                 <form class="form-horizontal" id="撰寫回報信件" style="display: none;">
+                        <div class="form-group">
+                            <label class="col-sm-2 col-xs-12 control-label"><span class="ps">*</span>信件主旨：</label>
+                            <div class="col-sm-10 col-xs-12">
+                                <input class="ug_commonform width100" style="max-width: 600px;" type="text" value="修改休假時數">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-xs-12 control-label"><span class="ps">*</span>信件內容：</label>
+                            <div class="col-sm-10 col-xs-12">
+                                <textarea name="reason" class="ug_commonform width100" style="height: 200px; max-width: 600px;">請協助修改吳美鈴104年休假時數為1日0小時。</textarea>
+                            </div>
+                        </div>
+                </form>
+         </div>
+            <div class="modal-footer">
+                 <span id="sentletter" style="display: none;">
+                      <div style="display: inline-block;float: left;">
+                          <a href="#" onclick="document.getElementById('撰寫回報信件').style.display='none';document.getElementById('letterbtn').style.display='';document.getElementById('letterinbox').style.display='';document.getElementById('sentletter').style.display='none';">返回收件匣</a>
+                      </div>
+                      <div style="display: inline-block;"><button type="button" class="btn btn-warning" data-dismiss="modal">發送</button></div>
+                 </span>
+               </div>
+       </div>
+     </div>
+    </div>
+     <div class="modal fade" id="檢視問題回報收件匣" role="dialog">
+       <div class="modal-dialog modal-lg">
+         <div class="modal-content">
+           <div class="modal-header">
+             <button type="button" class="close" data-dismiss="modal">&times;</button>
+             <h4 class="modal-title">問題回報信件</h4>
+           </div>
+           <div class="modal-body">
+              <div class="sticky-table sticky-ltr-cells" style="width: 100%;height: 350px;">
+                <table class="table table-bordered">
+                     <thead>
+                            <tr class="sticky-header">
+                                <th class="text-center darkgreenth sticky-cell" nowrap>問題分類</th>
+                                <th class="text-center darkgreenth sticky-cell" nowrap>信件主旨</th>
+                                <th class="text-center darkgreenth sticky-cell" nowrap>寄發時間</th>
+                                <th class="text-center darkgreenth sticky-cell" nowrap>處理狀態</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center sticky-cell">資料缺少</td>
+                                <td class="text-left blueword sticky-cell">該機關缺少○○○單位</td>
+                                <td class="text-center sticky-cell">107-09-11(三)10:02</td>
+                                <td class="text-center sticky-cell">107-09-10(二)14:01</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center sticky-cell">資料有誤</td>
+                                <td class="text-left blueword sticky-cell">該機關缺少○○○單位</td>
+                                <td class="text-center sticky-cell">107-09-11(三)10:02</td>
+                                <td class="text-center sticky-cell">107-09-10(二)14:01</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center sticky-cell">資料缺少</td>
+                                <td class="text-left blueword sticky-cell">該機關缺少○○○單位</td>
+                                <td class="text-center sticky-cell">107-09-11(三)10:02</td>
+                                <td class="text-center sticky-cell">107-09-10(二)14:01</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center sticky-cell">資料缺少</td>
+                                <td class="text-left blueword sticky-cell">該機關缺少○○○單位</td>
+                                <td class="text-center sticky-cell">107-09-11(三)10:02</td>
+                                <td class="text-center sticky-cell">107-09-10(二)14:01</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center sticky-cell">資料缺少</td>
+                                <td class="text-left blueword sticky-cell">該機關缺少○○○單位</td>
+                                <td class="text-center sticky-cell">107-09-11(三)10:02</td>
+                                <td class="text-center sticky-cell">107-09-10(二)14:01</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center sticky-cell">資料缺少</td>
+                                <td class="text-left blueword sticky-cell">該機關缺少○○○單位</td>
+                                <td class="text-center sticky-cell">107-09-11(三)10:02</td>
+                                <td class="text-center sticky-cell">107-09-10(二)14:01</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center sticky-cell">資料缺少</td>
+                                <td class="text-left blueword sticky-cell">該機關缺少○○○單位</td>
+                                <td class="text-center sticky-cell">107-09-11(三)10:02</td>
+                                <td class="text-center sticky-cell">107-09-10(二)14:01</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center sticky-cell">資料缺少</td>
+                                <td class="text-left blueword sticky-cell">該機關缺少○○○單位</td>
+                                <td class="text-center sticky-cell">107-09-11(三)10:02</td>
+                                <td class="text-center sticky-cell">107-09-10(二)14:01</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center sticky-cell">資料缺少</td>
+                                <td class="text-left blueword sticky-cell">該機關缺少○○○單位</td>
+                                <td class="text-center sticky-cell">107-09-11(三)10:02</td>
+                                <td class="text-center sticky-cell">107-09-10(二)14:01</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center sticky-cell">資料缺少</td>
+                                <td class="text-left blueword sticky-cell">該機關缺少○○○單位</td>
+                                <td class="text-center sticky-cell">107-09-11(三)10:02</td>
+                                <td class="text-center sticky-cell">107-09-10(二)14:01</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center sticky-cell">資料缺少</td>
+                                <td class="text-left blueword sticky-cell">該機關缺少○○○單位</td>
+                                <td class="text-center sticky-cell">107-09-11(三)10:02</td>
+                                <td class="text-center sticky-cell">107-09-10(二)14:01</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center sticky-cell">資料缺少</td>
+                                <td class="text-left blueword sticky-cell">該機關缺少○○○單位</td>
+                                <td class="text-center sticky-cell">107-09-11(三)10:02</td>
+                                <td class="text-center sticky-cell">107-09-10(二)14:01</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+                
+                
+               <div class="modal-footer">
+               </div>
+         </div>
+       </div>
+     </div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+
+<!-- InstanceBeginEditable name="浮動 DIV區" --><!--浮動 DIV區-->
+<!-- InstanceEndEditable -->
+
+<!-- 內容 -->
+<div class="ug_container">
+      <div class="container-fluid">
+        <div class="ug_breadcrumbdiv">
+          <ul class="breadcrumb nopadding" style="display: inline-block">
+            <!-- InstanceBeginEditable name="麵包屑路徑" -->
+              <li class="active">驗證工具</li>
+            <!-- InstanceEndEditable -->
+          </ul>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+              <!-- InstanceBeginEditable name="內容區" --><div class="main">
+           機關：
+            <select id="pe05m_peorg_select" name="pe05m_peorg_select" class="ug_commonform" style="width:250px;">
+                <option value="" selected>全部</option>
+                <option value="315060000H">交通部民用航空局</option>
+                <option value="501010000F">臺北高等行政法院</option>
+                <option value="504300000F">臺灣臺東地方法院</option>
+                <option value="A21020000I">衛生福利部食品藥物管理署</option>
+                <option value="A58000000A">人事行政總處</option>
+                <option value="EB16138656">凱發科技股份有限公司</option>
+            </select>
+            <input type="button" class="btn btn-primary" value="查詢">
+            <hr>
+            <div id="default_table">
+                <div class="clearfix"></div>
+
+                <div id="角色權限維護">
+                    <div style="margin: 1% 0;">
+
+                        <button id="addrole" class="btn btn-primary"><i class="fas fa-plus"></i> 新增角色權限</button>
+                    </div>
+                    <table class="table table-bordered table-striped" style="background-color:#fff;">
+                        <thead>
+                            <tr>
+                                <th width="15%" class="text-center">人員</th>
+                                <th width="10%" class="text-center">單位</th>
+
+                                <th width="55%" class="text-center">權限內容</th>
+                                <th width="10%" class="text-center">動作</th>
+                                <th width="10%" class="text-center">修改紀錄</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                                <td class="text-center">李○○</td>
+                                <td class="text-center">人事處</td>
+                                <td class="nopadding">
+                                    <table class="table table-bordered" style="min-height: 55px;margin-bottom:0px; ">
+                                        <tbody>
+                                           <tr>
+                                                <th width="120" class="text-right" style="vertical-align: middle">賦予角色：</th>
+                                                <td>導入驗證系統使用者</td>
+                                            </tr>
+                                            <tr>
+                                                <th width="120" class="text-right" style="vertical-align: middle">管轄機關：</th>
+                                                <td>苗栗縣政府、苗栗縣政府衛生局、苗栗縣政府消防局</td>
+                                            </tr>
+                                            <tr>
+                                                <th width="120" class="text-right" style="vertical-align: middle">管轄單位：</th>
+                                                <td>
+                                                    <div>苗栗縣政府：全部</div>
+                                                    <div>苗栗縣政府衛生局：全部</div>
+                                                    <div>苗栗縣政府消防局：全部</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </td>
+                                <td class="text-center">
+                                    <button id="editrole_btn" class="btn btn-default"><i class="fa fa-edit"></i> </button>
+                                    <button id="editrole_btn" class="btn btn-danger"><i class="fa fa-trash-alt"></i> </button>
+                                </td>
+                                <td class="text-center">1070124 16:22 <br>李○○</td>
+                            </tr>
+                           <tr>
+                                <td class="text-center">林○○</td>
+                                <td class="text-center">人事處</td>
+                                <td class="nopadding">
+                                    <table class="table table-bordered" style="min-height: 55px;margin-bottom:0px; ">
+                                        <tbody>
+                                           <tr>
+                                                <th width="120" class="text-right" style="vertical-align: middle">賦予角色：</th>
+                                                <td>導入驗證系統使用者</td>
+                                            </tr>
+                                            <tr>
+                                                <th width="120" class="text-right" style="vertical-align: middle">管轄機關：</th>
+                                                <td>嘉義縣政府</td>
+                                            </tr>
+                                            <tr>
+                                                <th width="120" class="text-right" style="vertical-align: middle">管轄單位：</th>
+                                                <td>
+                                                    <div>嘉義縣政府：全部</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </td>
+                                <td class="text-center">
+                                    <button id="editrole_btn" class="btn btn-default"><i class="fa fa-edit"></i> </button>
+                                    <button id="editrole_btn" class="btn btn-danger"><i class="fa fa-trash-alt"></i> </button>
+                                </td>
+                                <td class="text-center">1070124 16:22 <br>林○○</td>
+                            </tr>
+<!--
+                            <tr>
+                                <td class="text-center">凱大發</td>
+                                <td class="text-center">客服中心</td>
+                                <td class="nopadding">
+                                    <table class="table table-bordered" style="min-height: 55px;margin-bottom:0px; ">
+                                        <tbody>
+                                           <tr>
+                                                <th width="120" class="text-right" style="vertical-align: middle">賦予角色：</th>
+                                                <td>Portal機關管理者(EzwOrgAdmin)、Portal人事管理者(EzwPersonnel)、工作獎金管理者(BonusAdmin)..</td>
+                                            </tr>
+                                            <tr>
+                                                <th width="120" class="text-right" style="vertical-align: middle">管轄機關：</th>
+                                                <td>人事行政總處、司法院</td>
+                                            </tr>
+                                            <tr>
+                                                <th width="120" class="text-right" style="vertical-align: middle">管轄單位：</th>
+                                                <td>
+                                                    <div>人事行政總處：全部</div>
+                                                    <div>司法院：人事室、客服中心、資訊中心</div>
+                                                </td>
+                                            </tr>
+                                            
+                                            
+                                            
+                                        </tbody>
+                                    </table>
+
+                                </td>
+                                <td class="text-center">
+                                    <button id="editrole_btn" class="btn btn-default"><i class="fa fa-edit"></i> </button>
+                                    <button id="editrole_btn" class="btn btn-danger"><i class="fa fa-trash-alt"></i> </button>
+                                </td>
+                                <td class="text-center">1070124 16:22 <br>測試二</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">凱大發</td>
+                                <td class="text-center">人事室</td>
+                                <td class="nopadding">
+                                    <table class="table table-bordered" style="min-height: 55px;margin-bottom:0px; ">
+                                        <tbody>
+                                         <tr>
+                                                <th width="120" class="text-right" style="vertical-align: middle">賦予角色：</th>
+                                                <td>Portal機關管理者(EzwOrgAdmin)、Portal人事管理者(EzwPersonnel)、工作獎金管理者(BonusAdmin)..</td>
+                                            </tr>
+                                          <tr>
+                                                <th width="120" class="text-right" style="vertical-align: middle">管轄權限：</th>
+                                                <td>
+                                                    繼承：
+                                                    <ol>
+                                                        <li>人事行政總處 客服中心 凱大發</li>
+                                                        <li>人事行政總處 客服中心 凱一技</li>
+                                                    </ol>
+                                                </td>
+                                                
+                                            </tr>
+                                           
+                                            
+                                            
+
+                                        </tbody>
+                                    </table>
+
+                                </td>
+                                <td class="text-center">
+                                    <button id="editrole_btn" class="btn btn-default"><i class="fa fa-edit"></i> </button>
+                                    <button id="editrole_btn" class="btn btn-danger"><i class="fa fa-trash-alt"></i> </button>
+                                </td>
+                                <td class="text-center">1070124 16:22 <br>測試二</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="text-center">  一般工程師(613802003)<br>李曉郁</td>
+                                <td class="text-center">人事室</td>
+                                <td class="nopadding">
+                                   <table class="table table-bordered" style="min-height: 55px;margin-bottom:0px; ">
+                                        <tbody>
+                                           <tr>
+                                                <th width="120" class="text-right" style="vertical-align: middle">賦予角色：</th>
+                                                <td>Portal機關管理者(EzwOrgAdmin)、Portal人事管理者(EzwPersonnel)、工作獎金管理者(BonusAdmin)..</td>
+                                            </tr>
+                                            <tr>
+                                                <th width="120" class="text-right" style="vertical-align: middle">管轄機關：</th>
+                                                <td>全部</td>
+                                            </tr>
+                                            <tr>
+                                                <th width="120" class="text-right" style="vertical-align: middle">管轄單位：</th>
+                                                <td>
+                                                    <div>全部</div>
+                                                </td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+
+                                </td>
+                                <td class="text-center">
+                                    <button id="editrole_btn" class="btn btn-default"><i class="fa fa-edit"></i> </button>
+                                    <button id="editrole_btn" class="btn btn-danger"><i class="fa fa-trash-alt"></i> </button>
+                                </td>
+                                <td class="text-center">1070124 16:22 <br>測試二</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">凱大發</td>
+                                <td class="text-center">人事室</td>
+                                <td class="nopadding">
+                                    <table class="table table-bordered" style="min-height: 55px; margin-bottom:0px; ">
+                                        <tbody>
+                                           <tr>
+                                                <th width="120" class="text-right" style="vertical-align: middle">賦予角色：</th>
+                                                <td>Portal機關管理者(EzwOrgAdmin)、Portal人事管理者(EzwPersonnel)、工作獎金管理者(BonusAdmin)..</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </td>
+                                <td class="text-center">
+                                    <button id="editrole_btn" class="btn btn-default"><i class="fa fa-edit"></i> </button>
+                                    <button id="editrole_btn" class="btn btn-danger"><i class="fa fa-trash-alt"></i> </button>
+                                </td>
+                                <td class="text-center">1070124 16:22 <br>測試二</td>
+                            </tr>
+                          
+-->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 新增角色/編輯角色 權限 -->
+
+                <div id="新增編輯角色權限" style="display: none">
+                    <div style="margin: 1% 0;">
+                        <button name="back" class="btn btn-default" style="float: left"><i class="fas fa-long-arrow-alt-left"></i> 上一頁</button>
+                        <div class="clearfix"></div>
+                    </div>
+                    <table class="table table-bordered table-stripedl" style="background-color:#fff;">
+                        <tbody>
+                            <tr>
+                                <th class="blackth text-center" colspan="2">角色權限設定</th>
+                            </tr>
+                            
+                            <tr>
+                                <th class="text-right grayth">人員：</th>
+                                <td>
+                                    <span id="uroleScope">
+                                        <div style="width:100%;">
+                                            <span id="location_org">
+
+                                                <select id="org" name="org" class="ug_commonform" style="width:240px">
+                                                    <option value="315060000H">交通部民用航空局</option>
+                                                    <option value="501010000F">臺北高等行政法院</option>
+                                                    <option value="504300000F">臺灣臺東地方法院</option>
+                                                    <option value="A21020000I">衛生福利部食品藥物管理署</option>
+                                                    <option value="A58000000A" selected="">人事行政總處</option>
+                                                    <option value="EB16138656">凱發科技股份有限公司</option>
+                                                </select>
+                                            </span>
+                                            <span id="location_unit">
+
+                                                <select id="unit" name="unit" class="ug_commonform" style="width:240px">
+                                                    <option value="300001" selected="">客服中心</option>
+                                                    <option value="300002">中央存款保險公司</option>
+                                                    <option value="300006">中央存保會計處</option>
+                                                    <option value="300007">中央存保總經理</option>
+                                                    <option value="300008">中央存保陳副總</option>
+                                                    <option value="300009">中央存保周副總</option>
+                                                    <option value="300010">中央存保資訊室</option>
+                                                    <option value="300011">中央存保人事室 </option>
+                                                    <option value="300012">司法院</option>
+                                                    <option value="300013">司法院人事處</option>
+                                                    <option value="300014">司法院資訊處</option>
+                                                    <option value="300015">統一資訊股份有限公司</option>
+                                                    <option value="300016">雲林縣麥寮鄉公所</option>
+                                                    <option value="300017">臺中市立惠文高級中學</option>
+                                                    <option value="300018">台江國家公園管理處</option>
+                                                    <option value="300019">臺南市政府勞工局職訓就服中心</option>
+                                                    <option value="300020">高雄市政府勞工局</option>
+                                                    <option value="300021">高雄市六龜區公所</option>
+                                                    <option value="300022">中華民國工業安全衛生協會</option>
+                                                    <option value="300023">行政院資訊處</option>
+                                                    <option value="300024">高速公路局秘書室</option>
+                                                    <option value="300025">交通部觀光局北海岸及觀音山國家風景區管理處</option>
+                                                    <option value="300026">交通部觀光局阿里山國家風區管理處</option>
+                                                    <option value="300027">交通部觀光局東部海岸國家風景區管理處</option>
+                                                    <option value="300028">交通部觀光局大鵬灣國家風景區管理處</option>
+                                                    <option value="300029">交通部觀光局西拉雅國家風景區管理處</option>
+                                                    <option value="300030">經濟部標準檢驗局花蓮分局</option>
+                                                    <option value="300031">勞動部人事處</option>
+                                                    <option value="300032">勞動部</option>
+                                                    <option value="300033">最高法院人事室</option>
+                                                    <option value="300034">國立金門大學人事室</option>
+                                                    <option value="300035">教育部青年發展署</option>
+                                                    <option value="300036">高雄市審計處</option>
+                                                    <option value="300037">中央選舉委員會</option>
+                                                    <option value="300038">主計總處</option>
+                                                    <option value="300039">金門航空站</option>
+                                                    <option value="300040">嘉義縣政府</option>
+                                                    <option value="300041">交通部臺灣區國道高速公路局南區工程處</option>
+                                                    <option value="300042">中央存款保險公司</option>
+                                                    <option value="300043">臺北市立浩然敬老院</option>
+                                                    <option value="300044">交通部臺灣區國道高速公路局中區工程處</option>
+                                                    <option value="300045">臺中市北屯區公所人事室</option>
+                                                    <option value="300046">國立臺灣大學生物資源暨農學院附設山地實驗農場</option>
+                                                    <option value="300047">南投縣選舉委員會</option>
+                                                    <option value="300048">中興大學計資中心</option>
+                                                    <option value="300049">高雄市阿蓮區公所</option>
+                                                    <option value="300050">高雄廣播電臺</option>
+                                                    <option value="300051">高雄市橋頭區公所</option>
+                                                    <option value="300054">國立教育廣播電台</option>
+                                                    <option value="300055">國立臺北藝術大學</option>
+                                                    <option value="300056">衛生福利部國家中醫藥研究所</option>
+                                                    <option value="300057">臺東市公所</option>
+                                                    <option value="300058">高雄市立光華國中</option>
+                                                    <option value="300059">僑務委員會</option>
+                                                    <option value="300060">財政部高雄國稅局</option>
+                                                    <option value="300061">國立公共資訊圖書館</option>
+                                                    <option value="300062">中華民國國軍退除役官兵輔導委員會</option>
+                                                    <option value="300063">海洋委員會</option>
+                                                    <option value="000001">財政部</option>
+                                                    <option value="000002">新竹科學園區管理局</option>
+                                                </select>
+
+                                                <select id="people" name="people" class="ug_commonform" style="width:240px">
+                                                    <option>凱大發</option>
+                                                    <option>凱一技</option>
+                                                    <option>葉噗噗</option>
+                                                </select>
+                                            </span></div>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-right grayth">規則：</th>
+                                <td>
+                                    <span>
+                                        <label><input type="radio" name="rule" checked> 依人員新增</label>
+                                        <label><input type="radio" name="rule"> 依職位新增(任同一職位人員，自動適用同一權限)</label>
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th class="blackth text-center" colspan="2">賦予角色</th>
+                            </tr>
+                            <tr>
+                                <th class="text-right grayth">說明：</th>
+                                <td>
+                                    若設定 [賦予角色]中有 [人事承辦人(Personnel)]、[系統管理者(SysAdmin)]、[技工工友管理者(wPersonnel)]，則需設定[管轄權限]。</td>
+                            </tr>
+                            <tr>
+                                <th class="text-right grayth">系統類別：</th>
+                                <td>
+                                    <select name="role" class="ug_commonform" style="max-width:150px;">
+                                        <option value="allrole">全部</option>
+                                        <option value="itr">差勤</option>
+                                        <option value="oes">費用</option>
+                                        <option value="goods">領物</option>
+                                        <option value="car">派車</option>
+                                        <option value="mrt">會議室</option>
+                                        <option value="qst">問卷系統</option>
+                                        <option value="prs">小額採購</option>
+                                        <option value="pds">經驗傳承</option>
+                                        <option value="zhenshen">人員甄審(選)</option>
+                                        <option value="test">平時考核</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th width="15%" class="text-right grayth">角色：</th>
+                                <td>
+                                    <div style="margin-bottom: 10px;">
+                                        <div class="input-group" style="width:300px;">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                                            <input name="role_search_input" class="ug_commonform" placeholder="請輸入角色" style="border-top-left-radius: 0px; border-bottom-left-radius: 0px;">
+                                        </div>
+                                    </div>
+
+                                    <table name="itr" class="table role">
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" value="General"> 全域(General)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="SysAdmin">系統管理者(SysAdmin)</label></td>
+                                            <td width="25%">
+                                                <label><input type="checkbox" value="Personnel">人事承辦人(Personnel)</label>
+                                            </td>
+                                            <td width="25%"><label><input type="checkbox" value="wPersonnel">技工工友管理者(wPersonnel)</label></td>
+                                            <td width="25%"></td>
+
+
+
+                                        </tr>
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" value="BonusAdmin"> 工作獎金管理者(BonusAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="BonusUnitAdmin"> 工作獎金單位承辦人(BonusUnitAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="CertificateApplyEmploymentAdmin"> 在離職證明承辦人(CertificateApplyEmploymentAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="CesAdmin"> 課程活動管理系統管理者(CesAdmin)</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" value="CesUser">課程活動管理系統一般使用者()</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="ClassListAdmin">課務管理者(ClassListAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="ConfigFeeOfficial">差旅費用管理者(ConfigFeeOfficial)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="ConfigFlowroute">設定表單簽核流程(ConfigFlowroute)</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" value="ConfigOrg">設定組織(ConfigOrg)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="ConfigPosition">設定人員職位(ConfigPosition)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="DepartAdmin">單位管理者(DepartAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="DeptHead">單位主管(DeptHead)</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" value="EzwAdmin">設定組織(ConfigOrg)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="ConfigPosition">設定人員職位(ConfigPosition)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="DepartAdmin">單位管理者(DepartAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="EzwAdmin">Poratl管理者(EzwAdmin)</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" value="EzwOnlineCard">Portal線上刷卡(EzwOnlineCard)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="EzwOrgAdmin">Portal機關管理者(EzwOrgAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="EzwPersonnel">Portal人事管理者(EzwPersonnel)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="EzwPersonnelChangesOnBoardApply">職員報到作業單新進人員(EzwPersonnelChangesOnBoardApply)</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" value="EzwUser">Portal使用者(EzwUser)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="HealthCheckupAdmin">健檢補助費承辦人(HealthCheckupAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="ItrUser">差勤系統使用者(ItrUser)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="OrgAccount">機關帳號(OrgAccount)</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" value="OrgAdmin">機關管理者(OrgAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="OrgHead">機關首長(OrgHead)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="PersonnelOrg">主管機關差勤統計，人事處業務科管理者(PersonnelOrg)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="SamAdmin">應用系統帳號管理系統管理者(SamAdmin)</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" value="SamOnBoard">應用系統帳號管理系統職員報到作業新進人員(SamOnBoard)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="SamUser">應用子系統一般使用者(SamUser)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="PersonnelOrg">主管機關差勤統計，人事處業務科管理者(PersonnelOrg)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="SamAdmin">應用系統帳號管理系統管理者(SamAdmin)</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" value="ViewAllFlow">檢視所有公文(ViewAllFlow)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="ViewSysLog">系統日誌檢視(ViewSysLog)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="ShiftEditor">輪值班負責人(ShiftEditor)</label></td>
+                                            <td width="25%"></td>
+                                        </tr>
+
+
+                                    </table>
+
+                                    <table name="car" class="table role">
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" value="CarAdmin"> 派車通行證管理者</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="CarPassAdmin"> 派車通行證管理者(CarPassAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="CarUnitAdmin"> 派車單位管理者(CarUnitAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="CarUser"> 派車使用者(CarUser)</label></td>
+                                        </tr>
+                                    </table>
+                                    <table name="goods" class="table role">
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" value="RmoAdmin"> 領物管理者(RmoAdmin)
+                                                </label></td>
+                                            <td width="25%"><label><input type="checkbox" value="RmoUser"> 領物使用者(RmoUser)</label></td>
+                                            <td width="25%"></td>
+                                            <td width="25%"></td>
+                                        </tr>
+                                    </table>
+                                    <table name="mrt" class="table role">
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" value="MtrAdmin"> 會議室管理者(MtrAdmin)
+                                                </label></td>
+                                            <td width="25%"><label><input type="checkbox" value="MtrOrgAdmin"> 會議室機關管理者(MtrOrgAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="MtrUser"> 會議室使用者(MtrUser)</label></td>
+                                            <td width="25%"></td>
+                                        </tr>
+                                    </table>
+                                    <table name="pds" class="table role">
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" value="PdsAdmin"> 經驗傳承系統管理者(PdsAdmin)
+                                                </label></td>
+                                            <td width="25%"><label><input type="checkbox" value="PdsResearchAdmin"> 研究發展資料管理者(PdsResearchAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="PdsTaskAdmin"> 業務傳承資料管理者(PdsTaskAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="PdsUser"> 經驗傳承系統一般使用者(PdsUser)</label></td>
+                                        </tr>
+                                    </table>
+
+                                    <table name="prs" class="table role">
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" value="PrsAdmin"> 小額採購系統管理者(PrsAdmin)
+                                                </label></td>
+                                            <td width="25%"><label><input type="checkbox" value="PrsAssigner"> 小額採購系統採購分派人(PrsAssigner)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="PrsBudgetAdmin"> 小額採購系統登帳管理人(PrsBudgetAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="PrsBudgetUnitAdmin"> 小額採購系統預算總帳控管人(PrsBudgetUnitAdmin)</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" value="PrsBuyer"> 小額採購系統採購管理者(PrsBuyer)
+                                                </label></td>
+                                            <td width="25%"><label><input type="checkbox" value="PrsUser"> 小額採購系統一般使用者(PrsUser)</label></td>
+                                            <td width="25%"></td>
+                                            <td width="25%"></td>
+                                        </tr>
+                                    </table>
+                                    <table name="qst" class="table role">
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" value="QstAdmin"> 問卷調查子系統管理者(QstAdmin)
+                                                </label></td>
+                                            <td width="25%"><label><input type="checkbox" value="QstInvigilateAdmin">巡監場調查管理者(QstInvigilateAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="QstMakerAdmin">問卷製作管理者(QstMakerAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox" value="QstUser">問卷調查子系統一般使用者(QstUser)</label></td>
+                                        </tr>
+                                    </table>
+                                    <table name="oes" class="table role">
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox" checked> 費用管理者(ConfigFee)</label></td>
+                                            <td width="25%"><label><input type="checkbox"> 費用線上系統管理者(OesAdmin)</label></td>
+                                            <td width="25%"><label><input type="checkbox"> 預支旅費核發管理者(OesAdvanceIssue)</label></td>
+                                            <td width="25%"><label><input type="checkbox"> 預支旅費轉會計帳管理者(OesAdvanceTransfer)</label></td>
+                                        </tr>
+                                    </table>
+                                    <table name="zhenshen" class="table role">
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox"> 系統管理者</label></td>
+                                            <td width="25%"><label><input type="checkbox"> 人事管理者</label></td>
+                                            <td width="25%"><label><input type="checkbox"> 人員動態承辦人</label></td>
+                                            <td width="25%"><label><input type="checkbox"> 人求事承辦人</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox"> 人員甄審承辦人</label></td>
+                                            <td width="25%"></td>
+                                            <td width="25%"></td>
+                                            <td width="25%"></td>
+                                        </tr>
+                                    </table>
+                                    <table name="test" class="table role">
+                                        <tr>
+                                            <td width="25%"><label><input type="checkbox"> 平時考核承辦人</label></td>
+                                            <td width="25%"></td>
+                                            <td width="25%"></td>
+                                            <td width="25%"></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="blackth text-center" colspan="2">管轄權限</th>
+                            </tr>
+                            <tr>
+                                <th rowspan="2" class="text-right grayth">管轄權限：</th>
+                                <td>
+                                    繼承管轄權限：
+                                    <label><input type="radio" id="inherit_off" name="inherit" checked onclick="document.getElementById('啟用繼承').style.display='none';document.getElementById('不啟用繼承').style.display='';"> 不啟用</label>
+
+                                    <label><input type="radio" id="inherit_on" name="inherit" onclick="document.getElementById('啟用繼承').style.display='';document.getElementById('不啟用繼承').style.display='none';"> 啟用
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="nopadding">
+                                    <div id="啟用繼承" style="padding: 1%; display: none">
+                                        <div>
+                                            <button class="btn btn-success"><i class="fas fa-plus"></i> 新增對象</button>
+                                        </div>
+                                        <div style="margin:5px">
+                                            <span id="location_org">
+
+                                                <select id="org" name="org" class="ug_commonform" style="width:240px">
+                                                    <option value="315060000H">交通部民用航空局</option>
+                                                    <option value="501010000F">臺北高等行政法院</option>
+                                                    <option value="504300000F">臺灣臺東地方法院</option>
+                                                    <option value="A21020000I">衛生福利部食品藥物管理署</option>
+                                                    <option value="A58000000A" selected="">人事行政總處</option>
+                                                    <option value="EB16138656">凱發科技股份有限公司</option>
+                                                </select>
+                                            </span>
+                                            <span id="location_unit">
+
+                                                <select id="unit" name="unit" class="ug_commonform" style="width:240px">
+                                                    <option value="300001" selected="">客服中心</option>
+
+                                                </select>
+
+                                                <select id="people" name="people" class="ug_commonform" style="width:150px">
+                                                    <option>凱大發</option>
+                                                    <option>凱一技</option>
+                                                    <option>葉噗噗</option>
+                                                </select>
+
+                                            </span>
+                                            <button class="btn btn-default"><i class="fas fa-trash-alt"></i></button>
+                                        </div>
+                                        <div style="margin:5px">
+                                            <span id="location_org">
+
+                                                <select id="org" name="org" class="ug_commonform" style="width:240px">
+                                                    <option value="315060000H">交通部民用航空局</option>
+                                                    <option value="501010000F">臺北高等行政法院</option>
+                                                    <option value="504300000F">臺灣臺東地方法院</option>
+                                                    <option value="A21020000I">衛生福利部食品藥物管理署</option>
+                                                    <option value="A58000000A" selected="">人事行政總處</option>
+                                                    <option value="EB16138656">凱發科技股份有限公司</option>
+                                                </select>
+                                            </span>
+                                            <span id="location_unit">
+
+                                                <select id="unit" name="unit" class="ug_commonform" style="width:240px">
+                                                    <option value="300001" selected="">客服中心</option>
+
+                                                </select>
+
+                                                <select id="people" name="people" class="ug_commonform" style="width:150px">
+                                                    <option>凱大發</option>
+                                                    <option>凱一技</option>
+                                                    <option>葉噗噗</option>
+                                                </select>
+                                            </span>
+
+                                            <button class="btn btn-default"><i class="fas fa-trash-alt"></i></button>
+                                        </div>
+                                        <div style="margin:5px">
+                                            <span id="location_org">
+
+                                                <select id="org" name="org" class="ug_commonform" style="width:240px">
+                                                    <option value="315060000H">交通部民用航空局</option>
+                                                    <option value="501010000F">臺北高等行政法院</option>
+                                                    <option value="504300000F">臺灣臺東地方法院</option>
+                                                    <option value="A21020000I">衛生福利部食品藥物管理署</option>
+                                                    <option value="A58000000A" selected="">人事行政總處</option>
+                                                    <option value="EB16138656">凱發科技股份有限公司</option>
+                                                </select>
+                                            </span>
+                                            <span id="location_unit">
+                                                <select id="unit" name="unit" class="ug_commonform" style="width:240px">
+                                                    <option value="300001" selected="">客服中心</option>
+
+                                                </select>
+                                                <select id="people" name="people" class="ug_commonform" style="width:150px">
+                                                    <option>凱大發</option>
+                                                    <option>凱一技</option>
+                                                    <option>葉噗噗</option>
+                                                </select>
+                                            </span>
+                                            <button class="btn btn-default"><i class="fas fa-trash-alt"></i></button>
+                                        </div>
+                                    </div>
+
+                                    <div id="不啟用繼承">
+                                        <table class="table table-bordered" style="margin-bottom:0px; ">
+                                            <tr>
+                                                <th width="150" class="grayth text-right">管轄機關單位：</th>
+                                                <td>
+                                                   
+                                                   <div id="selectorgunit" style="width:500px;border-collapse:separate;">
+                                                      <treeselect :multiple="true"
+                                                    :options="options"
+                                                    placeholder="請選擇機關單位"
+                                                    v-model="value" />
+                                                    </div>
+                                                   
+                                                    
+                                                </td>
+                                            </tr>
+                                           
+                                            <tr>
+                                                <th class="grayth text-right">職務類別：</th>
+                                                <td>
+
+                                                    <label><input type="checkbox" name="memcod_box" id="memcod_box" value="all">全部
+                                                    </label><br>
+                                                    <label style="margin-right: 10px;"><input type="checkbox" name="memcod_box" id="memcod_box" value="1">正式人員</label>
+                                                    <label style="margin-right: 10px;"><input type="checkbox" name="memcod_box" id="memcod_box" value="2">雇員</label>
+                                                    <label style="margin-right: 10px;"><input type="checkbox" name="memcod_box" id="memcod_box" value="3">技工工友</label>
+                                                    <label style="margin-right: 10px;"><input type="checkbox" name="memcod_box" id="memcod_box" value="4">臨時人員</label>
+                                                    <label style="margin-right: 10px;"><input type="checkbox" name="memcod_box" id="memcod_box" value="5">約僱人員</label>
+                                                    <label style="margin-right: 10px;"><input type="checkbox" name="memcod_box" id="memcod_box" value="6">教師</label>
+                                                    <label style="margin-right: 10px;"><input type="checkbox" name="memcod_box" id="memcod_box" value="7">教師兼行政人員</label>
+                                                    <label style="margin-right: 10px;"><input type="checkbox" name="memcod_box" id="memcod_box" value="8">司機</label>
+                                                    <label style="margin-right: 10px;"><input type="checkbox" name="memcod_box" id="memcod_box" value="9">聘用人員</label>
+                                                    <label style="margin-right: 10px;"><input type="checkbox" name="memcod_box" id="memcod_box" value="A">專案人員</label>
+                                                    <label style="margin-right: 10px;"><input type="checkbox" name="memcod_box" id="memcod_box" value="B">替代役</label>
+                                                    <label style="margin-right: 10px;"><input type="checkbox" name="memcod_box" id="memcod_box" value="C">約用人員</label>
+                                                    <label style="margin-right: 10px;"><input type="checkbox" name="memcod_box" id="memcod_box" value="D">工讀生</label>
+                                                    <label style="margin-right: 10px;"><input type="checkbox" name="memcod_box" id="memcod_box" value="E">駐衛警</label>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+
+
+                    <div align="center" style="margin: 1% 0">
+
+                        <button class="btn btn-primary"> 復原</button>
+                        <button class="btn btn-primary"> 清除</button>
+                        <button class="btn btn-primary"> <i class="fas fa-save"></i> 儲存</button>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+        </div><!-- InstanceEndEditable -->           
+       	  </div>
+        </div>
+      </div>
+</div>
+<!-- InstanceBeginRepeat name="頁面js 重複區" --><!-- InstanceBeginRepeatEntry -->
+<script>
+	$(document).ready(function(){
+          $('#notifications,#notifications_mobile').click(function(){
+                $('.notifications').toggleClass('notice_open');
+            })
+         $('#通知訊息關閉按鈕').click(function(){
+                $('.notifications').removeClass('notice_open');
+         })
+         
+     })
+</script>
+
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+<!-- InstanceBeginEditable name="頁面 js區" -->
+	<!--Bootstrap Filters-->
+    <script>
+        $(document).ready(function() {
+            //角色搜尋
+            $('input[name="role_search_input"]').on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("table[name='itr'] td, table[name='oes'] td,table[name='goods'] td,table[name='car'] td").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+            
+            $('input[name="manage_org_search_input"]').on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("table[name='manage_org_data'] td").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+            $('input[name="manage_unit_search_input"]').on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("table[name='manage_unit_data'] td").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+
+        });
+    </script>
+    <script>
+        $(function() {
+            $('#addrole').click(function() {
+                $('#角色權限維護').hide();
+                $('#新增編輯角色權限').show();
+               
+            });
+            $('#editrole_btn').click(function() {
+                $('#角色權限維護').hide();
+                $('#新增編輯角色權限').show();
+               
+            });
+            //上一頁
+            $('button[name="back"]').click(function() {
+                $('#角色權限維護').show();
+                $('#新增編輯角色權限').hide();
+            });
+
+
+            //管轄權限>系統類別
+            $('select[name="role"]').change(function() {
+                $('.role').hide();
+                $('table[name="' + $(this).val() + '"]').show();
+
+                if (this.value == 'allrole') {
+                    $('.role').show();
+                }
+            });
+
+        })
+    </script>
+    <script>
+        // register the component
+        Vue.component('treeselect', VueTreeselect.Treeselect)
+
+        new Vue({
+            el: '#selectorgunit',
+            data: {
+                // define the default value
+                value: null,
+                // define options
+                options:
+
+                    [{
+                        id: '全部機關及單位',
+                        label: '全部機關及單位',
+                        children: [{
+                                id: '人事行政總處',
+                                label: '人事行政總處',
+                                children: [{
+                                    id: '人事行政總處資訊處',
+                                    label: '人事行政總處資訊處',
+                                    children: [{
+                                        id: '人事行政總處資訊○○○科',
+                                        label: '人事行政總處資訊○○○科',
+                                    }, {
+                                        id: '人事行政總處資訊XXX科',
+                                        label: '人事行政總處資訊XXX科',
+                                    }],
+                                }, {
+                                    id: '人事行政總處政風處',
+                                    label: '人事行政總處政風處',
+                                    children: [{
+                                        id: '人事行政總處政風處○○科',
+                                        label: '人事行政總處政風處○○科',
+                                    }, {
+                                        id: '人事行政總處政風處○○科',
+                                        label: '人事行政總處政風處○○科',
+                                    }],
+                                }, {
+                                    id: '人事行政總處秘書室',
+                                    label: '人事行政總處秘書室',
+                                }],
+                            },
+                            {
+                                id: '新竹市政府',
+                                label: '新竹市政府',
+                                children: [{
+                                    id: '新竹市政府民政處',
+                                    label: '新竹市政府民政處',
+                                    children: [{
+                                        id: '新竹市政府民政處自治行政科',
+                                        label: '新竹市政府民政處自治行政科',
+                                    }, {
+                                        id: '新竹市政府民政處戶政科',
+                                        label: '新竹市政府民政處戶政科',
+                                    }],
+                                }, {
+                                    id: '新竹市政府財政處',
+                                    label: '新竹市政府財政處',
+                                    children: [{
+                                        id: '新竹市政府財政處財務管理科',
+                                        label: '新竹市政府財政處財務管理科',
+                                    }, {
+                                        id: '新竹市政府財政處庫款支付科',
+                                        label: '新竹市政府財政處庫款支付科',
+                                    }],
+                                }, {
+                                    id: '新竹市衛生局',
+                                    label: '新竹市衛生局',
+                                }],
+                            }
+                        ]
+                    }, ],
+
+            },
+        })
+    </script>	
+<!-- InstanceEndEditable -->
+
+
+</body>
+<!-- InstanceEnd --></html>

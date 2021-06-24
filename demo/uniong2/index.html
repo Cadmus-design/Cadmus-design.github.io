@@ -1,0 +1,2831 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>客服資源平台</title>
+
+<link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+<link href="css/flexslider.css" rel="stylesheet" type="text/css">
+
+
+<!-- icon -->
+	<link rel="stylesheet" href="icon/css/fontawesome-all.css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
+<script src="js/jquery_new.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<!---------------------jS套件--------------------->
+<!-- chosen -->
+    <link rel="stylesheet" href="css/chosen.min.css">
+    <script src="js/chosen.jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('#客戶名稱').chosen();
+            $('#所屬單位').chosen();
+        });
+        
+    </script>
+<!--回到最上方js-->
+<script type="text/javascript">
+$(function() {
+    /* 按下GoTop按鈕時的事件 */
+    $('#gotoTop').click(function(){
+        $('html,body').animate({ scrollTop: 0 }, 'slow');   /* 返回到最頂上 */
+        return false;
+    });
+    
+    /* 偵測卷軸滑動時，往下滑超過400px就讓GoTop按鈕出現 */
+    $(window).scroll(function() {
+        if ( $(this).scrollTop() > 400){
+            $('#gotoTop').fadeIn();
+        } else {
+            $('#gotoTop').fadeOut();
+        }
+    });
+});
+</script>
+<!--廣告輪播-單張-->
+<script src="js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+  $(window).load(function() {
+    $('#sliderround').flexslider(
+		 {
+		animation: "slide", //此為不間斷效果，若拿掉則以浮出效果顯示
+        slideshowSpeed: 5000,
+        }
+	);	 
+  });
+   $(window).load(function() {
+    $('#sliderround_RWD').flexslider(
+		 {
+		animation: "slide", //此為不間斷效果，若拿掉則以浮出效果顯示
+        slideshowSpeed: 5000,
+        }
+	);	 
+  });
+</script>    
+<!--廣告輪播-多張-->
+<script type="text/javascript">
+  $(window).load(function() {
+  $('#piccarousel').flexslider({
+    animation: "slide",
+    animationLoop: true,
+	slideshowSpeed: 6000,
+    itemWidth: 210,
+    itemMargin: 9,
+    minItems: 1,
+    maxItems: 3
+  });
+});
+$(window).load(function() {
+    $('#piccarousel_RWD').flexslider(
+		 {
+		animation: "slide", //此為不間斷效果，若拿掉則以浮出效果顯示
+        slideshowSpeed: 5000,
+		itemMargin: -2,
+        }
+	);	 
+  });
+		
+$(window).load(function() {
+    $('#piccarouse2_RWD').flexslider(
+		 {
+		animation: "slide", //此為不間斷效果，若拿掉則以浮出效果顯示
+        slideshowSpeed: 5000,
+		itemWidth: 210,
+		itemMargin: 9,
+		minItems: 1,
+		maxItems: 2
+        }
+	);	 
+  });
+</script>
+
+
+<!--側邊訊息拖曳-->
+<script type="text/javascript">
+	window.onload=function() 
+{ 
+ var blackall=document.getElementById("blackall"); 
+ var clickdiv=document.getElementById("clickdiv");  
+ var askbtn=document.getElementById("askbtn"); 
+ var askbtnx=document.getElementById("askbtnx");
+ var black_user=document.getElementById("black_user"); 
+// var loginbt=document.getElementById("loginbt");
+// var loginpart=document.getElementById("loginpart");
+// var registeredbt=document.getElementById("registeredbt");
+// var registeredpart=document.getElementById("registeredpart");
+// var contact_us=document.getElementById("contact_us");
+// var contact_uspart=document.getElementById("contact_uspart");
+// var bookbt=document.getElementById("bookbt");
+// var bookpart=document.getElementById("bookpart");
+// var btclose=document.getElementById("btclose");
+// var btclose1=document.getElementById("btclose1");
+ var btclose2=document.getElementById("btclose2");
+// var btclose3=document.getElementById("btclose3");
+  
+ askbtn.onclick=function() 
+ { 
+  blackall.style.display="block"; 
+  clickdiv.style.display="block"; 
+  askbtn.style.display="none"; 
+  askbtnx.style.display="block";
+ } 
+ askbtnx.onclick=function() 
+ { 
+  blackall.style.display="none"; 
+  clickdiv.style.display="none";
+  askbtn.style.display="block"; 
+  askbtnx.style.display="none";
+ }
+// loginbt.onclick=function() 
+// { 
+//  black_user.style.display="block"; 
+//  loginpart.style.display="block";
+// } 
+//
+// registeredbt.onclick=function() 
+// { 
+//  black_user.style.display="block"; 
+//  registeredpart.style.display="block";
+// }
+// contact_us.onclick=function() 
+// { 
+//  black_user.style.display="block"; 
+//  contact_uspart.style.display="block";
+// }
+// bookbt.onclick=function() 
+// { 
+//  black_user.style.display="block"; 
+//  bookpart.style.display="block";
+// }
+ 
+//  btclose.onclick=function() 
+// { 
+//  black_user.style.display="none"; 
+//  loginpart.style.display="none";
+// } 
+//  btclose1.onclick=function() 
+// { 
+//  black_user.style.display="none"; 
+//  registeredpart.style.display="none";  
+// } 
+//  btclose2.onclick=function() 
+// { 
+//  black_user.style.display="none"; 
+//  contact_uspart.style.display="none";  
+// }
+//  btclose3.onclick=function() 
+// { 
+//  black_user.style.display="none"; 
+//  bookpart.style.display="none";  
+// } 
+} 
+</script>
+
+<!--頁籤效果-->
+<script type="text/javascript">
+	$(function(){
+		// 預設顯示第一個 Tab
+		var _showTab = 0;
+		$('.abgne_tab').each(function(){
+			// 目前的頁籤區塊
+			var $tab = $(this);
+
+			var $defaultLi = $('ul.tabs li', $tab).eq(_showTab).addClass('active');
+			$($defaultLi.find('a').attr('href')).siblings().hide();
+			
+			// 當 li 頁籤被點擊時...
+			// 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+			$('ul.tabs li', $tab).click(function() {
+				// 找出 li 中的超連結 href(#id)
+				var $this = $(this),
+					_clickTab = $this.find('a').attr('href');
+				// 把目前點擊到的 li 頁籤加上 .active
+				// 並把兄弟元素中有 .active 的都移除 class
+				$this.addClass('active').siblings('.active').removeClass('active');
+				// 淡入相對應的內容並隱藏兄弟元素
+				$(_clickTab).stop(false, true).fadeIn().siblings().hide();
+
+				return false;
+			}).find('a').focus(function(){
+				this.blur();
+			});
+		});
+	});
+</script>
+<!--若有多個分頁，為避免吃到重複的，可在<ul><li></li></ul>中的 id 設置不一樣的對應欲顯示的頁面內容，無須再動到 js-->
+
+<!--關鍵字搜尋-->
+<script>
+$(document).ready(function(){
+  $("#bookInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#bookTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+	$("#textInput1").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#textTable1 tbody tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+	$("#videoInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#videoTable tbody tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+</head>
+
+
+<body>
+<!-- 回到最上方 -->
+   <div id="gotoTop">
+        <div>
+            <a href="#" title="回到最上方"><i class="fas fa-arrow-up"></i><br>TOP</a>
+        </div>
+    </div>
+<!-- 業務洽詢 mobile-->
+<!--
+ 	<div id="contact_us">
+        <div>
+            <a href="#" title="業務洽詢"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+-->
+<!-- Main Container -->
+<div class="container"> 
+  <!-- Navigation -->
+  <header>  
+<!-- 浮動div start-->
+  <div class="black_user" id="black_user"></div> 
+  <div class="clickuser" id="loginpart">
+ 	  <div style="margin: 15px 15px 0px 0px;">
+  		<button id="btclose" class="closebt"><i class="fas fa-times"></i></button>
+      </div>
+       <div class="表格外距">
+  		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  		    <thead>
+  		    	<tr>
+  		    		<th class="標題 底線" colspan="2" align="center" >登入</th>
+  		        </tr>
+  		    </thead>
+  			<tbody>
+				<tr>
+				  <td class="表格標題" nowrap align="center">帳號：</td>
+				  <td class="表格內容">
+				  	<input type="text" class="通用輸入框" placeholder="請輸入帳號">
+				  </td>
+				</tr>
+				<tr>
+				  <td class="表格標題" nowrap align="center">密碼：</td>
+				  <td class="表格內容">
+				  	<input type="text" class="通用輸入框" placeholder="請輸入密碼">
+				  </td>
+				</tr>
+<!--
+		    	<tr>
+				  <td colspan="2" class="表格內容" style="padding-top: 0px;">
+				  	<a href="#">忘記密碼?</a>
+				  </td>
+				</tr>
+-->
+			    <tr>
+				  <td nowrap align="center" class="表格標題">驗證碼：</td>
+				  <td class="表格內容">
+				  <div style="float: left;width:60%;margin-top: 5px;">
+				   	<input type="text" class="通用輸入框" placeholder="請輸入驗證碼">
+				  </div>
+				  <div style="float: left;width:40%;">
+				    <img align="middle" alt="驗證碼(開新視窗)" src="images/驗證碼.jpg" style="width: 100%;padding-top: 1px;">
+				  </div>
+				  <div style="clear: both;"></div>
+				  </td>
+				</tr>
+				<tr>
+				  <td colspan="2" class="表格內容 底線" style="padding-top: 0px;">
+				  	<a href="#">更新驗證碼</a>
+				  </td>
+			    </tr>
+  			</tbody>
+		</table>
+		<div align="center">
+			<button type="button" class="allbtn bt_blue btn_間距" onclick="document.getElementById('loginpart').style.display='none';document.getElementById('black_user').style.display='none';document.getElementById('succmess').style.display='none';document.getElementById('oversent').style.display='';document.getElementById('logoutbt').style.display='';document.getElementById('username').style.display='';document.getElementById('loginbt').style.display='none';document.getElementById('registeredbt').style.display='none';">登入</button>
+	    </div>
+	    </div>
+  </div>
+  <div class="clickuser" id="registeredpart">
+ 	  <div style="margin: 15px 15px 0px 0px;">
+  		<button id="btclose1" class="closebt"><i class="fas fa-times"></i></button>
+      </div>
+       <div class="表格外距">
+  		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  		    <thead>
+  		    	<tr>
+  		    		<th class="標題 底線" colspan="2" align="center" >註冊</th>
+  		        </tr>
+  		    </thead>
+  			<tbody>
+				<tr>
+				  <td class="表格標題" nowrap align="center">客戶名稱：</td>
+				  <td class="表格內容">
+                       <select id="客戶名稱" data-placeholder="請選擇客戶名稱">
+                            <option value=""></option>
+                                <option value="行政院人事行政總處">行政院人事行政總處</option>
+                                <option value="雲林縣麥寮鄉公所">雲林縣麥寮鄉公所</option>
+                                <option value="雲林縣麥寮鄉清潔隊">雲林縣麥寮鄉清潔隊</option>
+                                <option value="新竹市北區戶政事務所">新竹市北區戶政事務所</option>
+                                <option value="新竹巿地政事務所">新竹巿地政事務所</option>
+						</select>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="表格標題" nowrap align="center">所屬單位：</td>
+				  <td class="表格內容">
+                       <select id="所屬單位" data-placeholder="請選擇所屬單位">
+                            <option value=""></option>
+                                <option value="麥寮鄉公所本機關">麥寮鄉公所本機關</option>
+                                <option value="麥寮鄉公所主任秘書室">麥寮鄉公所主任秘書室</option>
+                                <option value="麥寮鄉公所工務課">麥寮鄉公所工務課</option>
+                                <option value="麥寮鄉公所行政室">麥寮鄉公所行政室</option>
+                                <option value="麥寮鄉公所政風室">麥寮鄉公所政風室</option>
+						</select>
+				  </td>
+				</tr>
+		    	<tr>
+				  <td class="表格標題" nowrap align="center">姓名：</td>
+				  <td class="表格內容">
+				  	<input type="text" class="通用輸入框" placeholder="請輸入姓名">
+				  </td>
+				</tr>
+			    <tr>
+				  <td class="表格標題 底線" nowrap>E-mail：</td>
+				  <td class="表格內容 底線">
+				  	<input type="text" class="通用輸入框" placeholder="請輸入信箱">
+				  </td>
+				</tr>
+  			</tbody>
+		</table>
+		<div align="center" id="oversent">
+			<button type="button" class="allbtn bt_blue btn_間距" onclick="document.getElementById('succmess').style.display='';document.getElementById('oversent').style.display='none';">完成送出</button>
+	    </div>
+		<div align="center" id="succmess" style="display: none;">
+			<div class="成功訊息">
+			   <i class="fas fa-check-circle"></i> 註冊成功
+			</div>
+			<div class="成功訊息_小字">
+				密碼函已寄到您的信箱：XXXX@gmail.com
+			</div>
+			<div>
+			   <button type="button" class="allbtn bt_blue btn_間距" onclick="document.getElementById('registeredpart').style.display='none';document.getElementById('black_user').style.display='none';document.getElementById('succmess').style.display='none';document.getElementById('oversent').style.display='';document.getElementById('logoutbt').style.display='';document.getElementById('username').style.display='';document.getElementById('loginbt').style.display='none';document.getElementById('registeredbt').style.display='none';">登入</button>
+			</div>
+		</div>
+		
+	    </div>
+  </div>
+  <div class="clickuser" id="contact_uspart">
+ 	  <div style="margin: 15px 15px 0px 0px;">
+  		<button id="btclose2" class="closebt"><i class="fas fa-times"></i></button>
+      </div>
+       <div class="表格外距">
+  			<table width="100%">
+  				<thead>
+					<tr>
+						<th class="標題 底線" colspan="3" align="center"><i class="fas fa-envelope"></i> 業務洽詢</th>
+					</tr>
+  		    	</thead>
+  		    	<tboby>
+					<tr>
+						<td width="150" align="right" nowrap class="問題表格 內容_杏">客戶名稱：</td>
+						<td align="left" class="問題表格 右內容_白" colspan="2">
+							<input type="text" class="通用輸入框"/>
+						</td>
+					</tr>
+					<tr>
+						<td align="right" nowrap class="問題表格 內容_杏">聯絡人：</td>
+						<td align="left" class="問題表格 右內容_白" colspan="2">
+						     <input type="text" class="通用輸入框"/>
+						</td>
+					</tr>
+					<tr>
+						<td align="right" nowrap class="問題表格 內容_杏">聯絡電話：</td>
+						<td align="left" class="問題表格 右內容_白" colspan="2">
+						     <input type="text" class="通用輸入框"/>
+						</td>
+					</tr>
+<!--
+					<tr>
+						<td align="right" nowrap class="問題表格 內容_杏">公司電話：</td>
+						<td align="left" class="問題表格 右內容_白" colspan="2">
+							<input type="text" class="通用輸入框"/>
+						</td>
+					</tr>
+-->
+					<tr>
+						<td align="right" nowrap class="問題表格 內容_杏">Email：</td>
+						<td align="left" class="問題表格 右內容_白" colspan="2">
+							<input type="text" class="通用輸入框"/>
+						</td>
+					</tr>
+					<tr>
+						<td align="right" nowrap class="問題表格 內容_杏">合作方案：</td>
+						<td align="left" class="問題表格 右內容_白" colspan="2">
+							<label><input type="radio" name="plan" value="1" checked="">
+							外包合作諮詢</label><br>
+							<label><input type="radio" name="plan" value="2">
+							軟體銷售通路諮詢</label><br>
+							<label><input type="radio" name="plan" value="3">
+							購買公司現有產品</label>
+						</td>
+					</tr>
+					<tr>
+						<td align="right" nowrap class="問題表格 內容_杏">內容說明：</td>
+						<td align="left" class="問題表格 右內容_白" colspan="2">
+							<textarea name="message" class="通用輸入框" style="height: 100px;" rows="4"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td align="right" nowrap class="問題表格 內容_杏" rowspan="2">驗證碼：</td>
+						<td align="left" class="問題表格 右內容_白" colspan="2">
+							 <input type="text" class="通用輸入框" placeholder="請輸入驗證碼">
+						</td>
+					</tr>
+					<tr>
+						<td align="left" class="問題表格 右內容_白" width="50%">
+							<img align="middle" alt="驗證碼(開新視窗)" src="images/驗證碼.jpg" style="width: 100%;">
+						</td>
+						<td align="left" class="問題表格 右內容_白" valign="bottom">
+							<button type="button" class="" style="border:none;font-size: 18px;color:#4E4E4D;background-color: transparent;"><i class="fas fa-sync-alt"></i></button>
+						</td>
+					</tr>
+<!--
+					<tr>
+					  <td colspan="2" class="表格內容" style="padding-top: 0px;float: right;">
+						<a href="#">更新驗證碼</a>
+					  </td>
+			    	</tr>
+-->
+					<tr>
+						<td colspan="3" align="center" class="問題表格 右內容_白" style="border-top: 2px solid #eee;">
+							<button class="allbtn bt_blue btn_間距" onclick="document.getElementById('contact_uspart').style.display='none';document.getElementById('black_user').style.display='none';">送出</button>
+							<button class="allbtn btn_間距">清除</button>
+						</td>
+					</tr>
+				  </tboby>
+			  </table>
+	    </div>
+  </div>
+<!--
+  <div class="clickuser" id="bookpart">
+ 	  <div style="margin: 15px 15px 0px 0px;">
+  		<button id="btclose3" class="closebt"><i class="fas fa-times"></i></button>
+      </div>
+       <div class="表格外距">
+        <h3 class="公告標題" style="border-bottom: 2px solid #CCC;">天然災害停止上班、上課登記作業事項</h3>
+        <div>
+			  <div class="公告內容">因逢於颱風、大雨季節，提供差勤系統天然災害停止上班、上課登記設定步驟，請下載附件檔參閱。
+備註：本文件與實際作業畫面可能略有差異，但不影響實際操作
+文件更新時間：20180824</div>
+			  <div class="" style="text-align: center;">
+				<button type="button" class="allbtn bt_blue" onclick="document.getElementById('bookpart').style.display='none';document.getElementById('black_user').style.display='none';">按此下載檔案</button>
+			  </div>
+			  <div style="clear: both;"></div>
+		  </div>
+	    </div>
+  </div>
+-->
+<!-- 浮動div end-->
+  
+  <div id="logoarea" class="web_between">
+	  <div class="logopart">
+	    <a href="index.html" title="首頁">
+           <img src="images/ug_logo.png" alt="">
+		</a>
+	  </div>
+		<div class="userpart">
+<!--			<button class="allbtn bt_blue navtoolbtn" onClick="window.open('驗證工具/verifytool_index.html');">驗證工具 <i class="fas fa-wrench"></i></button>-->
+	       <button type="button" class="userinfo" id="username" style="display: '';">歡迎蒞臨，李○○</button>
+		</div>
+		<div style="clear: both"></div>
+	</div>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero" id="hero" style="padding-bottom: 45px;">
+    <div class="flexslider" id="sliderround">
+		  <ul class="slides">
+	            <li><img src="images/差勤資料彙整平台.jpg"></li>
+	            <li><img src="images/加班餘數併計優化.jpg"></li>
+	            <li><img src="images/報到離職.jpg"></li>
+	            <li><img src="images/雲端服務.jpg"></li>
+		        <li><img src="images/合作使用數.jpg"></li>
+				<li><img src="images/webitr2.0.jpg"></li>				
+				<li><img src="images/無障礙設計.jpg"></li>				
+		  </ul>
+	</div>
+	<!--手機 mobile顯示-->
+	<div class="flexslider" id="sliderround_RWD">
+		  <ul class="slides">
+	  		    <li><img src="images/差勤資料彙整平台-RWD.jpg"></li>
+	  		    <li><img src="images/加班餘數併計優化-RWD.jpg"></li>
+	  		    <li><img src="images/報到離職-RWD.jpg"></li>
+	  		    <li><img src="images/雲端服務-RWD.jpg"></li>
+		  		<li><img src="images/合作使用數-RWD.jpg"></li>
+				<li><img src="images/webitr2.0-RWD.jpg"></li>				
+				<li><img src="images/無障礙設計-RWD.jpg"></li>				
+		  </ul>
+	</div>
+  </section>
+  <!-- About Section -->
+  	<section class="banner_add web_between" style="background-color: #fff;padding-bottom: 0px;">
+        <div class="公告外框">
+          <table width="100%" cellpadding="8px" cellspacing="0" border="0" bgcolor="#efeeeb" style="padding: 15px 15px 30px 15px;border-radius: 10px;margin-top: 20px;margin-bottom: 30px;">
+           <thead>
+           	 <tr>
+          		<th align="center">
+          			<h3 class="公告標題"><i class="fas fa-volume-up"></i> 公告消息</h3>
+         		</th>
+			 </tr>
+           </thead>
+            <tbody>
+          	<tr>
+          		<td align="center">
+          			<div class="公告內距 公告內文_線">
+						<h3 class="公告內標">天然災害停止上班、上課登記作業說明 
+							<div class="公告內容" align="left">因逢於颱風、大雨季節，提供差勤系統天然災害停止上班、上課登記設定步驟，請下載附件檔參閱。</div>
+						</h3>
+						<button type="button" class="allbtn bt_blue btn_icon" style="width: 80%;">登記作業說明.pdf <i class="fas fa-download"></i></button>
+          			</div>
+         		</td>
+			</tr>
+          	<tr>
+          		<td align="center">
+          		   <div class="公告內距 公告內文_線">
+          			<h3 class="公告內標">51勞動節勞工休假人事人員操作說明 
+          				<div class="公告內容" align="left">5/1勞動節為法定休假日(勞工適用)，附件為勞基法人員放假日設定之流程步驟。</div>
+          			</h3>
+          			<button type="button" class="allbtn bt_blue btn_icon" style="width: 80%;">操作說明書.pdf <i class="fas fa-download"></i></button>
+				   </div>
+         		</td>
+          	</tr>
+          </tbody>
+          </table>
+	   </div>
+   </section>
+  <!-- Stats Gallery Section -->
+  <div class="gallery">
+   <div class="web_between">
+    <h3 class="標題 標題間距" align="center"><span class="底線">滿意度調查</span></h3>
+    <div class="thumbnail">
+		 <div class="thumbnail_content">		
+		  <div>
+		     <h1 class="stats">91.97%</h1>
+			  <div class="star_icon" style="white-space: nowrap;">
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+				  <i class="fas fa-star"></i>
+			  </div>
+			  <h3><span class="gray_back">我聽懂了</span></h3>
+		  </div>
+		 </div>
+	</div>
+    <div class="thumbnail">
+      <div class="thumbnail_content">    
+		 <h1 class="stats">4.96%</h1>
+		  <div class="star_icon">
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="far fa-star"></i>
+		  </div>
+		  <h3><span class="gray_back">一知半解</span></h3>
+		 </div>
+    </div>
+    <div class="thumbnail">
+      <div class="thumbnail_content">		  
+		  <h1 class="stats">2.34%</h1>
+		  <div class="star_icon">
+			  <i class="fas fa-star"></i>
+			  <i class="fas fa-star"></i>
+			  <i class="far fa-star"></i>
+			  <i class="far fa-star"></i>
+		  </div> 
+		   <h3><span class="gray_back">完全不懂</span></h3>
+		 </div>
+    </div>
+    <div class="thumbnail">
+		 <div class="thumbnail_content">		  
+		  <h1 class="stats">1.04%</h1>
+		  <div class="star_icon">
+			  <i class="fas fa-star"></i>
+			  <i class="far fa-star"></i>
+			  <i class="far fa-star"></i>
+			  <i class="far fa-star"></i>
+		  </div>
+		   <h3><span class="gray_back">回答錯誤</span></h3>
+		</div>
+		</div>
+   </div>
+  </div>
+  <section class="banner_add" style="background-color: #fafafa;">
+     <div class="web_between">
+         <h3 class="標題 標題間距" align="center"><span class="底線">政府修訂法規</span></h3>
+		   <div class="flexslider" id="piccarousel" style="background-color: transparent;">
+			  <ul class="slides">
+				<li class="法規_外框">
+					<div align="center">
+						<img src="images/法規_加班時數.jpg" class="法規_圖"/>
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙藍">勞基人員</span>
+						    </div>
+							<h3 class="公告內標">加班時數實施順序
+							   <div class="法規內容">勞動部表示，為讓勞雇雙方理解補休方式，新修勞動基準法施行細則第２２條之２明定補休方式應依勞工延長工作時間或休息日工作事實發生時間先後順序補休。勞工如果未能補休完畢，雇主仍然應依延長工作時間或休息日工作當日之工資計算標準發給工資。
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙紅" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">同一日內的加班時數，部分時數請領費用時，會從較高的加成費率進行計算。</li>
+											<li class="法規文_距">依法規定，補休時數需依工作事實發生時間先後順序補休。</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?id=FL014931&flno=22-2" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>
+				
+				<li class="法規_外框">
+					<div align="center">
+						<img src="images/法規_國定假日.jpg" class="法規_圖">
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙藍">勞基人員</span>
+						    </div>
+							<h3 class="公告內標">國定假日出勤加班勞動權益 
+							   <div class="法規內容">勞動部表示，依《勞動基準法》第37條規定，內政部「紀念日及節日實施辦法」規章中所訂的應放假之民俗節日（即俗稱之國定假日），雇主應依法給假並給薪，如徵得勞工同意出勤，工資應依法加倍發給，如適逢勞工例假或休息日，則應於其他工作日安排補休。
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙紅" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">國定假日出勤加班，依法需額外給加班費。</li>
+											<li class="法規文_距">國定假日如遇原定休息日，則需另給一日補休。</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://www.mol.gov.tw/announcement/2099/36179/" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>
+				<li class="法規_外框">
+					<div align="center" id="法規3">
+						<img src="images/法規_生理假.jpg" class="法規_圖"/>
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙咖">公務人員</span>
+						    </div>
+							<h3 class="公告內標">生理假統計問題
+							   <div class="法規內容">因疾病或安胎必須治療或休養者，得請病假，每年准給二十八日。女性公務人員因生理日致工作有困難者，每月得請生理假一日，全年請假日數未逾三日，不併入病假計算，其餘日數併入病假計算。其超過者，以事假抵銷。
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙紅" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">生理假若未滿三日，不併入病假計算，若滿三日，第三日1小時起則會併入病假上限控管</li>
+											<li class="法規文_距">超過病假上限，以事假控管</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://www.mocs.gov.tw/exhibits/invite_detail.aspx?Node=548&Page=1634&Index=3" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>
+<!--
+				<li class="法規_外框">
+					<div align="center" id="法規4">
+						<img src="images/修正法規_其他_1.jpg" class="法規_圖"/>
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙藍">勞基人員</span>
+						    </div>
+							<h3 class="公告內標">我是標題 
+							   <div class="法規內容">我是法規內文...
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙紅" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">條列重點1</li>
+											<li class="法規文_距">條列重點2</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://www.mocs.gov.tw/exhibits/invite_detail.aspx?Node=548&Page=1634&Index=3" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>
+				<li class="法規_外框">
+					<div align="center" id="法規5">
+						<img src="images/修正法規_其他_1.jpg" class="法規_圖"/>
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙咖">公務人員</span>
+						    </div>
+							<h3 class="公告內標">我是標題 
+							   <div class="法規內容">我是法規內文...
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙紅" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">條列重點1</li>
+											<li class="法規文_距">條列重點2</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://www.mocs.gov.tw/exhibits/invite_detail.aspx?Node=548&Page=1634&Index=3" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>
+				<li class="法規_外框">
+					<div align="center" id="法規6">
+						<img src="images/修正法規_其他_1.jpg" class="法規_圖"/>
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙藍">勞基人員</span>
+						    </div>
+							<h3 class="公告內標">我是標題 
+							   <div class="法規內容">我是法規內文...
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙咖" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">條列重點1</li>
+											<li class="法規文_距">條列重點2</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://www.mocs.gov.tw/exhibits/invite_detail.aspx?Node=548&Page=1634&Index=3" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>
+				<li class="法規_外框">
+					<div align="center" id="法規7">
+						<img src="images/修正法規_其他_1.jpg" class="法規_圖"/>
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙咖">公務人員</span>
+						    </div>
+							<h3 class="公告內標">我是標題 
+							   <div class="法規內容">我是法規內文...
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙咖" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">條列重點1</li>
+											<li class="法規文_距">條列重點2</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://www.mocs.gov.tw/exhibits/invite_detail.aspx?Node=548&Page=1634&Index=3" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>
+-->
+				<!-- items mirrored twice, total of 12 -->
+			  </ul>
+		</div>
+		<!--手機 mobile顯示-->
+		<div class="flexslider" id="piccarousel_RWD">
+			  <ul class="slides">
+				<li class="法規_外框">
+					<div align="center">
+						<img src="images/法規_加班時數.jpg" class="法規_圖"/>
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙藍">勞基人員</span>
+						    </div>
+							<h3 class="公告內標">加班時數實施順序
+							   <div class="法規內容">勞動部表示，為讓勞雇雙方理解補休方式，新修勞動基準法施行細則第２２條之２明定補休方式應依勞工延長工作時間或休息日工作事實發生時間先後順序補休。勞工如果未能補休完畢，雇主仍然應依延長工作時間或休息日工作當日之工資計算標準發給工資。
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙紅" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">同一日內的加班時數，部分時數請領費用時，會從較高的加成費率進行計算。</li>
+											<li class="法規文_距">依法規定，補休時數需依工作事實發生時間先後順序補休。</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?id=FL014931&flno=22-2" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>
+				<li class="法規_外框">
+					<div align="center">
+						<img src="images/法規_國定假日.jpg" class="法規_圖"/>
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙藍">勞基人員</span>
+								<span class="字_16">107-02-15</span>
+						    </div>
+							<h3 class="公告內標">國定假日出勤加班勞動權益 
+							   <div class="法規內容">勞動部表示，依《勞動基準法》第37條規定，內政部「紀念日及節日實施辦法」規章中所訂的應放假之民俗節日（即俗稱之國定假日），雇主應依法給假並給薪，如徵得勞工同意出勤，工資應依法加倍發給，如適逢勞工例假或休息日，則應於其他工作日安排補休。
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙咖" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">國定假日出勤加班，依法需額外給加班費。</li>
+											<li class="法規文_距">國定假日如遇原定休息日，則需另給一日補休。</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://www.mol.gov.tw/announcement/2099/36179/" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>			
+				<li class="法規_外框">
+					<div align="center">
+						<img src="images/法規_生理假.jpg" class="法規_圖"/>
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙藍">勞基人員</span>
+						    </div>
+							<h3 class="公告內標">生理假統計問題
+							   <div class="法規內容">因疾病或安胎必須治療或休養者，得請病假，每年准給二十八日。女性公務人員因生理日致工作有困難者，每月得請生理假一日，全年請假日數未逾三日，不併入病假計算，其餘日數併入病假計算。其超過者，以事假抵銷。
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙咖" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">生理假若未滿三日，不併入病假計算，若滿三日，第三日1小時起則會併入病假上限控管</li>
+											<li class="法規文_距">超過病假上限，以事假控管</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://www.mocs.gov.tw/exhibits/invite_detail.aspx?Node=548&Page=1634&Index=3" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>
+<!--
+				<li class="法規_外框">
+					<div align="center">
+						<img src="images/修正法規_其他_1.jpg" class="法規_圖"/>
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙咖">公務人員</span>
+						    </div>
+							<h3 class="公告內標">我是標題 
+							   <div class="法規內容">我是法規內文...
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙紅" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">條列重點1</li>
+											<li class="法規文_距">條列重點2</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://www.mocs.gov.tw/exhibits/invite_detail.aspx?Node=548&Page=1634&Index=3" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>
+				<li class="法規_外框">
+					<div align="center">
+						<img src="images/修正法規_其他_1.jpg" class="法規_圖"/>
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙藍">勞基人員</span>
+						    </div>
+							<h3 class="公告內標">我是標題 
+							   <div class="法規內容">我是法規內文...
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙咖" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">條列重點1</li>
+											<li class="法規文_距">條列重點2</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://www.mocs.gov.tw/exhibits/invite_detail.aspx?Node=548&Page=1634&Index=3" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>
+				<li class="法規_外框">
+					<div align="center">
+						<img src="images/修正法規_其他_1.jpg" class="法規_圖"/>
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙咖">公務人員</span>
+						    </div>
+							<h3 class="公告內標">我是標題 
+							   <div class="法規內容">我是法規內文...
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙咖" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">條列重點1</li>
+											<li class="法規文_距">條列重點2</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://www.mocs.gov.tw/exhibits/invite_detail.aspx?Node=548&Page=1634&Index=3" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>
+-->
+				<!-- items mirrored twice, total of 12 -->
+			  </ul>
+		</div>
+		
+		<!--ipad 顯示-->
+		<div class="flexslider" id="piccarouse2_RWD">
+			  <ul class="slides">
+				<li class="法規_外框">
+					<div align="center">
+						<img src="images/法規_加班時數.jpg" class="法規_圖"/>
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙藍">勞基人員</span>
+						    </div>
+							<h3 class="公告內標">加班時數實施順序
+							   <div class="法規內容">勞動部表示，為讓勞雇雙方理解補休方式，新修勞動基準法施行細則第２２條之２明定補休方式應依勞工延長工作時間或休息日工作事實發生時間先後順序補休。勞工如果未能補休完畢，雇主仍然應依延長工作時間或休息日工作當日之工資計算標準發給工資。
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙紅" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">同一日內的加班時數，部分時數請領費用時，會從較高的加成費率進行計算。</li>
+											<li class="法規文_距">依法規定，補休時數需依工作事實發生時間先後順序補休。</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://laws.mol.gov.tw/FLAW/FLAWDOC01.aspx?id=FL014931&flno=22-2" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>
+				<li class="法規_外框">
+					<div align="center">
+						<img src="images/法規_國定假日.jpg" class="法規_圖"/>
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙藍">勞基人員</span>
+						    </div>
+							<h3 class="公告內標">國定假日出勤加班勞動權益 
+							   <div class="法規內容">勞動部表示，依《勞動基準法》第37條規定，內政部「紀念日及節日實施辦法」規章中所訂的應放假之民俗節日（即俗稱之國定假日），雇主應依法給假並給薪，如徵得勞工同意出勤，工資應依法加倍發給，如適逢勞工例假或休息日，則應於其他工作日安排補休。
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙咖" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">國定假日出勤加班，依法需額外給加班費。</li>
+											<li class="法規文_距">國定假日如遇原定休息日，則需另給一日補休。</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://www.mol.gov.tw/announcement/2099/36179/" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>
+				<li class="法規_外框">
+					<div align="center">
+						<img src="images/法規_生理假.jpg" class="法規_圖"/>
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙咖">公務人員</span>
+						    </div>
+							<h3 class="公告內標">生理假統計問題
+							   <div class="法規內容">因疾病或安胎必須治療或休養者，得請病假，每年准給二十八日。女性公務人員因生理日致工作有困難者，每月得請生理假一日，全年請假日數未逾三日，不併入病假計算，其餘日數併入病假計算。其超過者，以事假抵銷。
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙紅" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">生理假若未滿三日，不併入病假計算，若滿三日，第三日1小時起則會併入病假上限控管</li>
+											<li class="法規文_距">超過病假上限，以事假控管</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://www.mocs.gov.tw/exhibits/invite_detail.aspx?Node=548&Page=1634&Index=3" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>
+<!--
+				<li class="法規_外框">
+					<div align="center">
+						<img src="images/修正法規_其他_1.jpg" class="法規_圖"/>
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙藍">勞基人員</span>
+						    </div>
+							<h3 class="公告內標">我是標題 
+							   <div class="法規內容">我是法規內文...
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙咖" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">條列重點1</li>
+											<li class="法規文_距">條列重點2</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://www.mocs.gov.tw/exhibits/invite_detail.aspx?Node=548&Page=1634&Index=3" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>
+				<li class="法規_外框">
+					<div align="center">
+						<img src="images/修正法規_其他_1.jpg" class="法規_圖"/>
+						<div class="法規" align="left">
+					        <div class="法規類型_距">
+								<span class="手冊系統_貼紙咖">公務人員</span>
+						    </div>
+							<h3 class="公告內標">我是標題 
+							   <div class="法規內容">我是法規內文...
+							     <div class="法規文_距">
+							     	<span class="手冊系統_貼紙咖" style="background-color: red;">修正重點</span>
+									   <ul class="法規文_外距">
+											<li class="法規文_距">條列重點1</li>
+											<li class="法規文_距">條列重點2</li>
+									   </ul>
+								  </div>
+								  <div align="right" class="更多">
+								  	<a href="https://www.mocs.gov.tw/exhibits/invite_detail.aspx?Node=548&Page=1634&Index=3" target="_blank">閱讀更多 ⟶</a>
+								  </div>
+							   </div>
+						    </h3>
+						</div>
+					</div>
+				</li>
+-->
+				<!-- items mirrored twice, total of 12 -->
+			  </ul>
+		</div>
+	 </div>
+  </section>
+  
+  
+<!--
+  <section class="banner_add" style="background-color: #fff;">
+     <div class="web_between">
+         <h3 class="標題 標題間距" align="center"><span class="底線">政府修訂法規</span></h3>
+		<div class="flexslider" id="piccarousel">
+			  <ul class="slides">
+				<li>
+					<a target="_blank" href="#"><img src="images/修正法規.jpg"></a>
+					<div></div>
+				</li>
+				<li><a target="_blank" href="#"><img src="images/修正法規_其他_1.jpg"></a></li>
+				<li><a target="_blank" href="#"><img src="images/修正法規_其他_1.jpg"></a></li>
+				<li><a target="_blank" href="#"><img src="images/修正法規_其他_1.jpg"></a></li>
+				<li><a target="_blank" href="#"><img src="images/修正法規_其他_1.jpg"></a></li>
+				 items mirrored twice, total of 12 
+			  </ul>
+		</div>
+-->
+		<!--手機 mobile顯示-->
+<!--
+		<div class="flexslider" id="piccarousel_RWD">
+			  <ul class="slides">
+				<li><a target="_blank" href="#"><img src="images/修正法規.jpg"></a></li>
+				<li><a target="_blank" href="#"><img src="images/修正法規_其他_1.jpg"></a></li>
+				<li><a target="_blank" href="#"><img src="images/修正法規_其他_1.jpg"></a></li>
+				<li><a target="_blank" href="#"><img src="images/修正法規_其他_1.jpg"></a></li>
+				<li><a target="_blank" href="#"><img src="images/修正法規_其他_1.jpg"></a></li>
+				 items mirrored twice, total of 12 
+			  </ul>
+		</div>
+	 </div>
+  </section>
+-->
+  
+  
+  <footer>
+   <div class="web_between">
+    <article class="footer_column_50">      
+      	 <div class="手冊_表格外距">
+      	   <h3 class="標題 標題間距"><span class="底線">版更手冊</span></h3>
+      	   <div align="right" class="bookdiv">
+	            <div class="searchbox">
+                   <form>
+                  	 <div class="searchtool">
+						  <i class="fas fa-search"></i>
+						  <input id="bookInput" type="text" class="searchinput 版更">
+                   	 </div>
+                   </form>
+	            </div>
+	            <div class="bookselect">
+				 <select class="通用輸入框 版更">
+				 	 <option selected="">全部</option> 
+					 <option>差勤系統</option>  
+					 <option>報到離職系統</option>  
+					 <option>甄補評核系統</option>  
+					 <option>平時考核系統</option>
+					 <option>領物系統</option>   
+					 <option>派車系統</option>
+					 <option>會議室租借系統</option>  
+				 </select>
+               </div> 
+               <div style="clear: both;"></div>   
+             </div>	
+			  <table class="教學手冊_表格" border="0" cellpadding="8" cellspacing="0">
+			      <thead>
+		      	    <tr>
+			      	 <th class="教學手冊_底線" colspan="2" align="center" nowrap>檔案</th>
+			      	</tr>
+			      </thead>
+				  <tbody style="color: #707070;" id="bookTable">
+					<tr>
+				      <td class="教學手冊_底線" align="left">
+				        <span class="手冊系統_貼紙">差勤系統</span>			  		
+<!--					  	<span class="教學手冊_貼紙">WebITR&nbsp;2.0.0.0</span>-->
+					  	&nbsp;WebITR&nbsp;2.0.0.0&nbsp;<span class="字_16">(108-05-30)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	 <button type="button" class="allbtn bt_blue btn_icon 版更 差勤系統WebITR2.0.0.0">Download <i class="fas fa-download"></i></button>
+					  </td>
+					</tr>
+					<tr>
+				      <td class="教學手冊_底線" align="left">
+				        <span class="手冊系統_貼紙">甄補評核系統</span>
+<!--				  		<span class="教學手冊_貼紙">WebITR&nbsp;1.10.5.0</span>-->
+				  		&nbsp;WebITR&nbsp;1.10.5.0&nbsp;<span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<button type="button" class="allbtn bt_blue btn_icon 版更 甄補評核系統WebITR1.10.5.0">Download <i class="fas fa-download"></i></button>
+					  </td>
+					</tr>
+					<tr>
+				      <td class="教學手冊_底線" align="left">
+				        <span class="手冊系統_貼紙">平時考核系統</span>
+<!--				  		<span class="教學手冊_貼紙">WebITR&nbsp;1.10.4.0</span>-->
+				  		&nbsp;WebITR&nbsp;1.10.4.0&nbsp;<span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<button type="button" class="allbtn bt_blue btn_icon 版更 平時考核系統WebITR1.10.4.0">Download <i class="fas fa-download"></i></button>
+					  </td>
+					</tr>
+					<tr>
+				      <td class="教學手冊_底線" align="left">
+				        <span class="手冊系統_貼紙">派車系統</span>
+<!--				  		<span class="教學手冊_貼紙">WebITR&nbsp;1.10.3.0</span>-->
+				  		&nbsp;WebITR&nbsp;1.10.3.0&nbsp;<span class="字_16">(107-04-25)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<button type="button" class="allbtn bt_blue btn_icon 版更 派車系統WebITR1.10.3.0">Download <i class="fas fa-download"></i></button>
+					  </td>
+					</tr>
+					<tr>
+				      <td class="教學手冊_底線" align="left">
+				        <span class="手冊系統_貼紙">領物系統</span>
+<!--				  		<span class="教學手冊_貼紙">WebITR&nbsp;1.10.3.0</span>-->
+				  		&nbsp;WebITR&nbsp;1.10.3.0&nbsp;<span class="字_16">(107-04-25)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<button type="button" class="allbtn bt_blue btn_icon 版更 領物系統WebITR1.10.3.0">Download <i class="fas fa-download"></i></button>
+					  </td>
+					</tr>				
+				  </tbody>
+				  <tfoot>
+				  	<tr>
+					  <td colspan="2" align="left">
+					  	<div class="page-icon">
+					  	    <a class="page-last 版更" href="#"><i class="fas fa-caret-left 版更"></i><i class="fas fa-caret-left 版更"></i></a>
+							<span class="page-disabled 版更"><i class="fas fa-caret-left 版更"></i><i class="fas fa-caret-left 版更"></i></span>
+							<span class="page-current 版更">1</span>
+							<a href="#" class="版更">2</a>
+							<a href="#" class="版更">3</a>
+							<a class="page-next 版更" href="#"><i class="fas fa-caret-right 版更"></i><i class="fas fa-caret-right 版更"></i></a>
+						</div>
+						<div class="jumppage">跳至 
+						   <select class="通用輸入框 版更" style="max-width: 50px;">
+						   	  <option>1</option>
+						   	  <option>2</option>
+						   	  <option>3</option>
+						   	  <option>4</option>
+						   	  <option>5</option>
+						   	  <option>6</option>
+						   	  <option>7</option>
+						   	  <option>8</option>
+						   	  <option>9</option>
+						   </select>
+						   頁
+						</div>
+					  </td>
+					</tr>
+				  </tfoot>
+			  </table>
+			</div>
+    </article>
+    <article class="footer_column_50">
+         <div class="手冊_表格外距">
+     	     <h3 class="標題 標題間距"><span class="底線">操作手冊</span></h3>
+      	     <div align="right" class="bookdiv">
+               <div class="searchbox">
+                   <form>
+                  	 <div class="searchtool">
+						  <i class="fas fa-search"></i>
+						  <input id="textInput1" type="text" class="searchinput 操作手冊">
+                   	 </div>
+                   </form>
+	            </div>
+	             <div class="bookselect">
+					 <select class="通用輸入框 操作手冊">
+						 <option selected="" onclick="document.getElementById('guestpart').style.display='none';document.getElementById('managerpart').style.display='';">管理者</option>  
+						 <option onclick="document.getElementById('guestpart').style.display='';document.getElementById('managerpart').style.display='none';">使用者</option>  
+					 </select>
+				 </div>
+				 <div class="bookselect">
+					 <select class="通用輸入框 操作手冊">
+						 <option>差勤系統</option>  
+						 <option>報到離職系統</option>  
+						 <option>甄補評核系統</option>  
+						 <option>平時考核系統</option>
+						 <option>領物系統</option>   
+						 <option>派車系統</option>
+						 <option>會議室租借系統</option>
+					 </select>
+                 </div>  
+               <div style="clear: both;"></div>   
+             </div>	           			           			           
+			 <table class="教學手冊_表格" border="0" cellpadding="8" cellspacing="0" id="textTable1">
+		  	      <thead>
+		      	    <tr>
+			      	 <th colspan="2" class="教學手冊_底線" align="center" nowrap>檔案</th>
+			      	</tr>
+			      </thead>
+			  	<!--一般人員-->
+				    <tbody style="display: none;" id="guestpart">					
+				    <tr>
+					  <td class="教學手冊_底線" align="left" id="">
+					  	<span class="手冊系統_貼紙">差勤系統</span>&nbsp;&nbsp;一般人員操作說明
+					  	<span class="字_16">(108-06-01)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<button type="button" class="allbtn bt_blue btn_icon 操作手冊 差勤系統一般人員操作說明">Download <i class="fas fa-download"></i></button>
+					  </td>
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">甄補評核系統</span>&nbsp;&nbsp;一般人員操作說明
+					  	<span class="字_16">(108-05-28)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<button type="button" class="allbtn bt_blue btn_icon 操作手冊 甄補評核系統一般人員操作說明">Download <i class="fas fa-download"></i></button>
+					  </td>
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">平時考核系統</span>&nbsp;&nbsp;一般人員操作說明
+					  	<span class="字_16">(108-05-13)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<button type="button" class="allbtn bt_blue btn_icon 操作手冊 平時考核系統一般人員操作說明">Download <i class="fas fa-download"></i></button>
+					  </td>
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">派車系統</span>&nbsp;&nbsp;一般人員操作說明
+					  	<span class="字_16">(108-05-11)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<button type="button" class="allbtn bt_blue btn_icon 操作手冊 派車系統一般人員操作說明">Download <i class="fas fa-download"></i></button>
+					  </td>
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">領物系統</span>&nbsp;&nbsp;一般人員操作說明
+					  	<span class="字_16">(108-04-30)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<button type="button" class="allbtn bt_blue btn_icon 操作手冊 領物系統一般人員操作說明">Download <i class="fas fa-download"></i></button>
+					  </td>
+					</tr>
+					</tbody>
+					<!--人事人員-->
+					<tbody id="managerpart">					
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">差勤系統</span>&nbsp;&nbsp;人事管理者操作說明
+					  	<span class="字_16">(108-06-01)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<button type="button" class="allbtn bt_blue btn_icon 操作手冊 差勤系統人事管理者操作說明">Download <i class="fas fa-download"></i></button>
+					  </td>
+					</tr>					
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">甄補評核系統</span>&nbsp;&nbsp;管理人員操作說明
+					  	<span class="字_16">(108-05-28)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<button type="button" class="allbtn bt_blue btn_icon 操作手冊 甄補評核系統管理人員操作說明">Download <i class="fas fa-download"></i></button>
+					  </td>
+					</tr>
+					
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">平時考核系統</span>&nbsp;&nbsp;人事管理者操作說明
+					  	<span class="字_16">(108-05-13)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<button type="button" class="allbtn bt_blue btn_icon 操作手冊 平時考核系統人事管理者操作說明">Download <i class="fas fa-download"></i></button>
+					  </td>
+					</tr>					
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">派車系統</span>&nbsp;&nbsp;管理者操作說明
+					  	<span class="字_16">(108-05-11)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<button type="button" class="allbtn bt_blue btn_icon 操作手冊 派車系統管理者操作說明">Download <i class="fas fa-download"></i></button>
+					  </td>
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">領物系統</span>&nbsp;&nbsp;管理者操作說明
+					  	<span class="字_16">(108-04-30)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<button type="button" class="allbtn bt_blue btn_icon 操作手冊 領物系統管理者操作說明">Download <i class="fas fa-download"></i></button>
+					  </td>
+					</tr>
+				  </tbody>
+				  <tfoot>
+				  	<tr>
+					  <td colspan="2" align="left">
+					  	<div class="page-icon">
+					  	    <a class="page-last 操作手冊" href="#"><i class="fas fa-caret-left 操作手冊"></i><i class="fas fa-caret-left 操作手冊"></i></a>
+							<span class="page-disabled 操作手冊"><i class="fas fa-caret-left 操作手冊"></i><i class="fas fa-caret-left 操作手冊"></i></span>
+							<span class="page-current 操作手冊">1</span>
+							<a href="#" class="操作手冊">2</a>
+							<a href="#" class="操作手冊">3</a>
+							<a class="page-next 操作手冊" href="#"><i class="fas fa-caret-right 操作手冊"></i><i class="fas fa-caret-right 操作手冊"></i></a>
+						</div>
+						<div class="jumppage">跳至 
+						   <select class="通用輸入框 操作手冊" style="max-width: 50px;">
+						   	  <option>1</option>
+						   	  <option>2</option>
+						   	  <option>3</option>
+						   	  <option>4</option>
+						   	  <option>5</option>
+						   	  <option>6</option>
+						   	  <option>7</option>
+						   	  <option>8</option>
+						   	  <option>9</option>
+						   </select>
+						   頁
+						</div>
+					  </td>
+					</tr>
+				  </tfoot>
+			    </table>
+	     	</div>	        
+    </article>
+  </div>
+  </footer>
+       <section class="banner_add">
+        <div class="web_between">
+           <div class="手冊_表格外距">
+			<h3 class="標題 標題間距" align="center"><span class="底線">線上教育訓練</span></h3>
+             <div align="right" class="videosearch">
+	            <div class="searchbox">
+                   <form>
+                  	 <div class="searchtool">
+						  <i class="fas fa-search"></i>
+						  <input id="videoInput" type="text" class="searchinput 線上教育訓練">
+                   	 </div>
+                   </form>
+	            </div>
+				 <div class="bookselect">      
+					 <select class="通用輸入框 線上教育訓練">
+						 <option selected onclick="document.getElementById('manager_sys').style.display='';document.getElementById('user_sys').style.display='none';document.getElementById('allvideo').style.display='';document.getElementById('allvideo_user').style.display='none';document.getElementById('video01').style.display='none';document.getElementById('video02').style.display='none';document.getElementById('video03').style.display='none';document.getElementById('video04').style.display='none';">管理者</option>  
+						 <option onclick="document.getElementById('manager_sys').style.display='none';document.getElementById('user_sys').style.display='';document.getElementById('allvideo').style.display='none';document.getElementById('allvideo_user').style.display='';document.getElementById('video01').style.display='none';document.getElementById('video02').style.display='none';document.getElementById('video03').style.display='none';document.getElementById('video04').style.display='none';">使用者</option>  
+					 </select>
+				 </div>
+				 <div class="bookselect"> 
+					 <select class="通用輸入框 線上教育訓練" id="manager_sys">
+						 <option selected onclick="document.getElementById('allvideo').style.display='';document.getElementById('allvideo_user').style.display='none';document.getElementById('video01').style.display='none';document.getElementById('video02').style.display='none';document.getElementById('video03').style.display='none';document.getElementById('video04').style.display='none';">全部</option>
+						 <option onclick="document.getElementById('allvideo').style.display='none';document.getElementById('allvideo_user').style.display='none';document.getElementById('video01').style.display='';document.getElementById('video02').style.display='none';document.getElementById('video03').style.display='none';document.getElementById('video04').style.display='none';">差勤系統</option>
+						 <option onclick="document.getElementById('allvideo').style.display='none';document.getElementById('allvideo_user').style.display='none';document.getElementById('video01').style.display='';document.getElementById('video02').style.display='none';document.getElementById('video03').style.display='none';document.getElementById('video04').style.display='none';">報到離職系統</option> 
+						 <option onclick="document.getElementById('allvideo').style.display='none';document.getElementById('allvideo_user').style.display='none';document.getElementById('video01').style.display='none';document.getElementById('video02').style.display='none';document.getElementById('video03').style.display='';document.getElementById('video04').style.display='none';">甄補評核系統</option>  
+						 <option onclick="document.getElementById('allvideo').style.display='none';document.getElementById('allvideo_user').style.display='none';document.getElementById('video01').style.display='none';document.getElementById('video02').style.display='none';document.getElementById('video03').style.display='none';document.getElementById('video04').style.display='none';">平時考核系統</option> 
+						 <option onclick="document.getElementById('allvideo').style.display='none';document.getElementById('allvideo_user').style.display='none';document.getElementById('video01').style.display='none';document.getElementById('video02').style.display='none';document.getElementById('video03').style.display='none';document.getElementById('video04').style.display='none';">領物系統</option> 
+						 <option onclick="document.getElementById('allvideo').style.display='none';document.getElementById('allvideo_user').style.display='none';document.getElementById('video01').style.display='none';document.getElementById('video02').style.display='none';document.getElementById('video03').style.display='none';document.getElementById('video04').style.display='none';">派車系統</option>  
+						 <option onclick="document.getElementById('allvideo').style.display='none';document.getElementById('allvideo_user').style.display='none';document.getElementById('video01').style.display='none';document.getElementById('video02').style.display='none';document.getElementById('video03').style.display='none';document.getElementById('video04').style.display='none';">會議室租借系統</option>  
+					 </select>
+				 </div>
+                <div class="bookselect"> 
+                 <select style="display: none;" class="通用輸入框 線上教育訓練" id="user_sys">
+				     <option selected onclick="document.getElementById('allvideo').style.display='none';document.getElementById('allvideo_user').style.display='';document.getElementById('video01').style.display='none';document.getElementById('video02').style.display='none';document.getElementById('video03').style.display='none';document.getElementById('video04').style.display='none';">全部</option>
+					 <option onclick="document.getElementById('allvideo').style.display='none';document.getElementById('allvideo_user').style.display='none';document.getElementById('video01').style.display='none';document.getElementById('video02').style.display='';document.getElementById('video03').style.display='none';document.getElementById('video04').style.display='none';">差勤系統</option> 
+					 <option onclick="document.getElementById('allvideo').style.display='none';document.getElementById('allvideo_user').style.display='none';document.getElementById('video01').style.display='none';document.getElementById('video02').style.display='';document.getElementById('video03').style.display='none';document.getElementById('video04').style.display='none';">報到離職系統</option> 
+					 <option onclick="document.getElementById('allvideo').style.display='none';document.getElementById('allvideo_user').style.display='none';document.getElementById('video01').style.display='none';document.getElementById('video02').style.display='none';document.getElementById('video03').style.display='none';document.getElementById('video04').style.display='';">甄補評核系統</option>  
+					 <option onclick="document.getElementById('allvideo').style.display='none';document.getElementById('allvideo_user').style.display='none';document.getElementById('video01').style.display='none';document.getElementById('video02').style.display='none';document.getElementById('video03').style.display='none';document.getElementById('video04').style.display='none';">平時考核系統</option>  
+					 <option onclick="document.getElementById('allvideo').style.display='none';document.getElementById('allvideo_user').style.display='none';document.getElementById('video01').style.display='none';document.getElementById('video02').style.display='none';document.getElementById('video03').style.display='none';document.getElementById('video04').style.display='none';">領物系統</option> 
+					 <option onclick="document.getElementById('allvideo').style.display='none';document.getElementById('allvideo_user').style.display='none';document.getElementById('video01').style.display='none';document.getElementById('video02').style.display='none';document.getElementById('video03').style.display='none';document.getElementById('video04').style.display='none';">派車系統</option>  
+				     <option onclick="document.getElementById('allvideo').style.display='none';document.getElementById('allvideo_user').style.display='none';document.getElementById('video01').style.display='none';document.getElementById('video02').style.display='none';document.getElementById('video03').style.display='none';document.getElementById('video04').style.display='none';">會議室租借系統</option>	  
+				 </select>
+				 </div>
+               <div style="clear: both"></div>                     	          	 
+             </div>
+             
+             <table class="教學手冊_表格" cellpadding="8" cellspacing="0" id="videoTable">
+                 <thead>
+		      	    <tr>
+			      	 <th colspan="2" class="教學手冊_底線" align="center" nowrap>標題</th>
+			      	</tr>
+			     </thead>
+				 <tbody id="allvideo">
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+				  		<span class="手冊系統_貼紙">差勤系統</span>&nbsp;&nbsp;新年度開始，如何執行執行年資累加的動作
+				  		<span class="字_16">(108-06-01)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=ExZUoThi_5Q" target="_blank">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 差勤系統新年度開始，如何執行執行年資累加的動作">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>		  
+					</tr>
+				     <tr>
+					  <td class="教學手冊_底線" align="left">
+					  	  <span class="手冊系統_貼紙">甄補評核系統</span>&nbsp;&nbsp;角色設定
+					  	  <span class="字_16">(108-05-28)</span>
+					  </td>	
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?time_continue=4&v=OxoMDKaINNE" target="_blank">	  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 甄補評核系統角色設定">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>			  
+					 </tr>
+					<tr id="video05">
+					  <td class="教學手冊_底線" align="left">
+					  		<span class="手冊系統_貼紙">平時考核系統</span>&nbsp;&nbsp;????????
+					  		<span class="字_16">(108-05-13)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="#" target="_blank">	  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 平時考核系統????????">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+					<tr id="video07">
+					  <td class="教學手冊_底線" align="left">
+					  		<span class="手冊系統_貼紙">派車系統</span>&nbsp;&nbsp;????????
+					  		<span class="字_16">(108-05-11)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="#" target="_blank">	  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 派車系統????????">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+					<tr id="video09">
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">領物系統</span>&nbsp;&nbsp;????????
+					  	<span class="字_16">(108-04-30)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="#" target="_blank">	  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 領物系統????????">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+				  </tbody>
+				  
+				  <tbody id="allvideo_user" style="display: none;">
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+				  		<span class="手冊系統_貼紙">差勤系統</span>&nbsp;&nbsp;我要設定、修改自己的帳號密碼
+				  		<span class="字_16">(108-06-01)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?time_continue=4&v=Zk0DEiEFMoo" target="_blank">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 差勤系統我要設定、修改自己的帳號密碼">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>		  
+					</tr>
+				     <tr>
+				      <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">甄補評核系統</span>&nbsp;&nbsp;要如何維護個人基本資料
+					  	 <span class="字_16">(108-05-28)</span>
+					  </td>	
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=ps_3KzQhx2k" target="_blank" width="150">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 甄補評核系統要如何維護個人基本資料">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>			  
+					 </tr>
+					<tr id="video06">
+					  <td class="教學手冊_底線" align="left">
+					  		<span class="手冊系統_貼紙">平時考核系統</span>&nbsp;&nbsp;????????
+					  		<span class="字_16">(108-05-13)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="#" target="_blank">	  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 平時考核系統????????">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+					<tr id="video08">
+					  <td class="教學手冊_底線" align="left">
+					  		<span class="手冊系統_貼紙">派車系統</span>&nbsp;&nbsp;????????
+					  		<span class="字_16">(108-05-11)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="#" target="_blank">	  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 派車系統????????">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+					<tr id="video10">
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">領物系統</span>&nbsp;&nbsp;????????
+					  	<span class="字_16">(108-04-30)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="#" target="_blank">	  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 領物系統????????">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+				  </tbody>
+				  <tbody id="video01" style="display: none;">
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+				  		<span class="手冊系統_貼紙">差勤系統</span>&nbsp;&nbsp;新年度開始，如何執行執行年資累加的動作
+				  		<span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=ExZUoThi_5Q" target="_blank">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 差勤系統新年度開始，如何執行執行年資累加的動作">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>		  
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">差勤系統</span>&nbsp;&nbsp;新進人員報到如何在系統上新增並給予職位
+					  	<span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=ovKazgIXVGU" target="_blank">	  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 差勤系統新進人員報到如何在系統上新增並給予職位">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  		<span class="手冊系統_貼紙">差勤系統</span>&nbsp;&nbsp;當有同仁在機關內調單位，要如何在系統上異動
+					  		<span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=AdaIfExgZ10" target="_blank">	  		
+							<button type="button" class="allbtn bt_blue btn_icon  線上教育訓練 差勤系統當有同仁在機關內調單位，要如何在系統上異動">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  		<span class="手冊系統_貼紙">差勤系統</span>&nbsp;&nbsp;當有同仁要離職，要如何在系統上操作
+					  		<span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=dgza39ObFyU" target="_blank">	  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 差勤系統當有同仁要離職，要如何在系統上操作">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">差勤系統</span>&nbsp;&nbsp;同仁離職又復職，如何操作
+					  	<span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=umSZ0diKh4M" target="_blank" width="150">	  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 差勤系統同仁離職又復職，如何操作">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+				  </tbody>
+				  <tbody id="video02" style="display: none;">
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">差勤系統</span>&nbsp;&nbsp;我要設定、修改自己的帳號密碼
+					  	<span class="字_16">(107-04-26)</span>
+					  </td>	
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?time_continue=4&v=Zk0DEiEFMoo" target="_blank">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 差勤系統我要設定、修改自己的帳號密碼">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>			  
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">差勤系統</span>&nbsp;&nbsp;我要設定、修改自己的請假代理人清單
+					  	<span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?time_continue=1&v=8R-5r9zWyWc" target="_blank">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 差勤系統我要設定、修改自己的請假代理人清單">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">差勤系統</span>&nbsp;&nbsp;我要請 1 天的休假，怎麼送出申請單?
+					  	<span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=z3REHgIFEKI" target="_blank">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 差勤系統我要請 1 天的休假，怎麼送出申請單?">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+				  		 <span class="手冊系統_貼紙">差勤系統</span>&nbsp;&nbsp;我要申請2小時的公差補休，怎麼送出申請?
+				  		 <span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=rapy6VzUi-I" target="_blank">	  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 差勤系統我要申請2小時的公差補休，怎麼送出申請?">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+				  		<span class="手冊系統_貼紙">差勤系統</span>&nbsp;&nbsp;我要請1個小時一般加班，怎麼送出申請?
+				  		<span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=lvp3SdoMC_I" target="_blank">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 差勤系統我要請1個小時一般加班，怎麼送出申請?">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+				  </tbody>
+				  <tbody id="video03" style="display: none;">
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	  <span class="手冊系統_貼紙">甄補評核系統</span>&nbsp;&nbsp;角色設定
+					  	  <span class="字_16">(107-04-26)</span>
+					  </td>	
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?time_continue=4&v=OxoMDKaINNE" target="_blank" width="150">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 甄補評核系統角色設定">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>			  
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">甄補評核系統</span>&nbsp;&nbsp;流程設定
+					  	<span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=ucPB_IzTqrU" target="_blank" width="150">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 甄補評核系統流程設定">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">甄補評核系統</span>&nbsp;&nbsp;公佈欄設定
+					  	<span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=FXsM4HdrOoo" target="_blank" width="150">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 甄補評核系統公佈欄設定">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	 <span class="手冊系統_貼紙">甄補評核系統</span>&nbsp;&nbsp;人員組織樹
+					  	 <span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=Pcvg1WDsckM" target="_blank" width="150">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 甄補評核系統人員組織樹">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	 <span class="手冊系統_貼紙">甄補評核系統</span>&nbsp;&nbsp;如何新增陞遷序列表
+					  	 <span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=rpjGnqn1ImM" target="_blank" width="150">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 甄補評核系統如何新增陞遷序列表">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+				  </tbody>
+				  <tbody id="video04" style="display: none;">
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">甄補評核系統</span>&nbsp;&nbsp;要如何維護個人基本資料
+					  	<span class="字_16">(107-04-26)</span>
+					  </td>	
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=ps_3KzQhx2k" target="_blank" width="150">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 甄補評核系統要如何維護個人基本資料">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>		  
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">甄補評核系統</span>&nbsp;&nbsp;要如何登載遷調意願
+					  	<span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=0xsRCPerQeU" target="_blank" width="150">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 甄補評核系統要如何登載遷調意願">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">甄補評核系統</span>&nbsp;&nbsp;要如何填寫自評
+					  	<span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=8ZfYPFU2HEg" target="_blank" width="150">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 甄補評核系統要如何填寫自評">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+					  	<span class="手冊系統_貼紙">甄補評核系統</span>&nbsp;&nbsp;要如何查詢自評紀錄
+					  	<span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=Ncsvj8TcuxQ" target="_blank" width="150">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 甄補評核系統要如何查詢自評紀錄">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+					<tr>
+					  <td class="教學手冊_底線" align="left">
+				  		<span class="手冊系統_貼紙">甄補評核系統</span>&nbsp;&nbsp;要如何查詢登載遷調意願
+				  		<span class="字_16">(107-04-26)</span>
+					  </td>
+					  <td class="教學手冊_底線" align="right">
+					  	<a href="https://www.youtube.com/watch?v=sMAiQU2_OZo" target="_blank" width="150">		  		
+							<button type="button" class="allbtn bt_blue btn_icon 線上教育訓練 甄補評核系統要如何查詢登載遷調意願">View <i class="fab fa-youtube"></i></button>
+						</a>
+					  </td>	
+					</tr>
+				  </tbody>
+				  <tfoot>
+				  	<tr>
+					  <td colspan="2" align="center" style="vertical-align: middle;">
+					  	<div class="page-icon">
+					  	    <a class="page-last 線上教育訓練" href="#"><i class="fas fa-caret-left 線上教育訓練"></i><i class="fas fa-caret-left 線上教育訓練"></i></a>
+							<span class="page-disabled 線上教育訓練"><i class="fas fa-caret-left 線上教育訓練"></i><i class="fas fa-caret-left 線上教育訓練"></i></span>
+							<span class="page-current 線上教育訓練">1</span>
+							<a href="#" class="線上教育訓練">2</a>
+							<a href="#" class="線上教育訓練">3</a>
+							<a class="page-next 線上教育訓練" href="#"><i class="fas fa-caret-right 線上教育訓練"></i><i class="fas fa-caret-right 線上教育訓練"></i></a>
+						</div>
+						<div class="jumppage">跳至 
+						   <select class="通用輸入框 線上教育訓練" style="max-width: 50px;">
+						   	  <option>1</option>
+						   	  <option>2</option>
+						   	  <option>3</option>
+						   	  <option>4</option>
+						   	  <option>5</option>
+						   	  <option>6</option>
+						   	  <option>7</option>
+						   	  <option>8</option>
+						   	  <option>9</option>
+						   </select>
+						   頁
+						</div>
+					  </td>	
+					</tr>
+				  </tfoot>
+				</table>
+		      </div>
+           </div>
+       </section> 
+  <!-- Parallax Section -->
+  <section class="banner">
+   <div class="web_between">
+		<h2 class="parallax">關於我們</h2>
+		<p class="parallax_description">創立於民國89年，洞悉智慧產業崛起，秉持「開放式服務創新」理念，結合內外部知識整合導入，激發服務創新的新思維，精鍊成功的價值，宇瞻各個領域。</p>
+   </div>
+  </section>
+  <!-- More Info Section -->
+  <footer>
+    <article class="footer_column">
+      <h3>企業核心價值</h3>
+      <img src="images/核心價值.jpg" alt="" width="400" height="200" class="cards"/>
+      <p>重視用戶體驗，基於數據和應用整合基礎以及各渠道的有效協同，提供用戶最佳解決方案，實現「科技、專業、服務」價值最大化。</p>
+    </article>
+    <article class="footer_column">
+      <h3>產品與服務</h3>
+      <img src="images/產品服務.jpg" alt="" width="400" height="200" class="cards"/>
+      <p>致力於軟體開發生命週期管理、整合資源並創造產品共通性、完整導入並持續優化產品、落實簡政便利 E 化服務</p>
+    </article>
+    <article class="footer_column">
+      <h3>企業願景</h3>
+      <img src="images/企業願景.jpg" alt="" width="400" height="200" class="cards"/>
+      <p>專注於「科技、專業、服務」，以創新思維實踐服務型智慧生活、由內而外創構高效軟體服務</p>
+    </article>
+  </footer>
+  <!-- Footer Section -->
+  <section class="footer_banner" id="contact" style="background-color: #4d5469;">
+   <div class="web_between" style="padding-bottom: 0px;">
+	<div class="company_info">
+		<div class="info_text"><i class="fa fa-home"></i> 台北辦公室：台北市南港區三重路19-11號E棟3樓363室</div>
+		<div class="info_text"><i class="fa fa-home"></i> 台中辦公室：台中市南屯區公益路二段61號14樓之2</div>
+		<div class="info_text"><i class="fa fa-phone"></i> 聯絡電話：02-7722-3313</div>
+		<div class="info_text"><i class="far fa-envelope"></i> 聯絡信箱：dept.svc@uniong.com.tw</div>
+		<div class="info_text"><i class="far fa-clock"></i> 服務時間：週一至週五，上午 09:00~12:00，下午 14:00~17:00（非服務時間，請利用聯絡信箱）</div>
+    </div>
+    <!-- Copyrights Section -->
+	<div class="copyright">
+        <div class="copyright_text">
+          <div>Copyright &copy; 2019 </div>
+          <div><img width="31" height="25" src="images/logo.png"> 凱發科技股份有限公司 版權所有</div>
+      </div>
+    </div>    	
+   </div>
+  </section>
+ </div>
+<!-- Main Container Ends -->
+<!-- 問題單區塊-->
+  <div class="blackall" id="blackall"></div> 
+  <div class="clickdiv" id="clickdiv"></div>
+  <aside class="sideall" id="sideall">
+	 <div class="sidebar" id="sidebar">
+		<!--內容-->
+		 <div class="abgne_tab" style="margin:20px 0px;">
+		    <h3 class="標題 底線" style="margin-bottom: 2px;"><span class="item">進行填寫</span></h3>
+<!--
+			<ul class="tabs" style="padding-left: 10px;">
+				<li style="width:48%;border: 0px solid;">
+					<a href="#tab3" style="font-size: 30px;padding: 10px 10px 10px 0px;"><i class="far fa-comments"></i> 問題單填寫</a>
+				</li>
+				<li style="width:48%;border: 0px solid;">
+					<a href="#tab4" style="font-size: 30px;padding: 10px 10px 10px 0px;"><i class="far fa-envelope"></i> 業務洽詢</a>
+				</li>
+			</ul>
+-->
+		
+			<div class="tab_container">
+				<div id="tab3" class="tab_content qtabdiv">
+                <!-------------------------------問題單選項------------------------------->
+					<div id="qtap" class="" style="margin: 0px 0px 1px 5px;border-bottom: 2px solid #eee;">
+							<button type="button" id="qbtn01" class="qbtn" style="display: none;" onclick="document.getElementById('list').style.display='none';document.getElementById('open').style.display='';document.getElementById('history').style.display='none';document.getElementById('qbtn01').style.display='none';document.getElementById('qbtn02').style.display='';document.getElementById('qbtn03').style.display='';document.getElementById('active01').style.display='';document.getElementById('active02').style.display='none';document.getElementById('active03').style.display='none';"><i class="fas fa-edit"></i> 建立問題單</button>
+							
+							<!--啟動後效果-->
+							<button type="button" id="active01" class="qbtn activeopen" onclick="document.getElementById('list').style.display='none';document.getElementById('open').style.display='';document.getElementById('history').style.display='none';document.getElementById('qbtn01').style.display='none';document.getElementById('qbtn02').style.display='';document.getElementById('qbtn03').style.display='';document.getElementById('active01').style.display='';document.getElementById('active02').style.display='none';document.getElementById('active03').style.display='none';"><i class="fas fa-edit"></i> 建立問題單</button>
+							
+							
+							<button class="qbtn" id="qbtn02" onclick="document.getElementById('list').style.display='';document.getElementById('open').style.display='none';document.getElementById('history').style.display='none';document.getElementById('qbtn01').style.display='';document.getElementById('qbtn02').style.display='none';document.getElementById('qbtn03').style.display='';document.getElementById('active01').style.display='none';document.getElementById('active02').style.display='';document.getElementById('active03').style.display='none';"><i class="far fa-paper-plane"></i> 處理中</button>
+							
+							<!--啟動後效果-->
+							<button class="qbtn activeopen" id="active02" style="display: none;" onclick="document.getElementById('list').style.display='';document.getElementById('open').style.display='none';document.getElementById('history').style.display='none';document.getElementById('qbtn01').style.display='';document.getElementById('qbtn02').style.display='none';document.getElementById('qbtn03').style.display='';document.getElementById('active01').style.display='none';document.getElementById('active02').style.display='';document.getElementById('active03').style.display='none';"><i class="far fa-paper-plane"></i> 處理中</button>
+							
+							<button class="qbtn" id="qbtn03" onclick="document.getElementById('list').style.display='none';document.getElementById('open').style.display='none';document.getElementById('history').style.display='';document.getElementById('qbtn01').style.display='';document.getElementById('qbtn02').style.display='';document.getElementById('qbtn03').style.display='none';document.getElementById('active01').style.display='none';document.getElementById('active02').style.display='none';document.getElementById('active03').style.display='';"><i class="fas fa-history"></i> 歷史紀錄</button>
+							
+							<!--啟動後效果-->
+							<button class="qbtn activeopen" id="active03" style="display: none;" onclick="document.getElementById('list').style.display='none';document.getElementById('open').style.display='none';document.getElementById('history').style.display='';document.getElementById('qbtn01').style.display='';document.getElementById('qbtn02').style.display='';document.getElementById('qbtn03').style.display='none';document.getElementById('active01').style.display='none';document.getElementById('active02').style.display='none';document.getElementById('active03').style.display='';"><i class="fas fa-history iconpic"></i> 歷史紀錄</button>
+							
+<!--							<button class="qbtn" id="qbtn04" onclick="document.getElementById('qbtn01').style.display='';document.getElementById('qbtn02').style.display='';document.getElementById('qbtn03').style.display='';document.getElementById('qbtn04').style.display='none';document.getElementById('active01').style.display='none';document.getElementById('active02').style.display='none';document.getElementById('active03').style.display='none';document.getElementById('active04').style.display='';"><a href="https://utrac.uniong.com.tw/app/dashboardPage/dashboard_list.ug" style="text-decoration: none;color: #000;"><i class="fa fa-lg fa-question-circle"></i> 進階查詢</a></button>-->
+							<!--啟動後效果-->
+<!--							<button class="qbtn activeopen" id="active04" style="display: none;" onclick="document.getElementById('qbtn01').style.display='';document.getElementById('qbtn02').style.display='';document.getElementById('qbtn03').style.display='';document.getElementById('qbtn04').style.display='none';document.getElementById('active01').style.display='none';document.getElementById('active02').style.display='none';document.getElementById('active03').style.display='none';document.getElementById('active04').style.display='';"><a href="https://utrac.uniong.com.tw/app/dashboardPage/dashboard_list.ug" style="text-decoration: none;color: #52BAD5;"><i class="fa fa-lg fa-question-circle"></i> 進階查詢</a></button>-->
+					</div>
+                <!-----------------------------問題單開單作業------------------------------>
+                 <div id="open">
+            	 <table width="100%">
+<!--
+                    <tr>
+						<td width="150" align="right" nowrap class="問題表格 內容_杏"><span class="ps">*</span>專案空間 </td>
+						<td align="left" class="問題表格 右內容_白">
+						  <select class="通用輸入框">
+							<option selected>000_AutoTest[自動測試]</option>
+							<option>000_UGCar[派車系統]</option>
+						  </select>
+						</td>
+              		</tr>
+-->
+                    <tr>
+						<td align="right" nowrap class="問題表格 內容_杏"><span class="ps">*</span> 摘要： </td>
+						<td align="left" class="問題表格 右內容_白">
+							<input type="text" class="通用輸入框"/>
+						</td>
+              		</tr>
+                    <tr>
+						<td align="right" nowrap class="問題表格 內容_杏"><span class="ps">*</span> 細節： </td>
+						<td align="left" class="問題表格 右內容_白">
+							<textarea class="通用輸入框" style="height: 100px;" rows="4"></textarea>
+						</td>
+              		</tr>
+				  <tr>
+					<td align="right" nowrap class="問題表格 內容_杏"><span class="ps">*</span> 功能類別： </td>
+					<td align="left" class="問題表格 右內容_白">
+					  <select class="通用輸入框">
+						<option selected>請選擇</option>
+					  </select>
+					</td>
+				  </tr>
+                    <tr>
+						<td align="right" nowrap class="問題表格 內容_杏">
+							<span class="ps">*</span> 詢問人機關／單位：
+						</td>
+						<td align="left" class="問題表格 右內容_白">
+							<input type="text" class="通用輸入框" />
+						 </td>
+              		</tr>
+                    <tr>
+						<td align="right" nowrap class="問題表格 內容_杏">
+							<span class="ps">*</span> 詢問人姓名：
+						</td>
+						<td align="left" class="問題表格 右內容_白">
+							<input type="text" class="通用輸入框">
+						</td>
+              		</tr>
+				  <tr>
+					<td align="right" nowrap class="問題表格 內容_杏">
+						<span class="ps">*</span> 詢問人電話：
+					</td>
+					<td align="left" class="問題表格 右內容_白">
+						<input type="text" class="通用輸入框">
+					</td>
+				  </tr>
+				  <tr>
+					<td align="right" nowrap class="問題表格 內容_杏">
+						<span class="ps">*</span> E-mail：
+					</td>
+					<td align="left" class="問題表格 右內容_白">
+						<input type="text" class="通用輸入框">
+					</td>
+				  </tr>
+				  <tr>
+					<td align="right" nowrap class="問題表格 內容_杏">檔案上傳：</td>
+					<td align="left" class="問題表格 右內容_白">
+					   <div class="file-box">
+							<form method="post" enctype="multipart/form-data">
+								<!--檔案名稱-->
+								<input name="textfield" id="textfield" class="filename">
+
+								<!--＜!--上傳按鈕--＞-->
+								<input type="button" class="filebtn" value="選取檔案">
+
+								<!--＜!--原按鈕隱藏--＞-->
+								<input type="file" name="file" class="file" onchange="document.getElementById('textfield').value=this.value">
+							 </form>
+					   </div>
+					   <div class="ps" style="color: cadetblue;">(檔案不得超過10M)</div>
+					</td>
+				  </tr>
+                    <tr>
+                		<td colspan="2" align="center" class="問題表格 右內容_白 表格_尾距">
+                       		<button class="allbtn bt_blue">送出</button>
+                        	<button class="allbtn">清除</button>
+                        </td>
+              		</tr>
+                  </table>
+          		</div>
+                <!-----------------------------問題單處理中--------------------------->
+                <div id="list" class="question_div" style="display:none;">
+            	  <table width="100%" class="question_table">
+					<tr>
+						<td align="center" nowrap class="問題表格 內容_藍">ID</td>
+						<td align="center" nowrap class="問題表格 內容_藍">摘要</td>
+						<td align="center" nowrap class="問題表格 內容_藍">狀態</td>
+						<td align="center" nowrap class="問題表格 內容_藍">指派給</td>
+						<td align="center" nowrap class="問題表格 內容_藍">功能類別</td>
+						<td align="center" nowrap class="問題表格 內容_藍" width="100">時間郵戳</td>
+				  	</tr>
+                    <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-21</a></td>
+						<td align="left" class="問題表格 右內容_白">《新標準版》會議室系統,會議室預約(修改預約時間)</td>
+						<td align="center" nowrap class="問題表格 右內容_白">Processing</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">新標準版會議室系統-會議室預約(修改預約時間)</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                    <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">Processing</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                    <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">Processing</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                    <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">Processing</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">Processing</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">Processing</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">Processing</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">Processing</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">Processing</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">Processing</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">Processing</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" nowrap class="問題表格 右內容_白">2014-06-09<br>
+								11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">Processing</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">Processing</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">Processing</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">Processing</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">Processing</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">Processing</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 
+                  </table>
+          </div>
+                
+                <!-----------------------------問題單歷史紀錄------------------------------>
+                <div id="history" class="" style="display:none;">
+            		<div class="問題表格 表頭_土藍">查詢條件<button style="color:#fff;font-size: 22px;border: 0px solid;background-color: transparent;cursor: pointer;" onclick="document.getElementById('inquiry').style.display='';"><i class="fas fa-search"></i></button>
+                  	</div>
+                <table id="inquiry" width="100%">
+                    <tr>
+						<td width="150" align="right" nowrap class="問題表格 內容_杏">時間郵戳</td>
+						<td align="left" nowrap class="問題表格 右內容_白">
+                       		<input type="text" class="通用輸入框" style="width:150px;" value="106-06-01">
+                        ~
+                        	<input type="text" class="通用輸入框" style="width:150px;" value="106-06-30"></td>
+              		</tr>
+                    <tr>
+						<td align="right" nowrap class="問題表格 內容_杏">ID</td>
+						<td align="left" class="問題表格 右內容_白">
+             				<input type="text" class="通用輸入框">
+             			</td>
+              		</tr>
+                    <tr>
+						<td align="right" nowrap class="問題表格 內容_杏">關鍵字</td>
+						<td align="left" class="問題表格 右內容_白">
+             				<input type="text" class="通用輸入框">
+             			</td>
+              		</tr>
+                    <tr>
+						<td colspan="2" align="center" class="問題表格 右內容_白">
+							   <button class="allbtn bt_blue" onclick="document.getElementById('inquiry').style.display='none';">確定</button>
+							   <div class="問題單_外框" style="margin:8px 0px;"></div>
+						</td>
+              		</tr>
+                </table>
+            
+            <!---------------------------------查詢歷史紀錄------------------------->
+               <div class="question_div" style="max-height: 550px;">
+            	 <table id="historylist" width="100%" class="question_table">
+				  <tr>
+					<td align="center" nowrap class="問題表格 內容_藍">ID</td>
+					<td align="center" nowrap class="問題表格 內容_藍">摘要</td>
+					<td align="center" nowrap class="問題表格 內容_藍">狀態</td>
+					<td align="center" nowrap class="問題表格 內容_藍">指派給</td>
+					<td align="center" nowrap class="問題表格 內容_藍">功能類別</td>
+					<td align="center" nowrap class="問題表格 內容_藍" width="100">時間郵戳</td>
+				  </tr>
+				  <tr>
+					<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-21</a></td>
+					<td align="left" class="問題表格 右內容_白">《新標準版》會議室系統,會議室預約(修改預約時間)</td>
+					<td align="center" nowrap class="問題表格 右內容_白">close</td>
+					<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+					<td align="left" class="問題表格 右內容_白">新標準版會議室系統-會議室預約(修改預約時間)</td>
+					<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+				  </tr>
+				  <tr>
+					<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+					<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+					<td align="center" nowrap class="問題表格 右內容_白">close</td>
+					<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+					<td align="left" class="問題表格 右內容_白">無</td>
+					<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+				  </tr>
+                    <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">close</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">close</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">close</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                     <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">close</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">close</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">close</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">close</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">close</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">close</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 <tr>
+						<td align="center" nowrap class="問題表格 右內容_白"><a href="#">000_UGMtr-29</a></td>
+						<td align="left" class="問題表格 右內容_白">會議室管理無法顯示圖片</td>
+						<td align="center" nowrap class="問題表格 右內容_白">close</td>
+						<td align="center" nowrap class="問題表格 右內容_白">張黃濱</td>
+						<td align="left" class="問題表格 右內容_白">無</td>
+						<td align="left" class="問題表格 右內容_白">2014-06-09 11:51:25</td>
+              		</tr>
+                 
+                  </table>
+               </div>
+          		</div>
+		 </div>
+<!--
+				<div id="tab4" class="tab_content qtabdiv">
+					 <div class="" style="display:;">
+						<table width="100%">
+							<tr>
+								<td width="150" align="right" nowrap class="問題表格 內容_杏">客戶名稱：</td>
+								<td align="left" class="問題表格 右內容_白">
+									<input type="text" class="通用輸入框"/>
+								</td>
+							</tr>
+							<tr>
+								<td align="right" nowrap class="問題表格 內容_杏">聯絡人：</td>
+								<td align="left" class="問題表格 右內容_白">
+								     <input type="text" class="通用輸入框"/>
+								</td>
+							</tr>
+							<tr>
+								<td align="right" nowrap class="問題表格 內容_杏">聯絡電話：</td>
+								<td align="left" class="問題表格 右內容_白">
+								     <input type="text" class="通用輸入框"/>
+								</td>
+							</tr>
+							<tr>
+								<td align="right" nowrap class="問題表格 內容_杏">Email：</td>
+								<td align="left" class="問題表格 右內容_白">
+									<input type="text" class="通用輸入框"/>
+								</td>
+							</tr>
+							<tr>
+								<td align="right" nowrap class="問題表格 內容_杏">合作方案：</td>
+								<td align="left" class="問題表格 右內容_白">
+									<label><input type="radio" name="plan" value="1" checked="">
+									外包合作諮詢</label>
+									<label><input type="radio" name="plan" value="2">
+									軟體銷售通路諮詢</label>
+								</td>
+							</tr>
+							<tr>
+								<td align="right" nowrap class="問題表格 內容_杏">內容說明：</td>
+								<td align="left" class="問題表格 右內容_白">
+									<textarea name="message" class="通用輸入框" style="height: 100px;" rows="4"></textarea>
+								</td>
+							</tr>
+							<tr>
+								<td align="right" nowrap class="問題表格 內容_杏" rowspan="2">驗證碼：</td>
+								<td align="left" class="問題表格 右內容_白">
+								    <div style="float: left;width:60%;margin-top: 5px;">
+										<input type="text" class="通用輸入框" placeholder="請輸入驗證碼">
+								  	</div>
+								 	 <div style="float: left;width:40%;">
+										<img align="middle" alt="驗證碼(開新視窗)" src="images/驗證碼.jpg" style="width: 100%;padding-top: 1px;">
+								 	 </div>
+								    <div style="clear: both;"></div>
+								</td>
+							</tr>
+							<tr>
+							  <td colspan="2" class="表格內容" style="padding-top: 0px;float: right;">
+								<a href="#">更新驗證碼</a>
+							  </td>
+			    			</tr>
+							<tr>
+								<td colspan="2" align="center" class="問題表格 右內容_白" style="border-top: 2px solid #eee;">
+									<button class="allbtn bt_blue btn_間距">送出</button>
+									<button class="allbtn btn_間距">清除</button>
+								</td>
+							  </tr>
+						  </table>
+					 </div>
+				</div>
+-->
+			</div>
+		</div>
+	 </div>
+	 <div class="askbtn" id="askbtn">問題單填寫<i class="fas fa-comments"></i></div>
+	 <div class="askbtnx" id="askbtnx" style="display: none;">關閉<i class="far fa-comments"></i></div>
+  </aside>
+  
+  <!--滿意度調查區塊-->
+<div id="survey_div">
+  <div class="black_user" id="black_user_survey" style="display: block;" onclick="document.getElementById('black_user_survey').style.display='none';document.getElementById('survey').style.display='none';"></div> 
+  <div class="clickuser" id="survey" style="display: block;"> 
+ 	  <div id="btclose_survey">
+          <button type="button" class="close" onclick="document.getElementById('black_user_survey').style.display='none';document.getElementById('survey').style.display='none';">&times;</button>
+      </div>
+       <div class="表格外距">
+        <div class="title_h1">您之前提出的問題已處理完畢，請協助填寫問題回覆滿意度~</div>
+           <div id="desktable">
+             <table class="fixtablehead">
+                <tr class="fixtr">
+                    <td style="width: 9.9%;">單號</td>
+                    <td style="width: 11.9%;">摘要</td>
+                    <td>處理回覆</td>
+                    <td class="width79">我聽<br>懂了</td>
+                    <td class="width79">一知<br>半解</td>
+                    <td class="width79">模稜<br>兩可</td>
+                    <td class="width79">完全<br>不懂</td>
+                    <td class="width79">回答<br>錯誤</td>
+                    <td style="width: 1%;"></td>
+                </tr>
+            </table>
+            <div class="fixtablebodyBox">
+                <table class="fixtablebody" style="margin: 0px;">
+                  <tr>
+                    <td class="width140"><a href="https://utrac.uniong.com.tw/app/monad/detail.ug?questionNo=058_50_SW-569"  target="_blank">058_50_SW-569</a></td>
+                    <td class="width180" style="text-align: left;">協助上傳卡檔</td>
+                    <td style="text-align: left;">
+                        <dl>
+                          <dt>問題描述:</dt>
+                          <dd>因電腦硬碟壞了，無法自動上傳卡檔請協助手動匯入如附件發生原因:需協助匯入刷卡資料</dd>
+                          <dt>處理方式:</dt>
+                          <dd>已協助匯入完成，請人事人員確認，如有任何問題再煩請填單詢問，謝謝</dd>
+                          <span id="yu_sug">
+                              <dt style="margin: 5px 0px;">您的建議:</dt>
+                              <dd><textarea name="detail" rows="5" style="width: 100%;" class="通用輸入框"></textarea></dd>
+                          </span>
+                        </dl>
+                    </td>
+                    <td class="width80"><input type="radio" name="rating1" onclick="document.getElementById('yu_sug').style.display='none';"></td>
+                    <td class="width80">
+                        <input type="radio" checked name="rating1" onclick="document.getElementById('yu_sug').style.display='';">
+                    </td>
+                    <td class="width80"><input type="radio" name="rating1" onclick="document.getElementById('yu_sug').style.display='';"></td>
+                    <td class="width80"><input type="radio" name="rating1" onclick="document.getElementById('yu_sug').style.display='';"></td>
+                    <td class="width80"><input type="radio" name="rating1" onclick="document.getElementById('yu_sug').style.display='';"></td>
+                  </tr>
+                  <tr>
+                    <td class="width140"><a href="https://utrac.uniong.com.tw/app/monad/detail.ug?questionNo=194_SW-973"  target="_blank">194_SW-973</a></td>
+                    <td class="width180" style="text-align: left;">文化園區人事由呂月鳳轉為洪韡珊，差勤批核還是會經過呂月鳳 請協助修改</td>
+                    <td style="text-align: left;">
+                        <dl>
+                           <dt>問題描述:</dt>
+                           <dd>文化園區人事由呂月鳳轉為洪韡珊，差勤批核還是會經過呂月鳳 請協助修改</dd>
+                           <dt>處理方式:</dt>
+                           <dd>已經協助將文化園區流程經過呂月鳳轉為洪韡珊，在請之前申請差假單請同仁重新申請，或是先行由舊人事進行批核，再請人事檢視確認，謝謝您。</dd>
+                        </dl>
+                    </td>
+                    <td class="width80"><input type="radio" name="rating2"></td>
+                    <td class="width80"><input type="radio" name="rating2"></td>
+                    <td class="width80"><input type="radio" name="rating2"></td>
+                    <td class="width80"><input type="radio" name="rating2"></td>
+                    <td class="width80"><input type="radio" name="rating2"></td>
+                  </tr>
+                  <tr>
+                    <td class="width140"><a href="https://utrac.uniong.com.tw/app/monad/detail.ug?questionNo=143_21_SW-125"  target="_blank">143_21_SW-125</a></td>
+                    <td class="width180" style="text-align: left;">3天同一公差事由代理人可否點不同2人</td>
+                    <td style="text-align: left;">
+                        <dl>
+                           <dt>問題描述:</dt>
+                           <dd>有同仁需申請7/20至7/22，共3天同一公差事由代理人可否點不同2人。</dd>
+                           <dt>處理方式:</dt>
+                           <dd>已與李先生電話說明，系統同筆差假申請僅可選擇一位代理人，如需分兩位代理人，請分兩張公差申請，請檢視確認謝謝您。</dd>
+                        </dl>
+                    </td>
+                    <td class="width80"><input type="radio" name="rating3"></td>
+                    <td class="width80"><input type="radio" name="rating3"></td>
+                    <td class="width80"><input type="radio" name="rating3"></td>
+                    <td class="width80"><input type="radio" name="rating3"></td>
+                    <td class="width80"><input type="radio" name="rating3"></td>
+                  </tr>
+                  <tr>
+                    <td class="width140"><a href="https://utrac.uniong.com.tw/app/monad/detail.ug?questionNo=111_11_MP-22"  target="_blank">111_11_MP-22</a></td>
+                    <td class="width180" style="text-align: left;">各單位主管人員如何查看所屬人員差勤動態？</td>
+                    <td style="text-align: left;">
+                        <dl>
+                          <dt>問題描述:</dt>
+                          <dd>各單位主管人員如何查看所屬人員差勤動態？</dd>
+                          <dt>處理方式:</dt>
+                          <dd>已與承辦人說明，可於差勤作業 / 其它所屬差勤資料查詢。</dd>
+                        </dl>
+                    </td>
+                    <td class="width80"><input type="radio" name="rating4"></td>
+                    <td class="width80"><input type="radio" name="rating4"></td>
+                    <td class="width80"><input type="radio" name="rating4"></td>
+                    <td class="width80"><input type="radio" name="rating4"></td>
+                    <td class="width80"><input type="radio" name="rating4"></td>
+                  </tr>
+                </table>
+            </div>
+         </div>
+         
+          <div id="RWD_table">
+            <table class="cell-table" style="width: 100%;">
+                <thead>
+                    <tr>
+                      <th width="12%" class="text-center">單號</th>
+                      <th width="12%" class="text-center">摘要</th>
+                      <th class="text-center">處理回覆</th>
+                      <th width="5%" class="text-center">我聽<br>懂了</th>
+                      <th width="5%" class="text-center">一知<br>半解</th>
+                      <th width="5%" class="text-center">模稜<br>兩可</th>
+                      <th width="5%" class="text-center">完全<br>不懂</th>
+                      <th width="5%" class="text-center">回答<br>錯誤</th>
+                   </tr>
+                </thead>
+                <tbody>
+                   <tr class="cell_row">
+                       <td align="center">
+                           <div class="grayth cell_left">單號</div>
+                           <div class="cell_right">
+                              <a href="#">058_50_SW-569</a>
+                           </div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">摘要</div>
+                           <div class="cell_right">協助上傳卡檔</div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">處理回覆</div>
+                           <div class="cell_right">
+                               <dl>
+                                 <dt>問題描述:</dt>
+                                 <dd>因電腦硬碟壞了，無法自動上傳卡檔請協助手動匯入如附件發生原因:需協助匯入刷卡資料</dd>
+                                 <dt>處理方式:</dt>
+                                 <dd>已協助匯入完成，請人事人員確認，如有任何問題再煩請填單詢問，謝謝</dd>
+                                 <span id="you_suggest" style="display: none;">
+                                     <dt style="margin: 5px 0px;">您的建議:</dt>
+                                     <dd><textarea rows="8" class="textarea_css" style="width: 98%;"></textarea></dd>
+                                 </span>
+                               </dl>
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">我聽懂了</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating1" onclick="document.getElementById('you_suggest').style.display='none';">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">一知半解</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating1" onclick="document.getElementById('you_suggest').style.display='';">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">模稜兩可</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating1" checked onclick="document.getElementById('you_suggest').style.display='';">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">完全不懂</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating1" onclick="document.getElementById('you_suggest').style.display='';">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">回答錯誤</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating1" onclick="document.getElementById('you_suggest').style.display='';">
+                           </div>
+                       </td>
+                   </tr>
+                   <tr class="cell_row">
+                       <td align="center">
+                           <div class="grayth cell_left">單號</div>
+                           <div class="cell_right">
+                              <a href="#">194_SW-973</a>
+                           </div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">摘要</div>
+                           <div class="cell_right">文化園區人事由呂月鳳轉為洪韡珊，差勤批核還是會經過呂月鳳 請協助修改</div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">處理回覆</div>
+                           <div class="cell_right">
+                               <dl>
+                                 <dt>問題描述:</dt>
+                                 <dd>文化園區人事由呂月鳳轉為洪韡珊，差勤批核還是會經過呂月鳳 請協助修改</dd>
+                                 <dt>處理方式:</dt>
+                                 <dd>已經協助將文化園區流程經過呂月鳳轉為洪韡珊，在請之前申請差假單請同仁重新申請，或是先行由舊人事進行批核，再請人事檢視確認，謝謝您。</dd>
+                               </dl>
+                              </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">我聽懂了</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating2">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">一知半解</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating2">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">模稜兩可</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating2">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">完全不懂</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating2">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">回答錯誤</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating2">
+                           </div>
+                       </td>
+                   </tr>
+                   <tr class="cell_row">
+                       <td align="center">
+                           <div class="grayth cell_left">單號</div>
+                           <div class="cell_right">
+                              <a href="#">143_21_SW-125</a>
+                           </div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">摘要</div>
+                           <div class="cell_right">3天同一公差事由代理人可否點不同2人</div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">處理回覆</div>
+                           <div class="cell_right">
+                               <dl>
+                                 <dt>問題描述:</dt>
+                                 <dd>有同仁需申請7/20至7/22，共3天同一公差事由代理人可否點不同2人。</dd>
+                                 <dt>處理方式:</dt>
+                                 <dd>已與李先生電話說明，系統同筆差假申請僅可選擇一位代理人，如需分兩位代理人，請分兩張公差申請，請檢視確認謝謝您。</dd>
+                               </dl>
+                              </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">我聽懂了</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating3">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">一知半解</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating3">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">模稜兩可</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating3">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">完全不懂</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating3">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">回答錯誤</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating3">
+                           </div>
+                       </td>
+                   </tr>
+                   <tr class="cell_row">
+                       <td align="center">
+                           <div class="grayth cell_left">單號</div>
+                           <div class="cell_right">
+                              <a href="#">111_11_MP-22</a>
+                           </div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">摘要</div>
+                           <div class="cell_right">各單位主管人員如何查看所屬人員差勤動態？</div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">處理回覆</div>
+                           <div class="cell_right">
+                               <dl>
+                                 <dt>問題描述:</dt>
+                                 <dd>各單位主管人員如何查看所屬人員差勤動態？</dd>
+                                 <dt>處理方式:</dt>
+                                 <dd>已與承辦人說明，可於差勤作業 / 其它所屬差勤資料查詢。</dd>
+                               </dl>
+                              </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">我聽懂了</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating4">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">一知半解</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating4">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">模稜兩可</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating4">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">完全不懂</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating4">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">回答錯誤</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating4">
+                           </div>
+                       </td>
+                   </tr>
+                   <tr class="cell_row">
+                       <td align="center">
+                           <div class="grayth cell_left">單號</div>
+                           <div class="cell_right">
+                              <a href="#">111_11_MP-22</a>
+                           </div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">摘要</div>
+                           <div class="cell_right">各單位主管人員如何查看所屬人員差勤動態？</div>
+                       </td>
+                       <td align="left">
+                           <div class="grayth cell_left">處理回覆</div>
+                           <div class="cell_right">
+                               <dl>
+                                 <dt>問題描述:</dt>
+                                 <dd>各單位主管人員如何查看所屬人員差勤動態？</dd>
+                                 <dt>處理方式:</dt>
+                                 <dd>已與承辦人說明，可於差勤作業 / 其它所屬差勤資料查詢。</dd>
+                               </dl>
+                              </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">我聽懂了</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating5">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">一知半解</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating5">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">模稜兩可</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating5">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">完全不懂</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating5">
+                           </div>
+                       </td>
+                       <td align="center">
+                           <div class="grayth cell_left">回答錯誤</div>
+                           <div class="cell_right">
+                               <input type="radio" name="rating5">
+                           </div>
+                       </td>
+                   </tr>
+                </tbody>
+            </table>
+         </div>
+         <div align="center" style="margin-top:15px;">
+             <button id="sent_bt" class="allbtn bt_blue" style="width:100px; font-size:16px" onclick="document.getElementById('black_user_survey').style.display='none';document.getElementById('survey').style.display='none';">送出</button>
+         </div>
+	   </div>
+  </div>
+</div>
+<!-- Main Container Ends -->
+<script type="text/javascript">
+	    $('#askbtn').on("click",function(){
+		$('askbtn').toggleClass('askbtnx');
+		$('.sidebar').toggleClass('side');
+		$('body').addClass('noscroll');
+	  });
+	    $('#askbtnx').on("click",function(){
+		$('askbtn').toggleClass('askbtnx');
+		$('.sidebar').toggleClass('side');
+        $('body').removeClass('noscroll');
+	  });
+//當有顯示問題單滿意度填寫介面的時候，需鎖住body；
+//當使用者點擊遮罩時，亦可關閉問題單滿意度填寫介面以及解鎖；
+        $('#survey_div').show(function(){
+        $('body').addClass('noscroll');
+      });
+        $('#sent_bt,#btclose_survey').on("click",function(){
+        $('body').removeClass('noscroll');
+      });
+        $('#black_user_survey').on("click",function(){
+        $('body').removeClass('noscroll');
+      });
+</script>
+
+
+</body>
+</html>

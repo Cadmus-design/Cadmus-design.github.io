@@ -1,0 +1,379 @@
+@charset "UTF-8";
+/* Body */
+.help_us{
+  position:fixed;
+  z-index:999;
+  right:25px;
+  bottom:25px;
+  width:50px;
+  height:50px;
+  color:#fff;
+  border: 5px solid #f0ad4e;
+  background-color:#fff;
+  transition:all 0.5s;
+  border-radius:50%;
+  box-sizing:content-box;
+  cursor:pointer;
+  box-shadow:0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.2);
+}
+.help_us div{
+    width: 60px;
+    height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.help_us div a{
+    color: #f0ad4e;
+    font-size:40px;
+    line-height: 20px;
+}
+#phone_open{
+    display: none;
+}
+#phone_close{
+    display: none;
+}
+/*側邊訊息效果*/
+.sideall{
+    position: fixed;
+    bottom: 0;
+    right:  0;
+    height: 100%; /*可決定區塊要長在哪裡，範圍要多大*/
+/*    z-index: 1500;*/
+    z-index: 1030;
+}
+.sidebar{
+    float: right;
+    max-width:500px;
+    width: 100%;
+    height:100%;
+/*    margin-right: -500px;*/
+    margin-right: 0;
+    background-color:#f0ad4e;
+    overflow: hidden;
+    transition: 0.3s ease;
+    padding-left: 20px;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+}
+.side{
+    margin-right: -500px;
+}
+.sidetext{
+    background-color: #eee;
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+.orgborder{
+    border-color: #f0ad4e !important;
+}
+.orgbg{
+    font-size: 20px;
+    background-color: #f0ad4e !important;
+    color: #fff !important;
+    text-align: justify;
+}
+.panel_text{
+    background-color: #f9f9f9;
+    font-size: 18px;
+}
+#text_ans{
+    margin-top: 5px;
+}
+#text_ans div{
+    display: inline-block;
+}
+/*導航列可用start*/
+.sidebar ul{
+/*有置中在sidebar div中效果*/
+    margin: 0;
+    padding: 0;
+}
+.sidebar ul li{
+    list-style: none;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    color: #1aa2b4;
+    height: 80px; /*圖案高度*/
+    width: 95%;
+    font-size: 20px; /*圖案大小*/
+    /*line-height: 20px; 圖案間距*/
+    text-align: center;
+    font-weight: bold;
+    display: block; /*圖案區塊排序*/
+    transition: 0.6s all; /*轉場效果：滑鼠移過去變色的速度，需搭配hover使用*/
+    border: 1.5px #1aa2b4 solid;
+    background: -webkit-linear-gradient(#f9f9f9, #ddd);
+    background: -o-linear-gradient(#f9f9f9, #ddd);
+    background: -moz-linear-gradient(#f9f9f9, #ddd);
+    background: linear-gradient(#f9f9f9, #ddd);
+    box-shadow:0px 5px 5px rgba(0,0,0,.1);
+}
+
+/*
+.sidebar ul li a:hover{
+    background: #1aa2b4;
+    color: #fff;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
+    background-color: #1aa2b4;
+    background: -webkit-linear-gradient(left top,#A0D0D6,#1aa2b4);
+    background: -o-linear-gradient(bottom right,#A0D0D6,#1aa2b4);
+    background: -moz-linear-gradient(bottom right,#A0D0D6,#1aa2b4);
+    background: linear-gradient(to bottom right,#A0D0D6,#1aa2b4);
+}
+*/
+/*導航列可用end*/
+.askbtn{
+    float: right;	/*區塊左右位置*/
+    background: #f0ad4e; /*區塊背景色*/	
+    padding: 10px; /*區塊大小*/
+    width:50px;	 /*區塊內容-寬度*/
+    margin: auto; /*區塊內容-垂直置中設定*/
+    /*line-height: 35px; 垂直置中設定-區塊內容文字間距*/
+    position: relative; /*區塊在瀏覽器的相對位置-需設定這個語法並搭配上下左右，才能調整區塊位置*/
+    top: 250px; /*區塊在瀏覽器的相對位置*/
+    border: solid #f0ad4e 5px; /*不影響區塊大小的框線設定*/
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;	
+    border-top-left-radius:8px; /*區塊左上角圓角*/
+    border-bottom-left-radius:8px; /*區塊左下角圓角*/
+    font-size: 22px; /*字體大小*/
+    text-decoration: none; /*字體底線*/
+    color: #fff;	/*字體顏色*/
+    cursor: pointer; /*滑鼠移過去變成手指頭效果*/
+    font-weight: bold;
+}
+
+/*遮罩效果*/
+.blackall{ 
+    width:100%; /*透明化全屏設定*/
+    height:100%; /*透明化全屏設定*/
+    background-color:#000000; 
+    filter:alpha(opacity=50); /*IE8 及更早的版本 */
+    -moz-opacity:0.5; 
+    opacity:0.5;  /*透明化效果：顯示顏色深淺設定,數字愈小愈透明*/
+    position:absolute; /*透明化全屏設定*/
+    left:0px; /*透明化呈現位置*/
+    top:0px; /*透明化呈現位置*/
+    display:none; 
+    z-index:1030;
+    /*z-index:1500; 需與position:absolute搭配才會有堆疊效果*/
+} 
+.clickdiv /*點擊後會出現的區塊*/
+{ 
+    /*width:280px; 區塊大小*/
+    /*height:180px; 區塊大小*/
+    position:absolute; 
+    top:200px; /*距離瀏覽頁面上方位置*/
+    left:50%; /*位置瀏覽頁面水平置中*/
+    background-color:#eeeeee;
+    margin-left:-140px; 
+    display:none;
+    z-index:1030;
+    /*z-index:1500; 需與position:absolute搭配才會有堆疊效果_疊在遮罩效果上方*/
+}
+/*回答答案*/
+.text_ans{
+    text-align: justify;
+}
+.text_ans button{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0px;
+}
+#answeryes ol{
+    margin-top: 10px;
+}
+/*回答答案-否*/
+#answerno dl{
+    margin: 10px 0px 0px 0px;
+}
+#answerno dd{
+    margin:5px 0px;
+    font-size:18px;
+}
+#answerno .alert-warning{
+    text-align: justify;
+}
+/*問題單-內容*/
+#問題單內容 .modal-header{
+    border-bottom: 0px;
+    padding:10px 15px 0px 0px; 
+}
+#問題單內容 .modal-header>button{
+   font-size: 30px;
+}
+#問題單內容 .modal-body{
+   padding-top: 5px;
+}
+#問題單內容 .panel-default>.panel-heading{
+   background-color: #666;
+   color: #fff;
+}
+#問題單內容 .cell-table>thead>tr>th{
+   background-color:#666;
+}
+#問題單內容 .table>thead>tr>th{
+   background-color:#ff9600;  
+}
+#問題單內容 th{
+   background-color:#fff2e2;  
+   vertical-align: middle;
+}   
+#問題單內容 .btn-primary{
+   color: #ffffff;
+   background-color: #1aa2b4;
+   border-color: #1aa2b4;
+   border: 0px;
+}
+#問題單內容 .btn-primary:hover{
+   background-color: #108898;
+   border-color: #09606b;
+}
+#問題單內容 .btn-primary[disabled]:hover{
+   background-color: #1aa2b4;
+   border-color: #1aa2b4;
+}
+#問題單內容 .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+   color: #fff;
+   background-color: #107e8c;
+   border-color: #0a6975;
+}
+#問題單內容 .btn-primary:focus, .btn-primary.focus {
+   color: #fff;
+   background-color: #107e8c;
+   border-color: #0a6975;
+}
+#問題單內容 .btn-primary:active:hover, .btn-primary.active:hover, .open>.dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open>.dropdown-toggle.btn-primary:focus, .btn-primary:active.focus, .btn-primary.active.focus, .open>.dropdown-toggle.btn-primary.focus {
+   color: #fff;
+   background-color: #107e8c;
+   border-color: #0a6975;
+}
+#問題單內容 .panel-default>.panel-heading{
+   background-color: #666;
+   color: #fff;
+} 
+.panel_divwidth{
+   padding: 0px;
+   max-height: 380px;
+   overflow-y: scroll;
+}
+#collapse1 tbody>tr>td>.cell_left{
+   width:100px;
+}
+#collapse1 tbody>tr>td>.cell_right>a{
+   font-size: 14px;
+}
+#collapse2 .panel-info>.panel-body{
+   padding: 5px 15px;
+}
+#collapse2 .panel-info>.panel-body>dl{
+   margin-bottom: 3px;
+}
+#collapse2 dt{
+   margin-top: 5px;
+}
+#collapse2 dd{
+   margin-top: 5px;
+}
+#collapse2 dd>textarea{
+   height: 60px;
+}
+.bt_area_margin{
+   margin: 5px;
+}
+.option_200{
+   width: 200px;
+}
+
+/*問題單-查詢*/
+#問題單查詢 .modal-header{
+    border-bottom: 0px;
+    padding:10px 15px 0px 0px; 
+}
+#問題單查詢 .modal-header>button{
+   font-size: 30px;
+}
+#問題單查詢 .modal-body{
+   padding-top: 5px;
+}
+#問題單查詢 .table>thead>tr>th{
+   background-color:#ff9600;  
+}
+#問題單查詢 th{
+   background-color:#fff2e2;  
+   vertical-align: middle;
+}
+#問題單查詢 .btn-primary{
+   color: #ffffff;
+   background-color: #1aa2b4;
+   border-color: #1aa2b4;
+   border: 0px;
+}
+#問題單查詢 .btn-primary:hover{
+    background-color: #108898;
+    border-color: #09606b;
+}
+#問題單查詢 .btn-primary[disabled]:hover{
+    background-color: #1aa2b4;
+    border-color: #1aa2b4;
+}
+#問題單查詢 .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #107e8c;
+    border-color: #0a6975;
+}
+#問題單查詢 .btn-primary:focus, .btn-primary.focus {
+    color: #fff;
+    background-color: #107e8c;
+    border-color: #0a6975;
+}
+#問題單查詢 .btn-primary:active:hover, .btn-primary.active:hover, .open>.dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open>.dropdown-toggle.btn-primary:focus, .btn-primary:active.focus, .btn-primary.active.focus, .open>.dropdown-toggle.btn-primary.focus {
+    color: #fff;
+    background-color: #107e8c;
+    border-color: #0a6975;
+}
+
+
+ @media screen and (max-width: 768px) 
+  {
+  #askbtn{
+    display: none;
+   }
+  #askbtnx{
+    display: none;
+   }
+  #phone_open{
+    display:block;
+  }
+  #phone_close{
+    display:block;
+  }
+  .sidebar ul li a{
+    width: 100%;
+  }
+ }
+ @media screen and (min-width: 769px)
+ {
+  #askbtn{
+    display: block;
+   }
+  #askbtnx{
+    display: block;
+   }
+  #phone_open{
+    display: none;
+  }
+  #phone_close{
+    display: none;
+  }
+ }
+    
