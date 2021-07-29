@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+	<meta charset="UTF-8">
+	<title>帳號同步功能開發開發</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="assets/images/Cadmus.ico" />
+	<link rel="stylesheet" type="text/css" href="assets/css/case.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/lightbox.css">
+	<script src="assets/js/jQuery.js"></script>
+	<script src="assets/js/all.js"></script>
+</head>
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KTR3PGW"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div id="wrapper">
+	<header>
+		<a class="logo" href="index.html"><img src="assets/images/logo.png" alt="Cadmus"></a>
+		<ul>
+			<!--<li><a class="btn btn-default" href="assets/doc/CV_Zh_Tw.pdf" data-featherlight="iframe" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-width="800em" data-featherlight-iframe-height="60em">簡歷</a></li>-->
+		<li><a href="assets/doc/CV_Zh_Tw.pdf">簡歷</a></li>
+			<li>專案成果</li>
+			<li><a href="case_104.html">專案文件</a></li>
+			<li><a href="index.html#web">網頁成果</a></li>
+		</ul>
+	</header>
+	<main>
+		<div class="box">
+			<img src="assets/images/case/pm/uniong_account_board.jpg" />
+		</div>
+		<div class="container">
+			<ul>
+				<li><h3>帳號同步功能開發</h3><p>2021/7</p><span><a href="https://asghq6.axshare.com/#g=1&p=%E7%89%88%E6%9C%AC%E7%B4%80%E9%8C%84" target="_blank">wireframe</a></span><small>密碼：uniong</small></li>
+				<li>
+					<p>差勤系統使用者需要進入客服網站開立問題單，但因差勤系統帳號與問題單系統帳號屬於各自獨立資料庫，問題單帳號系統使用SSO登入串接Web Service，常有使用者會因為不了解帳號或密碼問題，進而提出帳號問題。</p>
+					<h3>負責項目</h3>
+					<ol>
+						<li><h4>現況分析</h4>
+							<ol>
+								<li>能由WebITR帳號自動新增Utrac帳號功能</li>
+								<li>需要在設定WebITR個人權限的步驟同步新增utrac帳號功能</li>
+								<li>因為WebITR的管轄機關數量會透過URL傳送，而傳送的字元受到URL長度限制，若傳送超過5個以上的機關代碼，會有URL過長的問題。故若擁有超過5個管轄機關的承辦人，將傳送參數表示為超過5個機關，並帶入該承辦所屬機關的機關代碼。此方式依照V0.4的功能，傳入utrac的資料會將此承辦的其他專案空間刪除（同步）。為了避免此情況發生，將有傳送超過5個管轄機關的參數作為不異動專案空間的判斷。</li>
+							</ol>
+						</li>
+						<li><h4>產品功能企劃</h4>
+							<ol>
+								<li>需考量使用機關的承辦人聯絡方式，故需要於差勤系統的基本資料填寫Email與電話，且需要將Email設定為與問題單系統的Email相同，作為帳號判斷依據</li>
+								<li>承辦人與管轄機關數量可為一對多，須同步帶出管轄機關數量的「機關代碼」對應問題單的權限內容</li>
+								<li>能夠以系統方式自動新增帳號，解決帳處理號相關問題量。</li>
+							</ol>
+						</li>
+						<li><h4>功能特點</h4>
+						<ol>
+							<li>於差勤系統有設定基本資料的承辦，能自動新增帳號/調整對應權限。</li>
+							<li>權限可提供選擇，提高客服處理相關問題效率。</li>
+							<li>設定管轄權限時同步提醒需要新增基本資料，將操作斷點發生機會降至最低。</li>
+						</ol>
+						<li><h4>流程圖示意</h4>
+						<ol>
+							<li>第一版本流程圖<br><img src="assets/images/case/pm/uniong_account_flow_old.jpg" alt="帳號同步功能流程圖"></li>
+							<li>確認版流程圖<br><img src="assets/images/case/pm/uniong_account_flow.jpg" alt="帳號同步功能流程圖"></li>
+						</ol>
+						<li><h4>開發成果</h4>
+						<ol>
+							<li>2021/6/8 上線</li>
+						</ol>
+					</ol>
+				</li>
+
+			</ul>
+		</div>
+		<!--container end -->
+	</main>
+	</div>
+	<!-- wrapper end -->
+	<footer>
+	<div class="social">
+		<p>個人社群</p>
+		<a href="https://www.behance.net/CADMUS22"><img src="assets/images/footer/behance.svg" alt="behance"></a>
+		<a href="https://dribbble.com/Cadmus22"><img src="assets/images/footer/dribbble.svg" alt="dribble"></a>
+		<a href="https://www.facebook.com/Cadmus.Sung"><img src="assets/images/footer/facebook.svg" alt="facebook"></a>
+		<a href="https://www.instagram.com/cadmus_sung"><img src="assets/images/footer/instagram.svg" alt="instagram"></a>
+		<a href="https://medium.com/@cadmus22"><img src="assets/images/footer/Medium.svg" alt="Medium"></a>
+	</div>
+	<div class="contact">
+		<p>與我聯絡</p>
+		<a href="mailto:cadmus.sung@gmail.com"><img src="assets/images/footer/mail.png" alt=""></a>
+	</div>
+</footer>
+</body>
+</html>

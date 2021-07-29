@@ -49,7 +49,7 @@ ol,ul{
  	padding:0 0 30px 60px;
  }
  #wrapper header ul{
- 	width:14em;
+ 	width:35em;
  	display:flex;
  	flex-wrap: nowrap;
  	justify-content: space-between;
@@ -90,9 +90,14 @@ ol,ul{
  		padding:0 0 1em 1em;
  	}
  	#wrapper header ul{
- 		padding:0;
+ 		padding:1em 0;
  		width:100%;
- 		justify-content: space-around;
+ 		display: flex;
+		flex-wrap: wrap;
+ 		justify-content: center;
+ 	}
+ 	#wrapper header ul li{
+ 		margin:.35em .25em;
  	}
  }
 /*header end*/
@@ -100,6 +105,23 @@ ol,ul{
 #wrapper main .container{
 	width:calc(100% - 120px);
 	margin:15em auto 3em;
+}
+#wrapper main .container > h1, #wrapper main .container > h2{
+	color: #fff;
+	line-height: 2rem;
+	padding: 1rem;
+
+}
+#wrapper main .container > h1{
+	background: linear-gradient(#19BEE8,#289BFF);
+	box-shadow: 0px 0px 8px #ccc;
+	border-radius: 8px;
+	display: table;
+	margin: 0 auto;
+}
+#wrapper main .container > h2{
+	display: table;
+	margin: 0 auto;
 }
 #wrapper main .container ul{
 	display: flex;
