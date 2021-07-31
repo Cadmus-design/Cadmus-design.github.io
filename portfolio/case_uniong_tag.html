@@ -18,13 +18,15 @@
 	<div id="wrapper">
 	<header>
 		<a class="logo" href="index.html"><img src="assets/images/logo.png" alt="Cadmus"></a>
-		<ul>
-			<!--<li><a class="btn btn-default" href="assets/doc/CV_Zh_Tw.pdf" data-featherlight="iframe" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-width="800em" data-featherlight-iframe-height="60em">簡歷</a></li>-->
-		<li><a href="assets/doc/CV_Zh_Tw.pdf">簡歷</a></li>
-			<li>專案成果</li>
-			<li><a href="case_104.html">專案文件</a></li>
-			<li><a href="index.html#web">網頁成果</a></li>
-		</ul>
+		<nav>
+			<ul class="navbar">
+				<!--<li><a class="btn btn-default" href="assets/doc/CV_Zh_Tw.pdf" data-featherlight="iframe" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-width="800em" data-featherlight-iframe-height="60em">簡歷</a></li>-->
+				<li><a href="assets/doc/CV_Zh_Tw.pdf">彥志簡歷</a></li>
+				<li><a href="index.html#case">專案成果</a></li>
+				<li><a href="case_104.html">專案文件</a></li>
+				<li><a href="index.html#web">網頁成果</a></li>
+			</ul>
+		</nav>
 	</header>
 	<main>
 		<div class="box">
@@ -37,30 +39,34 @@
 					<p>依據客服網站重要公告同步教學個案作法，能在教學文件清單頁有對應的依循規則。</p>
 					<h3>負責項目</h3>
 					<ol>
-						<li><h4>現況分析</h4>
+						<li><h4>需求分析</h4>
 							<ol>
 								<li>教學文件頁面切換事件數量比例偏低，僅佔網站總事件1％</li>
-								<li>教學文件頁面離覽時間低於5秒的情況明顯佔多數，此行為需進行改善增加瀏覽時間以及減少低於5秒的比例。</li>
-								<li>重要公告為特殊事件以及跨功能操作的指引，但因以功能切分的方式無法有一定的準則提供使用者依循，需要解決無法提供教學文件的情況。</li>
+								<li>教學文件頁面瀏覽時間低於5秒的情況明顯佔多數，此行為需進行改善增加瀏覽時間以及減少低於5秒的比例。</li>
+								<li>重要公告屬於特殊繁瑣設定以及跨功能操作的指引，但文件是以功能切分的對應方式歸納，故重要公告集結所有內容的方式無法有依循準則提供使用者了解，故需要解決教學文件統整重要公告文件的情況。</li>
+								<li>撰寫規格分析文件提供開發。</li>
 							</ol>
 						</li>
 						<li><h4>產品功能企劃</h4>
 							<ol>
-								<li>建立標籤系統，增加教學文件關聯性。</li>
-								<li>新增正規化欄位，管理與設定標籤。</li>
-								<li>移除上下則切換教學文件功能，以標籤版位取代，能提供更多指引順序。</li>
-								<li>跨功能重要公告可依據功能切分，並增加對應標籤內容，串連唯一整份完整操作內容教學。</li>
+								<li>建立教學文件關聯標籤系統，增加關聯性，提供更多關聯內容參考，減少問題發生量。</li>
+								<li>標籤系統正規化欄位設計，利於內部管理與設定標籤。</li>
+								<li>移除上下則切換教學文件功能，簡化資訊內容，並以標籤版位取代，能提供更多指引順序。</li>
+								<li>跨功能重要公告可依據功能切分，並增加對應標籤內容，串連整份重要公告切分內容，提供完整系列的操作內容教學。</li>
 							</ol>
 						</li>
 						<li><h4>功能特點</h4>
 						<ol>
-							<li>切分時程先以前台上線為優先，提供更多關聯內容參考，達成上述設定目標數據。</li>
-							<li>上架方式可以SQL新增，排定後台功能開發。</li>
-							<li>單一教學文件可設定多組標籤對應，提供關聯性內容指引。</li>
+							<li>切分時程先以前台上線為優先，先以前台調整加速提供更多關聯教學文件內容參考。<img src="assets/images/case/pm/uniong_tag_demo.gif" alt="標籤版位操作"></li>
+							<li>簡易直覺的標籤設定方式<img src="assets/images/case/pm/uniong_tag_backend.gif" alt="設定標籤方式"></li>
+							<li>多組檢核機制，確保資訊正確。<img src="assets/images/case/pm/uniong_tag_check.gif" alt="設定標籤方式"></li>
+							<li>連動式設定，可由標籤管理功能設定套用的教學文件。<img src="assets/images/case/pm/uniong_tag_setDOC.gif" alt="設定標籤方式"></li>
+							<li>單一教學文件可設定多組標籤對應，提供關聯性內容指引。<img src="assets/images/case/pm/uniong_tag_page.png" alt="標籤功能版位"></li>
 						</ol>
-						<li><h4>頁面示意</h4>
+						<li><h4>流程圖示意</h4>
 						<ol>
-							<li>標籤功能版位<br><img src="assets/images/case/pm/uniong_tag_page.jpg" alt="標籤功能版位"></li>
+							<li>教學文件後台規劃<img src="assets/images/case/pm/uniong_tag_backend_DOCflow.jpg" alt="教學個案後台流程"></li>
+							<li>標籤系統後台規劃<img src="assets/images/case/pm/uniong_tag_backend_TAGflow.jpg" alt="標籤系統後台流程"></li>
 						</ol>
 						<li><h4>開發成果</h4>
 						<ol>
@@ -89,5 +95,7 @@
 		<a href="mailto:cadmus.sung@gmail.com"><img src="assets/images/footer/mail.png" alt=""></a>
 	</div>
 </footer>
+
+<div class="fbox"></div>
 </body>
 </html>

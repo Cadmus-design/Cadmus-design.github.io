@@ -14,7 +14,23 @@ ol,ul{
 	padding: 0;
 	margin: 0;
 }
+.fbox {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+.navbar.on {
+	position: fixed;
+	top: 1em;
+	left: 0;
+	z-index: 654;
+}
+nav{
 
+}
  #wrapper{
 	 width:100%;
 	 background:#aaa url(../images/bg.png) no-repeat top right;
@@ -48,6 +64,7 @@ ol,ul{
  #wrapper header h1, #wrapper header p{
  	padding:0 0 30px 60px;
  }
+
  #wrapper header ul{
  	width:35em;
  	display:flex;
