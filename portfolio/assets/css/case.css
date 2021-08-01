@@ -14,20 +14,8 @@ ol,ul{
 	padding: 0;
 	margin: 0;
 }
-.fbox {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 0;
-	height: 0;
-	opacity: 0;
-}
-.navbar.on {
-	position: fixed;
-	top: 0em;
-	right: 0em;
-	z-index: 654;
-}
+
+
  #wrapper{
 	 width:100%;
 	 background:#aaa url(../images/bg.png) no-repeat top right;
@@ -107,21 +95,8 @@ ol,ul{
  	align-self: center;
  	margin: .25em .5em;
  	}
- 	.fbox {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 0;
-	height: 0;
-	opacity: 0;
-	}
-	.navbar.on {
-		width:67%;
-		position: fixed;
-		top: 0em;
-		right: 0em;
-		z-index: 654;
-	}
+
+
  }
 /*header end*/
 /*container*/
