@@ -44,7 +44,7 @@ ol,ul{
  	/*background: #343AEB;*/
  	background: linear-gradient(#19BEE8,#289BFF);
  	color:#fff;
- 	font-size: 1.25em;
+ 	font-size: 1.25rem;
  	padding:0.35em 0.75em;
  	border-radius: 2em;
  	box-shadow: 2px 2px 2px #999;
@@ -73,7 +73,7 @@ ol,ul{
  	padding: 1em 1em 1em;
  	}
  	#wrapper header h1{
- 		font-size: 2em;
+ 		font-size: 2rem;
  	}
 
  	 #wrapper header ul{
@@ -88,7 +88,7 @@ ol,ul{
  	 background: linear-gradient(#19BEE8,#289BFF);
  	color:#fff;
  	text-align: center;
- 	font-size: 1em;
+ 	font-size: 1rem;
  	padding:0.5em .8em;
  	border-radius: 0.5em;
  	box-shadow: 2px 2px 2px #999;
@@ -127,7 +127,7 @@ main{
 	color:#fff;
 	font-weight: normal;
 	border-radius:1em;
-	font-size: 0.8em;
+	font-size: 1rem;
 	box-shadow: 1px 1px 3px 2px #ddd;
 	margin:0 0.2em 0 0;
 }
@@ -141,8 +141,8 @@ main{
 #wrapper main .container ul li{
 	background: #fff;
 	color:#333;
-	font-size: 1em;
-	line-height: 1.5em;
+	font-size: 1.25rem;
+	line-height: 1.25em;
 }
 #wrapper main .container ul li a{
 	text-decoration: underline;
@@ -171,7 +171,7 @@ main{
 #wrapper main .container table#wireframe tr th{
 	border: 1px solid #ddd;
 	padding: 1.8rem;
-	font-size: 1.2rem;
+	font-size: 1.25rem;
 	line-height: 1.8rem;
 	text-align: center;
 	border-spacing:0;
@@ -192,7 +192,7 @@ main{
 	word-break: break-all;
 }
 #wrapper main .container ul li h4{
-	line-height: 1.2em;
+	line-height: 1.5em;
 	
 	color:#333;
 }
@@ -200,8 +200,12 @@ main{
 	width:30%;
 	text-align: right;
 	padding:2%;
-	font-size: 1.5em;
+	font-size: 1.5rem;
 	line-height: 1.5em;
+}
+#wrapper main .container ul > li:nth-of-type(2n-1) p{
+	width:100%;
+	text-align: right;
 }
 #wrapper main .container ul > li:nth-of-type(2n){
 	width:60%;	
@@ -236,10 +240,16 @@ color:red;
 	display: block;
 }
 #wrapper main .container em{
-	font-size: 1.5em;
+	font-size: 1.8em;
 	color: red;
 	font-weight: 1000;
 	font-style: normal;
+}
+#wrapper main .container ul li ol li, #wrapper main .container ul li p{
+	width: 65%;
+}
+#wrapper main .container ul li img{
+	max-width: 65%;
 }
  @media (min-width:320px ) and (max-width: 640px) {
 	#wrapper main .container{
@@ -259,6 +269,7 @@ color:red;
 	line-height: 1.5em;
 	margin:1em 0;
 }
+
 #wrapper main .container ul li a{
 	text-decoration: underline;
 }
@@ -301,12 +312,26 @@ color:red;
 	width:95%;
 	text-align: left;
 	padding:2%;
-	font-size: 1em;
+	font-size: 1rem;
+	/*line-height: 1.2em;*/line-height: 2em;
+}
+#wrapper main .container ul > li:nth-of-type(2n-1) p{
+	width:100%;
+	text-align: left;
+	padding:2%;
+	font-size: 1rem;
 	/*line-height: 1.2em;*/line-height: 2em;
 }
 #wrapper main .container ul > li:nth-of-type(2n-1) h3{
 	margin:0;
 	font-size: 1.5em;
+	line-height: 1.2em;
+	color:#279EFD;
+	text-shadow: 2px 2px 2px #ddd;
+}
+#wrapper main .container ul > li:nth-of-type(2n-1) h4{
+	font-size: 1.5em;
+	font-weight: 800;
 	line-height: 1.2em;
 	color:#279EFD;
 	text-shadow: 2px 2px 2px #ddd;
@@ -334,6 +359,12 @@ color:red;
 #wrapper main .container ul > li > ol > li > ol{
 	list-style:lower-roman;
 	padding:0 0 0 1em;	
+}
+#wrapper main .container ul li img{
+	max-width: 100%;
+}
+#wrapper main .container ul li ol li, #wrapper main .container ul li p{
+	width: 100%;
 }
 }
 /*footer start*/
