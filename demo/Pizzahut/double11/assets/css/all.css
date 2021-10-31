@@ -38,9 +38,10 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
 }
 @media only screen and (max-width: 959px) {
     #wrapper #header .logo{
-        position: fixed;
+        position: relative;
         width:100px;
-        right:0px;
+        left:55%;
+        z-index: 50;
     }
 }
 
@@ -49,6 +50,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
     margin:0 auto;
     background: url("../images/KV_bg.jpg") no-repeat;
     background-size: cover;
+    padding:4rem 0 0 0;
 }
 
     #wrapper #KV .KV{
@@ -172,7 +174,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
             position: relative;
             z-index: 100;
             padding: 2rem .5rem;
-            background:url(../images/header_content_bg_m.png) no-repeat;
+            background:url(../images/header_content_bg_m.png) no-repeat 50% 0;
             background-size: contain;
         }
         #wrapper #KV .coupon ul{
@@ -192,7 +194,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                 }
                     #wrapper #KV .coupon ul:first-of-type li:first-of-type img{
                         display: inline;
-                        width:50%;
+                        width:40%;
                     }
                     #wrapper #KV .coupon ul:first-of-type li:first-of-type span{
                         font-size: 2rem;                        
@@ -229,7 +231,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                     #wrapper #KV .coupon h2 .time{
                         background: #000;
                         color:#f8b62d ;
-                        padding: 0.3rem 1rem;
+                        padding: 0.3rem .8rem;
                         border-radius: 2rem;
                     }
                     #wrapper #KV .coupon .ticket{
@@ -241,9 +243,9 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                         flex-wrap:wrap;
                     }
                     #wrapper #KV .coupon .ticket li{
-                        width:100%;
+                        width:90%;
                         padding:1%;
-                        margin:2% .6%;
+                        margin:2% auto;
                         background: #c9caca;
                         border-radius: .5rem;
                     }

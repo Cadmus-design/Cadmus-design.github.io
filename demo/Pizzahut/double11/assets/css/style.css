@@ -38,6 +38,7 @@ Screen style's
     width: 100%;
     margin: 0 auto;
     background: #dcdddd;
+    position: absolute;
 }
 
 .menu-mobile {
@@ -58,6 +59,7 @@ Screen style's
     -webkit-transform: translateY(-25%);
     -ms-transform: translateY(-25%);
     transform: translateY(-25%);
+    z-index: 99;
 }
 
 .menu-dropdown-icon:before {

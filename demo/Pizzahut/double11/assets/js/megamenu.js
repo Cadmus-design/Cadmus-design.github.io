@@ -1,6 +1,5 @@
 /*global $ */
 $(document).ready(function () {
-
     "use strict";
 
     $('.menu > ul > li:has( > ul)').addClass('menu-dropdown-icon');
@@ -56,6 +55,31 @@ $(document).ready(function () {
         $(".menu > ul").toggleClass('show-on-mobile');
         e.preventDefault();
     });
+         
     //when clicked on mobile-menu, normal menu is shown as a list, classic rwd menu story (thanks mwl from stackoverflow)
 
 });
+function locationHashChanged() {
+    if (location.hash === '#plan') {
+      //console.log("You're visiting a cool feature!");
+      $(".menu > ul").toggleClass('show-on-mobile');
+        e.preventDefault();
+    }
+    if (location.hash === '#dl_app') {
+        //console.log("You're visiting a cool feature!");
+        $(".menu > ul").toggleClass('show-on-mobile');
+          e.preventDefault();
+      }
+      if (location.hash === '#gift') {
+        //console.log("You're visiting a cool feature!");
+        $(".menu > ul").toggleClass('show-on-mobile');
+          e.preventDefault();
+      }
+      if (location.hash === '#use') {
+        //console.log("You're visiting a cool feature!");
+        $(".menu > ul").toggleClass('show-on-mobile');
+          e.preventDefault();
+      }
+  }
+    window.onhashchange = locationHashChanged;
+  
