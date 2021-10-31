@@ -468,7 +468,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
         }  
         #wrapper #use .steps{
             display: block;
-            width: 95%;
+            width: 98%;
             margin: 0 auto;
             height:80%;
             padding:0;
@@ -494,14 +494,13 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                 border-radius:1rem;
                 line-height: 1.5rem;
                 text-align: center;
-                margin:0 0.5rem 0.5rem;
-                padding:0 0.2rem;
+                margin:0 0rem 0.2rem;
             }
             #wrapper #use .steps li .split div{
                 width: 50%;
             }
             #wrapper #use .steps li .split img{
-                margin:0 0.5rem;
+                margin:0 1%;
             }
         #wrapper #use .steps li p,  #wrapper #use .steps li img{
             display: block;
@@ -675,6 +674,9 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                 font-size: 1.5rem;
                 width:100%;
                 margin: 0 auto;
+            }
+            #wrapper #feature h2 img{
+                width:6rem;
             }
             .separate:after {
                 content: "";
