@@ -59,7 +59,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
     }
 @media only screen and (max-width:959px){
     #wrapper #KV{
-    
+        padding:4rem 0 2rem;
     }
     #wrapper #KV .KV, #wrapper #KV .KV img{
         width: 100%;
@@ -483,6 +483,29 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
             line-height: 1.8rem;
             width:100%;
             padding:0 0 2rem;
+        }
+        #wrapper #use .steps li .split{
+            display: flex;
+        }
+            #wrapper #use .steps li .split p{
+                font-size: 0.75rem;
+                background:#231815;
+                color:#fff;
+                border-radius:1rem;
+                line-height: 1.5rem;
+                text-align: center;
+                margin:0 0.5rem 0.5rem;
+                padding:0 0.2rem;
+            }
+            #wrapper #use .steps li .split+div{
+                width: 50%;
+            }
+            #wrapper #use .steps li .split img{
+                margin:0 0.5rem;
+            }
+        #wrapper #use .steps li p,  #wrapper #use .steps li img{
+            display: block;
+            margin:0 auto;
         }
     }
     #wrapper #dl_app{
