@@ -497,7 +497,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                 margin:0 0.5rem 0.5rem;
                 padding:0 0.2rem;
             }
-            #wrapper #use .steps li .split+div{
+            #wrapper #use .steps li .split div{
                 width: 50%;
             }
             #wrapper #use .steps li .split img{
