@@ -28,6 +28,7 @@ html {
 	padding:0;
 }
 section{padding:0;}
+section > .d > img{width: 100%;}
 #wrap .header_page{
   	width:100%;
     line-height: 0;
@@ -44,6 +45,9 @@ section{padding:0;}
 	/*width:1440px;*/
 	margin:0 auto;
 	padding:0;
+}
+#wrap .container_page img{
+  width:100%;
 }
 #wrap .container_page .reminder{
   background: #ffe0e3;
@@ -104,6 +108,7 @@ div#social-float img{width:25%;margin:0 auto;display: block;}
   margin:0 auto;
   padding:0;
 }
+
 #wrap .container_page .reminder{
   background: #ffe0e3;
   padding:1rem;
