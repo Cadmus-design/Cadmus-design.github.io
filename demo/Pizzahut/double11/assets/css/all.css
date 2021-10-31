@@ -265,6 +265,11 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                                 line-height: 1.5rem;
                                 font-size: 1.2rem;
                             }
+                    #wrapper #KV .coupon .more img{
+                        display: block;
+                        width:70%;
+                        margin:2rem auto;
+                    }
         
     }
     #wrapper #gift{
