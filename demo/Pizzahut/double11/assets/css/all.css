@@ -135,13 +135,13 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
             #wrapper #KV .coupon h2{
                 font-weight: bold;
                 color: #000;
-                font-size: 2rem;
+                font-size: 1.5rem;
                 line-height: 2rem;
                 text-align: center;
             }
                 #wrapper #KV .coupon h2 .date{
                     color: #c30d23;
-                    font-size: 2.5rem;
+                    font-size: 2rem;
                 }
                 #wrapper #KV .coupon h2 .time{
                     background: #000;
@@ -174,8 +174,8 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                         justify-content: space-around;
                     }
                         #wrapper #KV .coupon .ticket li .purchase span{
-                            line-height: 1.8rem;
-                            font-size: 1.5rem;
+                            line-height: 1.5rem;
+                            font-size: 1rem;
                         }
     @media only screen and (max-width:959px){
         #wrapper #KV .coupon{
@@ -276,10 +276,10 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                                 line-height: 1.5rem;
                                 font-size: 0.8rem;
                             }
-                    #wrapper #KV .coupon .more img{
+                    #wrapper #KV .more img{
                         display: block;
                         width:70%;
-                        margin:4rem auto 0;
+                        margin:1rem auto;
                     }
         
     }
@@ -289,17 +289,21 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
     }
         #wrapper #gift .title{
             display: block;
-            margin: 1rem auto 2.5rem;
+            margin: 1rem auto 0rem;
             width:fit-content;
         }
-            #wrapper #gift .title h2{
+            #wrapper #gift h2{
                 text-align: center;
                 line-height: 85%;
+                font-size: 1.5rem;
             }
         #wrapper #gift .box{
             display: flex;
             justify-content: center;
         }
+            #wrapper #gift .box .d{
+                margin:0 0 0 -8rem;
+            }
             #wrapper #gift .box .arrow{
                 width: 125px;
                 height: 68px;
@@ -313,7 +317,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                 flex-grow: 0;
                 flex-shrink: 0;
                 color:#fff;
-                width: 25%;
+                width: 19.5%;
                 padding: 1.5rem 1.5rem 0;
                 height: 50%;
             }
@@ -322,8 +326,8 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                 margin: 0 auto;
             }
             #wrapper #gift .box .content p{
-                font-size: 1.5rem;
-                line-height: 2.2rem;
+                font-size: 1.2rem;
+                line-height: 1.8rem;
                 text-justify: auto;
                 
             }
@@ -343,14 +347,14 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                 padding:1.5rem;
             }
                     #wrapper #gift .box .content ul li .text h4{
-                        font-size: 1.5rem;
-                        line-height: 1.8rem;
+                        font-size: 1.2rem;
+                        line-height: 1.5rem;
                         margin:0;
                         padding:0;
                         font-weight: bold;
                     }
                     #wrapper #gift .box .content ul li .text p{
-                        font-size: 1.2rem;
+                        font-size: 1rem;
                         line-height: 1.5rem;
                     }
     @media only screen and (max-width:959px){
@@ -360,16 +364,16 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
         }
             #wrapper #gift .title{
                 display: block;
-                margin: 1rem auto 2.5rem;
-                width: 95%;
+                margin: 1rem auto 0rem;
+                width: 85%;
             }
                 #wrapper #gift .title img{
                     width: 100%;
                 } 
-                #wrapper #gift .title h2{
+                #wrapper #gift h2{
                     text-align: center;
                     line-height: 85%;
-                    font-size: 1.2rem;
+                    font-size: .85rem;
                 }
                 #wrapper #gift .box .content{
                     background: #c30d23;
@@ -382,10 +386,12 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                     height: 50%;
                 }
                 #wrapper #gift .box .content p{
-                    font-size: 1.2rem;
-                    line-height: 1.8rem;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
                     text-justify: auto;
-                    
+                }
+                #wrapper #gift .box .content > img{
+                    width:85%;
                 }
                 #wrapper #gift .box .content ul li{
                     background: #cf3d4f;
@@ -484,6 +490,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
         #wrapper #use .title{
             margin:0 auto;
             display: block;
+            width:85%;
         }
         #wrapper #use .title img{
             display: block;
@@ -590,7 +597,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
             }
     @media only screen and (max-width:959px){
         #wrapper #dl_app .title{
-            
+            width:85%;
             margin: 1rem auto 2.5rem;
         }
         #wrapper #dl_app .title img{
@@ -612,8 +619,8 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                 width:fit-content;
                 margin:0 auto;
                 text-align: center;
-                font-size: 1.5rem;
-                line-height: 2.2rem;
+                font-size: 1.25rem;
+                line-height: 1.8rem;
                 font-weight: 1000;
             }
             #wrapper #dl_app ul > li{
@@ -662,7 +669,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
             list-style: none;
         }
             #wrapper #feature .member ul li{
-                font-size: 1.2rem;
+                font-size: 1rem;
                 line-height: 3.5rem;
             }
                 #wrapper #feature .member ul li em{
@@ -690,11 +697,11 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
         #wrapper #feature ol{
             width:1200px;
             margin: 0 auto;
-            padding:1rem 0 1rem 5.5rem;
+            padding:1rem 0 1rem 8.5rem;
         }
             #wrapper #feature ol li{
                 line-height: 2.2rem;
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
     @media only screen and (max-width:959px){
         #wrapper #feature{
@@ -714,7 +721,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
             .separate:after {
                 content: "";
                 height: 3px;
-                width: 33%;
+                width: 30%;
                 background-color: #fff;
                 margin: -5px 15px 0 15px;
                 display: inline-block;
