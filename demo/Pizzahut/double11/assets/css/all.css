@@ -496,7 +496,8 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
         #wrapper #use .steps li > p{
             font-size: .8rem;
             line-height: 1.2rem;
-            width:100%;
+            width:80%;
+            margin:0 auto;
             padding:0 0 2rem;
         }
         #wrapper #use .steps li .split{
