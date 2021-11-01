@@ -40,7 +40,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
     #wrapper #header .logo{
         position: relative;
         width:100px;
-        left:50%;
+        left:53.5%;
         z-index: 50;
     }
 }
@@ -62,7 +62,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
     }
 @media only screen and (max-width:959px){
     #wrapper #KV{
-        padding:4rem 0 2rem;
+        padding:4rem 0 0rem;
     }
     #wrapper #KV .KV, #wrapper #KV .KV img{
         width: 100%;
@@ -266,12 +266,12 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                             }
                             #wrapper #KV .coupon .ticket li .purchase span{
                                 line-height: 1.5rem;
-                                font-size: 1.2rem;
+                                font-size: 0.8rem;
                             }
                     #wrapper #KV .coupon .more img{
                         display: block;
                         width:70%;
-                        margin:2rem auto;
+                        margin:8.5rem auto 0;
                     }
         
     }
@@ -487,8 +487,8 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
             padding:0 0 2rem;
         }
         #wrapper #use .steps li > p{
-            font-size: 1.2rem;
-            line-height: 1.8rem;
+            font-size: .8rem;
+            line-height: 1.2rem;
             width:100%;
             padding:0 0 2rem;
         }
@@ -679,7 +679,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
             color: #fff;
         }
             #wrapper #feature h2{
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 width:100%;
                 margin: 0 auto;
             }
@@ -689,7 +689,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
             .separate:after {
                 content: "";
                 height: 3px;
-                width: 22%;
+                width: 33%;
                 background-color: #fff;
                 margin: -5px 15px 0 15px;
                 display: inline-block;
@@ -707,7 +707,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                 list-style: none;
             }
                 #wrapper #feature .member ul li{
-                    font-size: 1rem;
+                    font-size: .9rem;
                     line-height: 2.5rem;
                 }
                 #wrapper #feature .member ul li em{
