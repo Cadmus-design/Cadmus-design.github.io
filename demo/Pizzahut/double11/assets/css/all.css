@@ -54,8 +54,11 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
 }
 
     #wrapper #KV .KV{
-        width: 1920px;
+        width: 100%;
         margin:0 auto;
+    }
+    #wrapper #KV .KV img{
+        width: 100%;
     }
 @media only screen and (max-width:959px){
     #wrapper #KV{
@@ -645,7 +648,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                 }
                 
                 #wrapper #feature .member ul .uni{
-                    padding:0 0 2.5rem 0;
+                    
                     /*content:"\A";
 		            white-space: pre;*/
                 }
