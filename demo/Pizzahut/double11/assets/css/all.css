@@ -197,7 +197,8 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                 }
                     #wrapper #KV .coupon ul:first-of-type li:first-of-type img{
                         display: inline;
-                        width:40%;
+                        width:95%;
+                        margin:0 auto;
                     }
                     #wrapper #KV .coupon ul:first-of-type li:first-of-type span{
                         font-size: 2rem;                        
@@ -246,8 +247,8 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                         flex-wrap:wrap;
                     }
                     #wrapper #KV .coupon .ticket li{
-                        width:90%;
-                        padding:1%;
+                        width:95%;
+                        padding:2% 1%;
                         margin:2% auto;
                         background: #c9caca;
                         border-radius: .5rem;
@@ -271,7 +272,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                     #wrapper #KV .coupon .more img{
                         display: block;
                         width:70%;
-                        margin:8.5rem auto 0;
+                        margin:4rem auto 0;
                     }
         
     }
@@ -484,7 +485,13 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
         #wrapper #use .steps li{
             list-style: none;
             color:#fff;
-            padding:0 0 2rem;
+            padding:0 0 1rem;
+            width:100%;
+        }
+        #wrapper #use .steps li img{
+            width:50%;
+            margin:0 auto;
+            border:2px solid #000;
         }
         #wrapper #use .steps li > p{
             font-size: .8rem;
@@ -508,7 +515,9 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                 width: 50%;
             }
             #wrapper #use .steps li .split img{
-                margin:0 1%;
+                
+                width:100%;
+                margin:0 auto;
             }
         #wrapper #use .steps li p,  #wrapper #use .steps li img{
             display: block;
