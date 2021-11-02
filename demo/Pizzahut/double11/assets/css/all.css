@@ -322,14 +322,14 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                 height: 50%;
             }
             #wrapper #gift .box > img{
-                width:85%;
+                width:45%;
             }
             #wrapper #gift .box .content img{
                 display: block;
                 margin: 0 auto;
             }
             #wrapper #gift .box .content p{
-                font-size: 1.2rem;
+                font-size: 1rem;
                 line-height: 1.8rem;
                 text-justify: auto;
                 
