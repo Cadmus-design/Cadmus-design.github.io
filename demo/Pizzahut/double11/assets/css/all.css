@@ -321,6 +321,9 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                 padding: 1.5rem 1.5rem 0;
                 height: 50%;
             }
+            #wrapper #gift .box > img{
+                width:85%;
+            }
             #wrapper #gift .box .content img{
                 display: block;
                 margin: 0 auto;
