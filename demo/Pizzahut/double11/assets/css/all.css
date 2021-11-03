@@ -10,6 +10,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
     }
 #wrapper{
     width: 100%;
+    overflow-x: hidden;
 }
 #wrapper #header{
     width:100%;
