@@ -322,7 +322,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
             #wrapper #gift .box .content{
                 background: #c30d23;
                 border-radius: 1.5rem;
-                max-width: 33vw;
+                width: 33vw;
                 height: 50%;
                 color:#fff;
                 padding: 1.5rem 1.5rem 0;
@@ -398,13 +398,16 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                     line-height: 85%;
                     font-size: .85rem;
                 }
+                #wrapper #gift .box{
+                    display: block;
+                }
                 #wrapper #gift .box .content{
                     background: #c30d23;
                     border-radius: 1.5rem;
                     flex-grow: 0;
                     flex-shrink: 0;
                     color:#fff;
-                    width: 95%;
+                    width: 100%;
                     padding: 1.5rem 1.5rem 0;
                     height: 50%;
                 }
