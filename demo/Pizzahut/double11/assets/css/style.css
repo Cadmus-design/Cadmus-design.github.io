@@ -48,14 +48,21 @@ Screen style's
 }
 
 .menu-mobile:after {
-    content: "\f394";
-    font-family: "Ionicons";
+    /*content: "\f394";*/
+    /*font-family: "Ionicons";*/
+    /*content:"\f0c9";*/
+    content: '';
+    background: url('../images/menu.png') no-repeat left top;
+    width:2rem;
+    height:2rem;
+    background-size: cover;
     font-size: 2.5rem;
     padding: 0;
     /*float: left;*/
     display:flex;
     position: relative;
-    top: 50%;
+    top: 30%;
+    left:0%;
     -webkit-transform: translateY(-25%);
     -ms-transform: translateY(-25%);
     transform: translateY(-25%);
@@ -63,7 +70,7 @@ Screen style's
 
 .menu-dropdown-icon:before {
     content: "\f489";
-    font-family: "Ionicons";
+    /*font-family: "Ionicons";*/
     display: none;
     cursor: pointer;
     float: right;
