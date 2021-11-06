@@ -63,22 +63,22 @@ function locationHashChanged() {
     if (location.hash === '#plan') {
       //console.log("You're visiting a cool feature!");
       $(".menu > ul").toggleClass('show-on-mobile');
-        //e.preventDefault();
+        e.preventDefault();
     }
     if (location.hash === '#dl_app') {
         //console.log("You're visiting a cool feature!");
         $(".menu > ul").toggleClass('show-on-mobile');
-          //e.preventDefault();
+          e.preventDefault();
       }
       if (location.hash === '#gift') {
         //console.log("You're visiting a cool feature!");
         $(".menu > ul").toggleClass('show-on-mobile');
-          //e.preventDefault();
+          e.preventDefault();
       }
       if (location.hash === '#use') {
         //console.log("You're visiting a cool feature!");
         $(".menu > ul").toggleClass('show-on-mobile');
-          //e.preventDefault();
+          e.preventDefault();
       }
   }
     window.onhashchange = locationHashChanged;
