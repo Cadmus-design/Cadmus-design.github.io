@@ -18,11 +18,10 @@
     <meta property="og:image" content="https://storage.googleapis.com/wwwpkcard/evoucher210824/img/kv-web.jpg"/>
     <meta property="og:site_name" content="PK雙饗卡"/>
     <!-- CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/all.css">
     <!-- <link rel="stylesheet" href="assets/css/ionicons.min.css">-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"></link>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
     <!-- 2021-11-04 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109401606-1"></script>
@@ -259,9 +258,98 @@
     <footer>
         <p>Copyright © 2021富利餐飲股份有限公司 All Rights Reserved</p>
     </footer>
-    <script src="assets/js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
 
-    <script src="assets/js/megamenu.js"></script>
+    <!-- <script src="assets/js/megamenu.js"></script>-->
+    <!-- MEGAMENU-->
+    <script type="text/javascript">
+        /*global $ */
+    $(document).ready(function () {
+    "use strict";
+
+    $('.menu > ul > li:has( > ul)').addClass('menu-dropdown-icon');
+    //Checks if li has sub (ul) and adds class for toggle icon - just an UI
+
+
+    $('.menu > ul > li > ul:not(:has(ul))').addClass('normal-sub');
+    //Checks if drodown menu's li elements have anothere level (ul), if not the dropdown is shown as regular dropdown, not a mega menu (thanks Luka Kladaric)
+
+    $(".menu > ul").before("<a href=\"#\" class=\"menu-mobile\"></a>");
+
+    //Adds menu-mobile class (for mobile toggle menu) before the normal menu
+    //Mobile menu is hidden if width is more then 959px, but normal menu is displayed
+    //Normal menu is hidden if width is below 959px, and jquery adds mobile menu
+    //Done this way so it can be used with wordpress without any trouble
+
+    $(".menu > ul > li").hover(
+        function (e) {
+            if ($(window).width() > 943) {
+                $(this).children("ul").fadeIn(150);
+                e.preventDefault();
+            }
+        }, function (e) {
+            if ($(window).width() > 943) {
+                $(this).children("ul").fadeOut(150);
+                e.preventDefault();
+            }
+        }
+    );
+    //If width is more than 943px dropdowns are displayed on hover
+
+
+    //the following hides the menu when a click is registered outside
+    $(document).on('click', function(e){
+        if($(e.target).parents('.menu').length === 0)
+            $(".menu > ul").removeClass('show-on-mobile');
+    });
+
+    $(".menu > ul > li").click(function() {
+        //no more overlapping menus
+        //hides other children menus when a list item with children menus is clicked
+        var thisMenu = $(this).children("ul");
+        var prevState = thisMenu.css('display');
+        $(".menu > ul > li > ul").fadeOut();
+        if ($(window).width() < 943) {
+            if(prevState !== 'block')
+                thisMenu.fadeIn(150);
+        }
+    });
+    //If width is less or equal to 943px dropdowns are displayed on click (thanks Aman Jain from stackoverflow)
+
+    $(".menu-mobile").click(function (e) {
+        $(".menu > ul").toggleClass('show-on-mobile');
+        e.preventDefault();
+    });
+         
+    //when clicked on mobile-menu, normal menu is shown as a list, classic rwd menu story (thanks mwl from stackoverflow)
+
+});
+function locationHashChanged() {
+    if (location.hash === '#plan') {
+      //console.log("You're visiting a cool feature!");
+      $(".menu > ul").toggleClass('show-on-mobile');
+        //e.preventDefault();
+    }
+    if (location.hash === '#dl_app') {
+        //console.log("You're visiting a cool feature!");
+        $(".menu > ul").toggleClass('show-on-mobile');
+          //e.preventDefault();
+      }
+      if (location.hash === '#gift') {
+        //console.log("You're visiting a cool feature!");
+        $(".menu > ul").toggleClass('show-on-mobile');
+          //e.preventDefault();
+      }
+      if (location.hash === '#use') {
+        //console.log("You're visiting a cool feature!");
+        $(".menu > ul").toggleClass('show-on-mobile');
+          //e.preventDefault();
+      }
+  }
+    window.onhashchange = locationHashChanged;
+  
+    </script>
+    <!-- END-->
 </body>
 
 </html>
