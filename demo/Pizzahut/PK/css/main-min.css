@@ -1,0 +1,407 @@
+
+
+/* ==========================================================================
+  custom styles
+   ========================================================================== */
+
+
+ul, li, p, h1, h2, h3{
+   list-style-type: none;
+   font-family: 'Noto Sans TC', sans-serif;
+   
+}
+
+p{
+   font-size: 14px;
+}
+
+ul, li{
+   padding-left: 0;
+}
+
+.navbar-header{
+   background-color: white;
+}
+@media screen and (min-width:768px) { 
+   .navbar-nav{
+      width: 580px;
+      margin: auto;
+      float: none;
+   }
+
+   .navbar-nav li{
+      width:25%;
+      text-align: center;
+      padding: 15px;
+   }
+}
+.navbar{
+   background-color: white;
+}
+#navbar a{
+   color: black;
+
+}
+@media screen and (max-width:767px) { 
+   #navbar{
+      background-color: black;
+   }
+   #navbar a{
+      color: white;
+   
+   }
+   
+ }
+
+.navbar-header .icon-bar{
+   background-color: black;
+}
+
+
+
+body{
+   background-color: #C02828;
+}
+
+.logo a{
+   width: 36px;
+   height: 35px;
+   margin-top: 5px;
+   margin-left: 10px;
+   display: inline-block;
+}
+.logo a img{
+   width: 100%;
+}
+
+
+.kv-container img{
+   width: 100%;
+}
+
+
+.title{
+   margin:  2rem auto 4rem auto;
+   position: relative;
+   z-index: 2;
+}
+
+img{
+   width: 100%;
+}
+.title.one{
+   width: 325px;
+}
+
+.title.two{
+   width: 341px;
+}
+
+.highlights h2{
+   font-size: 18px;
+   color: white;
+   background-color: #CE3039;
+   border: 1px solid white;
+   border-radius: 20px;
+   width: 194px;
+   text-align: center;
+   font-weight: 400;
+   padding: 5px 0;
+   margin: 0 auto;
+   position: relative;
+   z-index: 2;
+}
+
+.highlight-container{
+   background-color: white;
+   padding: 37px 33px;
+   border-radius: 3px;
+   margin-top: -15px;
+   position: relative;
+   z-index: 1;
+}
+
+.highlight-container span{
+  
+   vertical-align: middle;
+}
+.icon{
+   min-width: 55px;
+   max-width: 55px;
+   display: inline-block;
+   margin-right: 13px;
+}
+.highlight-container h3{
+   padding: 0;
+   margin: 0;
+   margin-bottom: 8px;
+   font-size: 16px;
+}
+
+.highlight-container p{
+   margin-bottom: 0;
+}
+
+.highlight-container li{
+   margin-top: 20px;
+   display: -webkit-flex!important;
+   display: flex!important
+}
+
+.highlight-container ul{
+   border-top: 1px solid #EDB4B8;
+   margin-top: 20px;
+}
+
+.container{
+   max-width: 1020px;
+}
+
+.what-is, .promotion{
+   padding: 50px 0;
+   background-color: #CE3039;
+   margin-bottom: 1px;
+}
+.how-to{
+   padding: 50px 0;
+}
+.intro{
+   color: white;
+   text-align: center;
+   font-size: 18px;
+}
+
+.promotion .intro{
+   font-size: 24px;
+   font-weight: 500;
+   position: relative;
+   z-index:2;
+}
+
+.num{
+   min-width: 30px;
+   max-width: 30px;
+   margin-right: 10px;
+}
+
+.description{
+   display: -webkit-flex!important;
+   display: flex!important;
+   color: white;
+   padding: 0 5px;
+  
+}
+.description p{
+   font-size: 13px;
+   line-height: 20px;
+}
+
+.how-to .col-lg-3{
+   padding-left: 5px;
+   padding-right: 5px;
+}
+
+.how-to h2{
+   font-size: 18px;
+   color: white;
+   border: 1px solid white;
+   border-radius: 20px;
+   width: 194px;
+   text-align: center;
+   padding: 5px;
+   margin: auto;
+   background-color: #A20D0D;
+   position: relative;
+   z-index: 2;
+   font-weight: 400;
+}
+.how-to .row{
+   border-top: 1px solid white;
+   padding-top: 50px;
+   margin-top: -15px;
+}
+
+.download h2{
+   color: white;
+   font-size: 25px;
+   text-align: center;
+   max-width: 290px;
+   margin: auto;
+   line-height: 35px;
+   margin-top: 4rem;
+}
+
+.download .col-lg-6{
+   padding: 2rem;
+}
+
+.download .qrcode{
+   width: 150px;
+   margin: 2rem auto;
+}
+.app{
+   max-width: 360px;
+}
+
+.app-icons{
+   width: 340px;
+   margin: auto;
+}
+
+.app-icons span{
+   width: 49%;
+   display: inline-block;
+}
+
+.app-container{
+   position: relative;
+   top: -12rem;
+}
+
+.benefits{
+   background-color: #202020;
+   padding: 40px;
+}
+.benefits h3{
+   color: white;
+   font-size: 18px;
+}
+.benefits li{
+   list-style-type:disc;
+   color: white;
+}
+
+
+footer p{
+   text-align: center;
+   padding-top: 2rem;
+   color: white;
+}
+
+.scan-code .qrcode{
+   width: 80px;
+}
+
+.scan-code div{
+   display: inline-block;
+   color: white;
+   margin-right: 10px;
+}
+
+.scan-code{
+   width: 280px;
+   margin: 3rem auto;
+   border: 1px solid white;
+   border-radius: 3px;
+   padding: 10px;
+   font-size: 16px;
+   text-align: center;
+
+}
+
+.bg-l{
+   width: 400px;
+   height: 400px;
+   top: 0;
+   left: 0;
+   position: absolute;
+   
+   background: url(../img/deco-left.png) no-repeat;
+   background-size: contain;
+}
+.bg-r{
+   width: 400px;
+   top: 0;
+   right: 0;
+   position: absolute;
+   height: 400px;
+   background: url(../img/deco-right.png) no-repeat;
+   background-size: contain;
+}
+
+.bg-tl{
+   width: 400px;
+   height: 300px;
+   top: 0;
+   left: 0;
+   position: absolute;
+   
+   background: url(../img/deco-tl.png) no-repeat;
+   background-size: contain;
+}
+.bg-tr{
+   width: 400px;
+   top: 0;
+   right: 0;
+   position: absolute;
+   height: 300px;
+   background: url(../img/deco-tr.png) no-repeat;
+   background-size: contain;
+   background-position: top right;
+}
+.bg-bl{
+   width: 400px;
+   height: 300px;
+   bottom: 0;
+   left: 0;
+   position: absolute;
+   
+   background: url(../img/deco-bl.png) no-repeat;
+   background-size: contain;
+}
+.bg-br{
+   width: 400px;
+   bottom: 0;
+   right: 0;
+   position: absolute;
+   height: 300px;
+   background: url(../img/deco-br.png) no-repeat;
+   background-size: contain;
+   background-position: bottom right;
+}
+.mobile-coupon{
+   display: none;
+}
+.web-coupon{
+   display: block;
+}
+@media screen and (max-width:768px) { 
+   .bg-br,.bg-bl,.bg-tr,.bg-tl, .bg-l, .bg-r{
+      width: 40%;
+      
+   }
+   .web-phone{
+      display: none;
+   }
+   .title.one,.title.two{
+      max-width: 90%;
+   }
+   .scan-code, .download .qrcode{
+      display: none;
+   }
+
+   .app-container{
+      top: 0;
+      margin-bottom: 50px;
+   }
+   .app-icons{
+      max-width: 300px;
+   }
+   .app{
+      margin: auto;
+   }
+   .mobile-coupon{
+      display: block;
+   }
+   .web-coupon{
+      display: none;
+   }
+}
+.what-is, .promotion{
+   position: relative;
+}
+
+.how-to, .download{
+   background: rgb(157,7,7);
+background: linear-gradient(180deg, rgba(157,7,7,1) 0%, rgba(192,40,40,1) 42%);
+}
