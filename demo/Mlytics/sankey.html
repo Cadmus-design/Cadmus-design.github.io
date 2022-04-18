@@ -1,0 +1,100 @@
+<html>
+<body>
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<div id="sankey_multiple" style="width: 100%;height:800px ">
+<script type="text/javascript">
+  google.charts.load("current", {packages:["sankey"]});
+  google.charts.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'From');
+    data.addColumn('string', 'To');
+    data.addColumn('number', 'Traffic');
+    data.addRows([
+       [ 'Brazil', 'GMA', 5 ],
+       [ 'Brazil', 'Stackpath', 1 ],
+       [ 'Brazil', 'Fastly', 1 ],
+       [ 'Brazil', 'Cloudflare', 1 ],
+       [ 'China', 'GMA', 5 ],
+       [ 'China', 'Stackpath', 1 ],
+       [ 'China', 'Akamai', 1 ],
+       [ 'China', 'Cloudflare', 1 ],
+       [ 'Canada', 'Cloudfront', 1 ],
+       [ 'Canada', 'Alibaba', 5 ],
+       [ 'Canada', 'Akamai', 1 ],
+       [ 'Mexico', 'CDNetwork', 1 ],
+       [ 'Mexico', 'GMA', 5 ],
+       [ 'Mexico', 'Cloudflare', 1 ],
+       [ 'USA', 'Cloudfront', 1 ],
+       [ 'USA', 'Fastly', 1 ],
+       [ 'USA', 'Stackpath', 1 ],
+       [ 'USA', 'Chunghwa', 5 ],
+       [ 'Portugal', 'Akamai', 2 ],
+       [ 'Portugal', 'Cloudflare', 1 ],
+       [ 'Portugal', 'Wangsu RIM', 1 ],
+       [ 'Portugal', 'Stackpath', 3 ],
+       [ 'France', 'Fastly', 1 ],
+       [ 'France', 'Alibaba', 3 ],
+       [ 'France', 'GMA', 3 ],
+       [ 'France', 'Cloudfront', 3 ],
+       [ 'Spain', 'Alibaba', 1 ],
+       [ 'Spain', 'CDNetwork', 3 ],
+       [ 'Spain', 'Fastly', 1 ],
+       [ 'England', 'GMA', 1 ],
+       [ 'England', 'Alibaba', 1 ],
+       [ 'England', 'Akamai', 2 ],
+       [ 'England', 'Fastly', 7 ],
+       [ 'South Africa', 'Cloudflare', 5 ],
+       [ 'South Africa', 'GMA', 1 ],
+       [ 'South Africa', 'CDNetwork', 3 ],
+
+       [ 'Wangsu RIM', 'www.strapmaster.com', 2],
+       [ 'GMA', 'www.strapmaster.com', 3],
+       [ 'Stackpath', 'www.strapmaster.com', 6],
+       [ 'Cloudflare', 'www.strapmaster.com', 4],
+       [ 'Fastly', 'www.strapmaster.com', 2],
+       [ 'Alibaba', 'www.strapmaster.com', 1],
+       [ 'Chunghwa', 'www.strapmaster.com', 4],
+       [ 'Cloudfront', 'portal.strapmaster.com', 3],
+       [ 'Akamai', 'portal.strapmaster.com', 7],
+       [ 'CDNetwork', 'test.strapmaster.com', 3],
+       [ 'Baishan', 'test.strapmaster.com', 3],
+       [ 'Alibaba', 'test.strapmaster.com', 3],
+       [ 'Fastly', 'main.steapmaster.com', 3],			
+       [ 'Alibaba', 'edm.strapmaster.com', 3],
+       [ 'Alibaba', 'assets.strapmaster.com', 3],
+       [ 'Alibaba', 'image.strapmaster.com', 3],
+       [ 'Alibaba', 'cdn.steapmaster.com', 3],
+       [ 'GMA', 'www2.strapmaster.com', 10]
+    ]);
+
+    // Set chart options
+     var colors = ['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f',
+                  '#cab2d6', '#ffff99', '#1f78b4', '#33a02c'];
+var options = {
+width: 1000,
+      height: 600,
+      sankey: {
+        node: {
+          colors: colors,
+          label: { fontName: 'Noto-sans',
+                         fontSize: 12,
+                         labelPadding: 50, }
+        },
+        link: {
+          colorMode: 'gradient',
+          colors: colors
+        }
+      }
+    };
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.Sankey(document.getElementById('sankey_multiple'));
+    chart.draw(data, options);
+   }
+</script>
+</div>
+
+</body>
+</html>
