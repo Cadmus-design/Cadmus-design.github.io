@@ -78,17 +78,17 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
 }
     #wrapper #KV .coupon{
         width: 1080px;
-        margin: 5rem auto 0;
+        margin: -3.8rem auto 0;
         position: relative;
         z-index: 100;
-        padding: 3rem;
+        padding: 5rem 3rem;
         background:url(../images/header_content_bg.png) center center no-repeat;
         background-size:contain;
     }
 
     #wrapper #KV .coupon ul{
         display: flex;  
-        list-style: none;  
+        /*list-style: none;  */
     }
         #wrapper #KV .coupon ul{
             margin: 1rem 0 0;
@@ -136,14 +136,26 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                 line-height: 2rem;
                 text-align: left;
             }
+                #wrapper #KV .coupon h2 ul{
+                    list-style: disc;
+                    display: block;
+                    padding:0 0 0 2.5rem;
+                }
+                #wrapper #KV .coupon h2 ul li{
+                    list-style-type: disc;
+                }
                 #wrapper #KV .coupon h2 span{
                     font-weight: 1000;
+                }
+                #wrapper #KV .coupon h2 span:after{
+                    content:"\A";
+                    white-space: pre;
                 }
                
     @media only screen and (max-width:959px){
         #wrapper #KV .coupon{
             width: 95%;
-            margin: -5rem auto 0;
+            margin: -3.5rem auto 0;
             position: relative;
             z-index: 100;
             padding: 2rem .5rem;
@@ -152,11 +164,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
         }
         #wrapper #KV .coupon ul{
             display: none;  
-            list-style: none;  
-            padding: 1.5rem .5rem;
-                margin: 4rem 0 0;
-                
-                padding:0;
+
         }
                 #wrapper #KV .coupon ul li{
                     display: flex;
@@ -196,38 +204,28 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
 
                 #wrapper #KV .coupon h2{
                     font-weight: 400;
+                    width:85%;
+                    margin:0 auto;
                     color: #000;
                     font-size: 1rem;
                     line-height: 1.5rem;
                     text-align: left;
-                    padding:0.5rem;
+                    padding:1rem;
+                }
+                #wrapper #KV .coupon h2 > ul{
+                    list-style: disc;
+                    display: block;
+                    padding:0;
+                    margin:0;
+                }
+                #wrapper #KV .coupon h2 > ul li{
+                    list-style: disc;
+                    /*content:"•";*/
                 }
                 #wrapper #KV .coupon h2 span{
                     font-weight: 1000;
                 }
-                    #wrapper #KV .coupon .ticket li{
-                        width:85%;
-                        padding:2% 1%;
-                        margin:2% auto;
-                        background: #c9caca;
-                        border-radius: .5rem;
-                    }
-                        #wrapper #KV .coupon .ticket li > img{
-                            width:100%;
-                            margin: 0 0 .5rem 0;
-                        }
-                        #wrapper #KV .coupon .ticket li .purchase{
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-around;
-                        }
-                            #wrapper #KV .coupon .ticket li .purchase img{
-                                
-                            }
-                            #wrapper #KV .coupon .ticket li .purchase p{
-                                line-height: 1.2rem;
-                                font-size: 0.8rem;
-                            }
+                   
                         #wrapper #KV .more img{
                         display: block;
                         width:70%;
@@ -401,13 +399,14 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
         display: flex;
         width: 1366px;
         margin: 0 auto;
-        height:80%;
+        height:90%;
+        padding:0;
     }
         #wrapper #use .steps > li{
             list-style: none;
             color:#fff;
             padding:0.5rem;
-            width: 24%;
+            width: 25%;
         }
         #wrapper #use .steps li:after{
             /*font-size: 2.5rem;
@@ -459,6 +458,23 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
                 display: block;
                 margin:0 auto;
             }
+    @media (min-width:960px) and (max-width:1365px) {
+        #wrapper #use .steps{
+            display: flex;
+            width: 100%;
+            margin: 0 auto;
+            height:90%;
+            padding:0;
+        }
+
+                #wrapper #use .steps li > p{
+                    font-size: 1rem;
+                    line-height: 1.8rem;
+                    width:90%;
+                    height: 7.2rem;
+                    padding:0 0 2rem;
+                }
+    }
     @media only screen and (max-width:959px){
         #wrapper #use{
             padding:1rem 2%;
