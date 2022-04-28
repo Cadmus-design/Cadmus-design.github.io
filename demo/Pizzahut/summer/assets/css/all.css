@@ -65,6 +65,8 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
     }
     #wrapper #KV .KV img{
         width: 100%;
+       display: block;
+        
     }
 @media only screen and (max-width:959px){
     #wrapper #KV{
@@ -141,7 +143,7 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
     @media only screen and (max-width:959px){
         #wrapper #KV .coupon{
             width: 95%;
-            margin: 0rem auto 0;
+            margin: -5rem auto 0;
             position: relative;
             z-index: 100;
             padding: 2rem .5rem;
