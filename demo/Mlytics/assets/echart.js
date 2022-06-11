@@ -34046,7 +34046,7 @@ var iz = function(t) {
         var f = c.meta,
             g = document.createElement("div");
         g.style.cssText = "position:absolute;bottom:5px;left:0;right:0";
-        var y = "float:right;margin-right:0px;border:none;cursor:pointer;padding:2px 5px;font-size:12px;border-radius:3px",
+        var y = "float:right;margin-right:20px;border:none;cursor:pointer;padding:2px 5px;font-size:12px;border-radius:3px",
             v = document.createElement("div"),
             m = document.createElement("div");
         y += ";background-color:" + i.get("buttonColor"), y += ";color:" + i.get("buttonTextColor");
