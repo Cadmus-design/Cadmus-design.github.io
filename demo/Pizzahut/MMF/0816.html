@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<head>
+    
+<style type="text/css">
+.tabbedPanels { width: 600px; 
+                margin-top: 25px;
+              }
+
+.panelContainer {
+	clear: left;
+	margin-bottom: 25px;
+	border: 5px solid red;	
+	background-color: #fff;
+	padding: 10px;
+    border-top-right-radius: 5px;
+   border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+	/* add height if you want equal panels */
+}
+
+
+
+
+/* reset ul defaults  */
+.tabs {
+	margin: 0;
+	padding: 0;	
+	list-style: none;	
+
+}
+
+/* set li properties  */
+.tabs li {
+   float: left;
+   width: 75px;
+	padding: 0;
+	margin: 0;
+        text-align: center;
+}
+
+/* all formatting goes inside 'a' */
+.tabs a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+        font-weight: bold;
+	padding:  8px;
+	margin-right: 4px;  /* spaces out the tabs  */
+	border: 0px solid grey;
+   border-top-right-radius: 5px;
+   border-top-left-radius: 5px;
+	background-color: grey;
+    margin-bottom: -2px;  /* negative margin will move it down
+	                         to blend in with outer border  */
+}
+
+
+.tabs a.active {
+	border-bottom: 2px solid red;
+	background-color: red;
+	color: #000;
+        font-weight: bold;
+}
+        
+ .panel img {
+             
+         margin-top: 10px;
+}
+
+.panel p  {
+             
+         margin-bottom: 0px;
+}
+
+
+</style>
+
+</head>
+<body>
+    <div class="tabbedPanels">  <!-- begins the tabbed panels / wrapper-->
+        <!--
+        <ul class="tabs">
+         <li><a href="#panel1">Kevin</a></li>
+         <li><a href="#panel2">Joan</a></li>
+         <li><a href="#panel3">Al</a></li>
+         <li><a href="#panel4">Teresa</a></li>
+        </ul>
+       -->
+         <ol class="tabs">
+         <li><a href="#panel1">Kev2in</a></li>
+         <li><a href="#panel2">Joan</a></li>
+         <li><a href="#panel3">Al</a></li>
+         <li><a href="#panel4">Teresa</a></li>
+        </ol>
+       
+       <div class="panelContainer">
+       <div id="panel1" class="panel">
+       
+       <p>
+       In spite of this tragedy, Kevin desired to bring good out of it, by spreading the word about the need for organ donation, and by supporting others in support groups. Kevin was on a waiting list for a kidney transplant. 
+       </p>    
+       </div>  <!-- end panel 1 -->
+       
+       
+       <div id="panel2" class="panel">
+       
+       <p>
+        Joan, Kevin's mother, was the first volunteer as a donor. Although she was a match, she was temporarily disqualified as a kidney donor at that time. Joan has coordinated Organ Donation Awareness Acitivities at her place of work.
+        
+       </p>    
+       </div> <!-- end panel 2 -->
+       
+       
+       <div id="panel3" class="panel">
+       <p>
+        Al, a relative, began a crusade of providing friends and other relatives with this information, in the hopes of finding a kidney donor. Al was a match, but was temporarily disqualified as a kidney donor at that time.
+       
+       </p>
+       </div>  <!-- end panel 3 -->
+       
+       <div id="panel4" class="panel">
+       <p>
+       Teresa,  also a relative and a website developer, volunteered to develop the website in September 2007, in cooperation with Al, Kevin and Joan. The goal of the website is to provide information and support to those in similar situations.
+       
+       </p>
+       </div>  <!-- end panel 4 -->
+       
+       </div> <!-- end div class="panelContainer" or panel wrapper -->
+       
+       </div> <!-- ends the tabbed panels / wrapper-->
+       
+       
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+<script>
+  
+
+
+    $(document).ready(function() {
+      
+      //alert('here');
+      
+    $('.tabs a').click(function(){
+    
+       $('.panel').hide();
+       $('.tabs a.active').removeClass('active');
+       $(this).addClass('active');
+       
+       var panel = $(this).attr('href');
+       $(panel).fadeIn(1000);
+       
+       return false;  // prevents link action
+      
+    });  // end click 
+  
+       $('.tabs li:first a').click();
+       
+  }); // end ready
+  
+  
+  
+  
+  
+  </script>
