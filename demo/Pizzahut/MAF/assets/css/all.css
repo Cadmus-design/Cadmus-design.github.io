@@ -34,6 +34,15 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
         width: 100%;
         justify-content:space-between;
     }
+    .float_CTA{
+        position: fixed;
+        z-index: 105;
+        bottom:15px;
+        right:5px;
+    }
+    .float_CTA img{
+        width:80%;
+    }
 }
 #wrapper #header .logo{
     width: 166px;
@@ -111,7 +120,16 @@ html {line-height: 1;-webkit-text-size-adjust: 100%;}body {margin: 0;}main {disp
         /*background:url(../images/header_content_bg.png) center center no-repeat;
         background-size:cover;*/
     }
-
+    #wrapper #KV .coupon .soldout{
+        width:100%;
+        display: block;
+        margin: 0 auto;
+    }
+    #wrapper #KV .coupon .soldout img{
+        width:100%;
+        display: block;
+        margin: 0 auto;
+    }
     #wrapper #KV .coupon ul{
         display: flex;  
         list-style: none;  
