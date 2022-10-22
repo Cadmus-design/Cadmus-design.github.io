@@ -61,17 +61,17 @@
                 <img src="assets/images/KV.png" />
             </div>
             <div class="KV m">
-                <img src="assets/images/KV_m.png" />
-                <a href="#"><img class="CTA" src="assets/images/KV_btn.png" /></a>
-                
+                <img src="assets/images/KV.png" />              
             </div>
 
         </section>
         <section id="gift">
-            <div class="title">
-                <img src="assets/images/giftcard.png" />
+            <div class="d">
+            <img src="assets/images/giftcard.png" />
             </div>
-
+        <div class="m">
+            <img src="assets/images/giftcard_m.jpg" />
+        </div>
         </section>
         <section id="use">
             <div class="title">
@@ -117,39 +117,26 @@
         <section id="dl_app">
            <img src="assets/images/footer.jpg" usemap="#image-map">
            <map name="image-map">
-               <area target="" alt="" title="" href="#" coords="396,339,560,395" shape="rect">
-               <area target="" alt="" title="" href="https://app.pkcard.com.tw/link/vbB8" coords="172,499,721,670" shape="rect">
-           </map>
+            <area target="" alt="" title="" href="https://www.pkcard.com.tw/evoucher/2022_double11/" coords="796,684,1125,784" shape="rect">
+            <area target="" alt="" title="" href="https://app.pkcard.com.tw/link/vbB8" coords="350,1006,1448,1354" shape="rect">
+        </map>
         </section>
+        <section class="note">
+            <img class="d" src="assets/images/note.jpg" />
+            <img class="m" src="assets/images/note_m.jpg" />
+        </div>
        
     </div>
     <footer>
         <p>Copyright © 2021富利餐飲股份有限公司 All Rights Reserved</p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
-        <!-- tabs start-->
+        
         <script>
-            $(document).ready(function() {
-     
-         //alert('here');
-         
-       $('.tabs a').click(function(){
-       
-          $('.panel').hide();
-          $('.tabs a.active').removeClass('active');
-          $(this).addClass('active');
-          
-          var panel = $(this).attr('href');
-          $(panel).fadeIn(1000);
-          
-          return false;  // prevents link action
-         
-       });  // end click 
-     
-          $('.tabs li:first a').click();
-     }); // end ready
+        //rwdimagemap
+        ;(function(a){a.fn.rwdImageMaps=function(){var c=this;var b=function(){c.each(function(){if(typeof(a(this).attr("usemap"))=="undefined"){return}var e=this,d=a(e);a("<img />").on('load',function(){var g="width",m="height",n=d.attr(g),j=d.attr(m);if(!n||!j){var o=new Image();o.src=d.attr("src");if(!n){n=o.width}if(!j){j=o.height}}var f=d.width()/100,k=d.height()/100,i=d.attr("usemap").replace("#",""),l="coords";a('map[name="'+i+'"]').find("area").each(function(){var r=a(this);if(!r.data(l)){r.data(l,r.attr(l))}var q=r.data(l).split(","),p=new Array(q.length);for(var h=0;h<p.length;++h){if(h%2===0){p[h]=parseInt(((q[h]/n)*100)*f)}else{p[h]=parseInt(((q[h]/j)*100)*k)}}r.attr(l,p.toString())})}).attr("src",d.attr("src"))})};a(window).resize(b).trigger("resize");return this}})(jQuery);
          </script>
-         <!-- tabs end -->
+        
 
     <!-- <script src="assets/js/megamenu.js"></script>-->
     <!-- MEGAMENU-->
@@ -231,6 +218,11 @@ function locationHashChanged() {
         $(".menu > ul").toggleClass('show-on-mobile');
           //e.preventDefault();
       }
+      if (location.hash === '#usage') {
+        //console.log("You're visiting a cool feature!");
+        $(".menu > ul").toggleClass('show-on-mobile');
+          //e.preventDefault();
+      }
       if (location.hash === '#use') {
         //console.log("You're visiting a cool feature!");
         $(".menu > ul").toggleClass('show-on-mobile');
@@ -238,10 +230,10 @@ function locationHashChanged() {
       }
   }
     window.onhashchange = locationHashChanged;
-  
-//rwdimagemap
-;(function(a){a.fn.rwdImageMaps=function(){var c=this;var b=function(){c.each(function(){if(typeof(a(this).attr("usemap"))=="undefined"){return}var e=this,d=a(e);a("<img />").on('load',function(){var g="width",m="height",n=d.attr(g),j=d.attr(m);if(!n||!j){var o=new Image();o.src=d.attr("src");if(!n){n=o.width}if(!j){j=o.height}}var f=d.width()/100,k=d.height()/100,i=d.attr("usemap").replace("#",""),l="coords";a('map[name="'+i+'"]').find("area").each(function(){var r=a(this);if(!r.data(l)){r.data(l,r.attr(l))}var q=r.data(l).split(","),p=new Array(q.length);for(var h=0;h<p.length;++h){if(h%2===0){p[h]=parseInt(((q[h]/n)*100)*f)}else{p[h]=parseInt(((q[h]/j)*100)*k)}}r.attr(l,p.toString())})}).attr("src",d.attr("src"))})};a(window).resize(b).trigger("resize");return this}})(jQuery);
-    </script>
+    
+$('img[usemap]').rwdImageMaps();
+
+</script>
     <!-- END-->
 </body>
 
