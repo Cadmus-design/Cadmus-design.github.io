@@ -53,6 +53,61 @@ img.emoji {
 	background: none !important;
 	padding: 0 !important;
 }
+
+<style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+	  
+	  /* swiper start */
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+	  @media (min-width:960px){
+		.swiper{
+			width:1200px;
+		}
+	  }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+	  /* swiper end */
+
 </style>
 	<link rel='stylesheet' id='codepeople-search-in-place-advanced-style-css'  href='https://www.mlytics.com/wp-content/plugins/search-in-place-advanced/css/codepeople_shearch_in_place.min.css?ver=5.0.97' media='all' />
 <link rel='stylesheet' id='wp-block-library-css'  href='https://www.mlytics.com/wp-includes/css/dist/block-library/style.min.css?ver=5.8.5' media='all' />
@@ -307,18 +362,48 @@ class="post-15 page type-page status-publish ast-article-single" id="post-15" it
 
 		
 		
-<div class="inherit-container-width wp-block-group"><div class="wp-block-group__inner-container"><div id="pl-gb15-634653cf962c8"  class="panel-layout" ><div id="pg-gb15-634653cf962c8-0"  class="panel-grid panel-has-style" ><div class="opt-hero siteorigin-panels-stretch panel-row-style panel-row-style-for-gb15-634653cf962c8-0" id="mobile-center" data-stretch-type="full" ><div id="pgc-gb15-634653cf962c8-0-0"  class="panel-grid-cell" ><div id="panel-gb15-634653cf962c8-0-0-0" class="widget_text so-panel widget widget_custom_html panel-first-child" data-index="0" ><div id="" class="widget_text panel-widget-style panel-widget-style-for-gb15-634653cf962c8-0-0-0" ><div class="textwidget custom-html-widget"><h1>維持可靠性、效能、安全性</h1>
-<h2><p class="main-title-desc">網站全球加速 不再無預警斷線</p></h2>
-<p class="sub-title">輕鬆安裝多個知名 CDN，Mlytics 為你隨時監控、自動切換，確保網站 24 小時正常運行。</p></div></div></div><div id="panel-gb15-634653cf962c8-0-0-1" class="widget_text so-panel widget widget_custom_html panel-last-child" data-index="1" ><div id="" class="widget_text panel-widget-style panel-widget-style-for-gb15-634653cf962c8-0-0-1" ><div class="textwidget custom-html-widget"><div class="cta-block">
-	<a href="https://www.mlytics.com/zh-tw/lp/get-a-demo/" class="link-button" style="margin-left:0;">預約免費諮詢</a>
-</div></div></div></div></div><div id="pgc-gb15-634653cf962c8-0-1"  class="panel-grid-cell" ><div id="panel-gb15-634653cf962c8-0-1-0" class="widget_text so-panel widget widget_custom_html panel-first-child panel-last-child" data-index="2" ><div class="widget_text cell-right panel-widget-style panel-widget-style-for-gb15-634653cf962c8-0-1-0" ><div class="textwidget custom-html-widget"><a href="https://www.mlytics.com/zh-tw/lp/get-a-demo/">
-	<video width="100%" style="max-width: 700px;" autoplay loop muted>
-		<source src="https://www.mlytics.com/wp-content/uploads/2022/01/demo-site-sample-05.mp4" type="video/mp4" />
-		<source src="movie.ogg" type="video/ogg" />
-		示範網站
-	</video>
-</a>
-</div></div></div></div></div></div><div id="pg-gb15-634653cf962c8-1"  class="panel-grid panel-has-style" ><div class="partner-sec panel-row-style panel-row-style-for-gb15-634653cf962c8-1" id="row-center" ><div id="pgc-gb15-634653cf962c8-1-0"  class="panel-grid-cell" ><div id="panel-gb15-634653cf962c8-1-0-0" class="widget_text so-panel widget widget_custom_html panel-first-child panel-last-child" data-index="3" ><div class="textwidget custom-html-widget"><a href="https://www.mlytics.com/zh-tw/features/power-ups/">
+<div class="inherit-container-width wp-block-group"><div class="wp-block-group__inner-container"><div id="pl-gb15-634653cf962c8"  class="panel-layout" ><div id="pg-gb15-634653cf962c8-0"  class="panel-grid panel-has-style" ><div class="opt-hero siteorigin-panels-stretch panel-row-style panel-row-style-for-gb15-634653cf962c8-0" id="mobile-center" data-stretch-type="full" >
+<!-- experienment -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+<div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://fakeimg.pl/1200x600/?retina=1&text=こ&font=noto"></div>
+        <div class="swiper-slide"><img src="https://fakeimg.pl/1200x600/?retina=1&text=こん&font=noto"></div>
+        <div class="swiper-slide"><img src="https://fakeimg.pl/1200x600/?retina=1&text=こんに&font=noto"></div>
+        <div class="swiper-slide"><img src="https://fakeimg.pl/1200x600/?retina=1&text=こんにち&font=noto"></div>
+        <div class="swiper-slide"><img src="https://fakeimg.pl/1200x600/?retina=1&text=こんにちは&font=noto"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+	  <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+</div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+<!-- Hero context -->
+
+<!-- hero image end -->
+
+</div></div></div><div id="pg-gb15-634653cf962c8-1"  class="panel-grid panel-has-style" ><div class="partner-sec panel-row-style panel-row-style-for-gb15-634653cf962c8-1" id="row-center" ><div id="pgc-gb15-634653cf962c8-1-0"  class="panel-grid-cell" ><div id="panel-gb15-634653cf962c8-1-0-0" class="widget_text so-panel widget widget_custom_html panel-first-child panel-last-child" data-index="3" ><div class="textwidget custom-html-widget"><a href="https://www.mlytics.com/zh-tw/features/power-ups/">
 	<img loading="lazy" class="partner-logo" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20202%20100'%3E%3C/svg%3E" alt="Akamai" width="202" height="100" data-lazy-src="https://www.mlytics.com/wp-content/uploads/2018/10/akamai-2.png"><noscript><img loading="lazy" class="partner-logo" src="https://www.mlytics.com/wp-content/uploads/2018/10/akamai-2.png" alt="Akamai" width="202" height="100"></noscript>
 	<img loading="lazy" class="partner-logo" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20202%20100'%3E%3C/svg%3E" alt="CDNetwork                                " width="202" height="100" data-lazy-src="https://www.mlytics.com/wp-content/uploads/2018/10/CDNetworks-1.png"><noscript><img loading="lazy" class="partner-logo" src="https://www.mlytics.com/wp-content/uploads/2018/10/CDNetworks-1.png" alt="CDNetwork" width="202" height="100"></noscript>
 	<img loading="lazy" class="partner-logo" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20202%20100'%3E%3C/svg%3E" alt="Cloudflare                                " width="202" height="100" data-lazy-src="https://www.mlytics.com/wp-content/uploads/2018/10/cloudflare-1.png"><noscript><img loading="lazy" class="partner-logo" src="https://www.mlytics.com/wp-content/uploads/2018/10/cloudflare-1.png" alt="Cloudflare" width="202" height="100"></noscript>
