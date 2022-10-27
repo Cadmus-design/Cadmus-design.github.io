@@ -94,5 +94,6 @@ window.Beacon('init', '8a690515-147b-4312-a68f-fda45f2b245b')
 /* helpscout parameter */
 Beacon('show-message', '31dbf5ec-2a14-4b84-a00f-2d1252d85f82', { force: true })
 Beacon('show-message', 'Y8a690515-147b-4312-a68f-fda45f2b245bE', { delay: 1000 })
-
+messagingEnabled{false};
+  
 /* helpscout parameter */
