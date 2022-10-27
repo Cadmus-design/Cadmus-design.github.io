@@ -106,6 +106,28 @@ img.emoji {
         height: 100%;
         object-fit: cover;
       }
+	  @media (min-width:960px){
+	  .swiper-slide h1,.swiper-slide  h2,.swiper-slide  p{
+		text-align:left;
+	  }
+	  .swiper-slide .cta-block{
+		text-align:left;
+	  }
+	  }
+	  @media (max-width:959px){
+		.swiper-wrapper{
+			padding:0 0 3rem 0;
+		}
+		.swiper-slide{
+		display: flex;
+		flex-direction: column-reverse;
+	  }
+		.swiper-slide .up{}
+		.swiper-slide .down{}
+		.swiper-slide .cta-block{
+		margin:-3rem 0 0 0;
+	  	}
+	  }
 	  /* swiper end */
 
 </style>
@@ -368,15 +390,53 @@ class="post-15 page type-page status-publish ast-article-single" id="post-15" it
 
 <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="https://fakeimg.pl/1200x600/?retina=1&text=こ&font=noto"></div>
-        <div class="swiper-slide"><img src="https://fakeimg.pl/1200x600/?retina=1&text=こん&font=noto"></div>
-        <div class="swiper-slide"><img src="https://fakeimg.pl/1200x600/?retina=1&text=こんに&font=noto"></div>
-        <div class="swiper-slide"><img src="https://fakeimg.pl/1200x600/?retina=1&text=こんにち&font=noto"></div>
-        <div class="swiper-slide"><img src="https://fakeimg.pl/1200x600/?retina=1&text=こんにちは&font=noto"></div>
+	  	<div class="swiper-slide">
+			<div>
+				<h1>中國加速解決方案</h1>
+				<h2>快速可靠的中國內容傳遞解決方案</h2>
+				<p>安全地載入您的網站，提高網站和應用程式的速度，為中國的使用者提供可靠的體驗。</p>
+				<div class="cta-block">
+					<a href="/zh-tw/lp/get-a-demo/" class="link-button" style="margin-left:0;">預約免費諮詢</a>
+				</div>
+			</div>
+			<img src="assets/images/experiment/china_r.jpg">
+		</div>
+		<div class="swiper-slide">
+			<div>
+				<h1>融合 CDN</h1>
+				<h2>一站管理所有 CDN </h2>
+				<p>最完整的融合 CDN服務，讓你在一個平台上就能安裝、管理並且優化多個 CDN。</p>
+				<div class="cta-block">
+					<a href="/zh-tw/lp/get-a-demo/" class="link-button" style="margin-left:0;">預約免費諮詢</a>
+				</div>
+			</div>
+			<img src="assets/images/experiment/Multi-CDN_r.jpg">
+		</div>
+		<div class="swiper-slide">
+			<div>
+				<h1>中國加速解決方案</h1>
+				<h2>快速可靠的中國內容傳遞解決方案</h2>
+				<p>安全地載入您的網站，提高網站和應用程式的速度，為中國的使用者提供可靠的體驗。</p>
+				<div class="cta-block">
+					<a href="/zh-tw/lp/get-a-demo/" class="link-button" style="margin-left:0;">預約免費諮詢</a>
+				</div>
+			</div>
+			<img src="assets/images/experiment/china_r.jpg">
+		</div>
+	
+		  <!--
+	 	<div class="swiper-slide"><img src="https://fakeimg.pl/1200x450/?retina=1&text=こ&font=noto"></div>
+        <div class="swiper-slide"><img src="https://fakeimg.pl/1200x450/?retina=1&text=こん&font=noto"></div>
+        <div class="swiper-slide"><img src="https://fakeimg.pl/1200x450/?retina=1&text=こんに&font=noto"></div>
+        <div class="swiper-slide"><img src="https://fakeimg.pl/1200x450/?retina=1&text=こんにち&font=noto"></div>
+        <div class="swiper-slide"><img src="https://fakeimg.pl/1200x450/?retina=1&text=こんにちは&font=noto"></div>
+		-->
       </div>
       <div class="swiper-pagination"></div>
-	  <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+	  <!-- 
+		<div class="swiper-button-next" style="color:#588157;"></div>
+      	<div class="swiper-button-prev" style="color:#588157;"></div>
+		-->
 
 </div>
     </div>
