@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Vaptcha Test</title>
+    <link rel="stylesheet" type="text/css" href="/__mly__assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://v.vaptcha.com/v3.js"></script>
+    <script> var option = { vid: "5edda4adb8c19be33e281050", type: "click", lang: "auto", container: "#vaptchaContainer", offline_server: "http://localhost.dev" }; function submit(token) { let result = parseQuery('<!--# echo var="request_uri"-->') ;let userArg s =result[0] ;let mlyArg s =result[1] ;let rout e =result[2] ;let ur i =assignQuery(userArgs ,mlyArgs ,route ,token) ;window.location.hre f =window.location.protoco l +'// ' +window.location.hostnam e +uri ;function parseQuery(originUri ) {let mlyKey s =['mlychl_jwt' ,'vaptcha_token'] ;let userArg s =[] ;let mlyArg s =[] ;let tempLis t =originUri.split('?') ;let rout e =tempList[0] ;let quer y =tempList[1 ] ?tempList[1].replace(/&amp;/g ,'&' ) :'' ;let argLis t =query.split('&').filter(functio n(item ) {return ite m!= =' '}) ;let lengt h =55 ;fo r(let  i =0 ; i <argList.length ;i++ ) {let pai r =argList[i].split('=') ;i f(!(mlyKeys.indexOf(pair[0] ) >-1) ) {lengt h+ =pair[0].length ;i f(pair[1 ]= =undefined ) {userArgs.push(pair[0] ) }els e {userArgs.push( {name :pair[0] ,value :pair[1] ,normal :tru e} ) } } }return [userArgs ,mlyArgs ,route] ; }function assignQuery(userArgs ,mlyArgs ,route ,token ) {i f(userArgs.lengt h > 0| |mlyArgs.lengt h >0 ) {let q s ='?' ;fo r(let  i =0 ; i <userArgs.length ;i++ ) {let ite m =userArgs[i] ;i f(item.normal ) {q s+ =item.nam e +'= ' +item.valu e +'&' ; }els e {q s+ =ite m +'&' ; } }fo r(let  i =0 ; i <mlyArgs.length ;i++ ) {let ite m =mlyArgs[i] ;q s+ =item.nam e +'= ' +item.valu e +'&' ; }q s+ ='vaptcha_token= ' +token ;return rout e +qs ; }els e {return rout e +'?vaptcha_token= ' +token ; } } }function selectLang( ) {var lan g =document.getElementById("lang").value ;i f(!option.lang ) {option.lan g ='zh-CN' ; }window.vaptcha(option).then(functio n(vaptchaObj ) {vaptchaObj.listen("pass" ,functio n( ) {let toke n =vaptchaObj.getToken() ;submit(token) ;}) ;vaptchaObj.render() ;}) ;document.querySelectorAll("*[lang]").forEach(functio n(e ) {e.style.displa y ="none" ;}) ;document.querySelectorAll("*[lang= " +lan g +"]").forEach(functio n(e ) {e.style.displa y ="block" ;}) ; }window.onloa d =functio n( ) {var  e =document.getElementById("lang") ;let lan g =window.navigator.language.replace(/-w+/ ,"").toLowerCase() ;switc h(lang ) {case "zh-cn" :e.valu e ="zh-CN" ;break ;case "zh-hk" :case "zh-tw" :e.valu e ="zh-TW" ;break ;case "vi" :e.valu e ="vi-VN" ;break ;default :e.valu e =lang.includes("en" ) ?"en " :"en" ;break ;}selectLang( )}</script>
+</head>
+
+<body><select id="lang" onchange="selectLang();">
+        <option value="en">en</option>
+        <option value="zh-CN">zh-CN</option>
+        <option value="zh-TW">zh-TW</option>
+        <option value="vi-VN">vi-VN</option>
+    </select>
+    <div class="wrapper">
+        <h1 lang="en">You're almost there...<span>Here's the final security check.</span></h1>
+        <h1 lang="zh-CN">只差一步...<span>您还需要通过最终的安全检查才能访问。</span></h1>
+        <h1 lang="zh-TW">只差一步...<span>您還需要通過最終的安全檢查才能訪問。</span></h1>
+        <h1 lang="vi-VN">Sắp hoàn tất...<span>Đây là bước kiểm tra bảo mật cuối cùng.</span></h1>
+        <p class="error_info"><span lang="en">Incident ID</span><span lang="zh-CN">事件 ID</span><span lang="zh-TW">事件
+                ID</span><span lang="vi-VN">Mã Kết Nối</span><!--# echo var="incident_id"--></p>
+        <p class="error_info"><span lang="en">Your IP</span><span lang="zh-CN">您的 IP</span><span lang="zh-TW">您的
+                IP</span><span lang="vi-VN">Địa chỉ IP của bạn</span><!--# echo var="source_addr"--></p>
+        <!--<img src="/__mly__assets/img/process_img.png">-->
+        <div class="verify">
+            <form id="captchaForm" ,onsubmit="onSubmit;" action='<!--# echo var="request_uri" encoding="none"-->'
+                method='<!--# echo var="request_method"-->'>
+                <div class="captcha">
+                    <div><span lang="en">Please click below to initiate the security check.</span><span
+                            lang="zh-CN">请单击下面以启动安全检查。</span><span lang="zh-TW">請點擊下面以啟動安全檢查。</span><span
+                            lang="vi-VN">Vui lòng nhấp trỏ chuột vào dưới đây để bắt đầu kiểm tra bảo mật.</span>
+                        <div id="vaptchaContainer"></div>
+                    </div>
+                </div>
+            </form>
+            <div class="next_Step" lang="en">
+                <p><span>What happened ?</span>CAPTCHA is a challenge-response test that protects domains against bots.
+                    Passing the test proves that you are a human.</p>
+                <p><span>What can I do ?</span>To avoid this again, you can run an anti-virus scan on your device to
+                    make sure it's not infected with malware. If you're accessing from a shared network, please check
+                    with the network administrator.</p>
+            </div>
+            <div class="next_Step" lang="zh-CN">
+                <p><span>发生了什么？</span>CAPTCHA是一项挑战响应测试，可以保护网站不受机器人攻击。通过测试证明你是个真实使用者，通过后即可进入网站。</p>
+                <p><span>我该怎么办？</span>为了避免再次进行CAPTCHA测试，您可以在个人设备上运行防病毒扫描，以确保它没有感染恶意软件。如果您从共享网络（即工作场所）进行访问，则可以要求网络管理员检查配置错误或受感染的设备。
+                </p>
+            </div>
+            <div class="next_Step" lang="zh-TW">
+                <p><span>發生了什麼？</span>CAPTCHA是一項挑戰響應測試，可以保護網站不受機器人攻擊。通過測試證明你是個真實使用者，通過後即可進入網站。</p>
+                <p><span>我該怎麼辦？</span>為了避免再次進行CAPTCHA測試，您可以在個人設備上運行防病毒掃描，以確保它沒有感染惡意軟件。如果您從共享網絡（即工作場所）進行訪問，則可以要求網絡管理員檢查配置錯誤或受其影響感染的設備。
+                </p>
+            </div>
+        </div>
+        <div class="next_Step" lang="vi-VN">
+            <p><span>Chuyện gì thế?</span>CAPTCHA là một bài kiểm tra kiểm phản hồi để bảo vệ các tên miền khỏi các bot
+                tự động. Vượt qua bài kiểm tra sẽ chứng minh bạn là người dùng thực.</p>
+            <p><span>Tôi có thể làm gì?</span>Để tránh lặp lại sự cố này, bạn có thể khởi động phần mềm quét anti-virus
+                trên thiết bị của bạn để bảo đảm rằng thiết bị của bạn chưa bị nhiễm (bị chèn) phần mềm độc hại. Nếu bạn
+                đang truy cập từ một mạng chia sẻ, vui lòng liên hệ với quản trị viên mạng.</p>
+        </div>
+    </div>
+</body>
+
+</html>
