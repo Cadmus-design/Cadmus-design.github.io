@@ -1,0 +1,47 @@
+<!doctype html>
+<!--suppress JSUnresolvedFunction, JSUnresolvedVariable -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[PROD] General</title>
+    <link href="https://vjs.fusioncdn.com/7.21.5/video-js.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@videojs/themes@1/dist/fantasy/index.css" rel="stylesheet">
+    <script src="https://vjs.fusioncdn.com/7.21.5/video.min.js"></script>
+    <script src="https://sdkjs.fusioncdn.com/cgpniujg7i146raqgbdg-mlysdk.js"></script>
+    <script src="https://jsdelivr.fusioncdn.com/npm/@mlytics/p2sp-sdk/bundle/driver.min.js"></script>
+    <script src="https://jsdelivr.fusioncdn.com/npm/@mlytics/p2sp-sdk/bundle/peripheral/player/videojs-hls.min.js"></script>
+</head>
+
+<body>
+    <div class="video-holder">
+        <video id="video" class="video-js vjs-theme-fantasy"></video>
+    </div>
+    <script>
+        const driver = mlysdk.driver.initialize();
+
+        const adapter = driver.extensions.VideojsHlsPlayerPlugin.create("video", {
+            liveui: true,
+            autoplay: true,
+            controls: true,
+            restoreEl: true,
+            preload: "auto",
+            aspectRatio: "16:9",
+            sources: [{
+                src: "https://lowlatencydemo.mlytics.com/app/stream/abr.m3u8",
+                type: "application/vnd.apple.mpegurl"
+            }],
+            playbackRates: [0.25, 0.5, 1.0, 1.5, 2.0],
+            html5: {
+                hlsConfig: {
+                    debug: false,
+                }
+            }
+        });
+        const player = adapter.player;
+    </script>
+</body>
+
+</html>
