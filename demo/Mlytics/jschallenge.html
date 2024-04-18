@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Error Page</title>
+    <link rel="stylesheet" type="text/css" href="/__mly__assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script
+        type="application/javascript"> let secondsRemaining, intervalHandle; function tick() { let timerDom = document.querySelector(".timer"); let minute = Math.floor(secondsRemaining / 60); let second = secondsRemaining - 60 * minute; if (second < 10) { second = "0" + second; }; let remainTimeInfo = minute.toString() + ":" + second; timerDom.innerHTML = remainTimeInfo; if (0 === secondsRemaining) { clearInterval(intervalHandle); let result = parseQuery('<!--# echo var="request_uri"-->') ;let userArg s =result[0] ;let mlyArg s =result[1] ;let rout e =result[2] ;let ur i =assignQuery(userArgs ,mlyArgs ,route) ;window.location.hre f =window.location.protoco l +'// ' +window.location.hostnam e +uri ;function parseQuery(originUri ) {let mlyKey s =['mlychl_jwt'] ;let userArg s =[] ;let mlyArg s =[] ;let tempLis t =originUri.split('?') ;let rout e =tempList[0] ;let quer y =tempList[1 ] ?tempList[1].replace(/&amp;/g ,'&' ) :'' ;let argLis t =query.split('&').filter(functio n(item ) {return ite m!= ='' ;}) ;let lengt h =55 ;fo r(let  i =0 ; i <argList.length ;i++ ) {let pai r =argList[i].split('=') ;i f(!(mlyKeys.indexOf(pair[0] ) >-1) ) {lengt h+ =pair[0].length ;i f(pair[1 ]= =undefined ) {userArgs.push(pair[0]) ; }els e {userArgs.push( {name :pair[0] ,value :pair[1] ,normal :tru e}) ; } } }mlyArgs.push( {name :'mlychl_jwt' ,value :"<!--# echo var="mlychl_jwt"-->"}) ;return [userArgs ,mlyArgs ,route] ;} ;function assignQuery(userArgs ,mlyArgs ,route ) {i f(userArgs.lengt h > 0| |mlyArgs.lengt h >0 ) {let q s ='?' ;fo r(let  i =0 ; i <userArgs.length ;i++ ) {let ite m =userArgs[i] ;i f(item.normal ) {q s+ =item.nam e +'= ' +item.valu e +'&' ; }els e {q s+ =ite m +'&' ; } }fo r(let  i =0 ; i <mlyArgs.length ;i++ ) {let ite m =mlyArgs[i] ;q s+ =item.nam e +'= ' +item.valu e +'&' ; }q s =qs.slice(0 ,qs.lengt h -1) ;return rout e +qs ; }els e {return route ; }} ;} ;secondsRemaining-- ;} ;function startCountdown( ) {secondsRemainin g =5 ;intervalHandl e =setInterval(tick ,1e3) ;} ;function selectLang( ) {let lan g =document.getElementById("lang").value ;i f(!lang ) {lan g ="zh-CN" ; }document.querySelectorAll("*[lang]").forEach(functio n(e ) {e.style.displa y ="none" ;}) ;document.querySelectorAll("*[lang= " +lan g +"]").forEach(functio n(e ) {e.style.displa y ="block" ;}) ;} ;window.onloa d =functio n( ) {let  e =document.getElementById("lang") ;let lan g =window.navigator.language.replace(/-w+/ ,"").toLowerCase() ;switc h(lang ) {case "zh-cn" :e.valu e ="zh-CN" ;break ;case "zh-hk" :case "zh-tw" :e.valu e ="zh-TW" ;break ;case "vi" :e.valu e ="vi-VN" ;break ;default :e.valu e =lang.includes("en" ) ?"en " :"en" ;break ;}selectLang() ;startCountdown() ;};
+    </script>
+</head>
+
+<body><select id="lang" onchange="selectLang();">
+        <option value="en">en</option>
+        <option value="zh-CN">zh-CN</option>
+        <option value="zh-TW">zh-TW</option>
+        <option value="vi-VN">vi-VN</option>
+    </select>
+    <div class="wrapper">
+        <h1 lang="en">Just one moment...<span>
+                <h>The system is verifying your connection.</h>
+            </span></h1>
+        <h1 lang="zh-CN">再等一下...<span>
+                <h>系统验证您的连接后，您将立即转到所请求的内容。</h>
+            </span></h1>
+        <h1 lang="zh-TW">再等一下...<span>
+                <h>系統驗證您的連接後，您將立即轉到所請求的內容。</h>
+            </span></h1>
+        <h1 lang="vi-VN">Xin chờ một chút...<span>
+                <h>Hệ thống đang xác minh kết nối của bạn.</h>
+            </span></h1>
+        <p class="error_info"><span lang="en">Incident ID</span><span lang="zh-CN">事件ID</span><span
+                lang="zh-TW">事件ID</span><span lang="vi-VN">Mã Kết Nối</span><!--#echo var="incident_id"--></p>
+        <p class="error_info"><span lang="en">Your IP</span><span lang="zh-CN">您的IP</span><span
+                lang="zh-TW">您的IP</span><span lang="vi-VN">Địa chỉ IP của bạn</span><!--#echo var="source_addr"--></p>
+        <!--<img class="timer"src="/__mly__assets/img/time_img.png">-->
+        <div class="timer"></div>
+        <div class="next_Step" lang="en">
+            <p><span>What happened?</span>The website you are trying to access is protected against cyber attacks. This
+                allows us to provide a better browsing experience for you.</p>
+            <p><span>What can I do?</span>Please make sure your browser supports the latest JavaScript version.</p>
+        </div>
+        <div class="next_Step" lang="zh-CN">
+            <p><span>发生了什么？</span>您尝试访问的网站受到保护，不会受到网络攻击。这使我们能够为您提供更好的浏览体验。</p>
+            <p><span>我该怎么办？</span>确保您的浏览器支持JavaScript。除此之外，该过程是完全自动化的。</p>
+        </div>
+        <div class="next_Step" lang="zh-TW">
+            <p><span>發生了什麼？</span>您嘗試訪問的網站受到保護，不會受到網絡攻擊。這使我們能夠為您提供更好的瀏覽體驗。</p>
+            <p><span>我該怎麼辦？</span>確保您的瀏覽器支持JavaScript。此外，該過程是完全自動化的。</p>
+        </div>
+        <div class="next_Step" lang="vi-VN">
+            <p><span>Chuyện gì đã xảy ra?</span>Trang web mà bạn đang truy cập đang được bảo vệ để chống lại các cuộc
+                tấn công mạng. Điều này giúp cho chúng tôi cung cấp cho bạn một trải nghiệm lướt web tối ưu hơn.</p>
+            <p><span>Tôi có thể làm gì?</span>Xin hãy đảm bảo rằng trình duyệt của bạn được hỗ trợ bởi phiên bản
+                JavaScript mới nhất.</p>
+        </div>
+    </div>
+    <div id="challenge" style="display:none">
+        <form id="ChallengeForm" action='<!--# echo var="request_uri" encoding="none"-->'
+            method='<!--# echo var="request_method"-->'></form>
+    </div>
+</body>
+
+</html>

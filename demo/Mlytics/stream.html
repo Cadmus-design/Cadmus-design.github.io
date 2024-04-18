@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>mlytics P2SP test</title>
+  <link href="https://vjs.fusioncdn.com/7.18.0/video-js.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/@videojs/themes@1/dist/fantasy/index.css" rel="stylesheet">
+  <script src="https://vjs.fusioncdn.com/7.18.0/video.min.js"></script>
+  <!-- Configuration might be different along with Stream. -->
+  <script src="https://vsp.mlytics.co/cgc1bu8pe2jpoo3rkmng-mlysdk.js"></script>
+  <script src="https://jsdelivr.fusioncdn.com/npm/@mlytics/p2sp-sdk@latest/bundle/driver.min.js"></script>
+  <script src="https://jsdelivr.fusioncdn.com/npm/@mlytics/p2sp-sdk@latest/bundle/peripheral/player/videojs-hls.min.js"></script>
+</head>
+<body>
+<div text-align="center">
+  <div style="width: 800px">
+    <video id="video" class="video-js vjs-theme-fantasy"></video>
+  </div>
+<script>
+  const driver = mlysdk.driver.initialize({
+    server: {
+      host: {
+        fqdn: "vsp.mlytics.co"
+      }
+    }
+  });
+
+  const player = window.videojs("video", {
+    autoplay: true,
+    controls: true,
+    preload: "auto",
+    aspectRatio: "16:9",
+    playbackRates: [0.25, 0.5, 1.0, 1.5, 2.0],
+    sources: [{
+      src: "https://1001642498035-cloudfront-kj9fhn53.xpmon.com/hls/3c274451-b5bd-48be-9898-e76dd6990933.flv/3c274451-b5bd-48be-9898-e76dd6990933.m3u8",
+      type: "application/vnd.apple.mpegurl"
+    }]
+  });
+
+  driver.extensions.VideojsHlsPlugin.adapt(player);
+</script>
+
+<hr>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://vimeo.com/event/3205515/embed" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>
+</div>
+</body>
+</html>
