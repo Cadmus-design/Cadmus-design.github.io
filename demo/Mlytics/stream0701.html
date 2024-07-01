@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Configuration might be different along with Stream. -->
+  <script src="https://vsp.mlytics.co/cogcp7cjcrqvv7f1uqp0-mlysdk.js"></script>
+  <script src="https://jsdelivr.fusioncdn.com/npm/@mlytics/lib-hls.js@latest/dist/hls.min.js"></script>
+  <script src="https://jsdelivr.fusioncdn.com/npm/@mlytics/p2sp-sdk@latest/bundle/driver.min.js"></script>
+  <script src="https://jsdelivr.fusioncdn.com/npm/@mlytics/p2sp-sdk@latest/bundle/peripheral/player/hlsjs-hls.min.js"></script>
+</head>
+<body>
+  <div style="width: 800px; height: 640px">
+    <video id="video" style="width: 800px; height: 640px; background-color: black;" controls autoplay></video>
+  </div>
+  <script>
+    const driver = mlysdk.driver.initialize({
+      server: {
+        host: {
+          fqdn: "vsp.mlytics.co"
+        }
+      }
+    })
+
+    const src = "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8"
+    const video = document.getElementById('video')
+    const adapter = driver.extensions.HlsjsHlsPlayerPlugin.create({
+      url: src,
+      element: video
+    })
+    const hlsjsPlayer = adapter.protocol
+  </script>
+</body>
+</html>
