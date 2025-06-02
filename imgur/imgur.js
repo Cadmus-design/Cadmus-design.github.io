@@ -20,7 +20,7 @@ function copyImageUrl(element) {
 class ImgurAPI {
   static accesstoken = null;
   static imgur_url = "https://api.imgur.com";
-  static worker_url = "https://api.imgur.com";
+  static worker_url = "https://imgur.cadmus-sung.workers.dev";
   //static worker_url = 'http://127.0.0.1:8787';
 
   static get_headers() {
