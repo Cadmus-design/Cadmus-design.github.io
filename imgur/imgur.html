@@ -1,0 +1,102 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imgur Tool</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+<body>
+  <div class="container" style="max-width: 1000px;">
+
+    <div class="card mt-4 shadow-sm">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="m-0"><i class="fas fa-cog"></i> 設定</h5>
+        <button class="btn btn-sm btn-outline-danger" id="resetBtn">
+          <i class="fas fa-redo"></i> 重置
+        </button>
+      </div>
+      <div class="card-body">
+        <div>
+          <input class="form-control" type="text" id="access_token" placeholder="Imgur Access Token">
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-4 shadow-sm">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="m-0"><i class="fas fa-cloud-upload-alt"></i> 上傳圖片</h5>
+        <button class="btn btn-sm btn-outline-primary" id="createAlbumBtn">
+          <i class="fas fa-plus"></i> 建立相簿
+        </button>
+      </div>
+      <div class="card-body">
+        <div class="input-group">
+          <input type="file" class="form-control" id="uploadFiles" multiple accept=".jpg,.jpeg,.png,.gif,.apng,.tiff,.tif,.bmp,.xcf,.webp,.mp4,.mov,.avi,.webm,.mpeg,.flv,.mkv,.mpv,.wmv">
+          <button class="btn btn-warning" type="button" id="uploadBtn">
+            <i class="fas fa-upload"></i> 上傳
+          </button>
+        </div>
+        <div class="progress-container mt-3 d-none" id="uploadProgress">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated"></div>
+          </div>
+          <div class="text-center mt-2">
+            <small class="text-muted">上傳中...</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mt-4 shadow-sm">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="m-0"><i class="fas fa-images"></i> 管理圖片</h5>
+        <div class="d-none" id="albumBlock">
+          <a class="col btn btn-sm btn-outline-success" id="albumLink" target="_blank">
+            <i class="fas fa-external-link-alt"></i> 前往相簿
+          </a>
+          <button class="col btn btn-sm btn-outline-danger" id="deleteAlbumBtn">
+            <i class="fas fa-trash-can"></i> 刪除相簿
+          </button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div id="imageBlock">
+          <div class="d-flex flex-wrap" id="imageList">
+            <!-- 動態生成圖片 -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 圖片模板 -->
+  <div class="image-block image-template">
+    <div class="card image-item position-relative">
+      <div class="image-controls">
+        <button class="btn btn-sm btn-danger" onclick="deleteBtnClick(this)">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+      <div class="card-body p-2">
+        <img class="image-thumbnail rounded" alt="" loading="lazy">
+        <div class="mt-2">
+          <input type="text" class="form-control form-control-sm image-url" onclick="copyImageUrl(this)" readonly>
+          <div class="file-info mt-1">
+            <small class="image-name"></small>
+            <br>
+            <small class="upload-time"></small>
+            <br>
+            <small class="file-size"></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
