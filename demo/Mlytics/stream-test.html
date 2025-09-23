@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mlytics VOD SDK 測試頁面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .player-container {
+            width: 100%;
+            height: 400px;
+            background: #000;
+            border-radius: 8px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #545b62;
+        }
+        
+        .btn-success {
+            background-color: #28a745;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background-color: #1e7e34;
+        }
+        
+        .btn-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+        
+        .info-panel {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .status-label {
+            font-weight: bold;
+            color: #495057;
+        }
+        
+        .status-value {
+            color: #28a745;
+            font-family: monospace;
+        }
+        
+        .log-container {
+            background: #343a40;
+            color: #fff;
+            padding: 15px;
+            border-radius: 4px;
+            height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        
+        .subtitle-menu {
+            position: absolute;
+            bottom: 50px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            border-radius: 4px;
+            padding: 10px;
+            min-width: 150px;
+        }
+        
+        .subtitle-option {
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+        
+        .subtitle-option:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .config-section {
+            margin-bottom: 20px;
+        }
+        
+        .config-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .config-label {
+            min-width: 120px;
+            font-weight: bold;
+        }
+        
+        .config-input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        select.config-input {
+            cursor: pointer;
+        }
+        
+        .bandwidth-indicator {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .bandwidth-good {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .bandwidth-medium {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        
+        .bandwidth-poor {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        .quality-selector {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+        
+        .quality-btn {
+            padding: 5px 10px;
+            border: 2px solid #007bff;
+            background: white;
+            color: #007bff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .quality-btn.active {
+            background: #007bff;
+            color: white;
+        }
+        
+        .quality-btn:hover {
+            background: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mlytics VOD SDK 測試頁面</h1>
+    
+    <!-- 設定區域 -->
+    <div class="container">
+        <h2>🔧 基本設定</h2>
+        <div class="config-section">
+            <div class="config-group">
+                <label class="config-label">Asset ID:</label>
+                <input type="text" class="config-input" id="assetId" placeholder="輸入您的 Asset ID">
+            </div>
+            <div class="config-group">
+                <label class="config-label">API Token:</label>
+                <input type="password" class="config-input" id="apiToken" placeholder="輸入您的 API Token">
+            </div>
+            <div class="config-group">
+                <label class="config-label">模擬頻寬:</label>
+                <select class="config-input" id="simulatedBandwidth">
+                    <option value="1">1 Mbps (慢速)</option>
+                    <option value="3">3 Mbps (中速)</option>
+                    <option value="5" selected>5 Mbps (一般)</option>
+                    <option value="10">10 Mbps (快速)</option>
+                    <option value="25">25 Mbps (超快)</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="btn btn-primary" onclick="initializePlayer()">初始化播放器</button>
+            <button class="btn btn-secondary" onclick="detectBandwidth()">偵測頻寬</button>
+            <button class="btn btn-success" onclick="testPreloadSettings()">測試 Preload 設定</button>
+            <button class="btn btn-danger" onclick="clearLogs()">清除日誌</button>
+        </div>
+    </div>
+
+    <!-- 播放器區域 -->
+    <div class="container">
+        <h2>📺 播放器</h2>
+        <div class="player-container" id="playerContainer">
+            <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: white; font-size: 18px;">
+                點擊 "初始化播放器" 開始測試
+            </div>
+            
+            <!-- 字幕選單 -->
+            <div class="subtitle-menu hidden" id="subtitleMenu">
+                <div class="subtitle-option" onclick="setSubtitle('off')">關閉字幕</div>
+                <div class="subtitle-option" onclick="setSubtitle('zh')">中文字幕</div>
+                <div class="subtitle-option" onclick="setSubtitle('en')">English Subtitle</div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="btn btn-primary" onclick="playVideo()">播放</button>
+            <button class="btn btn-secondary" onclick="pauseVideo()">暫停</button>
+            <button class="btn btn-success" onclick="toggleSubtitleMenu()">字幕選單</button>
+        </div>
+        
+        <!-- 畫質選擇器 -->
+        <div style="margin-top: 15px;">
+            <strong>手動選擇畫質:</strong>
+            <div class="quality-selector" style="margin-top: 5px;">
+                <button class="quality-btn" onclick="setQuality('360p')">360p</button>
+                <button class="quality-btn" onclick="setQuality('480p')">480p</button>
+                <button class="quality-btn" onclick="setQuality('720p')">720p</button>
+                <button class="quality-btn active" onclick="setQuality('1080p')">1080p</button>
+                <button class="quality-btn" onclick="setQuality('auto')">自動</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 狀態監控 -->
+    <div class="container">
+        <h2>📊 即時狀態監控</h2>
+        <div class="info-panel">
+            <div class="status-item">
+                <span class="status-label">目前頻寬:</span>
+                <span class="status-value" id="currentBandwidth">-- Mbps</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">建議畫質:</span>
+                <span class="status-value" id="recommendedQuality">--</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">目前畫質:</span>
+                <span class="status-value" id="currentQuality">--</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">緩衝區長度:</span>
+                <span class="status-value" id="bufferLength">-- 秒</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">Preload 狀態:</span>
+                <span class="status-value" id="preloadStatus">--</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">字幕軌道:</span>
+                <span class="status-value" id="subtitleTrack">--</span>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="btn btn-primary" onclick="startMonitoring()">開始監控</button>
+            <button class="btn btn-secondary" onclick="stopMonitoring()">停止監控</button>
+            <button class="btn btn-success" onclick="exportReport()">匯出報告</button>
+        </div>
+    </div>
+
+    <!-- 測試功能 -->
+    <div class="container">
+        <h2>🧪 功能測試</h2>
+        <div class="controls">
+            <button class="btn btn-primary" onclick="testBandwidthDetection()">測試頻寬偵測</button>
+            <button class="btn btn-primary" onclick="testQualityAdaptation()">測試畫質適應</button>
+            <button class="btn btn-secondary" onclick="testPreloadControl()">測試 Preload 控制</button>
+            <button class="btn btn-secondary" onclick="testSubtitleLoading()">測試字幕載入</button>
+            <button class="btn btn-success" onclick="simulateNetworkChange()">模擬網路變化</button>
+            <button class="btn btn-danger" onclick="simulateBuffering()">模擬緩衝問題</button>
+        </div>
+    </div>
+
+    <!-- 日誌區域 -->
+    <div class="container">
+        <h2>📝 執行日誌</h2>
+        <div class="log-container" id="logContainer">
+            <div style="color: #28a745; font-weight: bold;">🚀 Mlytics VOD SDK 測試頁面已載入</div>
+            <div style="color: #17a2b8;">ℹ️ 請設定 Asset ID 和 API Token 後開始測試</div>
+        </div>
+    </div>
+
+    <script>
+        // 全域變數
+        let player = null;
+        let bandwidthDetector = null;
+        let qualitySelector = null;
+        let preloadController = null;
+        let subtitleController = null;
+        let monitoringInterval = null;
+        let testData = {
+            bandwidthHistory: [],
+            qualityChanges: [],
+            bufferEvents: [],
+            subtitleEvents: []
+        };
+
+        // 日誌功能
+        function log(message, type = 'info') {
+            const logContainer = document.getElementById('logContainer');
+            const timestamp = new Date().toLocaleTimeString();
+            const colors = {
+                info: '#17a2b8',
+                success: '#28a745',
+                warning: '#ffc107',
+                error: '#dc3545',
+                debug: '#6c757d'
+            };
+            
+            const logEntry = document.createElement('div');
+            logEntry.style.color = colors[type] || colors.info;
+            logEntry.innerHTML = `[${timestamp}] ${message}`;
+            
+            logContainer.appendChild(logEntry);
+            logContainer.scrollTop = logContainer.scrollHeight;
+        }
+
+        function clearLogs() {
+            document.getElementById('logContainer').innerHTML = '';
+            log('日誌已清除', 'info');
+        }
+
+        // 頻寬偵測模擬器
+        class MockBandwidthDetector {
+            constructor() {
+                this.samples = [];
+                this.isDetecting = false;
+            }
+
+            async detectBandwidth() {
+                if (this.isDetecting) return this.getAverageBandwidth();
+                
+                this.isDetecting = true;
+                log('開始偵測頻寬...', 'info');
+                
+                // 模擬偵測延遲
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                const simulatedBandwidth = parseFloat(document.getElementById('simulatedBandwidth').value);
+                const variance = (Math.random() - 0.5) * 2; // ±1 Mbps 變動
+                const detectedBandwidth = Math.max(0.5, simulatedBandwidth + variance);
+                
+                this.samples.push(detectedBandwidth);
+                if (this.samples.length > 10) this.samples.shift();
+                
+                this.isDetecting = false;
+                
+                testData.bandwidthHistory.push({
+                    timestamp: Date.now(),
+                    bandwidth: detectedBandwidth
+                });
+                
+                log(`頻寬偵測完成: ${detectedBandwidth.toFixed(1)} Mbps`, 'success');
+                return detectedBandwidth;
+            }
+
+            getAverageBandwidth() {
+                if (this.samples.length === 0) return 5;
+                return this.samples.reduce((a, b) => a + b) / this.samples.length;
+            }
+        }
+
+        // 畫質選擇器
+        class MockQualitySelector {
+            constructor() {
+                this.qualityProfiles = [
+                    { name: '360p', width: 640, height: 360, bitrate: 1.5 },
+                    { name: '480p', width: 854, height: 480, bitrate: 2.5 },
+                    { name: '720p', width: 1280, height: 720, bitrate: 4.0 },
+                    { name: '1080p', width: 1920, height: 1080, bitrate: 7.0 }
+                ];
+            }
+
+            selectOptimalQuality(bandwidth, bufferHealth = 1.0) {
+                const availableBandwidth = bandwidth * 0.8 * bufferHealth;
+                
+                for (let i = this.qualityProfiles.length - 1; i >= 0; i--) {
+                    if (this.qualityProfiles[i].bitrate <= availableBandwidth) {
+                        log(`根據頻寬 ${bandwidth.toFixed(1)} Mbps 選擇畫質: ${this.qualityProfiles[i].name}`, 'info');
+                        return this.qualityProfiles[i];
+                    }
+                }
+                
+                log(`頻寬不足，降至最低畫質: ${this.qualityProfiles[0].name}`, 'warning');
+                return this.qualityProfiles[0];
+            }
+
+            getQualityByName(name) {
+                return this.qualityProfiles.find(q => q.name === name);
+            }
+        }
+
+        // 模擬播放器
+        class MockPlayer {
+            constructor(containerId) {
+                this.containerId = containerId;
+                this.isPlaying = false;
+                this.currentQuality = '1080p';
+                this.currentTime = 0;
+                this.duration = 120; // 2分鐘影片
+                this.bufferLength = 5;
+                this.preloadEnabled = true;
+                this.currentSubtitle = 'off';
+                this.setupPlayerElement();
+            }
+
+            setupPlayerElement() {
+                const container = document.getElementById(this.containerId);
+                container.innerHTML = `
+                    <div style="position: relative; width: 100%; height: 100%; background: linear-gradient(45deg, #333, #666); display: flex; align-items: center; justify-content: center; color: white; flex-direction: column;">
+                        <div style="font-size: 24px; margin-bottom: 20px;">🎬 模擬播放器</div>
+                        <div id="playStatus" style="font-size: 16px; margin-bottom: 10px;">準備就緒</div>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <div>時間: <span id="currentTime">00:00</span> / <span id="duration">02:00</span></div>
+                            <div style="margin-left: 20px;">品質: <span id="qualityDisplay">${this.currentQuality}</span></div>
+                        </div>
+                        <div style="margin-top: 10px; font-size: 14px;">
+                            緩衝區: <span id="bufferDisplay">${this.bufferLength}s</span> | 
+                            字幕: <span id="subtitleDisplay">${this.currentSubtitle}</span>
+                        </div>
+                        <div style="width: 80%; height: 4px; background: rgba(255,255,255,0.3); border-radius: 2px; margin-top: 15px;">
+                            <div id="progressBar" style="width: 0%; height: 100%; background: #007bff; border-radius: 2px; transition: width 0.1s;"></div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            play() {
+                this.isPlaying = true;
+                document.getElementById('playStatus').textContent = '播放中 ▶️';
+                log('開始播放', 'success');
+                this.startProgressUpdate();
+            }
+
+            pause() {
+                this.isPlaying = false;
+                document.getElementById('playStatus').textContent = '已暫停 ⏸️';
+                log('播放已暫停', 'info');
+                this.stopProgressUpdate();
+            }
+
+            setQuality(quality) {
+                const oldQuality = this.currentQuality;
+                this.currentQuality = quality;
+                document.getElementById('qualityDisplay').textContent = quality;
+                
+                testData.qualityChanges.push({
+                    timestamp: Date.now(),
+                    from: oldQuality,
+                    to: quality
+                });
+                
+                log(`畫質已變更: ${oldQuality} → ${quality}`, 'success');
+                updateQualityButtons();
+            }
+
+            getCurrentQuality() {
+                return this.currentQuality;
+            }
+
+            setPreload(enabled) {
+                this.preloadEnabled = enabled;
+                log(`Preload ${enabled ? '已啟用' : '已關閉'}`, 'info');
+                updateStatus();
+            }
+
+            getBufferLength() {
+                return this.bufferLength;
+            }
+
+            setSubtitle(language) {
+                this.currentSubtitle = language;
+                document.getElementById('subtitleDisplay').textContent = language;
+                
+                testData.subtitleEvents.push({
+                    timestamp: Date.now(),
+                    language: language
+                });
+                
+                log(`字幕已切換至: ${language}`, 'success');
+                updateStatus();
+            }
+
+            startProgressUpdate() {
+                this.progressInterval = setInterval(() => {
+                    if (this.isPlaying && this.currentTime < this.duration) {
+                        this.currentTime += 0.1;
+                        this.updateDisplay();
+                        
+                        // 模擬緩衝區變化
+                        this.bufferLength += (Math.random() - 0.4) * 0.5;
+                        this.bufferLength = Math.max(0, Math.min(15, this.bufferLength));
+                        
+                        if (this.bufferLength < 2) {
+                            testData.bufferEvents.push({
+                                timestamp: Date.now(),
+                                type: 'buffering',
+                                bufferLength: this.bufferLength
+                            });
+                            log('發生緩衝，考慮降低畫質', 'warning');
+                        }
+                    }
+                }, 100);
+            }
+
+            stopProgressUpdate() {
+                if (this.progressInterval) {
+                    clearInterval(this.progressInterval);
+                }
+            }
+
+            updateDisplay() {
+                const minutes = Math.floor(this.currentTime / 60);
+                const seconds = Math.floor(this.currentTime % 60);
+                document.getElementById('currentTime').textContent = 
+                    `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                const progress = (this.currentTime / this.duration) * 100;
+                document.getElementById('progressBar').style.width = `${progress}%`;
+                
+                document.getElementById('bufferDisplay').textContent = `${this.bufferLength.toFixed(1)}s`;
+            }
+        }
+
+        // 主要功能函數
+        async function initializePlayer() {
+            const assetId = document.getElementById('assetId').value;
+            const apiToken = document.getElementById('apiToken').value;
+            
+            if (!assetId || !apiToken) {
+                log('請先設定 Asset ID 和 API Token', 'error');
+                return;
+            }
+            
+            try {
+                log('初始化播放器...', 'info');
+                
+                // 初始化組件
+                bandwidthDetector = new MockBandwidthDetector();
+                qualitySelector = new MockQualitySelector();
+                player = new MockPlayer('playerContainer');
+                
+                log(`使用 Asset ID: ${assetId}`, 'debug');
+                log('播放器初始化完成', 'success');
+                
+                // 自動開始頻寬偵測
+                await detectBandwidth();
+                
+            } catch (error) {
+                log(`初始化失敗: ${error.message}`, 'error');
+            }
+        }
+
+        async function detectBandwidth() {
+            if (!bandwidthDetector) {
+                log('請先初始化播放器', 'error');
+                return;
+            }
+            
+            const bandwidth = await bandwidthDetector.detectBandwidth();
+            document.getElementById('currentBandwidth').textContent = `${bandwidth.toFixed(1)} Mbps`;
+            
+            const quality = qualitySelector.selectOptimalQuality(bandwidth);
+            document.getElementById('recommendedQuality').textContent = quality.name;
+            
+            updateBandwidthIndicator(bandwidth);
+        }
+
+        function updateBandwidthIndicator(bandwidth) {
+            const indicator = document.getElementById('currentBandwidth');
+            indicator.className = 'status-value bandwidth-indicator ';
+            
+            if (bandwidth >= 8) {
+                indicator.className += 'bandwidth-good';
+            } else if (bandwidth >= 4) {
+                indicator.className += 'bandwidth-medium';
+            } else {
+                indicator.className += 'bandwidth-poor';
+            }
+        }
+
+        async function testPreloadSettings() {
+            if (!player) {
+                log('請先初始化播放器', 'error');
+                return;
+            }
+            
+            log('測試 Preload 設定...', 'info');
+            
+            // 測試關閉 preload
+            player.setPreload(false);
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            // 測試開啟 preload
+            player.setPreload(true);
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            log('Preload 設定測試完成', 'success');
+        }
+
+        function playVideo() {
+            if (!player) {
+                log('請先初始化播放器', 'error');
+                return;
+            }
+            player.play();
+        }
+
+        function pauseVideo() {
+            if (!player) {
+                log('請先初始化播放器', 'error');
+                return;
+            }
+            player.pause();
+        }
+
+        function setQuality(quality) {
+            if (!player) {
+                log('請先初始化播放器', 'error');
+                return;
+            }
+            
+            if (quality === 'auto') {
+                log('切換至自動畫質選擇模式', 'info');
+                adaptQualityAutomatically();
+            } else {
+                player.setQuality(quality);
+            }
+        }
+
+        async function adaptQualityAutomatically() {
+            if (!bandwidthDetector || !qualitySelector || !player) {
+                return;
+            }
+            
+            const bandwidth = await bandwidthDetector.detectBandwidth();
+            const bufferHealth = player.getBufferLength() / 10; // 正規化緩衝區長度
+            const optimalQuality = qualitySelector.selectOptimalQuality(bandwidth, bufferHealth);
+            player.setQuality(optimalQuality.name);
+        }
+
+        function updateQualityButtons() {
+            document.querySelectorAll('.quality-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            const currentQuality = player ? player.getCurrentQuality() : '1080p';
+            const activeBtn = document.querySelector(`[onclick="setQuality('${currentQuality}')"]`);
+            if (activeBtn) {
+                activeBtn.classList.add('active');
+            }
+        }
+
+        function toggleSubtitleMenu() {
+            const menu = document.getElementById('subtitleMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function setSubtitle(language) {
+            if (!player) {
+                log('請先初始化播放器', 'error');
+                return;
+            }
+            
+            player.setSubtitle(language);
+            document.getElementById('subtitleMenu').classList.add('hidden');
+        }
+
+        function startMonitoring() {
+            if (monitoringInterval) {
+                log('監控已在執行中', 'warning');
+                return;
+            }
+            
+            log('開始即時監控...', 'info');
+            monitoringInterval = setInterval(updateStatus, 1000);
+        }
+
+        function stopMonitoring() {
+            if (monitoringInterval) {
+                clearInterval(monitoringInterval);
+                monitoringInterval = null;
+                log('即時監控已停止', 'info');
+            }
+        }
+
+        function updateStatus() {
+            if (!player) return;
+            
+            document.getElementById('currentQuality').textContent = player.getCurrentQuality();
+            document.getElementById('bufferLength').textContent = `${player.getBufferLength().toFixed(1)} 秒`;
+            document.getElementById('preloadStatus').textContent = player.preloadEnabled ? '已啟用' : '已關閉';
+            document.getElementById('subtitleTrack').textContent = player.currentSubtitle;
+        }
+
+        // 測試功能
+        async function testBandwidthDetection() {
+            log('開始連續頻寬偵測測試...', 'info');
+            
+            for (let i = 0; i < 5; i++) {
+                await detectBandwidth();
+                await new Promise(resolve => setTimeout(resolve, 2000));
+            }
+            
+            log('頻寬偵測測試完成', 'success');
+        }
+
+        async function testQualityAdaptation() {
+            if (!player) {
+                log('請先初始化播放器', 'error');
+                return;
+            }
+            
+            log('開始畫質適應測試...', 'info');
+            
+            const testQualities = ['360p', '480p', '720p', '1080p'];
+            
+            for (const quality of testQualities) {
+                player.setQuality(quality);
+                await new Promise(resolve => setTimeout(resolve, 2000));
+            }
+            
+            log('畫質適應測試完成', 'success');
+        }
+
+        async function testPreloadControl() {
+            if (!player) {
+                log('請先初始化播放器', 'error');
+                return;
+            }
+            
+            log('開始 Preload 控制測試...', 'info');
+            
+            player.setPreload(false);
+            await new Promise(resolve => setTimeout(resolve, 1500));
+            
+            player.setPreload(true);
+            await new Promise(resolve => setTimeout(resolve, 1500));
+            
+            log('Preload 控制測試完成', 'success');
+        }
+
+        async function testSubtitleLoading() {
+            if (!player) {
+                log('請先初始化播放器', 'error');
+                return;
+            }
+            
+            log('開始字幕載入測試...', 'info');
+            
+            const subtitles = ['off', 'zh', 'en'];
+            
+            for (const subtitle of subtitles) {
+                player.setSubtitle(subtitle);
+                await new Promise(resolve => setTimeout(resolve, 1500));
+            }
+            
+            log('字幕載入測試完成', 'success');
+        }
+
+        async function simulateNetworkChange() {
+            log('模擬網路狀況變化...', 'info');
+            
+            const bandwidths = [1, 3, 8, 15, 5];
+            const bandwidthSelect = document.getElementById('simulatedBandwidth');
+            
+            for (const bandwidth of bandwidths) {
+                bandwidthSelect.value = bandwidth;
+                log(`模擬網路變更為 ${bandwidth} Mbps`, 'debug');
+                
+                if (bandwidthDetector) {
+                    await detectBandwidth();
+                    await adaptQualityAutomatically();
+                }
+                
+                await new Promise(resolve => setTimeout(resolve, 3000));
+            }
+            
+            log('網路變化模擬完成', 'success');
+        }
+
+        async function simulateBuffering() {
+            if (!player) {
+                log('請先初始化播放器', 'error');
+                return;
+            }
+            
+            log('模擬緩衝問題...', 'warning');
+            
+            // 模擬緩衝區不足
+            player.bufferLength = 1;
+            log('緩衝區不足，建議降低畫質', 'warning');
+            
+            await new Promise(resolve => setTimeout(resolve, 2000));
+            
+            // 恢復正常
+            player.bufferLength = 8;
+            log('緩衝問題已解決', 'success');
+        }
+
+        function exportReport() {
+            const report = {
+                timestamp: new Date().toISOString(),
+                testData: testData,
+                currentStatus: {
+                    bandwidth: document.getElementById('currentBandwidth').textContent,
+                    quality: document.getElementById('currentQuality').textContent,
+                    buffer: document.getElementById('bufferLength').textContent,
+                    preload: document.getElementById('preloadStatus').textContent,
+                    subtitle: document.getElementById('subtitleTrack').textContent
+                }
+            };
+            
+            const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `mlytics-vod-test-report-${Date.now()}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            log('測試報告已匯出', 'success');
+        }
+
+        // 頁面載入時的初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            log('測試頁面載入完成', 'success');
+            log('請填寫 Asset ID 和 API Token 後開始測試', 'info');
+            
+            // 每5秒更新一次狀態
+            setInterval(updateStatus, 5000);
+        });
+    </script>
+</body>
+</html>
