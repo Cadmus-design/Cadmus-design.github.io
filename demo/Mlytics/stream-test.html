@@ -225,6 +225,12 @@
             border-radius: 4px;
             margin: 10px 0;
         }
+        .box{
+            display: flex;
+        }
+        .box .container{
+            flex:1;
+        }
     </style>
 </head>
 <body>
@@ -323,7 +329,7 @@
             </div>
         </div>
     </div>
-
+<div class="box">
     <!-- 即時狀態監控 -->
     <div class="container">
         <h2>📊 即時狀態監控</h2>
@@ -378,7 +384,7 @@
             <div style="color: #fbd38d;">⚠️ 請設定 HLS URL 後點擊 "初始化播放器"</div>
         </div>
     </div>
-
+</div>
     <script>
         // 全域變數
         let videojsPlayer = null;
